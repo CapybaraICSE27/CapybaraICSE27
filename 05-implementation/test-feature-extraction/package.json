@@ -1,0 +1,20 @@
+{
+  "name": "ui-test-feature-extraction-phase2",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Phase 2 test-case-level UI test feature extraction using Python orchestration and ts-morph.",
+  "scripts": {
+    "analyze-one": "node analyze_repo_test_cases.cjs",
+    "test:ast-patterns": "node scripts/test_ast_pattern_extractor.cjs",
+    "test:input-patterns": "node scripts/test_input_pattern_extractor.cjs",
+    "test:phase2b": "node scripts/test_phase2b_classification.cjs",
+    "test:rq3": "npm run test:ast-patterns && npm run test:phase2b",
+    "test:rq2": "npm run test:input-patterns"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.3",
+    "sloc": "^0.3.2",
+    "ts-morph": "^25.0.1",
+    "typescript": "^5.7.2"
+  }
+}

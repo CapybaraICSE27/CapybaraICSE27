@@ -1,0 +1,94 @@
+sample_origin,repo,test_id,framework,line,name,raw_code,feature_type,source_kind,phase,scope,primary_intent,primary_intent_evidence_basis,review_reason,eligibility_basis,provenance_basis,manual_eligibility_ok,manual_phase_ok,manual_scope_ok,manual_intent_ok,manual_suggested_phase,manual_suggested_scope,manual_suggested_intent,manual_error_type,manual_notes
+review_queue,appsmithorg/appsmith,d3b08505b8e93d7d6b2fe51d6b253f76,Cypress,686,cy.intercept,"cy.intercept(""PUT"", ""/api/v1/users/leaveWorkspace/*"")",setup,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Network intercept/mock is eligible setup/control.
+review_queue,mattermost/mattermost,a45833e310acebb43938248a59cf7d2d,Cypress,307,cy.request,"cy.request({
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        url: '/api/v4/channels/' + channelId,
+        method: 'DELETE',
+    })",setup,cypress_command,setup,helper_or_framework_extension,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:feature_type|framework_api_category:test_data_api:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,DELETE/backend cleanup request is eligible cleanup/restore state.
+review_queue,appsmithorg/appsmith,9813f4a850ab850ebdcbd0a3236ce9c2,Cypress,634,cy.intercept,"cy.intercept(""GET"", ""/api/v1/workspaces"")",setup,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Network intercept/mock is eligible setup/control.
+review_queue,plasmicapp/plasmic,296e9f6653730a36351f7d38802109c7,Cypress,2124,"cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })
+    .fetchCsrf","cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })
+    .fetchCsrf()",custom_command_call,afterEach,teardown,per_test_hook,auth_session_state,lexical_auth_session,weak_lexical_signal|framework_mapping_unclear,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,"Auth/session mutation appears in afterEach; phase as teardown is acceptable due hook placement, intent as auth_session_state is acceptable."
+review_queue,plasmicapp/plasmic,95c6a3e64420bb815fdbdd3a9b0c5ec7,Cypress,2124,"cy.fetchCsrf()
+    .request","cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })",custom_command_call,afterEach,teardown,per_test_hook,auth_session_state,lexical_auth_session,weak_lexical_signal|framework_mapping_unclear,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,"Auth/session mutation appears in afterEach; phase as teardown is acceptable due hook placement, intent as auth_session_state is acceptable."
+review_queue,plasmicapp/plasmic,5af5befcf7ce0501d9cee31629cddd3b,Cypress,2124,"cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })
+    .fetchCsrf","cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })
+    .fetchCsrf()",custom_command_call,afterEach,teardown,per_test_hook,auth_session_state,lexical_auth_session,weak_lexical_signal|framework_mapping_unclear,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,"Auth/session mutation appears in afterEach; phase as teardown is acceptable due hook placement, intent as auth_session_state is acceptable."
+review_queue,Unleash/unleash,327831eb6ad1ac722e6c0e6f17e8c4bc,Cypress,23,userIds.forEach,"userIds.forEach((id) => {
+            cy.request('DELETE', `${baseUrl}/api/admin/user-admin/${id}`);
+        })",helper_call,after,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal|helper_body_unavailable,hook_source_kind:after:framework_api_category:test_data_api,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,DELETE/backend cleanup request is eligible cleanup/restore state.
+review_queue,Unleash/unleash,b9604399b6e42a682fbac7db4f447a0f,Cypress,53,userIds.forEach,"userIds.forEach((id) => {
+            cy.request('DELETE', `${baseUrl}/api/admin/user-admin/${id}`);
+        })",helper_call,after,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal|helper_body_unavailable,hook_source_kind:after:framework_api_category:test_data_api,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,DELETE/backend cleanup request is eligible cleanup/restore state.
+review_queue,Unleash/unleash,bef91ed5427dc51faaefcb156ae113bd,Cypress,23,userIds.forEach,"userIds.forEach((id) => {
+            cy.request('DELETE', `${baseUrl}/api/admin/user-admin/${id}`);
+        })",helper_call,after,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal|helper_body_unavailable,hook_source_kind:after:framework_api_category:test_data_api,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,DELETE/backend cleanup request is eligible cleanup/restore state.
+review_queue,linode/manager,45ce1de9fa437e268baa2de8ee3c67e9,Cypress,54,cy.clearLocalStorage,cy.clearLocalStorage(tokenLocalStorageKey),custom_command_call,test_body,setup,inline_test_body,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal|helper_body_unavailable|framework_mapping_unclear,framework_api_category:cleanup,classify_setup:unknown_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed queue row; label is acceptable under current RQ1 codebook.
+review_queue,midas-research/audino,329cf5635a2e67f03f15670769d96c79,Cypress,17,cy.clearLocalStorage,cy.clearLocalStorage('token'),custom_command_call,test_body,setup,inline_test_body,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal|helper_body_unavailable|framework_mapping_unclear,framework_api_category:cleanup,classify_setup:unknown_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed queue row; label is acceptable under current RQ1 codebook.
+review_queue,webiny/webiny-js,06268bca9c278690169d993c89372576,Cypress,21,cy.clearLocalStorage,cy.clearLocalStorage(),custom_command_call,test_body,unclear,inline_test_body,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal|helper_body_unavailable|framework_mapping_unclear,framework_api_category:cleanup,classify_setup:unknown_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed queue row; label is acceptable under current RQ1 codebook.
+review_queue,elizaOS/eliza,79cfd1302ee37f189ba8ea8da310a70b,Playwright,504,page.route,"page.route(""**/api/cloud/status"", async (route) => {
+    if (route.request().method() !== ""GET"") {
+      await route.fallback();
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: ""application/json"",
+      body: JSON.stringify({
+        connected: false,
+        enabled: false,
+        cloudVoiceProxyAvailable: false,
+        hasApiKey: false,
+      })...",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed queue row; label is acceptable under current RQ1 codebook.
+review_queue,elizaOS/eliza,9c77cf7fd8532ebc5ea8258cbd651e86,Playwright,461,page.route,"page.route(""**/api/auth/sessions"", async (route) => {
+    if (route.request().method() !== ""GET"") {
+      await route.fallback();
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: ""application/json"",
+      body: JSON.stringify({ sessions: [] }),
+    });
+  })",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed queue row; label is acceptable under current RQ1 codebook.
+review_queue,elizaOS/eliza,f8e0f6a667e1fdd570927c2f8c7b7ad6,Playwright,473,page.route,"page.route(""**/api/agents"", async (route) => {
+    if (route.request().method() !== ""GET"") {
+      await route.fallback();
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: ""application/json"",
+      body: JSON.stringify({ agents: [] }),
+    });
+  })",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed queue row; label is acceptable under current RQ1 codebook.

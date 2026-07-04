@@ -1,0 +1,25 @@
+repo,test_id,framework,sequence_event_count,test_body_sequence_event_count,repeat_action_fraction,test_body_repeat_action_fraction,repeated_navigation_api_count,navigation_target_revisit_count,loop_driven_action_count,branch_driven_action_count,test_body_conditionalized_action_fraction,manual_notes
+appsmithorg/appsmith,049818c4c52b3a580aca860181a676e4,Cypress,75,6,0.32,0.0,3,0,1,40,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+dflex-js/dflex,9f4b7e4b5e9ee7e56fa01995e850bb95,Cypress,3,2,0.0,0.0,0,0,2,0,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+mattermost/mattermost,f435d6a2c3e32f7854b3231a9e702ffd,Cypress,18,0,0.444444,,0,0,1,5,,Sequence metrics reviewed; no blocking issue in sampled row.
+appsmithorg/appsmith,19a15366db648b9e30c90f0abbd824c0,Cypress,42,1,0.333333,0.0,3,0,0,35,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+mempool/mempool,04f50d1656eeb295b76197dd858138c2,Cypress,9,5,0.444444,0.4,0,0,0,1,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+appsmithorg/appsmith,42e7a031deb981f8eb06a99713f7721c,Cypress,39,0,0.307692,,3,0,0,35,,Sequence metrics reviewed; no blocking issue in sampled row.
+Mail-0/Zero,d22d6f03c5b90aa0f3c5d497d030e204,Playwright,11,11,0.0,0.0,0,0,6,3,0.181818,Sequence metrics reviewed; no blocking issue in sampled row.
+documenso/documenso,89e1fc7d1035c98e02b915f5152ac849,Playwright,28,18,0.107143,0.0,2,0,28,19,0.5,Sequence metrics reviewed; no blocking issue in sampled row.
+payloadcms/payload,1a492f985cef3b7cdc5a11e2c2ed20b3,Playwright,32,8,0.3125,0.0,0,0,1,19,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+payloadcms/payload,1b4d5ba079f66af66220bbcffe28b689,Playwright,9,4,0.444444,0.0,0,0,0,4,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+RackulaLives/Rackula,40fcf4ac5074299a67f31cef757adace,Playwright,38,10,0.421053,0.2,0,0,0,4,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+microsoft/fluentui,b23d08abd9531908cbb0df3b8e9f4dc7,Playwright,3,3,0.666667,0.666667,0,0,0,0,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+springload/react-accessible-accordion,c6c470713ec9d24387a48e4121ac1de9,Puppeteer,2,2,1.0,1.0,0,0,2,0,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+swaponline/MultiCurrencyWallet,cf6503ba3eaac1698ab95e1938fa681f,Puppeteer,10,1,0.2,0.0,1,0,3,8,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+swaponline/MultiCurrencyWallet,9bc042aceb412f9482f79cb7d2080bc7,Puppeteer,4,4,0.0,0.0,0,0,2,4,0.25,Sequence metrics reviewed; no blocking issue in sampled row.
+swaponline/MultiCurrencyWallet,26c972fdaf2648a3a9ad47322ce71358,Puppeteer,2,2,0.0,0.0,0,0,0,2,0.5,Sequence metrics reviewed; no blocking issue in sampled row.
+swaponline/MultiCurrencyWallet,928a92a000393038ba0156a58a165a75,Puppeteer,2,2,0.0,0.0,0,0,0,2,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+synyi/poplar,f4b38f20e3daddc7d15dca2e26143292,Puppeteer,3,3,0.666667,0.666667,0,0,0,0,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+MyCryptoHQ/MyCrypto,a4b1dbf8f050dd1b204ff591c01c5b39,TestCafe,5,5,1.0,1.0,0,0,0,0,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+MyCryptoHQ/MyCrypto,78a1773ad36a502762d37327c25a5f79,TestCafe,3,3,1.0,1.0,0,0,0,0,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+MyCryptoHQ/MyCrypto,ed64aa2de23eeffde66029e1614bdd51,TestCafe,4,4,1.0,1.0,0,0,0,0,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+WebThingsIO/gateway,09405a4beec3d3668de2a2c3fb2c684d,WebDriverIO,23,23,0.73913,0.73913,0,0,0,1,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+WebThingsIO/gateway,922826e24be36da48eb77ed8e0d7e372,WebDriverIO,3,2,0.666667,1.0,0,0,0,0,0.0,Sequence metrics reviewed; no blocking issue in sampled row.
+WebThingsIO/gateway,108c55c7a0643ee7cf5fab6016f58b10,WebDriverIO,3,2,0.666667,1.0,0,0,0,0,0.0,Sequence metrics reviewed; no blocking issue in sampled row.

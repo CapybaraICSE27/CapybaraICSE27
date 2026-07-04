@@ -1,0 +1,3479 @@
+sample_origin,repo,test_id,framework,file_path,line,feature_type,category,name,raw_code,ui_action_category,terminal_action_ast,locator_strategy_ast,input_channel_ast,control_flow_enclosure,control_flow_loop_depth,control_flow_branch_depth,control_flow_branch_kind,control_flow_branch_arm,control_flow_source,control_flow_parent_kind,control_flow_parent_line,action_snippet,enclosing_control_flow_snippet,enclosing_function_or_callback_snippet,test_body_or_helper_context_snippet,snippet_truncated,manual_enclosure_ok,manual_notes
+control_flow_stratified,springload/react-accessible-accordion,35727156fa3259d6e14de8f42e377f41,Puppeteer,integration/wai-aria.spec.js,357,ui_action,unknown_action,page.evaluate,"page.evaluate(
+                    (panel) => panel.id,
+                    panelHandle,
+                )",unknown_action,evaluate,,,loop,1,0,,,test_body,ForOfStatement,345,"page.evaluate(
+                    (panel) => panel.id,
+                    panelHandle,
+                )","for (const itemHandle of itemsHandles) {
+                const buttonHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemButton""]',
+                );
+                const panelHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemPanel""]',
+                );
+
+                const buttonAriaControls = await page.evaluate(
+                    (button) => button.getAttribute('aria-controls'),
+                    buttonHandle,
+                );
+                const panelId = await page.evaluate(
+                    (panel) => panel.id,
+                    panelHandle,
+                );
+
+                expect(buttonAriaControls).toBeTruthy();
+                expect(panelId).toBeTruthy();
+                expect(buttonAriaControls).toEqual(panelId);
+            }","it(`The accordion header button element has aria-controls set to the ID
+            of the element containing the accordion panel content.`, async () => {
+            const { browser, page, itemsHandles } = await setup();
+            expect(itemsHandles.length).toEqual(3);
+
+            for (const itemHandle of itemsHandles) {
+                const buttonHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemButton""]',
+                );
+                const panelHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemPanel""]',
+                );
+
+                const buttonAriaControls = await page.evaluate(
+                    (button) => button.getAttribute('aria-controls'),
+                    buttonHandle,
+                );
+                const panelId = await page.evaluate(
+                    (panel) => panel.id,
+                    panelHandle,
+                );
+
+                expect(buttonAriaControls).toBeTruthy();
+                expect(panelId).toBeTruthy();
+                expect(buttonAriaControls).toEqual(panelId);
+            }
+        })","async () => {
+            const { browser, page, itemsHandles } = await setup();
+            expect(itemsHandles.length).toEqual(3);
+
+            for (const itemHandle of itemsHandles) {
+                const buttonHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemButton""]',
+                );
+                const panelHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemPanel""]',
+                );
+
+                const buttonAriaControls = await page.evaluate(
+                    (button) => button.getAttribute('aria-controls'),
+                    buttonHandle,
+                );
+                const panelId = await page.evaluate(
+                    (panel) => panel.id,
+                    panelHandle,
+                );
+
+                expect(buttonAriaControls).toBeTruthy();
+                expect(panelId).toBeTruthy();
+                expect(buttonAriaControls).toEqual(panelId);
+            }
+        }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,appsmithorg/appsmith,e69c4a8d1e82f370ac14d56d01d52366,Cypress,app/client/cypress/support/e2e.js,78,ui_action,navigation,cy.visit,cy.visit(RapidMode.url()),navigation,visit,,,branch,0,2,if,then,hook_or_fixture,if,77,cy.visit(RapidMode.url()),"if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }","before(function () {
+  if (RapidMode.config.enabled) {
+    cy.startServerAndRoutes();
+    cy.getCookie(""SESSION"").then((cookie) => {
+      if (!cookie) {
+        cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""));
+      }
+    });
+
+    if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }
+  }
+})","function () {
+  if (RapidMode.config.enabled) {
+    cy.startServerAndRoutes();
+    cy.getCookie(""SESSION"").then((cookie) => {
+      if (!cookie) {
+        cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""));
+      }
+    });
+
+    if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,ueberdosis/tiptap,ce53d49f4d5a6f73cb68a9aa0f7a32f6,Cypress,demos/src/Examples/Default/React/index.spec.js,57,ui_action,locator_query,cy.get('button').contains,cy.get('button').contains(m.label),locator_query,contains,,,loop,1,0,,,test_body,callback_iteration,53,cy.get('button').contains(m.label),"buttonMarks.forEach(m => {
+      cy.get('.tiptap').type('{selectall}Hello world{selectall}')
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains(m.label).should('not.be.disabled')
+    })","buttonMarks.forEach(m => {
+      cy.get('.tiptap').type('{selectall}Hello world{selectall}')
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains(m.label).should('not.be.disabled')
+    })","() => {
+    buttonMarks.forEach(m => {
+      cy.get('.tiptap').type('{selectall}Hello world{selectall}')
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains(m.label).should('not.be.disabled')
+    })
+  }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,appsmithorg/appsmith,b29e364da8f4eca6d9ebfea40c2ecac4,Cypress,app/client/cypress/support/commands.js,963,ui_action,text_input,cy.get(welcomePage.password).type,"cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""))",text_input,type,css_selector,ui_text_entry,branch,0,1,if,,caller_context,if,102,"cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""))","ase connection
+        db.close();
+      };
+
+      // Handling add error
+      addRequest.onerror = (event) => {
+        console.log(""Error adding key:"", event.target.error);
+        // Closing the database connection
+        db.close();
+      };
+    };
+
+    // Handling database opening error
+    request.onerror = (event) => {
+      console.log(""Error opening database:"", event.target.error);
+    };
+  });
+};
+
+Cypress.Commands.add(""stubPostHeaderReq"", () => {
+  // GHSA-j9gf-vw2f-9hrw: server-side strict-mode now requires Origin to match
+  // APPSMITH_BASE_URL. Use the live Cypress baseUrl so the intercept produces a
+  // valid Origin (the literal string ""Cypress"" used to live here as a synthetic-
+  // traffic flag and no longer parses as a URL).
+  cy.intercept(""POST"", ""/api/v1/users/invite"", (req) => {
+    req.headers[""origin""","Cypress.Commands.add(""createSuperUser"", () => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymou","() => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymousData=true"",
+      );
+      expect(int",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,deltachat/deltachat-desktop,e4c76ba8f2d319342ccae7af6ec2f5d5,Playwright,packages/e2e-tests/tests/composer.spec.ts,100,ui_action,click,page.getByLabel('Messages').getByText(msg).click,page.getByLabel('Messages').getByText(msg).click({ button: 'right' }),click,click,text_content,,loop,1,0,,,hook_or_fixture,ForStatement,90,page.getByLabel('Messages').getByText(msg).click({ button: 'right' }),"for (let i = 1; i <= numDummyChats; i++) {
+    await selectChat(i)
+    // Just send a/the message to make sure the draft is cleared.
+    // In case the draft is actually empty already, type some text.
+    const msg = 'dummy message to clear draft'
+    await textarea.fill(msg)
+    await page.getByRole('button', { name: 'Send' }).click()
+    await testDraftIsEmpty()
+
+    // Delete it, to leave no side effects.
+    await page.getByLabel('Messages').getByText(msg).click({ button: 'right' })
+    await page.getByRole('menuitem', { name: 'Delete' }).click()
+    await page
+      .getByRole('dialog')
+      .getByRole('button', { name: 'Delete' })
+      .last()
+      .click()
+  }","test.afterEach(async () => {
+  for (let i = 1; i <= numDummyChats; i++) {
+    await selectChat(i)
+    // Just send a/the message to make sure the draft is cleared.
+    // In case the draft is actually empty already, type some text.
+    const msg = 'dummy message to clear draft'
+    await textarea.fill(msg)
+    await page.getByRole('button', { name: 'Send' }).click()
+    await testDraftIsEmpty()
+
+    // Delete it, to leave no side effects.
+    await page.getByLabel('Messages').getByText(msg).click({ button: 'right' })
+    await page.getByRole('menuitem', { name: 'Delete' }).click()
+    await page
+      .getByRole('dialog')
+      .getByRole('button', { name: 'Delete' })
+      .last()
+      .click()
+  }
+})","async () => {
+  for (let i = 1; i <= numDummyChats; i++) {
+    await selectChat(i)
+    // Just send a/the message to make sure the draft is cleared.
+    // In case the draft is actually empty already, type some text.
+    const msg = 'dummy message to clear draft'
+    await textarea.fill(msg)
+    await page.getByRole('button', { name: 'Send' }).click()
+    await testDraftIsEmpty()
+
+    // Delete it, to leave no side effects.
+    await page.getByLabel('Messages').getByText(msg).click({ button: 'right' })
+    await page.getByRole('menuitem', { name: 'Delete' }).click()
+    await page
+      .getByRole('dialog')
+      .getByRole('button', { name: 'Delete' })
+      .last()
+      .click()
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,super-productivity/super-productivity,68374fed5bba053df69cf73e89bd0980,Playwright,e2e/utils/sync-helpers.ts,170,ui_action,locator_query,page.locator,page.locator('.sync-btn mat-icon.sync-state-ico'),locator_query,locator,,,loop,1,0,,,helper_body,WhileStatement,167,page.locator('.sync-btn mat-icon.sync-state-ico'),"while (Date.now() - startTime < timeout) {
+    // Check if sync-state-ico icon exists (shown when hasNoPendingOps)
+    // The icon is small (10px) and absolutely positioned, so use count() check
+    const syncStateIcon = page.locator('.sync-btn mat-icon.sync-state-ico');
+    if ((await syncStateIcon.count()) > 0) {
+      // Brief wait for any final state updates to flush through
+      await page.waitForTimeout(200);
+      return 'success';
+    }
+
+    // Check if spinner is gone (sync not in progress)
+    const spinnerVisible = await syncPage.syncSpinner.isVisible().catch(() => false);
+    if (!spinnerVisible) {
+      nonSpinningCount++;
+      // After several consecutive checks with no spinner and no error, consider it success
+      // This handles cases where the icon check fails but sync actually completed
+      if (nonSpinningCount >= requiredNonSpinningChecks) {
+        // Final check - make sure sync button is still there and no error shown
+        const syncBtnVisible = await syncPage.syncBtn.isVisible().catch(() => false);
+        if (syncBtnVisible) {
+          // Brief wait for any final state updates to flush through
+          await page.waitForTimeout(200);
+          return 'success';
+        }
+      }
+    } else {
+      nonSpinningCount = 0; // Reset if spinner is visible again
+    }
+
+    const conflictDialog = page.locator('dialog-sync-conflict');
+    if (await conflictDialog.isVisible()) return 'conflict';
+
+    // Also check for first-sync conflict dialog (mat-d","{
+  const startTime = Date.now();
+
+  // Ensure sync button is visible first
+  await expect(syncPage.syncBtn).toBeVisible({ timeout: 10000 });
+
+  // Track consecutive non-spinning states to confirm sync is truly complete
+  let nonSpinningCount = 0;
+  const requiredNonSpinningChecks = 3;
+
+  while (Date.now() - startTime < timeout) {
+    // Check if sync-state-ico icon exists (shown when hasNoPendingOps)
+    // The icon is small (10px) and absolutely positioned, so use count() check
+    const syncStateIcon = page.locator('.sync-btn mat-icon.sync-state-ico');
+    if ((await syncStateIcon.count()) > 0) {
+      // Brief wait for any final state updates to flush through
+      await page.waitForTimeout(200);
+      return 'success';
+    }
+
+    // Check if spinner is gone (sync not in progress)
+    const spinnerVisible = await syncPage.syncSpinner.isVisible().catch(() => false);
+    if (!spinnerVisible) {
+      nonSpinningCount++;
+      // After several consecutive checks with no spinner and no error, consider it success
+      // This handles cases where the icon check fails but sync actually completed
+      if (nonSpinningCount >= requiredNonSpinningChecks) {
+        // Final check - make sure sync button is still there and no error shown
+        const syncBtnVisible = await syncPage.syncBtn.isVisible().catch(() => false);
+        if (syncBtnVisible) {
+          // Brief wait for any final state updates to flush through
+          await page.waitForTimeout(200);
+          return 'succe","async (
+  page: Page,
+  syncPage: SyncPage,
+  timeout: number = 30000,
+): Promise<'success' | 'conflict' | void> => {
+  const startTime = Date.now();
+
+  // Ensure sync button is visible first
+  await expect(syncPage.syncBtn).toBeVisible({ timeout: 10000 });
+
+  // Track consecutive non-spinning states to confirm sync is truly complete
+  let nonSpinningCount = 0;
+  const requiredNonSpinningChecks = 3;
+
+  while (Date.now() - startTime < timeout) {
+    // Check if sync-state-ico icon exists (shown when hasNoPendingOps)
+    // The icon is small (10px) and absolutely positioned, so use count() check
+    const syncStateIcon = page.locator('.sync-btn mat-icon.sync-state-ico');
+    if ((await syncStateIcon.count()) > 0) {
+      // Brief wait for any final state updates to flush through
+      await page.waitForTimeout(200);
+      return 'success';
+    }
+
+    // Check if spinner is gone (sync not in progress)
+    const spinnerVisible = await syncPage.syncSpinner.isVisible().catch(() => false);
+    if (!spinnerVisible) {
+      nonSpinningCount++;
+      // After several consecutive checks with no spinner and no error, consider it success
+      // This handles cases where the icon check fails but sync actually completed
+      if (nonSpinningCount >= requiredNonSpinningChecks) {
+        // Final check - make sure sync button is still there and no error shown
+        const syncBtnVisible = await syncPage.syncBtn.isVisible().catch(() => false);
+        if (syncBtnVisible) {
+          // Brief",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,swaponline/MultiCurrencyWallet,9bc042aceb412f9482f79cb7d2080bc7,Puppeteer,tests/e2e/appsSmoke.test.js,225,ui_action,navigation,page.goto,page.goto(`${url}#/apps/${app.id}`),navigation,goto,,,branch,0,2,if,then,test_body,if,223,page.goto(`${url}#/apps/${app.id}`),"if (!clicked) {
+          const url = page.url().split('#')[0]
+          await page.goto(`${url}#/apps/${app.id}`)
+        }","it(`${app.title} — clicking tile opens iframe`, async () => {
+      const page = await newPage()
+      const consoleErrors = []
+      page.on('pageerror', (err) => consoleErrors.push(err.message))
+
+      try {
+        await goToAppsPage(page)
+
+        const buttons = await page.$$('button')
+        let clicked = false
+        for (const btn of buttons) {
+          const text = await page.evaluate((el) => el.textContent, btn)
+          if (text && text.includes(app.title)) {
+            try {
+              await btn.click()
+              clicked = true
+              break
+            } catch {
+              // button not clickable (e.g. hidden nav dropdown), try next
+            }
+          }
+        }
+
+        if (!clicked) {
+          const url = page.url().split('#')[0]
+          await page.goto(`${url}#/apps/${app.id}`)
+        }
+
+        await timeOut(2_000)
+
+        const currentUrl = page.url()
+        console.log(`${app.title} — navigated to: ${currentUrl}`)
+        expect(currentUrl).toContain(`/apps/${app.id}`)
+
+        const iframe = await page.$('iframe')
+        expect(iframe).not.toBeNull()
+        console.log(`${app.title} — iframe element found`)
+
+        const iframeSrc = await page.evaluate((el) => el?.getAttribute('src'), iframe)
+        console.log(`${app.title} — iframe src: ${iframeSrc}`)
+        expect(iframeSrc).toContain(app.urlPattern)
+        // Verify theme is forwarded to iframe URL
+        expect(iframeSrc","async () => {
+      const page = await newPage()
+      const consoleErrors = []
+      page.on('pageerror', (err) => consoleErrors.push(err.message))
+
+      try {
+        await goToAppsPage(page)
+
+        const buttons = await page.$$('button')
+        let clicked = false
+        for (const btn of buttons) {
+          const text = await page.evaluate((el) => el.textContent, btn)
+          if (text && text.includes(app.title)) {
+            try {
+              await btn.click()
+              clicked = true
+              break
+            } catch {
+              // button not clickable (e.g. hidden nav dropdown), try next
+            }
+          }
+        }
+
+        if (!clicked) {
+          const url = page.url().split('#')[0]
+          await page.goto(`${url}#/apps/${app.id}`)
+        }
+
+        await timeOut(2_000)
+
+        const currentUrl = page.url()
+        console.log(`${app.title} — navigated to: ${currentUrl}`)
+        expect(currentUrl).toContain(`/apps/${app.id}`)
+
+        const iframe = await page.$('iframe')
+        expect(iframe).not.toBeNull()
+        console.log(`${app.title} — iframe element found`)
+
+        const iframeSrc = await page.evaluate((el) => el?.getAttribute('src'), iframe)
+        console.log(`${app.title} — iframe src: ${iframeSrc}`)
+        expect(iframeSrc).toContain(app.urlPattern)
+        // Verify theme is forwarded to iframe URL
+        expect(iframeSrc).toMatch(/theme=(dark|light)/)
+
+        const",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,cloudtogo/pageplug,55cfc6e0140db9ba501a20bffe74dae2,Cypress,app/client/cypress/support/e2e.js,75,ui_action,navigation,cy.visit,cy.visit(RapidMode.url()),navigation,visit,,,branch,0,2,if,then,hook_or_fixture,if,74,cy.visit(RapidMode.url()),"if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }","before(function () {
+  if (RapidMode.config.enabled) {
+    cy.startServerAndRoutes();
+    cy.getCookie(""SESSION"").then((cookie) => {
+      if (!cookie) {
+        cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""));
+      }
+    });
+
+    //Cypress.Cookies.preserveOnce(""SESSION"", ""remember_token"");
+    if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }
+  }
+})","function () {
+  if (RapidMode.config.enabled) {
+    cy.startServerAndRoutes();
+    cy.getCookie(""SESSION"").then((cookie) => {
+      if (!cookie) {
+        cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""));
+      }
+    });
+
+    //Cypress.Cookies.preserveOnce(""SESSION"", ""remember_token"");
+    if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,swaponline/MultiCurrencyWallet,cf6503ba3eaac1698ab95e1938fa681f,Puppeteer,tests/e2e/utils.ts,96,ui_action,text_input,wordInput.type,wordInput.type(seed[i]),text_input,type,,ui_text_entry,loop_and_branch,1,1,try_catch,,helper_body_with_caller_context,try_catch,95,wordInput.type(seed[i]),"for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }","{
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}","async (params: ImportWalletParams) => {
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,swaponline/MultiCurrencyWallet,002370d5c79a4f28df74404147544114,Puppeteer,tests/e2e/appsSmoke.test.js,166,ui_action,unknown_action,page.evaluate,page.evaluate(() => document.body.textContent),unknown_action,evaluate,,,loop_and_branch,1,2,if,then,test_body,if,165,page.evaluate(() => document.body.textContent),"if (!found) {
+          const pageText = await page.evaluate(() => document.body.textContent)
+          found = pageText.includes(app.title)
+        }","it('all apps appear as tiles on #/apps page', async () => {
+    const page = await newPage()
+    try {
+      await goToAppsPage(page)
+
+      for (const app of APPS) {
+        const tileSelector = `[data-app-id=""${app.id}""], button`
+        const tiles = await page.$$(tileSelector)
+
+        let found = false
+        for (const tile of tiles) {
+          const text = await page.evaluate((el) => el.textContent, tile)
+          if (text && text.includes(app.title)) {
+            found = true
+            break
+          }
+        }
+
+        if (!found) {
+          const pageText = await page.evaluate(() => document.body.textContent)
+          found = pageText.includes(app.title)
+        }
+
+        console.log(`App tile ""${app.title}"": ${found ? 'FOUND' : 'MISSING'}`)
+        expect(found).toBe(true)
+      }
+
+      await takeScreenshot(page, 'Apps_CatalogPage')
+    } catch (error) {
+      await takeScreenshot(page, 'Apps_CatalogPage_Error')
+      throw error
+    } finally {
+      await page.close()
+    }
+  })","async () => {
+    const page = await newPage()
+    try {
+      await goToAppsPage(page)
+
+      for (const app of APPS) {
+        const tileSelector = `[data-app-id=""${app.id}""], button`
+        const tiles = await page.$$(tileSelector)
+
+        let found = false
+        for (const tile of tiles) {
+          const text = await page.evaluate((el) => el.textContent, tile)
+          if (text && text.includes(app.title)) {
+            found = true
+            break
+          }
+        }
+
+        if (!found) {
+          const pageText = await page.evaluate(() => document.body.textContent)
+          found = pageText.includes(app.title)
+        }
+
+        console.log(`App tile ""${app.title}"": ${found ? 'FOUND' : 'MISSING'}`)
+        expect(found).toBe(true)
+      }
+
+      await takeScreenshot(page, 'Apps_CatalogPage')
+    } catch (error) {
+      await takeScreenshot(page, 'Apps_CatalogPage_Error')
+      throw error
+    } finally {
+      await page.close()
+    }
+  }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,springload/react-accessible-accordion,b7211705ee9559295f361291c5c26724,Puppeteer,integration/wai-aria.spec.js,328,ui_action,click,handle.click,handle.click(),click,click,,,loop,1,0,,,test_body,ForOfStatement,318,handle.click(),"for (const handle of buttonsHandles) {
+                // Before expanding
+                expect(
+                    await page.evaluate(
+                        (button) => button.getAttribute('aria-expanded'),
+                        handle,
+                    ),
+                ).toEqual('false');
+
+                // Click to expand
+                await handle.click();
+
+                // After expanding
+                expect(
+                    await page.evaluate(
+                        (button) => button.getAttribute('aria-expanded'),
+                        handle,
+                    ),
+                ).toEqual('true');
+            }","it(`If the accordion panel associated with an accordion header is
+            visible, the header button element has aria-expanded set to true.
+            If the panel is not visible, aria-expanded is set to false.`, async () => {
+            const { browser, page, buttonsHandles } = await setup();
+            expect(buttonsHandles.length).toEqual(3);
+
+            for (const handle of buttonsHandles) {
+                // Before expanding
+                expect(
+                    await page.evaluate(
+                        (button) => button.getAttribute('aria-expanded'),
+                        handle,
+                    ),
+                ).toEqual('false');
+
+                // Click to expand
+                await handle.click();
+
+                // After expanding
+                expect(
+                    await page.evaluate(
+                        (button) => button.getAttribute('aria-expanded'),
+                        handle,
+                    ),
+                ).toEqual('true');
+            }
+        })","async () => {
+            const { browser, page, buttonsHandles } = await setup();
+            expect(buttonsHandles.length).toEqual(3);
+
+            for (const handle of buttonsHandles) {
+                // Before expanding
+                expect(
+                    await page.evaluate(
+                        (button) => button.getAttribute('aria-expanded'),
+                        handle,
+                    ),
+                ).toEqual('false');
+
+                // Click to expand
+                await handle.click();
+
+                // After expanding
+                expect(
+                    await page.evaluate(
+                        (button) => button.getAttribute('aria-expanded'),
+                        handle,
+                    ),
+                ).toEqual('true');
+            }
+        }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,deltachat/deltachat-desktop,a921d3e1bee49b1797ba770333b91f18,Playwright,packages/e2e-tests/playwright-helper.ts,238,ui_action,click,page.getByTestId(`account-item-${accountId}`).click,page.getByTestId(`account-item-${accountId}`).click({ button: 'right' }),click,click,test_id_or_data_contract,,loop_and_branch,1,2,if,,caller_context,if,350,page.getByTestId(`account-item-${accountId}`).click({ button: 'right' }),"
+  const accountList = page.locator('.styles_module_account')
+  await expect(accountList.last()).t","{
+  await page.getByTestId(`account-item-${accountId}`).click({ button: 'right' })
+  await page.getByTestId('open-settings-menu-item').click()
+  const nameLocator = page.getByTestId('profile-display-name')
+  await expect(nameLocator).not.toBeEmpty()
+  const name = await nameLocator.textContent()
+
+  await page.getByTestId('open-advanced-settings').click()
+  await page.getByTestId('open-transport-settings').click()
+  await page.getByLabel('Edit Relay').first().click()
+  const addressLocator = page.locator('#addr')
+  await expect(addressLocator).toHaveValue(/.+@.+/)
+  const address = await addressLocator.inputValue()
+  let password = ''
+  if (includePasswd) {
+    const passwdLocator = page.locator('#password')
+    password = await passwdLocator.inputValue()
+  }
+  await page.getByTestId('cancel').click()
+  await page.getByTestId('transports-settings-close').click()
+  await page.getByTestId('settings-advanced-close').click()
+
+  return {
+    id: accountId,
+    name: name ?? '',
+    address: address ?? '',
+    password: password,
+  }
+}","export async function getProfile(
+  page: Page,
+  accountId: string,
+  includePasswd = false
+): Promise<User> {
+  await page.getByTestId(`account-item-${accountId}`).click({ button: 'right' })
+  await page.getByTestId('open-settings-menu-item').click()
+  const nameLocator = page.getByTestId('profile-display-name')
+  await expect(nameLocator).not.toBeEmpty()
+  const name = await nameLocator.textContent()
+
+  await page.getByTestId('open-advanced-settings').click()
+  await page.getByTestId('open-transport-settings').click()
+  await page.getByLabel('Edit Relay').first().click()
+  const addressLocator = page.locator('#addr')
+  await expect(addressLocator).toHaveValue(/.+@.+/)
+  const address = await addressLocator.inputValue()
+  let password = ''
+  if (includePasswd) {
+    const passwdLocator = page.locator('#password')
+    password = await passwdLocator.inputValue()
+  }
+  await page.getByTestId('cancel').click()
+  await page.getByTestId('transports-settings-close').click()
+  await page.getByTestId('settings-advanced-close').click()
+
+  return {
+    id: accountId,
+    name: name ?? '',
+    address: address ?? '',
+    password: password,
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,documenso/documenso,bcad24f1b6a5e74937cba68ed343f72c,Playwright,packages/app-tests/e2e/fixtures/authentication.ts,33,ui_action,navigation,page.goto,page.goto(`${NEXT_PUBLIC_WEBAPP_URL()}${redirectPath}`),navigation,goto,,,loop_and_branch,1,1,if,,caller_context,if,310,page.goto(`${NEXT_PUBLIC_WEBAPP_URL()}${redirectPath}`),page.goto(`${NEXT_PUBLIC_WEBAPP_URL()}${redirectPath}`),"{
+  const { request } = page.context();
+
+  const csrfToken = await getCsrfToken(page);
+
+  await request.post(`${NEXT_PUBLIC_WEBAPP_URL()}/api/auth/email-password/authorize`, {
+    data: {
+      email,
+      password,
+      csrfToken,
+    },
+  });
+
+  await page.goto(`${NEXT_PUBLIC_WEBAPP_URL()}${redirectPath}`);
+  await page.waitForTimeout(500);
+}","async ({
+  page,
+  email = 'example@documenso.com',
+  password = 'password',
+  redirectPath = '/',
+}: LoginOptions) => {
+  const { request } = page.context();
+
+  const csrfToken = await getCsrfToken(page);
+
+  await request.post(`${NEXT_PUBLIC_WEBAPP_URL()}/api/auth/email-password/authorize`, {
+    data: {
+      email,
+      password,
+      csrfToken,
+    },
+  });
+
+  await page.goto(`${NEXT_PUBLIC_WEBAPP_URL()}${redirectPath}`);
+  await page.waitForTimeout(500);
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,appsmithorg/appsmith,86671727e238b8a97dbc98e7cebd95f4,Cypress,app/client/cypress/support/e2e.js,78,ui_action,navigation,cy.visit,cy.visit(RapidMode.url()),navigation,visit,,,branch,0,2,if,then,hook_or_fixture,if,77,cy.visit(RapidMode.url()),"if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }","before(function () {
+  if (RapidMode.config.enabled) {
+    cy.startServerAndRoutes();
+    cy.getCookie(""SESSION"").then((cookie) => {
+      if (!cookie) {
+        cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""));
+      }
+    });
+
+    if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }
+  }
+})","function () {
+  if (RapidMode.config.enabled) {
+    cy.startServerAndRoutes();
+    cy.getCookie(""SESSION"").then((cookie) => {
+      if (!cookie) {
+        cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""));
+      }
+    });
+
+    if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,tldraw/tldraw,a08bf34411a92f7d89a4fbf0ad3075bc,Playwright,apps/examples/e2e/tests/test-shapes.spec.ts,100,ui_action,locator_query,page.getByTestId(`tools.${tool}`).isVisible,page.getByTestId(`tools.${tool}`).isVisible(),locator_query,isVisible,,,loop_and_branch,1,1,if,,test_body,if,100,page.getByTestId(`tools.${tool}`).isVisible(),"if (!(await page.getByTestId(`tools.${tool}`).isVisible())) {
+				await toolbar.moreToolsButton.click()
+				await page.getByTestId(`tools.more.${tool}`).click()
+				await toolbar.moreToolsButton.click()
+			}","test('creates shapes clickable tools', async ({ page, toolbar }) => {
+		expect(await getAllShapeTypes(page)).toEqual([])
+
+		for (const { tool, shape } of clickableShapeCreators) {
+			// Find and click the button
+			if (!(await page.getByTestId(`tools.${tool}`).isVisible())) {
+				await toolbar.moreToolsButton.click()
+				await page.getByTestId(`tools.more.${tool}`).click()
+				await toolbar.moreToolsButton.click()
+			}
+			await page.getByTestId(`tools.${tool}`).click()
+
+			// Button should be selected
+			await expect(page.getByTestId(`tools.${tool}`)).toHaveAttribute('aria-pressed', 'true')
+
+			// Click on the page
+			await page.mouse.click(200, 200)
+
+			// We should have a corresponding shape in the page
+			expect(await getAllShapeTypes(page)).toEqual([shape])
+
+			// Reset for next time using API (faster than keyboard)
+			await page.evaluate(() => {
+				editor.selectAll().deleteShapes(editor.getSelectedShapeIds())
+				editor.setCurrentTool('select')
+			})
+		}
+
+		expect(await getAllShapeTypes(page)).toEqual([])
+	})","async ({ page, toolbar }) => {
+		expect(await getAllShapeTypes(page)).toEqual([])
+
+		for (const { tool, shape } of clickableShapeCreators) {
+			// Find and click the button
+			if (!(await page.getByTestId(`tools.${tool}`).isVisible())) {
+				await toolbar.moreToolsButton.click()
+				await page.getByTestId(`tools.more.${tool}`).click()
+				await toolbar.moreToolsButton.click()
+			}
+			await page.getByTestId(`tools.${tool}`).click()
+
+			// Button should be selected
+			await expect(page.getByTestId(`tools.${tool}`)).toHaveAttribute('aria-pressed', 'true')
+
+			// Click on the page
+			await page.mouse.click(200, 200)
+
+			// We should have a corresponding shape in the page
+			expect(await getAllShapeTypes(page)).toEqual([shape])
+
+			// Reset for next time using API (faster than keyboard)
+			await page.evaluate(() => {
+				editor.selectAll().deleteShapes(editor.getSelectedShapeIds())
+				editor.setCurrentTool('select')
+			})
+		}
+
+		expect(await getAllShapeTypes(page)).toEqual([])
+	}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,BuilderIO/builder,04132a8af487af6f3c716136236c2307,Playwright,packages/sdks-tests/src/e2e-tests/large-reactive-state.spec.ts,59,ui_action,locator_query,page.getByText,page.getByText('Increment Number'),locator_query,click,text_content,,loop,1,0,,,test_body,ForStatement,58,page.getByText('Increment Number'),"for (let i = 0; i < 10; i++) {
+      await page.getByText('Increment Number').click();
+    }","test('performance check for large state updates', async ({ page, sdk, packageName }) => {
+    test.fail(excludeTestFor({ rsc: true }, sdk));
+    test.skip(packageName === 'gen1-remix', 'hydration mismatch');
+    test.skip(excludeSdksWithoutCachedProcessedBlock(sdk), 'Not implemented');
+
+    await page.goto('/large-reactive-state');
+
+    const startTime = Date.now();
+
+    // Perform multiple state updates
+    for (let i = 0; i < 10; i++) {
+      await page.getByText('Increment Number').click();
+    }
+
+    const endTime = Date.now();
+    const duration = endTime - startTime;
+
+    const logMsg = `Large state updates duration: ${duration}ms`;
+    console.log(logMsg);
+    test.info().annotations.push({
+      type: 'performance',
+      description: logMsg,
+    });
+    // Assuming a threshold of 1000ms for 10 updates
+    expect(duration).toBeLessThan(10000);
+
+    // Verify final state
+    await expect(page.getByText('10', { exact: true })).toBeVisible();
+  })","async ({ page, sdk, packageName }) => {
+    test.fail(excludeTestFor({ rsc: true }, sdk));
+    test.skip(packageName === 'gen1-remix', 'hydration mismatch');
+    test.skip(excludeSdksWithoutCachedProcessedBlock(sdk), 'Not implemented');
+
+    await page.goto('/large-reactive-state');
+
+    const startTime = Date.now();
+
+    // Perform multiple state updates
+    for (let i = 0; i < 10; i++) {
+      await page.getByText('Increment Number').click();
+    }
+
+    const endTime = Date.now();
+    const duration = endTime - startTime;
+
+    const logMsg = `Large state updates duration: ${duration}ms`;
+    console.log(logMsg);
+    test.info().annotations.push({
+      type: 'performance',
+      description: logMsg,
+    });
+    // Assuming a threshold of 1000ms for 10 updates
+    expect(duration).toBeLessThan(10000);
+
+    // Verify final state
+    await expect(page.getByText('10', { exact: true })).toBeVisible();
+  }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,appsmithorg/appsmith,8f4682293815e69979a8aca41149f048,Cypress,app/client/cypress/support/e2e.js,78,ui_action,navigation,cy.visit,cy.visit(RapidMode.url()),navigation,visit,,,branch,0,2,if,then,hook_or_fixture,if,77,cy.visit(RapidMode.url()),"if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }","before(function () {
+  if (RapidMode.config.enabled) {
+    cy.startServerAndRoutes();
+    cy.getCookie(""SESSION"").then((cookie) => {
+      if (!cookie) {
+        cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""));
+      }
+    });
+
+    if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }
+  }
+})","function () {
+  if (RapidMode.config.enabled) {
+    cy.startServerAndRoutes();
+    cy.getCookie(""SESSION"").then((cookie) => {
+      if (!cookie) {
+        cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""));
+      }
+    });
+
+    if (!RapidMode.config.usesDSL) {
+      cy.visit(RapidMode.url());
+      cy.wait(""@getWorkspace"");
+    }
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,linode/manager,533e505419df1558506600dc84122eb6,Cypress,packages/manager/cypress/e2e/core/notificationsAndEvents/events-menu.spec.ts,54,ui_action,locator_query,cy.get,"cy.get(`[data-qa-event=""${event.id}""]`)",locator_query,get,,,loop,1,0,,,test_body,callback_iteration,53,"cy.get(`[data-qa-event=""${event.id}""]`)","mockEvents.forEach((event) => {
+          cy.get(`[data-qa-event=""${event.id}""]`)
+            .as('qaEventId')
+            .scrollIntoView();
+          cy.get('@qaEventId').should('be.visible');
+        })","mockEvents.forEach((event) => {
+          cy.get(`[data-qa-event=""${event.id}""]`)
+            .as('qaEventId')
+            .scrollIntoView();
+          cy.get('@qaEventId').should('be.visible');
+        })","() => {
+    const mockEvents = buildArray(randomNumber(1, 20), (index) => {
+      return eventFactory.build({
+        action: 'linode_delete',
+        // The response from the API will be ordered by created date, descending.
+        created: DateTime.local().minus({ minutes: index }).toISO(),
+        duration: null,
+        entity: {
+          id: 1000 + index,
+          label: `my-linode-${index}`,
+          type: 'linode',
+          url: `/v4/linode/instances/${1000 + index}`,
+        },
+        percent_complete: null,
+        rate: null,
+        seen: false,
+        status: 'scheduled',
+        username: randomLabel(),
+      });
+    });
+
+    mockGetEvents(mockEvents).as('getEvents');
+    cy.visitWithLogin('/');
+    cy.wait('@getEvents');
+
+    ui.appBar.find().within(() => {
+      cy.findByLabelText('Notifications')
+        .should('be.visible')
+        .should('be.enabled')
+        .click();
+    });
+
+    cy.get('[data-qa-notification-menu]')
+      .should('be.visible')
+      .within(() => {
+        // Confirm that all mocked events are shown in the notification menu.
+        mockEvents.forEach((event) => {
+          cy.get(`[data-qa-event=""${event.id}""]`)
+            .as('qaEventId')
+            .scrollIntoView();
+          cy.get('@qaEventId').should('be.visible');
+        });
+      });
+  }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,payloadcms/payload,71ec0dcd5b4c86eda9293cb20f29cff0,Playwright,test/__helpers/e2e/helpers.ts,228,ui_action,locator_query,page.locator,page.locator('.form-submit .popup__trigger-wrap > .popup-button'),locator_query,locator,,,branch,0,1,if,then,helper_body,if,226,page.locator('.form-submit .popup__trigger-wrap > .popup-button'),"if (selector === '#publish-locale') {
+    // open dropdown
+    const chevronButton = page.locator('.form-submit .popup__trigger-wrap > .popup-button')
+    await chevronButton.click()
+  }","{
+  await wait(500) // TODO: Fix this
+  if (selector === '#publish-locale') {
+    // open dropdown
+    const chevronButton = page.locator('.form-submit .popup__trigger-wrap > .popup-button')
+    await chevronButton.click()
+  }
+  await page.click(selector, { delay: 100 })
+
+  if (expectation === 'success') {
+    await expect(page.locator('.payload-toast-container')).toContainText('successfully')
+    await expect.poll(() => page.url(), { timeout: POLL_TOPASS_TIMEOUT }).not.toContain('/create')
+  } else {
+    await expect(page.locator('.payload-toast-container .toast-error')).toBeVisible()
+  }
+
+  // Close all toasts to prevent them from interfering with subsequent tests. E.g. the following could happen
+  // 1. saveDocAndAssert
+  // 2. some operation
+  // 3. second saveDocAndAssert
+  // 4. the first toast is still visible => the second saveDocAndAssert will pass even though the save is not finished yet (or even not successful!)
+  if (!options?.disableDismissAllToasts) {
+    await closeAllToasts(page)
+  }
+}","export async function saveDocAndAssert(
+  page: Page,
+  selector:
+    | '#action-publish'
+    | '#action-save'
+    | '#action-save-draft'
+    | '#publish-locale'
+    | string = '#action-save',
+  expectation: 'error' | 'success' = 'success',
+  options?: {
+    /**
+     * If true, the all toasts will not be dismissed after the save operation.
+     */
+    disableDismissAllToasts?: boolean
+  },
+): Promise<void> {
+  await wait(500) // TODO: Fix this
+  if (selector === '#publish-locale') {
+    // open dropdown
+    const chevronButton = page.locator('.form-submit .popup__trigger-wrap > .popup-button')
+    await chevronButton.click()
+  }
+  await page.click(selector, { delay: 100 })
+
+  if (expectation === 'success') {
+    await expect(page.locator('.payload-toast-container')).toContainText('successfully')
+    await expect.poll(() => page.url(), { timeout: POLL_TOPASS_TIMEOUT }).not.toContain('/create')
+  } else {
+    await expect(page.locator('.payload-toast-container .toast-error')).toBeVisible()
+  }
+
+  // Close all toasts to prevent them from interfering with subsequent tests. E.g. the following could happen
+  // 1. saveDocAndAssert
+  // 2. some operation
+  // 3. second saveDocAndAssert
+  // 4. the first toast is still visible => the second saveDocAndAssert will pass even though the save is not finished yet (or even not successful!)
+  if (!options?.disableDismissAllToasts) {
+    await closeAllToasts(page)
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,documenso/documenso,e76f567e7753b5cd0a53163f61ba9c66,Playwright,packages/app-tests/e2e/document-auth/next-recipient-dictation.spec.ts,141,ui_action,click,"page.getByRole('button', { name: 'Save' }).click","page.getByRole('button', { name: 'Save' }).click()",click,click,role_or_accessibility,,loop_and_branch,1,1,if,then,test_body,if,139,"page.getByRole('button', { name: 'Save' }).click()","if (field.type === FieldType.TEXT) {
+      await page.locator('#custom-text').fill('TEXT');
+      await page.getByRole('button', { name: 'Save' }).click();
+    }","test('[NEXT_RECIPIENT_DICTATION]: should not show dictation UI when disabled', async ({ page }) => {
+  const { user, team } = await seedUser();
+  const { user: firstSigner } = await seedUser();
+  const { user: secondSigner } = await seedUser();
+
+  const { recipients, document } = await seedPendingDocumentWithFullFields({
+    owner: user,
+    teamId: team.id,
+    recipients: [firstSigner, secondSigner],
+    recipientsCreateOptions: [{ signingOrder: 1 }, { signingOrder: 2 }],
+    updateDocumentOptions: {
+      documentMeta: {
+        upsert: {
+          create: {
+            allowDictateNextSigner: false,
+            signingOrder: DocumentSigningOrder.SEQUENTIAL,
+          },
+          update: {
+            allowDictateNextSigner: false,
+            signingOrder: DocumentSigningOrder.SEQUENTIAL,
+          },
+        },
+      },
+    },
+  });
+
+  const firstRecipient = recipients[0];
+  const { token, fields } = firstRecipient;
+
+  const signUrl = `/sign/${token}`;
+
+  await page.goto(signUrl);
+  await expect(page.getByRole('heading', { name: 'Sign Document' })).toBeVisible();
+
+  await signSignaturePad(page);
+
+  // Fill in all fields
+  for (const field of fields) {
+    await page.locator(`#field-${field.id}`).getByRole('button').click();
+
+    if (field.type === FieldType.TEXT) {
+      await page.locator('#custom-text').fill('TEXT');
+      await page.getByRole('button', { name: 'Save' }).click();
+    }
+
+    await expect(page.locator(`#field","async ({ page }) => {
+  const { user, team } = await seedUser();
+  const { user: firstSigner } = await seedUser();
+  const { user: secondSigner } = await seedUser();
+
+  const { recipients, document } = await seedPendingDocumentWithFullFields({
+    owner: user,
+    teamId: team.id,
+    recipients: [firstSigner, secondSigner],
+    recipientsCreateOptions: [{ signingOrder: 1 }, { signingOrder: 2 }],
+    updateDocumentOptions: {
+      documentMeta: {
+        upsert: {
+          create: {
+            allowDictateNextSigner: false,
+            signingOrder: DocumentSigningOrder.SEQUENTIAL,
+          },
+          update: {
+            allowDictateNextSigner: false,
+            signingOrder: DocumentSigningOrder.SEQUENTIAL,
+          },
+        },
+      },
+    },
+  });
+
+  const firstRecipient = recipients[0];
+  const { token, fields } = firstRecipient;
+
+  const signUrl = `/sign/${token}`;
+
+  await page.goto(signUrl);
+  await expect(page.getByRole('heading', { name: 'Sign Document' })).toBeVisible();
+
+  await signSignaturePad(page);
+
+  // Fill in all fields
+  for (const field of fields) {
+    await page.locator(`#field-${field.id}`).getByRole('button').click();
+
+    if (field.type === FieldType.TEXT) {
+      await page.locator('#custom-text').fill('TEXT');
+      await page.getByRole('button', { name: 'Save' }).click();
+    }
+
+    await expect(page.locator(`#field-${field.id}`)).toHaveAttribute('data-inserted', 'true');
+  }
+
+  // Complete",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,cloudtogo/pageplug,cb4116cd020061bcf731faab831813b5,Cypress,app/client/cypress/support/commands.js,944,ui_action,locator_query,cy.get,cy.get(welcomePage.submitButton),locator_query,click,css_selector,,branch,0,1,if,,caller_context,if,100,cy.get(welcomePage.submitButton),""");
+        // Closing the database connection
+        db.close();
+      };
+
+      // Handling add error
+      addRequest.onerror = (event) => {
+        console.log(""Error adding key:"", event.target.error);
+        // Closing the database connection
+        db.close();
+      };
+    };
+
+    // Handling database opening error
+    request.onerror = (event) => {
+      console.log(""Error opening database:"", event.target.error);
+    };
+  });
+};
+
+// Cypress.Commands.add(""goToEditFromPublish"", () => {
+//   cy.url().then((url) => {
+//     const urlObject = new URL(url);
+//     if (!urlObject.pathname.includes(""edit"")) {
+//       urlObject.pathname = urlObject.pathname + ""/edit"";
+//       cy.visit(urlObject.toString());
+//     }
+//   });
+// });
+
+Cypress.Commands.add(""stubPostHeaderReq"", () => {
+  cy.intercept(""POST"", ""/api/v1/users/in","Cypress.Commands.add(""createSuperUser"", () => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymou","() => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymousData=true"",
+      );
+      expect(int",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,deltachat/deltachat-desktop,2b895b242344d2044611a1d69f7e4d31,Playwright,packages/e2e-tests/playwright-helper.ts,245,ui_action,click,page.getByTestId('open-transport-settings').click,page.getByTestId('open-transport-settings').click(),click,click,test_id_or_data_contract,,loop_and_branch,1,2,if,,caller_context,if,350,page.getByTestId('open-transport-settings').click(),"
+  const accountList = page.locator('.styles_module_account')
+  await expect(accountList.last()).t","{
+  await page.getByTestId(`account-item-${accountId}`).click({ button: 'right' })
+  await page.getByTestId('open-settings-menu-item').click()
+  const nameLocator = page.getByTestId('profile-display-name')
+  await expect(nameLocator).not.toBeEmpty()
+  const name = await nameLocator.textContent()
+
+  await page.getByTestId('open-advanced-settings').click()
+  await page.getByTestId('open-transport-settings').click()
+  await page.getByLabel('Edit Relay').first().click()
+  const addressLocator = page.locator('#addr')
+  await expect(addressLocator).toHaveValue(/.+@.+/)
+  const address = await addressLocator.inputValue()
+  let password = ''
+  if (includePasswd) {
+    const passwdLocator = page.locator('#password')
+    password = await passwdLocator.inputValue()
+  }
+  await page.getByTestId('cancel').click()
+  await page.getByTestId('transports-settings-close').click()
+  await page.getByTestId('settings-advanced-close').click()
+
+  return {
+    id: accountId,
+    name: name ?? '',
+    address: address ?? '',
+    password: password,
+  }
+}","export async function getProfile(
+  page: Page,
+  accountId: string,
+  includePasswd = false
+): Promise<User> {
+  await page.getByTestId(`account-item-${accountId}`).click({ button: 'right' })
+  await page.getByTestId('open-settings-menu-item').click()
+  const nameLocator = page.getByTestId('profile-display-name')
+  await expect(nameLocator).not.toBeEmpty()
+  const name = await nameLocator.textContent()
+
+  await page.getByTestId('open-advanced-settings').click()
+  await page.getByTestId('open-transport-settings').click()
+  await page.getByLabel('Edit Relay').first().click()
+  const addressLocator = page.locator('#addr')
+  await expect(addressLocator).toHaveValue(/.+@.+/)
+  const address = await addressLocator.inputValue()
+  let password = ''
+  if (includePasswd) {
+    const passwdLocator = page.locator('#password')
+    password = await passwdLocator.inputValue()
+  }
+  await page.getByTestId('cancel').click()
+  await page.getByTestId('transports-settings-close').click()
+  await page.getByTestId('settings-advanced-close').click()
+
+  return {
+    id: accountId,
+    name: name ?? '',
+    address: address ?? '',
+    password: password,
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,linode/manager,61eeaaa94d2857cd4b073495b3d07b31,Cypress,packages/manager/cypress/e2e/core/account/quotas-storage.spec.ts,450,ui_action,click,"ui.actionMenuItem
+          .findByTitle('Request Increase')
+          .should('be.visible')
+          .should('be.enabled')
+          .click","ui.actionMenuItem
+          .findByTitle('Request Increase')
+          .should('be.visible')
+          .should('be.enabled')
+          .click()",click,click,placeholder_or_alt_title,,loop,1,0,,,test_body,callback_iteration,405,"ui.actionMenuItem
+          .findByTitle('Request Increase')
+          .should('be.visible')
+          .should('be.enabled')
+          .click()","mockQuotas.forEach((mockQuota: Quota, index: number) => {
+        cy.visitWithLogin('/account/quotas');
+        cy.wait([
+          '@getFeatureFlags',
+          '@getProfile',
+          '@getObjectStorageEndpoints',
+        ]);
+
+        // Object Storage Endpoint field is blank
+        const mockTicket = supportTicketFactory.build({
+          summary: ticketSummary,
+          description: getQuotaIncreaseMessage({
+            convertedMetrics: {
+              limit: mockQuota.quota_limit,
+
+...
+   .findByTitle('Request Increase')
+          .should('be.visible')
+          .should('be.enabled')
+          .click();
+        ui.dialog
+          .findByTitle(`Contact Support: ${ticketSummary}`)
+          .should('be.visible')
+          .within(() => {
+            cy.get('input[name=""quantity""]').should(
+              'have.value',
+              mockQuota.quota_limit
+            );
+            cy.findByLabelText('New Quota (required)')
+              .should('be.visible')
+              .should('be.enabled')
+              .clear();
+            cy.focused().type(expectedResults[index].newQuotaLimit.toString());
+            cy.findByLabelText('Description (required)')
+              .should('be.visible')
+              .should('be.enabled')
+              .type(expectedResults[index].description);
+            mockCreateSupportTicket(mockTicket).as('createTicket');
+
+            // preview before submission
+            ui.accordionHeading
+              .findByTit","mockQuotas.forEach((mockQuota: Quota, index: number) => {
+        cy.visitWithLogin('/account/quotas');
+        cy.wait([
+          '@getFeatureFlags',
+          '@getProfile',
+          '@getObjectStorageEndpoints',
+        ]);
+
+        // Object Storage Endpoint field is blank
+        const mockTicket = supportTicketFactory.build({
+          summary: ticketSummary,
+          description: getQuotaIncreaseMessage({
+            convertedMetrics: {
+              limit: mockQuota.quota_limit,
+              metric: expectedResults[index].metric,
+            },
+            neededIn: 'Fewer than 7 days',
+            profile: mockProfile,
+            quantity: expectedResults[index].newQuotaLimit,
+            quota: mockQuota,
+            selectedService: {
+              label: 'Object Storage',
+              value: 'object-storage',
+            },
+          }).description,
+        });
+        cy.findByPlaceholderText(placeholderText)
+          .should('be.visible')
+          .should('be.enabled');
+        ui.autocomplete
+          .findByLabel('Object Storage Endpoint')
+          .should('be.visible')
+          .type(selectedDomain);
+        ui.autocompletePopper
+          .findByTitle(selectedDomain, { exact: false })
+          .should('be.visible')
+          .click();
+        cy.wait(['@getQuotas', '@getQuotaUsages']);
+
+        // Quotas increase request workflow
+        ui.actionMenu
+          .findByTitle(`Action menu for quota ${mockQuo","() => {
+      const mockProfile = profileFactory.build({
+        email: 'mock-user@linode.com',
+        restricted: false,
+      });
+      mockGetProfile(mockProfile).as('getProfile');
+      mockApiInternalUser();
+      const ticketSummary = 'Increase Object Storage Quota';
+      const expectedResults = [
+        {
+          newQuotaLimit: mockQuotas[0].quota_limit * 2,
+          description: randomLabel(),
+          metric: 'Bytes',
+        },
+        {
+          newQuotaLimit: mockQuotas[1].quota_limit * 2,
+          description: randomLabel(),
+          metric: 'Buckets',
+        },
+        {
+          newQuotaLimit: mockQuotas[2].quota_limit * 2,
+          description: randomLabel(),
+          metric: 'Objects',
+        },
+      ];
+      mockQuotas.forEach((mockQuota: Quota, index: number) => {
+        cy.visitWithLogin('/account/quotas');
+        cy.wait([
+          '@getFeatureFlags',
+          '@getProfile',
+          '@getObjectStorageEndpoints',
+        ]);
+
+        // Object Storage Endpoint field is blank
+        const mockTicket = supportTicketFactory.build({
+          summary: ticketSummary,
+          description: getQuotaIncreaseMessage({
+            convertedMetrics: {
+              limit: mockQuota.quota_limit,
+              metric: expectedResults[index].metric,
+            },
+            neededIn: 'Fewer than 7 days',
+            profile: mockProfile,
+            quantity: expectedResults[index].newQuotaLimit,
+    ",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,openobserve/openobserve,38359a9ac49e4ed017776321eb7602d5,Playwright,tests/ui-testing/playwright-tests/Dashboards/dashboard-pie-donut.spec.js,295,ui_action,locator_query,page.locator,"page.locator('[data-test^=""dashboard-legend-item-""]')",locator_query,locator,,,branch,0,1,if,then,test_body,if,288,"page.locator('[data-test^=""dashboard-legend-item-""]')","if (isLegendBtnVisible) {
+      await legendBtn.click();
+      const legendPopup = page.locator('[data-test=""dashboard-show-legends-popup""]');
+      await expect(legendPopup).toBeVisible({ timeout: 5000 });
+      testLogger.info(""Legend popup is visible"");
+
+      // Verify at least one legend item exists
+      const legendItem = page.locator('[data-test^=""dashboard-legend-item-""]');
+      expect(await legendItem.count()).toBeGreaterThan(0);
+      testLogger.info(""Legend items found in popup"");
+
+      // Close legend popup
+      await page.locator('[data-test=""dashboard-show-legends-close""]').click();
+    } else {
+      testLogger.info(""Legend button not visible on panel — skipping popup check"");
+    }","test(""TC-PIE-014: pie chart legend visibility — legend popup shows series names"", {
+    tag: [""@pieDonut"", ""@functional"", ""@P1""],
+  }, async ({ page }) => {
+    const pm = new PageManager(page);
+    const dashboardName = generateDashboardName();
+
+    await setupPiePanelWithConfig(page, pm, dashboardName, ""Pie Legend"");
+    await pm.dashboardPanelActions.verifyChartRenders(expect);
+    testLogger.info(""verifyChartRenders passed - pie for legend test"", { coloredPixels: await getPlottedPixelCount(page) });
+
+    // Save panel first to access legend button on dashboard view
+    await pm.dashboardPanelActions.savePanel();
+
+    // Hover over panel bar to reveal legend button
+    const panelBar = page.locator('[data-test=""dashboard-panel-bar""]').first();
+    await panelBar.waitFor({ state: ""visible"", timeout: 10000 });
+    await panelBar.hover();
+
+    // Click Show Legends via page object
+    const legendBtn = pm.dashboardLegendsCopy.getShowLegendsButton();
+    const isLegendBtnVisible = await legendBtn.isVisible().catch(() => false);
+
+    if (isLegendBtnVisible) {
+      await legendBtn.click();
+      const legendPopup = page.locator('[data-test=""dashboard-show-legends-popup""]');
+      await expect(legendPopup).toBeVisible({ timeout: 5000 });
+      testLogger.info(""Legend popup is visible"");
+
+      // Verify at least one legend item exists
+      const legendItem = page.locator('[data-test^=""dashboard-legend-item-""]');
+      expect(await legendItem.count(","async ({ page }) => {
+    const pm = new PageManager(page);
+    const dashboardName = generateDashboardName();
+
+    await setupPiePanelWithConfig(page, pm, dashboardName, ""Pie Legend"");
+    await pm.dashboardPanelActions.verifyChartRenders(expect);
+    testLogger.info(""verifyChartRenders passed - pie for legend test"", { coloredPixels: await getPlottedPixelCount(page) });
+
+    // Save panel first to access legend button on dashboard view
+    await pm.dashboardPanelActions.savePanel();
+
+    // Hover over panel bar to reveal legend button
+    const panelBar = page.locator('[data-test=""dashboard-panel-bar""]').first();
+    await panelBar.waitFor({ state: ""visible"", timeout: 10000 });
+    await panelBar.hover();
+
+    // Click Show Legends via page object
+    const legendBtn = pm.dashboardLegendsCopy.getShowLegendsButton();
+    const isLegendBtnVisible = await legendBtn.isVisible().catch(() => false);
+
+    if (isLegendBtnVisible) {
+      await legendBtn.click();
+      const legendPopup = page.locator('[data-test=""dashboard-show-legends-popup""]');
+      await expect(legendPopup).toBeVisible({ timeout: 5000 });
+      testLogger.info(""Legend popup is visible"");
+
+      // Verify at least one legend item exists
+      const legendItem = page.locator('[data-test^=""dashboard-legend-item-""]');
+      expect(await legendItem.count()).toBeGreaterThan(0);
+      testLogger.info(""Legend items found in popup"");
+
+      // Close legend popup
+      await page.locator('[",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,swaponline/MultiCurrencyWallet,cf6503ba3eaac1698ab95e1938fa681f,Puppeteer,tests/e2e/utils.ts,100,ui_action,click,page.click,page.click('#walletRecoveryButton'),click,click,,,branch,0,1,try_catch,,caller_context,try_catch,11,page.click('#walletRecoveryButton'),"rrencyWallet/MultiCurrencyWallet/build-${
+    process.env.NODE_ENV === 'production' ? 'mainnet' : 'testnet'
+  }/index.html`
+}
+
+console.log('>>>> START TEST', process.env.NODE_ENV)
+// if it's true then you will be able to see puppeteer's browser
+// don't enable this mode in Github test flows. They don't work with that
+const isDebug = false
+
+export const createBrowser = async (): Promise<{
+  browser: Browser
+  page: Page
+}> => {
+  const browser = await puppeteer.launch({
+    headless: !isDebug,
+    // slowMo: 100,
+    args: process.env.CI ? ['--no-sandbox', '--disable-setuid-sandbox'] : [],
+  })
+
+  const page = await browser.newPage()
+  await page.setViewport({
+    w","{
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}","async (params: ImportWalletParams) => {
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,super-productivity/super-productivity,3cc0f2fd309635b2d270432af6567903,Playwright,e2e/tests/sync/supersync-edge-cases.spec.ts,252,ui_action,hover,taskLocator1.hover,taskLocator1.hover(),hover,hover,,,loop_and_branch,1,2,try_catch,try,test_body,try_catch,247,taskLocator1.hover(),"try {
+          const taskLocator1 = clientA.page
+            .locator(`task:not(.ng-animating):has-text(""${task1}"")`)
+            .first();
+          await taskLocator1.waitFor({ state: 'visible', timeout: 10000 });
+          await taskLocator1.hover();
+          const doneBtn1 = taskLocator1.locator('done-toggle');
+          await doneBtn1.waitFor({ state: 'visible', timeout: 5000 });
+          await doneBtn1.click();
+          await expect(taskLocator1).toHaveClass(/isDone/, { timeout: 5000 });
+          doneSuccess = true;
+          console.log('[BurstTest] Task 1 marked as done');
+        } catch (e) {
+          console.log(`[BurstTest] Done attempt ${attempt + 1} failed, retrying...`);
+          await clientA.page.waitForTimeout(300);
+        }","test('Offline burst of changes syncs correctly', async ({
+    browser,
+    baseURL,
+    testRunId,
+    serverHealthy,
+  }) => {
+    void serverHealthy; // Ensure fixture is evaluated for server health check
+    const appUrl = baseURL || 'http://localhost:4242';
+    let clientA: SimulatedE2EClient | null = null;
+    let clientB: SimulatedE2EClient | null = null;
+
+    try {
+      const user = await createTestUser(testRunId);
+      const syncConfig = getSuperSyncConfig(user);
+
+      // Setup Clients
+      clientA = await createSimulatedClient(browser, appUrl, 'A', testRunId);
+      await clientA.sync.setupSuperSync(syncConfig);
+
+      clientB = await createSimulatedClient(browser, appUrl, 'B', testRunId);
+      await clientB.sync.setupSuperSync(syncConfig);
+
+      // 1. Client A goes ""offline"" (we just accumulate changes)
+      const task1 = `Burst1-${testRunId}`;
+      const task2 = `Burst2-${testRunId}`;
+      const task3 = `Burst3-${testRunId}`;
+
+      // 3. Create Tasks - wait for each to be visible before creating next
+      await clientA.workView.addTask(task1);
+      await waitForTask(clientA.page, task1);
+      console.log('[BurstTest] Task 1 created');
+      await clientA.workView.addTask(task2);
+      await waitForTask(clientA.page, task2);
+      console.log('[BurstTest] Task 2 created');
+      await clientA.workView.addTask(task3);
+      await waitForTask(clientA.page, task3);
+      console.log('[BurstTest] Task 3 created');
+
+      // 4. Mark Task 1 Done with retry lo","async ({
+    browser,
+    baseURL,
+    testRunId,
+    serverHealthy,
+  }) => {
+    void serverHealthy; // Ensure fixture is evaluated for server health check
+    const appUrl = baseURL || 'http://localhost:4242';
+    let clientA: SimulatedE2EClient | null = null;
+    let clientB: SimulatedE2EClient | null = null;
+
+    try {
+      const user = await createTestUser(testRunId);
+      const syncConfig = getSuperSyncConfig(user);
+
+      // Setup Clients
+      clientA = await createSimulatedClient(browser, appUrl, 'A', testRunId);
+      await clientA.sync.setupSuperSync(syncConfig);
+
+      clientB = await createSimulatedClient(browser, appUrl, 'B', testRunId);
+      await clientB.sync.setupSuperSync(syncConfig);
+
+      // 1. Client A goes ""offline"" (we just accumulate changes)
+      const task1 = `Burst1-${testRunId}`;
+      const task2 = `Burst2-${testRunId}`;
+      const task3 = `Burst3-${testRunId}`;
+
+      // 3. Create Tasks - wait for each to be visible before creating next
+      await clientA.workView.addTask(task1);
+      await waitForTask(clientA.page, task1);
+      console.log('[BurstTest] Task 1 created');
+      await clientA.workView.addTask(task2);
+      await waitForTask(clientA.page, task2);
+      console.log('[BurstTest] Task 2 created');
+      await clientA.workView.addTask(task3);
+      await waitForTask(clientA.page, task3);
+      console.log('[BurstTest] Task 3 created');
+
+      // 4. Mark Task 1 Done with retry logic
+      let doneSuccess = false;
+      for (let",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,midas-research/audino,2c7f8f7c04b3d135e03fad9e929b1642,Cypress,cvat/tests/cypress/support/commands.js,612,ui_action,locator_query,cy.get,cy.get('.cvat-canvas-container'),locator_query,click,css_selector,,loop,1,0,,,helper_body,callback_iteration,611,cy.get('.cvat-canvas-container'),"createPolygonParams.pointsMap.forEach((element) => {
+        cy.get('.cvat-canvas-container').click(element.x, element.y);
+    })","createPolygonParams.pointsMap.forEach((element) => {
+        cy.get('.cvat-canvas-container').click(element.x, element.y);
+    })","(createPolygonParams) => {
+    if (!createPolygonParams.reDraw) {
+        cy.interactControlButton('draw-polygon');
+        cy.switchLabel(createPolygonParams.labelName, 'draw-polygon');
+        cy.get('.cvat-draw-polygon-popover').within(() => {
+            cy.get('.ant-select-selection-item').then(($labelValue) => {
+                selectedValueGlobal = $labelValue.text();
+            });
+            if (createPolygonParams.numberOfPoints) {
+                cy.get('.ant-input-number-input').clear();
+                cy.get('.ant-input-number-input').type(createPolygonParams.numberOfPoints);
+            }
+            cy.contains('button', createPolygonParams.type).click();
+        });
+    }
+    createPolygonParams.pointsMap.forEach((element) => {
+        cy.get('.cvat-canvas-container').click(element.x, element.y);
+    });
+    if (createPolygonParams.finishWithButton) {
+        cy.contains('span', 'Done').click();
+    } else if (!createPolygonParams.numberOfPoints) {
+        const keyCodeN = 78;
+        cy.get('.cvat-canvas-container')
+            .trigger('keydown', { keyCode: keyCodeN, code: 'KeyN' });
+        cy.get('.cvat-canvas-container')
+            .trigger('keyup', { keyCode: keyCodeN, code: 'KeyN' });
+    }
+    cy.checkPopoverHidden('draw-polygon');
+    cy.checkObjectParameters(createPolygonParams, 'POLYGON');
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,surveyjs/survey-library,9ae642d4c3813bc45c618b1010e11be4,Playwright,e2e/helper.ts,152,ui_action,locator_query,page.evaluate,"page.evaluate(() => {
+      const self: any = window;
+      // eslint-disable-next-line surveyjs/eslint-plugin-i18n/allowed-in-shadow-dom
+      const rootElement = document.getElementById(""surveyElement"")!.shadowRoot!.querySelector(""div"");
+      self.SurveyUI.renderSurvey(self.survey, rootElement);
+      delete self.__surveyStylesLoaded;
+    })",locator_query,evaluate,,,branch,0,1,if,then,helper_body,if,119,"page.evaluate(() => {
+      const self: any = window;
+      // eslint-disable-next-line surveyjs/eslint-plugin-i18n/allowed-in-shadow-dom
+      const rootElement = document.getElementById(""surveyElement"")!.shadowRoot!.querySelector(""div"");
+      self.SurveyUI.renderSurvey(self.survey, rootElement);
+      delete self.__surveyStylesLoaded;
+    })","if (framework === ""survey-js-ui"") {
+    await page.evaluate(() => {
+      const self: any = window;
+      // eslint-disable-next-line surveyjs/eslint-plugin-i18n/allowed-in-shadow-dom
+      const surveyElement: HTMLElement = document.getElementById(""surveyElement"") as HTMLElement;
+      surveyElement.innerHTML = """";
+
+      const shadowRoot = surveyElement.attachShadow({ mode: ""open"" });
+      const rootElement = document.createElement(""div"");
+      rootElement.classList.add(""root-element"");
+      const styles = document.createElement(""style"");
+      styles.textContent = `
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+        }
+      `;
+      shadowRoot.appendChild(styles);
+
+      self.__surveyStylesLoaded = false;
+      // eslint-disable-next-line surveyjs/eslint-plugin-i18n/allowed-in-shadow-dom
+      const surveyLink = document.createElement(""link"");
+      surveyLink.rel = ""stylesheet"";
+      surveyLink.href = ""../../node_modules/survey-core/survey-core.min.css"";
+      surveyLink.onload = () => { self.__surveyStylesLoaded = true; };
+      surveyLink.onerror = () => { self.__surveyStylesLoaded = true; };
+      shadowRoot.appendChild(surveyLink);
+      shadowRoot.appendChild(rootElement);
+    });
+
+    await page.waitForFunction(() => (window as any).__surveyStylesLoaded === true, { timeout: 5000 });
+
+    await page.evaluate(() => {
+      const self: any = window;
+      // eslint-disable-next-line surveyjs","{
+  if (!!props) {
+    Object.keys(props).forEach(name => {
+      if (typeof props[name] == ""function"") {
+        throw new Error(`Function '${name}' is passed over serialization boundary.`);
+      }
+    });
+  }
+  await page.emulateMedia({ reducedMotion: ""reduce"" });
+  await page.evaluate(([json, isDesignMode, props]) => {
+    // eslint-disable-next-line no-console
+    console.error = (msg) => {
+      throw new Error(msg);
+    };
+    // eslint-disable-next-line no-console
+    console.warn = (msg) => {
+      throw new Error(msg);
+    };
+    // eslint-disable-next-line no-console
+    console.log(""surveyjs console.error and console.warn override"");
+
+    (window as any).Survey.settings.animationEnabled = false;
+    const model = new (window as any).Survey.Model(json);
+    model.allowResizeComment = false;
+    model.setDesignMode(isDesignMode);
+    const surveyComplete = function (model) {
+      (window as any).SurveyResult = model.data;
+      // eslint-disable-next-line surveyjs/eslint-plugin-i18n/allowed-in-shadow-dom
+      document.getElementById(""surveyResultElement"")!.innerHTML = JSON.stringify(
+        model.data
+      );
+    };
+    if (!!props) {
+      for (var key in props) {
+        model[key] = props[key];
+      }
+    }
+    model.onComplete.add(surveyComplete);
+    (window as any).survey = model;
+  }, [json, isDesignMode, props]);
+  afterInitializeModelCallback && await afterInitializeModelCallback();
+
+  // For survey-js-ui (Shad","async (page: Page, framework: string, json: any, isDesignMode?: boolean, props?: any, afterInitializeModelCallback?: () => Promise<void>) => {
+  if (!!props) {
+    Object.keys(props).forEach(name => {
+      if (typeof props[name] == ""function"") {
+        throw new Error(`Function '${name}' is passed over serialization boundary.`);
+      }
+    });
+  }
+  await page.emulateMedia({ reducedMotion: ""reduce"" });
+  await page.evaluate(([json, isDesignMode, props]) => {
+    // eslint-disable-next-line no-console
+    console.error = (msg) => {
+      throw new Error(msg);
+    };
+    // eslint-disable-next-line no-console
+    console.warn = (msg) => {
+      throw new Error(msg);
+    };
+    // eslint-disable-next-line no-console
+    console.log(""surveyjs console.error and console.warn override"");
+
+    (window as any).Survey.settings.animationEnabled = false;
+    const model = new (window as any).Survey.Model(json);
+    model.allowResizeComment = false;
+    model.setDesignMode(isDesignMode);
+    const surveyComplete = function (model) {
+      (window as any).SurveyResult = model.data;
+      // eslint-disable-next-line surveyjs/eslint-plugin-i18n/allowed-in-shadow-dom
+      document.getElementById(""surveyResultElement"")!.innerHTML = JSON.stringify(
+        model.data
+      );
+    };
+    if (!!props) {
+      for (var key in props) {
+        model[key] = props[key];
+      }
+    }
+    model.onComplete.add(surveyComplete);
+    (window as any).survey = model",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,WebThingsIO/gateway,09405a4beec3d3668de2a2c3fb2c684d,WebDriverIO,src/test/browser/load-test.ts,49,ui_action,unknown_action,browser.execute,"browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      })",unknown_action,execute,,,branch,0,1,try_catch,try,test_body,try_catch,46,"browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      })","try {
+      const connectivityScrim = await browser.$('#connectivity-scrim');
+      await connectivityScrim.waitForDisplayed();
+      browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      });
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } catch (_e) {
+      // If it didn't appear, just move on.
+    }","it('creates a user', async () => {
+    const browser = getBrowser();
+
+    await browser.url('/');
+
+    const name = await browser.$('#name');
+    const email = await browser.$('#email');
+    const password = await browser.$('#password');
+    const confirmPassword = await browser.$('#confirm-password');
+
+    await name.waitForExist({ timeout: 5000 });
+    await name.setValue('Test User');
+    await email.setValue('test@example.com');
+    await password.setValue('rosebud');
+    await confirmPassword.setValue('rosebud');
+
+    const createUserButton = await browser.$('#create-user-button');
+    await createUserButton.waitForClickable({ timeout: DEFAULT_CLICKABLE_TIMEOUT });
+    await createUserButton.click();
+
+    const menuButton = await browser.$('#menu-button');
+    await menuButton.waitForClickable({ timeout: DEFAULT_CLICKABLE_TIMEOUT });
+
+    await waitForExpect(async () => {
+      const newUrl = await browser.getUrl();
+      expect(newUrl.endsWith('/things')).toBeTruthy();
+    });
+
+    // Wait for the connectivity scrim to appear, then hide it (and wait for the
+    // transition to finish).
+    try {
+      const connectivityScrim = await browser.$('#connectivity-scrim');
+      await connectivityScrim.waitForDisplayed();
+      browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      });
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } catch (_e) {
+      // If it di","async () => {
+    const browser = getBrowser();
+
+    await browser.url('/');
+
+    const name = await browser.$('#name');
+    const email = await browser.$('#email');
+    const password = await browser.$('#password');
+    const confirmPassword = await browser.$('#confirm-password');
+
+    await name.waitForExist({ timeout: 5000 });
+    await name.setValue('Test User');
+    await email.setValue('test@example.com');
+    await password.setValue('rosebud');
+    await confirmPassword.setValue('rosebud');
+
+    const createUserButton = await browser.$('#create-user-button');
+    await createUserButton.waitForClickable({ timeout: DEFAULT_CLICKABLE_TIMEOUT });
+    await createUserButton.click();
+
+    const menuButton = await browser.$('#menu-button');
+    await menuButton.waitForClickable({ timeout: DEFAULT_CLICKABLE_TIMEOUT });
+
+    await waitForExpect(async () => {
+      const newUrl = await browser.getUrl();
+      expect(newUrl.endsWith('/things')).toBeTruthy();
+    });
+
+    // Wait for the connectivity scrim to appear, then hide it (and wait for the
+    // transition to finish).
+    try {
+      const connectivityScrim = await browser.$('#connectivity-scrim');
+      await connectivityScrim.waitForDisplayed();
+      browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      });
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } catch (_e) {
+      // If it didn't appear, just mov",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,SonicJs-Org/sonicjs,cb1d2058c93f9d6bb49dfcc432b5cb90,Playwright,tests/e2e/21-plugin-version-display.spec.ts,87,ui_action,locator_query,page.locator('text=/v?\\d+\\.\\d+\\.\\d+(-[a-z0-9.]+)?/i').first().textContent,page.locator('text=/v?\\d+\\.\\d+\\.\\d+(-[a-z0-9.]+)?/i').first().textContent(),locator_query,textContent,,,loop_and_branch,1,1,if,then,test_body,if,79,page.locator('text=/v?\\d+\\.\\d+\\.\\d+(-[a-z0-9.]+)?/i').first().textContent(),"if (hasSettings > 0) {
+        console.log(`Checking settings page for plugin: ${pluginName}`);
+        await settingsBtn.click();
+
+        // Should navigate to plugin settings page
+        await expect(page.url()).toContain('/admin/plugins/');
+
+        // Check if version is displayed on settings page
+        const versionOnSettings = await page.locator('text=/v?\\d+\\.\\d+\\.\\d+(-[a-z0-9.]+)?/i').first().textContent();
+        console.log(`  Version on settings page: ${versionOnSettings}`);
+
+        // Version should contain the expected version
+        expect(versionOnSettings).toContain(EXPECTED_VERSION);
+
+        // Go back to plugins list
+        await page.goto(`${BASE_URL}/admin/plugins`);
+        break;
+      }","test('should display version in plugin details/settings page', async ({ page }) => {
+    await page.goto(`${BASE_URL}/admin/plugins`);
+
+    // Find a plugin with settings button
+    const pluginCards = page.locator('.plugin-card');
+    const count = await pluginCards.count();
+
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      const card = pluginCards.nth(i);
+      const pluginName = await card.locator('h3, h2').first().textContent();
+      const settingsBtn = card.locator('button[title=""Settings""], button:has-text(""Settings"")');
+
+      const hasSettings = await settingsBtn.count();
+      if (hasSettings > 0) {
+        console.log(`Checking settings page for plugin: ${pluginName}`);
+        await settingsBtn.click();
+
+        // Should navigate to plugin settings page
+        await expect(page.url()).toContain('/admin/plugins/');
+
+        // Check if version is displayed on settings page
+        const versionOnSettings = await page.locator('text=/v?\\d+\\.\\d+\\.\\d+(-[a-z0-9.]+)?/i').first().textContent();
+        console.log(`  Version on settings page: ${versionOnSettings}`);
+
+        // Version should contain the expected version
+        expect(versionOnSettings).toContain(EXPECTED_VERSION);
+
+        // Go back to plugins list
+        await page.goto(`${BASE_URL}/admin/plugins`);
+        break;
+      }
+    }
+  })","async ({ page }) => {
+    await page.goto(`${BASE_URL}/admin/plugins`);
+
+    // Find a plugin with settings button
+    const pluginCards = page.locator('.plugin-card');
+    const count = await pluginCards.count();
+
+    for (let i = 0; i < Math.min(count, 3); i++) {
+      const card = pluginCards.nth(i);
+      const pluginName = await card.locator('h3, h2').first().textContent();
+      const settingsBtn = card.locator('button[title=""Settings""], button:has-text(""Settings"")');
+
+      const hasSettings = await settingsBtn.count();
+      if (hasSettings > 0) {
+        console.log(`Checking settings page for plugin: ${pluginName}`);
+        await settingsBtn.click();
+
+        // Should navigate to plugin settings page
+        await expect(page.url()).toContain('/admin/plugins/');
+
+        // Check if version is displayed on settings page
+        const versionOnSettings = await page.locator('text=/v?\\d+\\.\\d+\\.\\d+(-[a-z0-9.]+)?/i').first().textContent();
+        console.log(`  Version on settings page: ${versionOnSettings}`);
+
+        // Version should contain the expected version
+        expect(versionOnSettings).toContain(EXPECTED_VERSION);
+
+        // Go back to plugins list
+        await page.goto(`${BASE_URL}/admin/plugins`);
+        break;
+      }
+    }
+  }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,BuilderIO/builder,aa541d688344ea81f9b88ff4994285f6,Playwright,packages/sdks-tests/src/e2e-tests/accordion.spec.ts,165,ui_action,locator_query,page.locator,page.locator(`text=Inside Item ${j}`),locator_query,locator,,,loop_and_branch,2,1,if,then,test_body,if,164,page.locator(`text=Inside Item ${j}`),"if (j !== i) {
+          await expect(page.locator(`text=Inside Item ${j}`)).not.toBeVisible();
+        }","test('grid - Only one item is displayed regardless of oneAtATime', async ({ page, sdk }) => {
+    test.fail(
+      excludeTestFor(
+        {
+          rsc: true,
+        },
+        sdk
+      )
+    );
+    await page.goto('/accordion-grid');
+
+    for (let i = 1; i <= 3; i++) {
+      await page.locator(`text=Item ${i}`).click({ timeout: 10000 });
+      await expect(page.locator(`text=Inside Item ${i}`)).toBeVisible();
+      for (let j = 1; j <= 3; j++) {
+        if (j !== i) {
+          await expect(page.locator(`text=Inside Item ${j}`)).not.toBeVisible();
+        }
+      }
+    }
+  })","async ({ page, sdk }) => {
+    test.fail(
+      excludeTestFor(
+        {
+          rsc: true,
+        },
+        sdk
+      )
+    );
+    await page.goto('/accordion-grid');
+
+    for (let i = 1; i <= 3; i++) {
+      await page.locator(`text=Item ${i}`).click({ timeout: 10000 });
+      await expect(page.locator(`text=Inside Item ${i}`)).toBeVisible();
+      for (let j = 1; j <= 3; j++) {
+        if (j !== i) {
+          await expect(page.locator(`text=Inside Item ${j}`)).not.toBeVisible();
+        }
+      }
+    }
+  }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,swaponline/MultiCurrencyWallet,26c972fdaf2648a3a9ad47322ce71358,Puppeteer,tests/e2e/appsSmoke.test.js,330,ui_action,click,dropdownItem.asElement().click,dropdownItem.asElement().click(),click,click,,,branch,0,2,if,then,test_body,if,329,dropdownItem.asElement().click(),"if (dropdownItem.asElement()) {
+        await dropdownItem.asElement().click()
+        await timeOut(2_000)
+
+        const currentUrl = page.url()
+        console.log(`Dropdown click navigated to: ${currentUrl}`)
+        expect(currentUrl).toContain(`/apps/${targetApp.id}`)
+
+        await takeScreenshot(page, `Apps_NavDropdown_Click_${targetApp.id}`)
+      } else {
+        console.warn(`Dropdown item for ""${targetApp.title}"" not found in DOM`)
+      }","it('clicking dropdown item navigates directly to that app', async () => {
+    const page = await newPage()
+    try {
+      await goToAppsPage(page)
+
+      const targetApp = APPS[APPS.length - 1]
+
+      const appsNavLink = await page.evaluateHandle(() => {
+        const links = Array.from(document.querySelectorAll('a, button'))
+        return links.find(
+          (el) =>
+            el.textContent?.trim().match(/^Apps$/i) &&
+            el.closest('nav, header, [class*=""nav""], [class*=""header""]')
+        )
+      })
+
+      if (!appsNavLink.asElement()) {
+        console.warn('Apps nav link not found — skipping dropdown click test')
+        return
+      }
+
+      await appsNavLink.asElement().hover()
+      await timeOut(500)
+
+      const dropdownItem = await page.evaluateHandle((title) => {
+        const links = Array.from(document.querySelectorAll('a'))
+        return links.find((el) => el.textContent?.trim() === title)
+      }, targetApp.title)
+
+      if (dropdownItem.asElement()) {
+        await dropdownItem.asElement().click()
+        await timeOut(2_000)
+
+        const currentUrl = page.url()
+        console.log(`Dropdown click navigated to: ${currentUrl}`)
+        expect(currentUrl).toContain(`/apps/${targetApp.id}`)
+
+        await takeScreenshot(page, `Apps_NavDropdown_Click_${targetApp.id}`)
+      } else {
+        console.warn(`Dropdown item for ""${targetApp.title}"" not found in DOM`)
+      }
+    } catch (error) {
+      await tak","async () => {
+    const page = await newPage()
+    try {
+      await goToAppsPage(page)
+
+      const targetApp = APPS[APPS.length - 1]
+
+      const appsNavLink = await page.evaluateHandle(() => {
+        const links = Array.from(document.querySelectorAll('a, button'))
+        return links.find(
+          (el) =>
+            el.textContent?.trim().match(/^Apps$/i) &&
+            el.closest('nav, header, [class*=""nav""], [class*=""header""]')
+        )
+      })
+
+      if (!appsNavLink.asElement()) {
+        console.warn('Apps nav link not found — skipping dropdown click test')
+        return
+      }
+
+      await appsNavLink.asElement().hover()
+      await timeOut(500)
+
+      const dropdownItem = await page.evaluateHandle((title) => {
+        const links = Array.from(document.querySelectorAll('a'))
+        return links.find((el) => el.textContent?.trim() === title)
+      }, targetApp.title)
+
+      if (dropdownItem.asElement()) {
+        await dropdownItem.asElement().click()
+        await timeOut(2_000)
+
+        const currentUrl = page.url()
+        console.log(`Dropdown click navigated to: ${currentUrl}`)
+        expect(currentUrl).toContain(`/apps/${targetApp.id}`)
+
+        await takeScreenshot(page, `Apps_NavDropdown_Click_${targetApp.id}`)
+      } else {
+        console.warn(`Dropdown item for ""${targetApp.title}"" not found in DOM`)
+      }
+    } catch (error) {
+      await takeScreenshot(page, 'Apps_NavDropdown_Click_Error')
+      thr",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,midas-research/audino,7d11f9161294650dbfc401da04deab27,Cypress,cvat/tests/cypress/support/commands.js,730,ui_action,locator_query,cy.get,cy.get('.cvat-attribute-values-input'),locator_query,type,css_selector,,loop_and_branch,1,3,if,then,helper_body_with_caller_context,if,1006,cy.get('.cvat-attribute-values-input'),"as.scrollIntoView();
+        const rect = canvas.getBoundingClientRect();
+        const { width, height } = rect;
+ ","cy.get(`[cvat-attribute-id=""${minId}""]`).within(() => {
+                cy.get('.cvat-attribute-values-input').type(`${attributes.values}{Enter}`);
+
+                if (attributes.defaultValue) {
+                    cy.get('.cvat-attribute-values-input').within(() => {
+                        cy.get('.ant-tag').contains(attributes.defaultValue).click({ force: true });
+                        cy.get('.ant-tag').should('have.class', 'ant-tag-blue');
+                    });
+                }
+            })","(attributes) => {
+    const cvatAttributeInputsWrapperId = [];
+    cy.get('.cvat-new-attribute-button').click();
+    cy.document().then((doc) => {
+        const cvatAttributeInputsWrapperList = Array.from(doc.querySelectorAll('.cvat-attribute-inputs-wrapper'));
+        for (let i = 0; i < cvatAttributeInputsWrapperList.length; i++) {
+            cvatAttributeInputsWrapperId.push(cvatAttributeInputsWrapperList[i].getAttribute('cvat-attribute-id'));
+        }
+
+        const minId = Math.min(...cvatAttributeInputsWrapperId);
+
+        cy.get(`[cvat-attribute-id=""${minId}""]`).within(() => {
+            cy.get('.cvat-attribute-name-input').type(attributes.name);
+            cy.get('.cvat-attribute-type-input').click();
+        });
+        cy.get('.ant-select-dropdown:has(.cvat-attribute-type-input-select)')
+            .not('.ant-select-dropdown-hidden')
+            .should('exist').and('be.visible')
+            .first()
+            .within(() => {
+                cy.get(`.cvat-attribute-type-input-${attributes.type.toLowerCase()}`).click();
+            });
+
+        if (['Number', 'Text'].includes(attributes.type)) {
+            cy.get(`[cvat-attribute-id=""${minId}""]`).within(() => {
+                if (attributes.values !== '') {
+                    cy.get('.cvat-attribute-values-input').type(attributes.values);
+                } else {
+                    cy.get('.cvat-attribute-values-input').clear();
+                }
+            });
+        } els",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,midas-research/audino,aa89f248f22248cd49ad4e376abf2e3c,Cypress,cvat/tests/cypress/support/commands.js,1034,ui_action,unknown_action,canvas.dispatchEvent,"canvas.dispatchEvent(new MouseEvent('mousedown', {
+                clientX: rect.x + width * xOffset,
+                clientY: rect.y + height * yOffset,
+                button: 0,
+                bubbles: true,
+            }))",unknown_action,dispatchEvent,,,loop,1,0,,,helper_body,callback_iteration,1033,"canvas.dispatchEvent(new MouseEvent('mousedown', {
+                clientX: rect.x + width * xOffset,
+                clientY: rect.y + height * yOffset,
+                button: 0,
+                bubbles: true,
+            }))","$circles.each(function (j) {
+                        const circle2 = this;
+                        if (i === j) return;
+                        circle1.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+                        circle1.dispatchEvent(new MouseEvent('click', { button: 0, bubbles: true }));
+                        circle1.dispatchEvent(new MouseEvent('mouseout', { bubbles: true }));
+
+                        circle2.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+                        circle2.dispatchEvent(new MouseEvent('click', { button: 0, bubbles: true }));
+                        circle2.dispatchEvent(new MouseEvent('mouseout', { bubbles: true }));
+                    })","points.forEach(({ x: xOffset, y: yOffset }) => {
+            canvas.dispatchEvent(new MouseEvent('mousedown', {
+                clientX: rect.x + width * xOffset,
+                clientY: rect.y + height * yOffset,
+                button: 0,
+                bubbles: true,
+            }));
+        })","({ name, points }) => {
+    cy.get('.cvat-constructor-viewer-new-skeleton-item').click();
+    cy.get('.cvat-skeleton-configurator').should('exist').and('be.visible');
+
+    cy.get('.cvat-label-constructor-creator').within(() => {
+        cy.get('#name').type(name);
+        cy.get('.ant-radio-button-checked').within(() => {
+            cy.get('.ant-radio-button-input').should('have.attr', 'value', 'point');
+        });
+    });
+
+    cy.get('.cvat-skeleton-configurator-svg').then(($canvas) => {
+        const canvas = $canvas[0];
+        canvas.scrollIntoView();
+        const rect = canvas.getBoundingClientRect();
+        const { width, height } = rect;
+        points.forEach(({ x: xOffset, y: yOffset }) => {
+            canvas.dispatchEvent(new MouseEvent('mousedown', {
+                clientX: rect.x + width * xOffset,
+                clientY: rect.y + height * yOffset,
+                button: 0,
+                bubbles: true,
+            }));
+        });
+
+        cy.get('.ant-radio-button-wrapper:nth-child(3)').click();
+        cy.get('.ant-radio-button-wrapper:nth-child(3)').within(() => {
+            cy.get('.ant-radio-button-input').should('have.attr', 'value', 'join');
+        });
+
+        cy.get('.cvat-skeleton-configurator-svg').within(() => {
+            cy.get('circle').then(($circles) => {
+                expect($circles.length).to.be.equal(5);
+                $circles.each(function (i) {
+                    const circle1 = this;
+    ",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,facebook/lexical,50b1e803d67053db4325e09ab40b1cd5,Playwright,packages/lexical-playground/__tests__/keyboardShortcuts/index.mjs,227,ui_action,keyboard_input,page.keyboard.press,page.keyboard.press('ArrowUp'),keyboard_input,press,,keyboard_entry,loop,1,0,,,helper_body,ForStatement,223,page.keyboard.press('ArrowUp'),"for (let i = 0; i < numCharacters; i++) {
+    if (delayMs !== undefined) {
+      await sleep(delayMs);
+    }
+    await page.keyboard.press('ArrowUp');
+  }","{
+  for (let i = 0; i < numCharacters; i++) {
+    if (delayMs !== undefined) {
+      await sleep(delayMs);
+    }
+    await page.keyboard.press('ArrowUp');
+  }
+}","export async function moveUp(page, numCharacters = 1, delayMs) {
+  for (let i = 0; i < numCharacters; i++) {
+    if (delayMs !== undefined) {
+      await sleep(delayMs);
+    }
+    await page.keyboard.press('ArrowUp');
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,SonicJs-Org/sonicjs,2f155f9df6ea911f604e3f2620c9ba1d,Playwright,tests/e2e/19-dashboard-recent-activity.spec.ts,140,ui_action,locator_query,page.locator,"page.locator('#recent-activity-container ul[role=""list""]')",locator_query,locator,,,branch,0,1,if,then,test_body,if,129,"page.locator('#recent-activity-container ul[role=""list""]')","if (uploadResponse.ok()) {
+      const uploadResult = await uploadResponse.json();
+      console.log(`Upload result:`, uploadResult);
+
+      // Reload dashboard
+      await page.goto('/admin');
+      await page.waitForLoadState('networkidle');
+      await page.waitForSelector('#recent-activity-container', { timeout: 10000 });
+      await page.waitForTimeout(2000);
+
+      // Look for media upload activity
+      const activityList = page.locator('#recent-activity-container ul[role=""list""]');
+      await expect(activityList).toBeVisible();
+
+      // Check for ""Uploaded"" text in recent activity
+      const uploadActivity = activityList.locator('li', {
+        has: page.locator('text=/Uploaded|uploaded/')
+      });
+
+      const hasUploadActivity = await uploadActivity.count() > 0;
+
+      if (hasUploadActivity) {
+        console.log(`✓ Media upload appears in recent activity`);
+      } else {
+        console.log(`Upload activity not found, but activity section is visible`);
+      }
+
+      // Clean up uploaded file
+      if (uploadResult.uploaded && uploadResult.uploaded.length > 0) {
+        const fileId = uploadResult.uploaded[0].id;
+        await context.request.post('http://localhost:8787/api/media/bulk-delete', {
+          data: { fileIds: [fileId] }
+        });
+      }
+    }","test('should show new media upload in recent activity', async ({ page, context }) => {
+    // Navigate to dashboard
+    await page.goto('/admin');
+    await page.waitForLoadState('networkidle');
+
+    // Wait for recent activity section
+    await page.waitForSelector('#recent-activity-container', { timeout: 10000 });
+    await page.waitForTimeout(2000);
+
+    // Upload a test file via API
+    const testImageBuffer = Buffer.from([
+      0xFF, 0xD8, 0xFF, 0xE0, 0x00, 0x10, 0x4A, 0x46, 0x49, 0x46, 0x00, 0x01,
+      0x01, 0x01, 0x00, 0x48, 0x00, 0x48, 0x00, 0x00, 0xFF, 0xDB, 0x00, 0x43,
+      0x00, 0x08, 0x06, 0x06, 0x07, 0x06, 0x05, 0x08, 0x07, 0x07, 0x07, 0x09,
+      0x09, 0x08, 0x0A, 0x0C, 0x14, 0x0D, 0x0C, 0x0B, 0x0B, 0x0C, 0x19, 0x12,
+      0x13, 0x0F, 0x14, 0x1D, 0x1A, 0x1F, 0x1E, 0x1D, 0x1A, 0x1C, 0x1C, 0x20,
+      0x24, 0x2E, 0x27, 0x20, 0x22, 0x2C, 0x23, 0x1C, 0x1C, 0x28, 0x37, 0x29,
+      0x2C, 0x30, 0x31, 0x34, 0x34, 0x34, 0x1F, 0x27, 0x39, 0x3D, 0x38, 0x32,
+      0x3C, 0x2E, 0x33, 0x34, 0x32, 0xFF, 0xC0, 0x00, 0x11, 0x08, 0x00, 0x01,
+      0x00, 0x01, 0x01, 0x01, 0x11, 0x00, 0x02, 0x11, 0x01, 0x03, 0x11, 0x01,
+      0xFF, 0xC4, 0x00, 0x14, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0xFF, 0xC4,
+      0x00, 0x14, 0x10, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xDA, 0x00, 0x0C,
+      0x03, 0x01, 0x00, 0x02, ","async ({ page, context }) => {
+    // Navigate to dashboard
+    await page.goto('/admin');
+    await page.waitForLoadState('networkidle');
+
+    // Wait for recent activity section
+    await page.waitForSelector('#recent-activity-container', { timeout: 10000 });
+    await page.waitForTimeout(2000);
+
+    // Upload a test file via API
+    const testImageBuffer = Buffer.from([
+      0xFF, 0xD8, 0xFF, 0xE0, 0x00, 0x10, 0x4A, 0x46, 0x49, 0x46, 0x00, 0x01,
+      0x01, 0x01, 0x00, 0x48, 0x00, 0x48, 0x00, 0x00, 0xFF, 0xDB, 0x00, 0x43,
+      0x00, 0x08, 0x06, 0x06, 0x07, 0x06, 0x05, 0x08, 0x07, 0x07, 0x07, 0x09,
+      0x09, 0x08, 0x0A, 0x0C, 0x14, 0x0D, 0x0C, 0x0B, 0x0B, 0x0C, 0x19, 0x12,
+      0x13, 0x0F, 0x14, 0x1D, 0x1A, 0x1F, 0x1E, 0x1D, 0x1A, 0x1C, 0x1C, 0x20,
+      0x24, 0x2E, 0x27, 0x20, 0x22, 0x2C, 0x23, 0x1C, 0x1C, 0x28, 0x37, 0x29,
+      0x2C, 0x30, 0x31, 0x34, 0x34, 0x34, 0x1F, 0x27, 0x39, 0x3D, 0x38, 0x32,
+      0x3C, 0x2E, 0x33, 0x34, 0x32, 0xFF, 0xC0, 0x00, 0x11, 0x08, 0x00, 0x01,
+      0x00, 0x01, 0x01, 0x01, 0x11, 0x00, 0x02, 0x11, 0x01, 0x03, 0x11, 0x01,
+      0xFF, 0xC4, 0x00, 0x14, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0xFF, 0xC4,
+      0x00, 0x14, 0x10, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xDA, 0x00, 0x0C,
+      0x03, 0x01, 0x00, 0x02, 0x11, 0x03, 0x11, 0x00, 0x3F, 0x00, 0x80, 0xFF, 0xD9
+  ",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,midas-research/audino,6f2e7798257135881837fd7abaffad7d,Cypress,cvat/tests/cypress/support/commands.js,529,ui_action,locator_query,"cy.get('.cvat-canvas-container')
+            .trigger","cy.get('.cvat-canvas-container')
+            .trigger('keydown', { keyCode: keyCodeN, code: 'KeyN' })",locator_query,trigger,,,loop_and_branch,1,2,if,then,helper_body_with_caller_context,if,527,"cy.get('.cvat-canvas-container')
+            .trigger('keydown', { keyCode: keyCodeN, code: 'KeyN' })","createPointParams.pointsMap.forEach((element) => {
+        cy.get('.cvat-canvas-container').click(element.x, element.y);
+    });
+    if (createPointParams.finishWithButton) {
+        cy.contains('span', 'Done').click();
+    } else if (!createPointParams.numberOfPoints) {
+        const keyCodeN = 78;
+        cy.get('.cvat-canvas-container')
+            .trigger('keydown', { keyCode: keyCodeN, code: 'KeyN' });
+        cy.get('.cvat-canvas-container')
+            .trigger('keyup', { keyCode: keyCodeN, code: 'KeyN' });
+    }
+    cy.checkPopoverHidden('draw-points');
+    cy.checkObjectParameters(createPointParams, 'POINTS');
+});
+
+Cypress.Commands.add('createEllipse', (createEllipseParams) => {
+    cy.interactControlButton('draw-ellipse');
+    cy.switchLabel(createEllipseParams.labelName, 'draw-ellipse');
+    cy.get('.cvat-draw-ellipse-popover').within(() => {
+        cy.get('.ant-select-selection-item').then(($labelValue) => {
+            selectedValueGlobal = $labelValue.text();
+        });
+        cy.contains('button', createEllipseParams.type).click();
+    });
+    cy.get('.cvat-canvas-container')
+        .click(createEllipseParams.firstX, createEllipseParams.firstY);
+    cy.get('.cvat-canvas-container')
+        .click(createEllipseParams.secondX, createEllipseParams.secondY);
+    cy.checkPopoverHidden('draw-ellipse');
+    cy.checkObjectParameters(createEllipseParams, 'ELLIPSE');
+})","Cypress.Commands.add('createPoint', (createPointParams) => {
+    cy.interactControlButton('draw-points');
+    cy.switchLabel(createPointParams.labelName, 'draw-points');
+    cy.get('.cvat-draw-points-popover').within(() => {
+        cy.get('.ant-select-selection-item').then(($labelValue) => {
+            selectedValueGlobal = $labelValue.text();
+        });
+        if (createPointParams.numberOfPoints) {
+            cy.get('.ant-input-number-input').clear();
+            cy.get('.ant-input-number-input').type(createPointParams.numberOfPoints);
+        }
+        cy.contains('button', createPointParams.type).click();
+    });
+    createPointParams.pointsMap.forEach((element) => {
+        cy.get('.cvat-canvas-container').click(element.x, element.y);
+    });
+    if (createPointParams.finishWithButton) {
+        cy.contains('span', 'Done').click();
+    } else if (!createPointParams.numberOfPoints) {
+        const keyCodeN = 78;
+        cy.get('.cvat-canvas-container')
+            .trigger('keydown', { keyCode: keyCodeN, code: 'KeyN' });
+        cy.get('.cvat-canvas-container')
+            .trigger('keyup', { keyCode: keyCodeN, code: 'KeyN' });
+    }
+    cy.checkPopoverHidden('draw-points');
+    cy.checkObjectParameters(createPointParams, 'POINTS');
+})","(createPointParams) => {
+    cy.interactControlButton('draw-points');
+    cy.switchLabel(createPointParams.labelName, 'draw-points');
+    cy.get('.cvat-draw-points-popover').within(() => {
+        cy.get('.ant-select-selection-item').then(($labelValue) => {
+            selectedValueGlobal = $labelValue.text();
+        });
+        if (createPointParams.numberOfPoints) {
+            cy.get('.ant-input-number-input').clear();
+            cy.get('.ant-input-number-input').type(createPointParams.numberOfPoints);
+        }
+        cy.contains('button', createPointParams.type).click();
+    });
+    createPointParams.pointsMap.forEach((element) => {
+        cy.get('.cvat-canvas-container').click(element.x, element.y);
+    });
+    if (createPointParams.finishWithButton) {
+        cy.contains('span', 'Done').click();
+    } else if (!createPointParams.numberOfPoints) {
+        const keyCodeN = 78;
+        cy.get('.cvat-canvas-container')
+            .trigger('keydown', { keyCode: keyCodeN, code: 'KeyN' });
+        cy.get('.cvat-canvas-container')
+            .trigger('keyup', { keyCode: keyCodeN, code: 'KeyN' });
+    }
+    cy.checkPopoverHidden('draw-points');
+    cy.checkObjectParameters(createPointParams, 'POINTS');
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,deltachat/deltachat-desktop,898981259efbbceda34ec2add22c37ad,Playwright,packages/e2e-tests/playwright-helper.ts,397,ui_action,click,"page.getByRole('button', { name: 'New Group' }).click","page.getByRole('button', { name: 'New Group' }).click()",click,click,role_or_accessibility,,loop,1,0,,,caller_context,ForStatement,406,"page.getByRole('button', { name: 'New Group' }).click()","n selectChat(
+  page: Page,
+  chatName: string,
+  options?: { dontWaitForLoaded?: boolean }
+) {
+  const chatL","{
+  await page.getByRole('button', { name: 'New Chat' }).click()
+  await page.getByRole('button', { name: 'New Group' }).click()
+  await page.getByRole('textbox', { name: 'Group Name' }).fill(chatName)
+  await page.getByTestId('group-create-button').click()
+}","export async function createDummyChat(page: Page, chatName: string) {
+  await page.getByRole('button', { name: 'New Chat' }).click()
+  await page.getByRole('button', { name: 'New Group' }).click()
+  await page.getByRole('textbox', { name: 'Group Name' }).fill(chatName)
+  await page.getByTestId('group-create-button').click()
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,swaponline/MultiCurrencyWallet,9bc042aceb412f9482f79cb7d2080bc7,Puppeteer,tests/e2e/appsSmoke.test.js,214,ui_action,click,btn.click,btn.click(),click,click,,,loop_and_branch,1,3,try_catch,try,test_body,try_catch,213,btn.click(),"try {
+              await btn.click()
+              clicked = true
+              break
+            } catch {
+              // button not clickable (e.g. hidden nav dropdown), try next
+            }","it(`${app.title} — clicking tile opens iframe`, async () => {
+      const page = await newPage()
+      const consoleErrors = []
+      page.on('pageerror', (err) => consoleErrors.push(err.message))
+
+      try {
+        await goToAppsPage(page)
+
+        const buttons = await page.$$('button')
+        let clicked = false
+        for (const btn of buttons) {
+          const text = await page.evaluate((el) => el.textContent, btn)
+          if (text && text.includes(app.title)) {
+            try {
+              await btn.click()
+              clicked = true
+              break
+            } catch {
+              // button not clickable (e.g. hidden nav dropdown), try next
+            }
+          }
+        }
+
+        if (!clicked) {
+          const url = page.url().split('#')[0]
+          await page.goto(`${url}#/apps/${app.id}`)
+        }
+
+        await timeOut(2_000)
+
+        const currentUrl = page.url()
+        console.log(`${app.title} — navigated to: ${currentUrl}`)
+        expect(currentUrl).toContain(`/apps/${app.id}`)
+
+        const iframe = await page.$('iframe')
+        expect(iframe).not.toBeNull()
+        console.log(`${app.title} — iframe element found`)
+
+        const iframeSrc = await page.evaluate((el) => el?.getAttribute('src'), iframe)
+        console.log(`${app.title} — iframe src: ${iframeSrc}`)
+        expect(iframeSrc).toContain(app.urlPattern)
+        // Verify theme is forwarded to iframe URL
+        expect(iframeSrc","async () => {
+      const page = await newPage()
+      const consoleErrors = []
+      page.on('pageerror', (err) => consoleErrors.push(err.message))
+
+      try {
+        await goToAppsPage(page)
+
+        const buttons = await page.$$('button')
+        let clicked = false
+        for (const btn of buttons) {
+          const text = await page.evaluate((el) => el.textContent, btn)
+          if (text && text.includes(app.title)) {
+            try {
+              await btn.click()
+              clicked = true
+              break
+            } catch {
+              // button not clickable (e.g. hidden nav dropdown), try next
+            }
+          }
+        }
+
+        if (!clicked) {
+          const url = page.url().split('#')[0]
+          await page.goto(`${url}#/apps/${app.id}`)
+        }
+
+        await timeOut(2_000)
+
+        const currentUrl = page.url()
+        console.log(`${app.title} — navigated to: ${currentUrl}`)
+        expect(currentUrl).toContain(`/apps/${app.id}`)
+
+        const iframe = await page.$('iframe')
+        expect(iframe).not.toBeNull()
+        console.log(`${app.title} — iframe element found`)
+
+        const iframeSrc = await page.evaluate((el) => el?.getAttribute('src'), iframe)
+        console.log(`${app.title} — iframe src: ${iframeSrc}`)
+        expect(iframeSrc).toContain(app.urlPattern)
+        // Verify theme is forwarded to iframe URL
+        expect(iframeSrc).toMatch(/theme=(dark|light)/)
+
+        const",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,swaponline/MultiCurrencyWallet,cf6503ba3eaac1698ab95e1938fa681f,Puppeteer,tests/e2e/utils.ts,226,ui_action,visual_action,page.screenshot,"page.screenshot({
+    path: `tests/e2e/screenshots/${fileName}.jpg`,
+    type: 'jpeg',
+  })",visual_action,screenshot,,,branch,0,1,try_catch,,caller_context,try_catch,11,"page.screenshot({
+    path: `tests/e2e/screenshots/${fileName}.jpg`,
+    type: 'jpeg',
+  })","rrencyWallet/MultiCurrencyWallet/build-${
+    process.env.NODE_ENV === 'production' ? 'mainnet' : 'testnet'
+  }/index.html`
+}
+
+console.log('>>>> START TEST', process.env.NODE_ENV)
+// if it's true then you will be able to see puppeteer's browser
+// don't enable this mode in Github test flows. They don't work with that
+const isDebug = false
+
+export const createBrowser = async (): Promise<{
+  browser: Browser
+  page: Page
+}> => {
+  const browser = await puppeteer.launch({
+    headless: !isDebug,
+    // slowMo: 100,
+    args: process.env.CI ? ['--no-sandbox', '--disable-setuid-sandbox'] : [],
+  })
+
+  const page = await browser.newPage()
+  await page.setViewport({
+    w","{
+  const dir = 'tests/e2e/screenshots'
+  // check if ./screenshots directory exists
+  if (!fs.existsSync(dir)) {
+    // create tests/e2e/screenshots directory
+    await fs.mkdir(dir, (err) => {
+      if (err) {
+        throw err
+      }
+      console.log('tests/e2e/screenshots directory is created.')
+    })
+  }
+
+  await page.screenshot({
+    path: `tests/e2e/screenshots/${fileName}.jpg`,
+    type: 'jpeg',
+  })
+}","async (page: Page, fileName: string) => {
+  const dir = 'tests/e2e/screenshots'
+  // check if ./screenshots directory exists
+  if (!fs.existsSync(dir)) {
+    // create tests/e2e/screenshots directory
+    await fs.mkdir(dir, (err) => {
+      if (err) {
+        throw err
+      }
+      console.log('tests/e2e/screenshots directory is created.')
+    })
+  }
+
+  await page.screenshot({
+    path: `tests/e2e/screenshots/${fileName}.jpg`,
+    type: 'jpeg',
+  })
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,mattermost/mattermost,e604b71c48e5294e649de3a9870d17e5,Cypress,e2e-tests/cypress/tests/integration/channels/interactive_dialog/multiselect_spec.js,154,ui_action,locator_query,cy.get,cy.get('[id^=\'MultiInput_\']'),locator_query,click,css_selector,,loop_and_branch,1,1,if,then,test_body,if,148,cy.get('[id^=\'MultiInput_\']'),"// * Verify that the body contains all multiselect elements
+            cy.get('.modal-body').should('be.visible').children('.form-group').should('have.length', 3).each(($elForm, index) => {
+                const element = multiSelectDialogClean.dialog.elements[index];
+
+                // Skip if element is undefined (more DOM elements than expected)
+                if (!element) {
+                    return;
+                }
+
+                cy.wrap($elForm).within(() => {
+                    // Verify the label text includes display name
+                    cy.get('label').first().scrollIntoView().should('be.visible').and('contain', element.display_name);
+
+                    if (element.name === 'multiselect_options') {
+                        // * Verify multiselect options field starts empty
+                        cy.get('[id^=\'MultiInput_\']').should('be.visible');
+                        cy.get('.react-select__multi-value').should('not.exist');
+
+                        // * Test adding multiple options
+                        cy.get('[id^=\'MultiInput_\']').click();
+                        cy.document().then((doc) => {
+                            cy.wrap(doc).find('.react-select__option').contains('Engineering').click();
+                        });
+
+                        cy.get('[id^=\'MultiInput_\']').click();
+                        cy.document().then((doc) => {
+                            cy.wrap(doc).find('.react-select__option').contains('Sales').click();
+   ","cy.wrap($elForm).within(() => {
+                    // Verify the label text includes display name
+                    cy.get('label').first().scrollIntoView().should('be.visible').and('contain', element.display_name);
+
+                    if (element.name === 'multiselect_options') {
+                        // * Verify multiselect options field starts empty
+                        cy.get('[id^=\'MultiInput_\']').should('be.visible');
+                        cy.get('.react-select__multi-value').should('not.exist');
+
+                        // * Test adding multiple options
+                        cy.get('[id^=\'MultiInput_\']').click();
+                        cy.document().then((doc) => {
+                            cy.wrap(doc).find('.react-select__option').contains('Engineering').click();
+                        });
+
+                        cy.get('[id^=\'MultiInput_\']').click();
+                        cy.document().then((doc) => {
+                            cy.wrap(doc).find('.react-select__option').contains('Sales').click();
+                        });
+
+                        // * Verify two options are now selected
+                        cy.get('.react-select__multi-value').should('have.length', 2);
+                        cy.get('.react-select__multi-value').eq(0).should('contain', 'Engineering');
+                        cy.get('.react-select__multi-value').eq(1).should('contain', 'Sales');
+
+                        // * Test removing an op","() => {
+        // # Post a slash command (clean, no defaults)
+        cy.postMessage(`/${createdCommandClean.trigger} `);
+
+        // * Verify that the apps form modal opens up
+        cy.get('#appsModal').should('be.visible').within(() => {
+            // * Verify that the header of modal contains icon URL, title and close button
+            cy.get('.modal-header').should('be.visible').within(($elForm) => {
+                cy.get('#appsModalIconUrl').should('be.visible').and('have.attr', 'src').and('not.be.empty');
+                cy.get('#appsModalLabel').should('be.visible').and('have.text', multiSelectDialogClean.dialog.title);
+                cy.wrap($elForm).find('button.close').should('be.visible').and('contain', '×').and('contain', 'Close');
+            });
+
+            // * Verify that the body contains all multiselect elements
+            cy.get('.modal-body').should('be.visible').children('.form-group').should('have.length', 3).each(($elForm, index) => {
+                const element = multiSelectDialogClean.dialog.elements[index];
+
+                // Skip if element is undefined (more DOM elements than expected)
+                if (!element) {
+                    return;
+                }
+
+                cy.wrap($elForm).within(() => {
+                    // Verify the label text includes display name
+                    cy.get('label').first().scrollIntoView().should('be.visible').and('contain', element.display_name);
+
+                ",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,dflex-js/dflex,06d2d1fee362aec82f4b7e2b3c34891e,Cypress,playgrounds/dflex-dnd-playground/cypress/e2e/same-container-vertical/differentHeights/inOut/inOut.draggedBigger.noRelease.cy.ts,44,ui_action,locator_query,"cy.get(""#org"").trigger","cy.get(""#org"").trigger(""mousemove"", {
+          clientX: startingPointX - i,
+          force: true,
+        })",locator_query,trigger,,,loop,1,0,,,test_body,ForStatement,43,"cy.get(""#org"").trigger(""mousemove"", {
+          clientX: startingPointX - i,
+          force: true,
+        })","for (let i = 0; i < stepsX; i += 10) {
+        cy.get(""#org"").trigger(""mousemove"", {
+          clientX: startingPointX - i,
+          force: true,
+        });
+        // eslint-disable-next-line cypress/no-unnecessary-waiting
+        cy.wait(0);
+      }","it(""Transforms element (org) - outside the list"", () => {
+      stepsX = 240;
+      for (let i = 0; i < stepsX; i += 10) {
+        cy.get(""#org"").trigger(""mousemove"", {
+          clientX: startingPointX - i,
+          force: true,
+        });
+        // eslint-disable-next-line cypress/no-unnecessary-waiting
+        cy.wait(0);
+      }
+
+      stepsY = 115;
+      for (let i = 0; i < stepsY; i += 10) {
+        cy.get(""#org"").trigger(""mousemove"", {
+          clientY: startingPointY + i,
+          force: true,
+        });
+        // eslint-disable-next-line cypress/no-unnecessary-waiting
+        cy.wait(0);
+      }
+    })","() => {
+      stepsX = 240;
+      for (let i = 0; i < stepsX; i += 10) {
+        cy.get(""#org"").trigger(""mousemove"", {
+          clientX: startingPointX - i,
+          force: true,
+        });
+        // eslint-disable-next-line cypress/no-unnecessary-waiting
+        cy.wait(0);
+      }
+
+      stepsY = 115;
+      for (let i = 0; i < stepsY; i += 10) {
+        cy.get(""#org"").trigger(""mousemove"", {
+          clientY: startingPointY + i,
+          force: true,
+        });
+        // eslint-disable-next-line cypress/no-unnecessary-waiting
+        cy.wait(0);
+      }
+    }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,cloudtogo/pageplug,22f47110bddb3ca372e4fa01b2087c4e,Cypress,app/client/cypress/support/commands.js,931,ui_action,text_input,cy.get(welcomePage.email).type,"cy.get(welcomePage.email).type(Cypress.env(""USERNAME""))",text_input,type,css_selector,ui_text_entry,branch,0,1,if,,caller_context,if,100,"cy.get(welcomePage.email).type(Cypress.env(""USERNAME""))",""");
+        // Closing the database connection
+        db.close();
+      };
+
+      // Handling add error
+      addRequest.onerror = (event) => {
+        console.log(""Error adding key:"", event.target.error);
+        // Closing the database connection
+        db.close();
+      };
+    };
+
+    // Handling database opening error
+    request.onerror = (event) => {
+      console.log(""Error opening database:"", event.target.error);
+    };
+  });
+};
+
+// Cypress.Commands.add(""goToEditFromPublish"", () => {
+//   cy.url().then((url) => {
+//     const urlObject = new URL(url);
+//     if (!urlObject.pathname.includes(""edit"")) {
+//       urlObject.pathname = urlObject.pathname + ""/edit"";
+//       cy.visit(urlObject.toString());
+//     }
+//   });
+// });
+
+Cypress.Commands.add(""stubPostHeaderReq"", () => {
+  cy.intercept(""POST"", ""/api/v1/users/in","Cypress.Commands.add(""createSuperUser"", () => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymou","() => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymousData=true"",
+      );
+      expect(int",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,mattermost/mattermost,e604b71c48e5294e649de3a9870d17e5,Cypress,e2e-tests/cypress/tests/integration/channels/interactive_dialog/multiselect_spec.js,166,ui_action,locator_query,cy.get,cy.get('.react-select__multi-value'),locator_query,get,,,loop_and_branch,1,1,if,then,test_body,if,148,cy.get('.react-select__multi-value'),"// * Verify that the body contains all multiselect elements
+            cy.get('.modal-body').should('be.visible').children('.form-group').should('have.length', 3).each(($elForm, index) => {
+                const element = multiSelectDialogClean.dialog.elements[index];
+
+                // Skip if element is undefined (more DOM elements than expected)
+                if (!element) {
+                    return;
+                }
+
+                cy.wrap($elForm).within(() => {
+
+...
+(doc) => {
+                            cy.wrap(doc).find('.react-select__option').contains('Sales').click();
+                        });
+
+                        // * Verify two options are now selected
+                        cy.get('.react-select__multi-value').should('have.length', 2);
+                        cy.get('.react-select__multi-value').eq(0).should('contain', 'Engineering');
+                        cy.get('.react-select__multi-value').eq(1).should('contain', 'Sales');
+
+                        // * Test removing an option
+                        cy.get('.react-select__multi-value').eq(0).find('.react-select__multi-value__remove').click();
+
+                        // * Verify only one option remains
+                        cy.get('.react-select__multi-value').should('have.length', 1);
+                        cy.get('.react-select__multi-value').eq(0).should('contain', 'Sales');
+             ","cy.wrap($elForm).within(() => {
+                    // Verify the label text includes display name
+                    cy.get('label').first().scrollIntoView().should('be.visible').and('contain', element.display_name);
+
+                    if (element.name === 'multiselect_options') {
+                        // * Verify multiselect options field starts empty
+                        cy.get('[id^=\'MultiInput_\']').should('be.visible');
+                        cy.get('.react-select__multi-value').should('not.exist');
+
+                        // * Test adding multiple options
+                        cy.get('[id^=\'MultiInput_\']').click();
+                        cy.document().then((doc) => {
+                            cy.wrap(doc).find('.react-select__option').contains('Engineering').click();
+                        });
+
+                        cy.get('[id^=\'MultiInput_\']').click();
+                        cy.document().then((doc) => {
+                            cy.wrap(doc).find('.react-select__option').contains('Sales').click();
+                        });
+
+                        // * Verify two options are now selected
+                        cy.get('.react-select__multi-value').should('have.length', 2);
+                        cy.get('.react-select__multi-value').eq(0).should('contain', 'Engineering');
+                        cy.get('.react-select__multi-value').eq(1).should('contain', 'Sales');
+
+                        // * Test removing an op","() => {
+        // # Post a slash command (clean, no defaults)
+        cy.postMessage(`/${createdCommandClean.trigger} `);
+
+        // * Verify that the apps form modal opens up
+        cy.get('#appsModal').should('be.visible').within(() => {
+            // * Verify that the header of modal contains icon URL, title and close button
+            cy.get('.modal-header').should('be.visible').within(($elForm) => {
+                cy.get('#appsModalIconUrl').should('be.visible').and('have.attr', 'src').and('not.be.empty');
+                cy.get('#appsModalLabel').should('be.visible').and('have.text', multiSelectDialogClean.dialog.title);
+                cy.wrap($elForm).find('button.close').should('be.visible').and('contain', '×').and('contain', 'Close');
+            });
+
+            // * Verify that the body contains all multiselect elements
+            cy.get('.modal-body').should('be.visible').children('.form-group').should('have.length', 3).each(($elForm, index) => {
+                const element = multiSelectDialogClean.dialog.elements[index];
+
+                // Skip if element is undefined (more DOM elements than expected)
+                if (!element) {
+                    return;
+                }
+
+                cy.wrap($elForm).within(() => {
+                    // Verify the label text includes display name
+                    cy.get('label').first().scrollIntoView().should('be.visible').and('contain', element.display_name);
+
+                ",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,appsmithorg/appsmith,d9dec35a354f47f47fdcc5a314cacf14,Cypress,app/client/cypress/support/commands.js,953,ui_action,locator_query,cy.get,cy.get(welcomePage.lastName),locator_query,get,,,branch,0,1,if,,caller_context,if,102,cy.get(welcomePage.lastName),"ase connection
+        db.close();
+      };
+
+      // Handling add error
+      addRequest.onerror = (event) => {
+        console.log(""Error adding key:"", event.target.error);
+        // Closing the database connection
+        db.close();
+      };
+    };
+
+    // Handling database opening error
+    request.onerror = (event) => {
+      console.log(""Error opening database:"", event.target.error);
+    };
+  });
+};
+
+Cypress.Commands.add(""stubPostHeaderReq"", () => {
+  // GHSA-j9gf-vw2f-9hrw: server-side strict-mode now requires Origin to match
+  // APPSMITH_BASE_URL. Use the live Cypress baseUrl so the intercept produces a
+  // valid Origin (the literal string ""Cypress"" used to live here as a synthetic-
+  // traffic flag and no longer parses as a URL).
+  cy.intercept(""POST"", ""/api/v1/users/invite"", (req) => {
+    req.headers[""origin""","Cypress.Commands.add(""createSuperUser"", () => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymou","() => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymousData=true"",
+      );
+      expect(int",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,apache/superset,8a7dc496177f2f8aebfb0c39e1f00f73,Cypress,superset-frontend/cypress-base/cypress/support/e2e.ts,134,ui_action,locator_query,sampleCharts?.find,"sampleCharts?.find(
+        c => c.slice_name === fixture.slice_name,
+      )",locator_query,find,,,loop,1,0,,,helper_body,ForStatement,132,"sampleCharts?.find(
+        c => c.slice_name === fixture.slice_name,
+      )","for (let i = 0; i < CHART_FIXTURES.length; i += 1) {
+      const fixture = CHART_FIXTURES[i];
+      const isInDb = sampleCharts?.find(
+        c => c.slice_name === fixture.slice_name,
+      );
+      if (isInDb) {
+        deletableCharts.push(isInDb.id);
+      }
+    }","cy.getCharts().then((sampleCharts?: Record<string, any>[]) => {
+    const deletableCharts = [];
+    for (let i = 0; i < CHART_FIXTURES.length; i += 1) {
+      const fixture = CHART_FIXTURES[i];
+      const isInDb = sampleCharts?.find(
+        c => c.slice_name === fixture.slice_name,
+      );
+      if (isInDb) {
+        deletableCharts.push(isInDb.id);
+      }
+    }
+    if (deletableCharts.length) {
+      cy.request({
+        failOnStatusCode: false,
+        method: 'DELETE',
+        url: `api/v1/chart/?q=!(${deletableCharts.join(',')})`,
+        headers: {
+          Cookie: `csrf_access_token=${window.localStorage.getItem(
+            'access_token',
+          )}`,
+          'Content-Type': 'application/json',
+          'X-CSRFToken': `${window.localStorage.getItem('access_token')}`,
+          Referer: `${Cypress.config().baseUrl}/`,
+        },
+      }).then(resp => resp);
+    }
+  })","() => {
+  cy.getCharts().then((sampleCharts?: Record<string, any>[]) => {
+    const deletableCharts = [];
+    for (let i = 0; i < CHART_FIXTURES.length; i += 1) {
+      const fixture = CHART_FIXTURES[i];
+      const isInDb = sampleCharts?.find(
+        c => c.slice_name === fixture.slice_name,
+      );
+      if (isInDb) {
+        deletableCharts.push(isInDb.id);
+      }
+    }
+    if (deletableCharts.length) {
+      cy.request({
+        failOnStatusCode: false,
+        method: 'DELETE',
+        url: `api/v1/chart/?q=!(${deletableCharts.join(',')})`,
+        headers: {
+          Cookie: `csrf_access_token=${window.localStorage.getItem(
+            'access_token',
+          )}`,
+          'Content-Type': 'application/json',
+          'X-CSRFToken': `${window.localStorage.getItem('access_token')}`,
+          Referer: `${Cypress.config().baseUrl}/`,
+        },
+      }).then(resp => resp);
+    }
+  });
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,swaponline/MultiCurrencyWallet,cf6503ba3eaac1698ab95e1938fa681f,Puppeteer,tests/e2e/utils.ts,107,ui_action,click,page.click,page.click('#finishWalletRecoveryButton'),click,click,,,branch,0,1,try_catch,,caller_context,try_catch,11,page.click('#finishWalletRecoveryButton'),"rrencyWallet/MultiCurrencyWallet/build-${
+    process.env.NODE_ENV === 'production' ? 'mainnet' : 'testnet'
+  }/index.html`
+}
+
+console.log('>>>> START TEST', process.env.NODE_ENV)
+// if it's true then you will be able to see puppeteer's browser
+// don't enable this mode in Github test flows. They don't work with that
+const isDebug = false
+
+export const createBrowser = async (): Promise<{
+  browser: Browser
+  page: Page
+}> => {
+  const browser = await puppeteer.launch({
+    headless: !isDebug,
+    // slowMo: 100,
+    args: process.env.CI ? ['--no-sandbox', '--disable-setuid-sandbox'] : [],
+  })
+
+  const page = await browser.newPage()
+  await page.setViewport({
+    w","{
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}","async (params: ImportWalletParams) => {
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,cloudtogo/pageplug,b7ba841de4c4764a78f41552631ce9eb,Cypress,app/client/cypress/e2e/Regression/ClientSide/PropertyPane/Draggable_PropertyPane_Widgets_spec.js,50,ui_action,locator_query,cy.get,"cy.get(""#popper-draghandler"")",locator_query,get,,,loop,1,0,,,test_body,ForOfStatement,48,"cy.get(""#popper-draghandler"")","for (const testWidget of widgetList) {
+      cy.openPropertyPane(testWidget);
+      cy.get(""#popper-draghandler"")
+        .trigger(""mousedown"", { which: 1 })
+        .trigger(""mousemove"", { clientX: 400, clientY: 500 })
+        .trigger(""mouseup"", { force: true });
+      cy.get(""#popper-draghandler"").then((oldPorpPane) => {
+        const oldPropPanePosition = oldPorpPane[0].getBoundingClientRect();
+        cy.get(commonlocators.editPropCrossButton).click({ force: true });
+        cy.openPropertyPane(""containerwidget"");
+        cy.get(""#popper-draghandler"").then((newPropPane) => {
+          const newPropPanePosition = newPropPane[0].getBoundingClientRect();
+          cy.get(commonlocators.editPropCrossButton).click({ force: true });
+          expect(oldPropPanePosition.top).to.be.equal(newPropPanePosition.top);
+          expect(oldPropPanePosition.left).to.be.equal(
+            newPropPanePosition.left,
+          );
+        });
+      });
+    }","it(""Property pane position should stay same after dragging down"", () => {
+    for (const testWidget of widgetList) {
+      cy.openPropertyPane(testWidget);
+      cy.get(""#popper-draghandler"")
+        .trigger(""mousedown"", { which: 1 })
+        .trigger(""mousemove"", { clientX: 400, clientY: 500 })
+        .trigger(""mouseup"", { force: true });
+      cy.get(""#popper-draghandler"").then((oldPorpPane) => {
+        const oldPropPanePosition = oldPorpPane[0].getBoundingClientRect();
+        cy.get(commonlocators.editPropCrossButton).click({ force: true });
+        cy.openPropertyPane(""containerwidget"");
+        cy.get(""#popper-draghandler"").then((newPropPane) => {
+          const newPropPanePosition = newPropPane[0].getBoundingClientRect();
+          cy.get(commonlocators.editPropCrossButton).click({ force: true });
+          expect(oldPropPanePosition.top).to.be.equal(newPropPanePosition.top);
+          expect(oldPropPanePosition.left).to.be.equal(
+            newPropPanePosition.left,
+          );
+        });
+      });
+    }
+  })","() => {
+    for (const testWidget of widgetList) {
+      cy.openPropertyPane(testWidget);
+      cy.get(""#popper-draghandler"")
+        .trigger(""mousedown"", { which: 1 })
+        .trigger(""mousemove"", { clientX: 400, clientY: 500 })
+        .trigger(""mouseup"", { force: true });
+      cy.get(""#popper-draghandler"").then((oldPorpPane) => {
+        const oldPropPanePosition = oldPorpPane[0].getBoundingClientRect();
+        cy.get(commonlocators.editPropCrossButton).click({ force: true });
+        cy.openPropertyPane(""containerwidget"");
+        cy.get(""#popper-draghandler"").then((newPropPane) => {
+          const newPropPanePosition = newPropPane[0].getBoundingClientRect();
+          cy.get(commonlocators.editPropCrossButton).click({ force: true });
+          expect(oldPropPanePosition.top).to.be.equal(newPropPanePosition.top);
+          expect(oldPropPanePosition.left).to.be.equal(
+            newPropPanePosition.left,
+          );
+        });
+      });
+    }
+  }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,facebook/lexical,e3356773d04dc2d0afde42f41aeb5bcd,Playwright,packages/lexical-playground/__tests__/keyboardShortcuts/index.mjs,218,ui_action,keyboard_input,page.keyboard.press,page.keyboard.press('ArrowRight'),keyboard_input,press,,keyboard_entry,loop,1,0,,,helper_body,ForStatement,214,page.keyboard.press('ArrowRight'),"for (let i = 0; i < numCharacters; i++) {
+    if (delayMs !== undefined) {
+      await sleep(delayMs);
+    }
+    await page.keyboard.press('ArrowRight');
+  }","{
+  for (let i = 0; i < numCharacters; i++) {
+    if (delayMs !== undefined) {
+      await sleep(delayMs);
+    }
+    await page.keyboard.press('ArrowRight');
+  }
+}","export async function moveRight(page, numCharacters = 1, delayMs) {
+  for (let i = 0; i < numCharacters; i++) {
+    if (delayMs !== undefined) {
+      await sleep(delayMs);
+    }
+    await page.keyboard.press('ArrowRight');
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+control_flow_stratified,cloudtogo/pageplug,dd40fb5732aba788999c11bd0de0991b,Cypress,app/client/cypress/support/commands.js,937,ui_action,click,cy.get(welcomePage.continueButton).click,cy.get(welcomePage.continueButton).click(),click,click,css_selector,,branch,0,1,if,,caller_context,if,100,cy.get(welcomePage.continueButton).click(),""");
+        // Closing the database connection
+        db.close();
+      };
+
+      // Handling add error
+      addRequest.onerror = (event) => {
+        console.log(""Error adding key:"", event.target.error);
+        // Closing the database connection
+        db.close();
+      };
+    };
+
+    // Handling database opening error
+    request.onerror = (event) => {
+      console.log(""Error opening database:"", event.target.error);
+    };
+  });
+};
+
+// Cypress.Commands.add(""goToEditFromPublish"", () => {
+//   cy.url().then((url) => {
+//     const urlObject = new URL(url);
+//     if (!urlObject.pathname.includes(""edit"")) {
+//       urlObject.pathname = urlObject.pathname + ""/edit"";
+//       cy.visit(urlObject.toString());
+//     }
+//   });
+// });
+
+Cypress.Commands.add(""stubPostHeaderReq"", () => {
+  cy.intercept(""POST"", ""/api/v1/users/in","Cypress.Commands.add(""createSuperUser"", () => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymou","() => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymousData=true"",
+      );
+      expect(int",true,correct,Control-flow enclosure matches loop/branch/context snippet.

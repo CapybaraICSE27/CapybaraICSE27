@@ -1,0 +1,2090 @@
+sample_origin,repo,test_id,framework,file_path,line,feature_type,category,name,raw_code,ui_action_category,terminal_action_ast,locator_strategy_ast,input_channel_ast,control_flow_enclosure,control_flow_loop_depth,control_flow_branch_depth,control_flow_branch_kind,control_flow_branch_arm,control_flow_source,control_flow_parent_kind,control_flow_parent_line,action_snippet,enclosing_control_flow_snippet,enclosing_function_or_callback_snippet,test_body_or_helper_context_snippet,snippet_truncated,manual_enclosure_ok,manual_notes
+loop_branch_stratified,appsmithorg/appsmith,bce4defa914dee438e02f811a409dbde,Cypress,app/client/cypress/support/commands.js,960,ui_action,locator_query,cy.get,cy.get(welcomePage.continueButton),locator_query,get,,,branch,0,1,if,,caller_context,if,102,cy.get(welcomePage.continueButton),"ase connection
+        db.close();
+      };
+
+      // Handling add error
+      addRequest.onerror = (event) => {
+        console.log(""Error adding key:"", event.target.error);
+        // Closing the database connection
+        db.close();
+      };
+    };
+
+    // Handling database opening error
+    request.onerror = (event) => {
+      console.log(""Error opening database:"", event.target.error);
+    };
+  });
+};
+
+Cypress.Commands.add(""stubPostHeaderReq"", () => {
+  // GHSA-j9gf-vw2f-9hrw: server-side strict-mode now requires Origin to match
+  // APPSMITH_BASE_URL. Use the live Cypress baseUrl so the intercept produces a
+  // valid Origin (the literal string ""Cypress"" used to live here as a synthetic-
+  // traffic flag and no longer parses as a URL).
+  cy.intercept(""POST"", ""/api/v1/users/invite"", (req) => {
+    req.headers[""origin""","Cypress.Commands.add(""createSuperUser"", () => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymou","() => {
+  cy.wait(1000);
+  cy.get(welcomePage.firstName).should(""be.visible"");
+  cy.get(welcomePage.lastName).should(""be.visible"");
+  cy.get(welcomePage.email).should(""be.visible"");
+  cy.get(welcomePage.password).should(""be.visible"");
+  cy.get(welcomePage.verifyPassword).should(""be.visible"");
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+
+  cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.email).type(Cypress.env(""USERNAME""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""be.disabled"");
+  cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""));
+  cy.get(welcomePage.continueButton).should(""not.be.disabled"");
+  cy.get(welcomePage.continueButton).click();
+
+  cy.get(welcomePage.proficiencyGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""be.disabled"");
+  cy.get(welcomePage.useCaseGroupButton).eq(0).click();
+  cy.get(welcomePage.submitButton).should(""not.be.disabled"");
+
+  cy.get(welcomePage.submitButton).click();
+  //in case of airgapped both anonymous data and newsletter are disabled
+  if (Cypress.env(""AIRGAPPED"")) {
+    cy.wait(""@createSuperUser"").then((interception) => {
+      expect(interception.request.body).to.not.contain(
+        ""allowCollectingAnonymousData=true"",
+      );
+      expect(int",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,cloudtogo/pageplug,8ec7cab7e1dda176f81fe0924cde4ba5,Cypress,app/client/cypress/support/commands.js,194,ui_action,navigation,cy.visit,"cy.visit({
+    method: ""POST"",
+    url: ""api/v1/login"",
+    headers: {
+      origin: baseURL,
+    },
+    followRedirect: true,
+    body: {
+      username: uname,
+      password: pword,
+    },
+    timeout: 60000,
+  })",navigation,visit,,,branch,0,2,if,,caller_context,if,68,"cy.visit({
+    method: ""POST"",
+    url: ""api/v1/login"",
+    headers: {
+      origin: baseURL,
+    },
+    followRedirect: true,
+    body: {
+      username: uname,
+      password: pword,
+    },
+    timeout: 60000,
+  })","rage = () => {
+  cy.window().then((window) => {
+    window.localStorage.setItem(""ShowCommentsButton","Cypress.Commands.add(""LoginFromAPI"", (uname, pword) => {
+  homePageTS.LogOutviaAPI();
+  let baseURL = Cypress.config().baseUrl;
+  baseURL = baseURL.endsWith(""/"") ? baseURL.slice(0, -1) : baseURL;
+
+  // Clear cookies to avoid stale cookies on cypress CI
+  cy.clearCookie(""SESSION"");
+
+  cy.visit({
+    method: ""POST"",
+    url: ""api/v1/login"",
+    headers: {
+      origin: baseURL,
+    },
+    followRedirect: true,
+    body: {
+      username: uname,
+      password: pword,
+    },
+    timeout: 60000,
+  });
+
+  // Check if cookie is present
+  cy.getCookie(""SESSION"").then((cookie) => {
+    expect(cookie).to.not.be.null;
+    cy.log(""cookie.value is: "" + cookie.value);
+
+    if (CURRENT_REPO === REPO.EE) {
+      cy.wait(2000);
+      cy.url().then((url) => {
+        if (url.indexOf(""/license"") > -1) {
+          cy.validateLicense();
+        }
+      });
+    }
+
+    cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    });
+
+    if (CURRENT_REPO === REPO.EE) {
+      cy.wait(2000);
+    } else {
+      assertHelper.AssertNetworkStatus(""getAllWorkspaces"");
+      assertHelper.AssertNetworkStatus(""getConsolidatedData"");
+    }
+  });
+  cy.wait(2000); //for the page elements to load!
+})","(uname, pword) => {
+  homePageTS.LogOutviaAPI();
+  let baseURL = Cypress.config().baseUrl;
+  baseURL = baseURL.endsWith(""/"") ? baseURL.slice(0, -1) : baseURL;
+
+  // Clear cookies to avoid stale cookies on cypress CI
+  cy.clearCookie(""SESSION"");
+
+  cy.visit({
+    method: ""POST"",
+    url: ""api/v1/login"",
+    headers: {
+      origin: baseURL,
+    },
+    followRedirect: true,
+    body: {
+      username: uname,
+      password: pword,
+    },
+    timeout: 60000,
+  });
+
+  // Check if cookie is present
+  cy.getCookie(""SESSION"").then((cookie) => {
+    expect(cookie).to.not.be.null;
+    cy.log(""cookie.value is: "" + cookie.value);
+
+    if (CURRENT_REPO === REPO.EE) {
+      cy.wait(2000);
+      cy.url().then((url) => {
+        if (url.indexOf(""/license"") > -1) {
+          cy.validateLicense();
+        }
+      });
+    }
+
+    cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    });
+
+    if (CURRENT_REPO === REPO.EE) {
+      cy.wait(2000);
+    } else {
+      assertHelper.AssertNetworkStatus(""getAllWorkspaces"");
+      assertHelper.AssertNetworkStatus(""getConsolidatedData"");
+    }
+  });
+  cy.wait(2000); //for the page elements to load!
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,microsoft/responsible-ai-toolbox,0e01f31732efad96687544aea7e6021c,Cypress,libs/e2e/src/lib/describer/modelAssessment/errorAnalysis/describeErrorAnalysis.ts,26,ui_action,locator_query,cy.get,cy.get(Locators.ErrorAnalysisHeader),locator_query,get,,,branch,0,1,if,then,test_body,if,25,cy.get(Locators.ErrorAnalysisHeader),"if (!datasetShape.errorAnalysisData?.hasErrorAnalysisComponent) {
+        cy.get(Locators.ErrorAnalysisHeader).should(""not.exist"");
+      }","it(""should not have error analysis for causal decision making"", () => {
+      if (!datasetShape.errorAnalysisData?.hasErrorAnalysisComponent) {
+        cy.get(Locators.ErrorAnalysisHeader).should(""not.exist"");
+      }
+    })","() => {
+      if (!datasetShape.errorAnalysisData?.hasErrorAnalysisComponent) {
+        cy.get(Locators.ErrorAnalysisHeader).should(""not.exist"");
+      }
+    }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,ueberdosis/tiptap,4fa0c1ed33be7574e6ba9c7559270797,Cypress,demos/src/Examples/Default/Svelte/index.spec.js,36,ui_action,text_input,cy.get('.tiptap').type,cy.get('.tiptap').type('{selectall}Hello world'),text_input,type,css_selector,ui_text_entry,loop,1,0,,,test_body,callback_iteration,35,cy.get('.tiptap').type('{selectall}Hello world'),"buttonMarks.forEach(m => {
+      cy.get('.tiptap').type('{selectall}Hello world')
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains(m.label).should('not.be.disabled')
+    })","buttonMarks.forEach(m => {
+      cy.get('.tiptap').type('{selectall}Hello world')
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains(m.label).should('not.be.disabled')
+    })","() => {
+    buttonMarks.forEach(m => {
+      cy.get('.tiptap').type('{selectall}Hello world')
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains('Code').click()
+      cy.get('button').contains(m.label).should('not.be.disabled')
+    })
+  }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,valor-software/ngx-bootstrap,14a6976af4d3958da76012d3e489bafd,Cypress,_root/cypress/snapshot/snapshot_spec.js,22,ui_action,locator_query,cy.wrap(demo).find,cy.wrap(demo).find(`.bd-example`),locator_query,find,,,loop,1,0,,,test_body,callback_iteration,19,cy.wrap(demo).find(`.bd-example`),"cy.get('ng-sample-box').each(demo => {
+        const subtitle = demo.parent().find('h3').text();
+
+        cy.wrap(demo).find(`.bd-example`)
+          .eyesOpen({
+            appName: 'NGX-bootstrap',
+            concurrency: 5,
+            matchLevel: 'Strict',
+            showLogs: true,
+            testName: `${page.pageUrl} - ${subtitle}`,
+            browser: [{
+              name: 'chrome',
+              browserVersion: 'latest',
+              width: 360,
+              height: 640
+            }, {
+              name: 'firefox',
+              browserVersion: 'latest',
+              width: 360,
+              height: 640
+            },
+              {
+              name: 'firefox',
+              browserVersion: 'latest',
+              width: 1366,
+              height: 768
+            }]
+          })
+          .eyesCheckWindow({
+            sizeMode: 'selector',
+            selector: `.bd-example`,
+            tag: `${page.pageUrl}-${subtitle}`,
+            sendDom: false,
+          })
+          .eyesClose();
+      })","cy.get('ng-sample-box').each(demo => {
+        const subtitle = demo.parent().find('h3').text();
+
+        cy.wrap(demo).find(`.bd-example`)
+          .eyesOpen({
+            appName: 'NGX-bootstrap',
+            concurrency: 5,
+            matchLevel: 'Strict',
+            showLogs: true,
+            testName: `${page.pageUrl} - ${subtitle}`,
+            browser: [{
+              name: 'chrome',
+              browserVersion: 'latest',
+              width: 360,
+              height: 640
+            }, {
+              name: 'firefox',
+              browserVersion: 'latest',
+              width: 360,
+              height: 640
+            },
+              {
+              name: 'firefox',
+              browserVersion: 'latest',
+              width: 1366,
+              height: 768
+            }]
+          })
+          .eyesCheckWindow({
+            sizeMode: 'selector',
+            selector: `.bd-example`,
+            tag: `${page.pageUrl}-${subtitle}`,
+            sendDom: false,
+          })
+          .eyesClose();
+      })","() => {
+      page.navigateTo();
+      cy.get('ng-sample-box').each(demo => {
+        const subtitle = demo.parent().find('h3').text();
+
+        cy.wrap(demo).find(`.bd-example`)
+          .eyesOpen({
+            appName: 'NGX-bootstrap',
+            concurrency: 5,
+            matchLevel: 'Strict',
+            showLogs: true,
+            testName: `${page.pageUrl} - ${subtitle}`,
+            browser: [{
+              name: 'chrome',
+              browserVersion: 'latest',
+              width: 360,
+              height: 640
+            }, {
+              name: 'firefox',
+              browserVersion: 'latest',
+              width: 360,
+              height: 640
+            },
+              {
+              name: 'firefox',
+              browserVersion: 'latest',
+              width: 1366,
+              height: 768
+            }]
+          })
+          .eyesCheckWindow({
+            sizeMode: 'selector',
+            selector: `.bd-example`,
+            tag: `${page.pageUrl}-${subtitle}`,
+            sendDom: false,
+          })
+          .eyesClose();
+      });
+    }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,laudspeaker/laudspeaker,29a4d816d70ff30f689f3d26baf59b48,Cypress,packages/tests/cypress/test-helpers/createTestCustomer.ts,23,ui_action,text_input,"cy.get(""input:last"").clear","cy.get(""input:last"").clear()",text_input,type,css_selector,,loop,1,0,,,helper_body,callback_iteration,21,"cy.get(""input:last"").clear()","cy.wrap(additional_attributes).each((attr) => {
+    cy.contains(""Add attribute"").click();
+    cy.get(""input:last"").clear().type(attr);
+  })","cy.wrap(additional_attributes).each((attr) => {
+    cy.contains(""Add attribute"").click();
+    cy.get(""input:last"").clear().type(attr);
+  })","(email: string, additional_attributes: string[] = []) => {
+  cy.contains(""Audience"").click();
+  cy.contains(""People"").click();
+  cy.get(':contains(""Settings""):last').click();
+  cy.contains(""Add attribute"").click();
+  cy.get(""input"").clear().type(""email"");
+  cy.contains(""String"").click();
+  cy.get('[data-option=""Email""]').click();
+  cy.contains(""Select which customer attribute to use as the primary key"").click();
+  cy.contains(""email"").click();
+  cy.contains(""Add attribute"").click();
+  cy.get(""input:last"").clear().type(""agreed"");
+  cy.contains(""String"").click();
+  cy.get('[data-option=""Boolean""]').click();
+
+  cy.contains(""Add attribute"").click();
+  cy.get(""input:last"").clear().type(""mkt_agree"");
+  cy.contains(""String"").click();
+  cy.get('[data-option=""Boolean""]').click();
+
+  cy.wrap(additional_attributes).each((attr) => {
+    cy.contains(""Add attribute"").click();
+    cy.get(""input:last"").clear().type(attr);
+  });
+
+  cy.contains(""Save"").click();
+  cy.get(""#create-customer-button"").click();
+  cy.get(""#pkValue"").type(email);
+  cy.get(""#create-person-modal-button"").click();
+
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,midas-research/audino,ea6996328bdb733201055337577dc80d,Cypress,cvat/tests/cypress/support/commands.js,1497,ui_action,unknown_action,cy.wrap($canvas).trigger,"cy.wrap($canvas).trigger('mousedown', {
+                        clientX: initX, clientY: initY, button: 0, bubbles: true,
+                    })",unknown_action,trigger,,,loop_and_branch,1,2,if,then,helper_body,if,1487,"cy.wrap($canvas).trigger('mousedown', {
+                        clientX: initX, clientY: initY, button: 0, bubbles: true,
+                    })","if (['brush', 'eraser'].includes(method)) {
+                if (method === 'eraser') {
+                    cy.get('.cvat-brush-tools-eraser').click();
+                } else {
+                    cy.get('.cvat-brush-tools-brush').click();
+                }
+
+                cy.get('.cvat-canvas-container').then(([$canvas]) => {
+                    const [initX, initY] = coordinates[0];
+                    cy.wrap($canvas).trigger('mousemove', { clientX: initX, clientY: initY, bubbles: true });
+                    cy.wrap($canvas).trigger('mousedown', {
+                        clientX: initX, clientY: initY, button: 0, bubbles: true,
+                    });
+                    for (const coord of coordinates) {
+                        const [clientX, clientY] = coord;
+                        cy.wrap($canvas).trigger('mousemove', { clientX, clientY, bubbles: true });
+                    }
+                    cy.wrap($canvas).trigger('mousemove', { clientX: initX, clientY: initY, bubbles: true });
+                    cy.wrap($canvas).trigger('mouseup', { bubbles: true });
+                });
+            } else if (['polygon-plus', 'polygon-minus'].includes(method)) {
+                if (method === 'polygon-plus') {
+                    cy.get('.cvat-brush-tools-polygon-plus').click();
+                } else {
+                    cy.get('.cvat-brush-tools-polygon-minus').click();
+                }
+
+                cy.get('.cvat-canvas-container').then(($c","cy.get('.cvat-canvas-container').then(([$canvas]) => {
+                    const [initX, initY] = coordinates[0];
+                    cy.wrap($canvas).trigger('mousemove', { clientX: initX, clientY: initY, bubbles: true });
+                    cy.wrap($canvas).trigger('mousedown', {
+                        clientX: initX, clientY: initY, button: 0, bubbles: true,
+                    });
+                    for (const coord of coordinates) {
+                        const [clientX, clientY] = coord;
+                        cy.wrap($canvas).trigger('mousemove', { clientX, clientY, bubbles: true });
+                    }
+                    cy.wrap($canvas).trigger('mousemove', { clientX: initX, clientY: initY, bubbles: true });
+                    cy.wrap($canvas).trigger('mouseup', { bubbles: true });
+                })","(instructions) => {
+    for (const instruction of instructions) {
+        const { method } = instruction;
+        if (method === 'brush-size') {
+            const { value } = instruction;
+            cy.get('.cvat-brush-tools-brush').click();
+            cy.get('.cvat-brush-tools-brush-size').within(() => {
+                cy.get('input').clear();
+                cy.get('input').type(`${value}`);
+            });
+        } else {
+            const { coordinates } = instruction;
+            if (['brush', 'eraser'].includes(method)) {
+                if (method === 'eraser') {
+                    cy.get('.cvat-brush-tools-eraser').click();
+                } else {
+                    cy.get('.cvat-brush-tools-brush').click();
+                }
+
+                cy.get('.cvat-canvas-container').then(([$canvas]) => {
+                    const [initX, initY] = coordinates[0];
+                    cy.wrap($canvas).trigger('mousemove', { clientX: initX, clientY: initY, bubbles: true });
+                    cy.wrap($canvas).trigger('mousedown', {
+                        clientX: initX, clientY: initY, button: 0, bubbles: true,
+                    });
+                    for (const coord of coordinates) {
+                        const [clientX, clientY] = coord;
+                        cy.wrap($canvas).trigger('mousemove', { clientX, clientY, bubbles: true });
+                    }
+                    cy.wrap($canvas).trigger('mousemove', { clientX: initX, cl",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,cloudtogo/pageplug,e4da1dbf57be60a1fc462849ba73b013,Cypress,app/client/cypress/support/Pages/AggregateHelper.ts,673,ui_action,locator_query,cy.get,cy.get(this.locator._multiSelectOptions($each)),locator_query,get,,,loop_and_branch,1,1,if,else,helper_body,if,669,cy.get(this.locator._multiSelectOptions($each)),"options.forEach(($each) => {
+        cy.get(this.locator._multiSelectOptions($each))
+          .uncheck({ force: true })
+          .wait(1000);
+        cy.get(this.locator._multiSelectOptions($each)).should(
+          ""not.be.checked"",
+        );
+      })","options.forEach(($each) => {
+        cy.get(this.locator._multiSelectOptions($each))
+          .uncheck({ force: true })
+          .wait(1000);
+        cy.get(this.locator._multiSelectOptions($each)).should(
+          ""not.be.checked"",
+        );
+      })","public SelectFromMultiSelect(
+    options: string[],
+    index = 0,
+    check = true,
+    endpoint = ""multiselectwidgetv2"",
+  ) {
+    this.ScrollIntoView(
+      this.locator._widgetInDeployed(endpoint) + "" div.rc-select-selector"",
+      index,
+    )
+      .then(($element: any) => {
+        // here, we try to click on downArrow in dropdown of multiSelect.
+        // the position is calculated from top left of the element
+        const dropdownCenterPosition = +$element.height / 2;
+        const dropdownArrowApproxPosition = +$element.width - 10;
+        cy.get($element).click(
+          dropdownArrowApproxPosition,
+          dropdownCenterPosition,
+          {
+            force: true,
+          },
+        );
+      })
+      .wait(500); //for dropdown options to settle
+
+    if (check) {
+      options.forEach(($each) => {
+        cy.get(this.locator._multiSelectOptions($each))
+          .check({ force: true })
+          .wait(1000);
+        cy.get(this.locator._multiSelectOptions($each)).should(""be.checked"");
+      });
+    } else {
+      options.forEach(($each) => {
+        cy.get(this.locator._multiSelectOptions($each))
+          .uncheck({ force: true })
+          .wait(1000);
+        cy.get(this.locator._multiSelectOptions($each)).should(
+          ""not.be.checked"",
+        );
+      });
+    }
+
+    // //closing multiselect dropdown
+    this.PressEscape();
+    // cy.get(this.locator._widgetInDeployed(endpoint))
+    //     .eq(index)
+",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,midas-research/audino,aff4cee53f30beaf064393c2b32999b0,Cypress,cvat/tests/cypress/support/commands.js,751,ui_action,locator_query,cy.get,cy.get('.cvat-attribute-mutable-checkbox'),locator_query,check,css_selector,,loop_and_branch,1,2,if,then,helper_body_with_caller_context,if,1006,cy.get('.cvat-attribute-mutable-checkbox'),"as.scrollIntoView();
+        const rect = canvas.getBoundingClientRect();
+        const { width, height } = rect;
+ ","cy.document().then((doc) => {
+        const cvatAttributeInputsWrapperList = Array.from(doc.querySelectorAll('.cvat-attribute-inputs-wrapper'));
+        for (let i = 0; i < cvatAttributeInputsWrapperList.length; i++) {
+            cvatAttributeInputsWrapperId.push(cvatAttributeInputsWrapperList[i].getAttribute('cvat-attribute-id'));
+        }
+
+        const minId = Math.min(...cvatAttributeInputsWrapperId);
+
+        cy.get(`[cvat-attribute-id=""${minId}""]`).within(() => {
+            cy.get('.cvat-attribute-name-input').type(attributes.name);
+            cy.get('.cvat-attribute-type-input').click();
+        });
+        cy.get('.ant-select-dropdown:has(.cvat-attribute-type-input-select)')
+            .not('.ant-select-dropdown-hidden')
+            .should('exist').and('be.visible')
+            .first()
+            .within(() => {
+                cy.get(`.cvat-attribute-type-input-${attributes.type.toLowerCase()}`).click();
+            });
+
+        if (['Number', 'Text'].includes(attributes.type)) {
+            cy.get(`[cvat-attribute-id=""${minId}""]`).within(() => {
+                if (attributes.values !== '') {
+                    cy.get('.cvat-attribute-values-input').type(attributes.values);
+                } else {
+                    cy.get('.cvat-attribute-values-input').clear();
+                }
+            });
+        } else if (['Radio', 'Select'].includes(attributes.type)) {
+            cy.get(`[cvat-attribute-id=""${minId}""]`).within(() =","(attributes) => {
+    const cvatAttributeInputsWrapperId = [];
+    cy.get('.cvat-new-attribute-button').click();
+    cy.document().then((doc) => {
+        const cvatAttributeInputsWrapperList = Array.from(doc.querySelectorAll('.cvat-attribute-inputs-wrapper'));
+        for (let i = 0; i < cvatAttributeInputsWrapperList.length; i++) {
+            cvatAttributeInputsWrapperId.push(cvatAttributeInputsWrapperList[i].getAttribute('cvat-attribute-id'));
+        }
+
+        const minId = Math.min(...cvatAttributeInputsWrapperId);
+
+        cy.get(`[cvat-attribute-id=""${minId}""]`).within(() => {
+            cy.get('.cvat-attribute-name-input').type(attributes.name);
+            cy.get('.cvat-attribute-type-input').click();
+        });
+        cy.get('.ant-select-dropdown:has(.cvat-attribute-type-input-select)')
+            .not('.ant-select-dropdown-hidden')
+            .should('exist').and('be.visible')
+            .first()
+            .within(() => {
+                cy.get(`.cvat-attribute-type-input-${attributes.type.toLowerCase()}`).click();
+            });
+
+        if (['Number', 'Text'].includes(attributes.type)) {
+            cy.get(`[cvat-attribute-id=""${minId}""]`).within(() => {
+                if (attributes.values !== '') {
+                    cy.get('.cvat-attribute-values-input').type(attributes.values);
+                } else {
+                    cy.get('.cvat-attribute-values-input').clear();
+                }
+            });
+        } els",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,payloadcms/payload,801f84dc9a873be3a524461d13ff9f18,Playwright,test/__helpers/e2e/helpers.ts,252,ui_action,locator_query,page.locator,page.locator(toastCloseSelector),locator_query,locator,,,branch,0,1,if,,caller_context,if,245,page.locator(toastCloseSelector),"if (!options?.disableDismissAllToasts) {
+    await closeAllToasts(page)
+  }","{
+  const toastCloseSelector = '.payload-toast-container button.payload-toast-close-button'
+  let count = await page.locator(toastCloseSelector).count()
+
+  while (count > 0) {
+    await page.locator(toastCloseSelector).first().click()
+    await expect(page.locator(toastCloseSelector)).toHaveCount(count - 1)
+    count--
+  }
+}","export async function closeAllToasts(page: Locator | Page): Promise<void> {
+  const toastCloseSelector = '.payload-toast-container button.payload-toast-close-button'
+  let count = await page.locator(toastCloseSelector).count()
+
+  while (count > 0) {
+    await page.locator(toastCloseSelector).first().click()
+    await expect(page.locator(toastCloseSelector)).toHaveCount(count - 1)
+    count--
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,payloadcms/payload,11aa2299c6d62154a4651c18edc31345,Playwright,test/__helpers/e2e/helpers.ts,229,ui_action,click,chevronButton.click,chevronButton.click(),click,click,,,branch,0,1,if,then,helper_body,if,226,chevronButton.click(),"if (selector === '#publish-locale') {
+    // open dropdown
+    const chevronButton = page.locator('.form-submit .popup__trigger-wrap > .popup-button')
+    await chevronButton.click()
+  }","{
+  await wait(500) // TODO: Fix this
+  if (selector === '#publish-locale') {
+    // open dropdown
+    const chevronButton = page.locator('.form-submit .popup__trigger-wrap > .popup-button')
+    await chevronButton.click()
+  }
+  await page.click(selector, { delay: 100 })
+
+  if (expectation === 'success') {
+    await expect(page.locator('.payload-toast-container')).toContainText('successfully')
+    await expect.poll(() => page.url(), { timeout: POLL_TOPASS_TIMEOUT }).not.toContain('/create')
+  } else {
+    await expect(page.locator('.payload-toast-container .toast-error')).toBeVisible()
+  }
+
+  // Close all toasts to prevent them from interfering with subsequent tests. E.g. the following could happen
+  // 1. saveDocAndAssert
+  // 2. some operation
+  // 3. second saveDocAndAssert
+  // 4. the first toast is still visible => the second saveDocAndAssert will pass even though the save is not finished yet (or even not successful!)
+  if (!options?.disableDismissAllToasts) {
+    await closeAllToasts(page)
+  }
+}","export async function saveDocAndAssert(
+  page: Page,
+  selector:
+    | '#action-publish'
+    | '#action-save'
+    | '#action-save-draft'
+    | '#publish-locale'
+    | string = '#action-save',
+  expectation: 'error' | 'success' = 'success',
+  options?: {
+    /**
+     * If true, the all toasts will not be dismissed after the save operation.
+     */
+    disableDismissAllToasts?: boolean
+  },
+): Promise<void> {
+  await wait(500) // TODO: Fix this
+  if (selector === '#publish-locale') {
+    // open dropdown
+    const chevronButton = page.locator('.form-submit .popup__trigger-wrap > .popup-button')
+    await chevronButton.click()
+  }
+  await page.click(selector, { delay: 100 })
+
+  if (expectation === 'success') {
+    await expect(page.locator('.payload-toast-container')).toContainText('successfully')
+    await expect.poll(() => page.url(), { timeout: POLL_TOPASS_TIMEOUT }).not.toContain('/create')
+  } else {
+    await expect(page.locator('.payload-toast-container .toast-error')).toBeVisible()
+  }
+
+  // Close all toasts to prevent them from interfering with subsequent tests. E.g. the following could happen
+  // 1. saveDocAndAssert
+  // 2. some operation
+  // 3. second saveDocAndAssert
+  // 4. the first toast is still visible => the second saveDocAndAssert will pass even though the save is not finished yet (or even not successful!)
+  if (!options?.disableDismissAllToasts) {
+    await closeAllToasts(page)
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,payloadcms/payload,f71bacffea218b6acf28c0949c7ebe68,Playwright,test/__helpers/e2e/helpers.ts,228,ui_action,locator_query,page.locator,page.locator('.form-submit .popup__trigger-wrap > .popup-button'),locator_query,locator,,,branch,0,1,if,then,helper_body,if,226,page.locator('.form-submit .popup__trigger-wrap > .popup-button'),"if (selector === '#publish-locale') {
+    // open dropdown
+    const chevronButton = page.locator('.form-submit .popup__trigger-wrap > .popup-button')
+    await chevronButton.click()
+  }","{
+  await wait(500) // TODO: Fix this
+  if (selector === '#publish-locale') {
+    // open dropdown
+    const chevronButton = page.locator('.form-submit .popup__trigger-wrap > .popup-button')
+    await chevronButton.click()
+  }
+  await page.click(selector, { delay: 100 })
+
+  if (expectation === 'success') {
+    await expect(page.locator('.payload-toast-container')).toContainText('successfully')
+    await expect.poll(() => page.url(), { timeout: POLL_TOPASS_TIMEOUT }).not.toContain('/create')
+  } else {
+    await expect(page.locator('.payload-toast-container .toast-error')).toBeVisible()
+  }
+
+  // Close all toasts to prevent them from interfering with subsequent tests. E.g. the following could happen
+  // 1. saveDocAndAssert
+  // 2. some operation
+  // 3. second saveDocAndAssert
+  // 4. the first toast is still visible => the second saveDocAndAssert will pass even though the save is not finished yet (or even not successful!)
+  if (!options?.disableDismissAllToasts) {
+    await closeAllToasts(page)
+  }
+}","export async function saveDocAndAssert(
+  page: Page,
+  selector:
+    | '#action-publish'
+    | '#action-save'
+    | '#action-save-draft'
+    | '#publish-locale'
+    | string = '#action-save',
+  expectation: 'error' | 'success' = 'success',
+  options?: {
+    /**
+     * If true, the all toasts will not be dismissed after the save operation.
+     */
+    disableDismissAllToasts?: boolean
+  },
+): Promise<void> {
+  await wait(500) // TODO: Fix this
+  if (selector === '#publish-locale') {
+    // open dropdown
+    const chevronButton = page.locator('.form-submit .popup__trigger-wrap > .popup-button')
+    await chevronButton.click()
+  }
+  await page.click(selector, { delay: 100 })
+
+  if (expectation === 'success') {
+    await expect(page.locator('.payload-toast-container')).toContainText('successfully')
+    await expect.poll(() => page.url(), { timeout: POLL_TOPASS_TIMEOUT }).not.toContain('/create')
+  } else {
+    await expect(page.locator('.payload-toast-container .toast-error')).toBeVisible()
+  }
+
+  // Close all toasts to prevent them from interfering with subsequent tests. E.g. the following could happen
+  // 1. saveDocAndAssert
+  // 2. some operation
+  // 3. second saveDocAndAssert
+  // 4. the first toast is still visible => the second saveDocAndAssert will pass even though the save is not finished yet (or even not successful!)
+  if (!options?.disableDismissAllToasts) {
+    await closeAllToasts(page)
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,super-productivity/super-productivity,37d9be80912501a3f23eda86afa82aff,Playwright,e2e/utils/sync-helpers.ts,170,ui_action,locator_query,page.locator,page.locator('.sync-btn mat-icon.sync-state-ico'),locator_query,locator,,,loop,1,0,,,helper_body,WhileStatement,167,page.locator('.sync-btn mat-icon.sync-state-ico'),"while (Date.now() - startTime < timeout) {
+    // Check if sync-state-ico icon exists (shown when hasNoPendingOps)
+    // The icon is small (10px) and absolutely positioned, so use count() check
+    const syncStateIcon = page.locator('.sync-btn mat-icon.sync-state-ico');
+    if ((await syncStateIcon.count()) > 0) {
+      // Brief wait for any final state updates to flush through
+      await page.waitForTimeout(200);
+      return 'success';
+    }
+
+    // Check if spinner is gone (sync not in progress)
+    const spinnerVisible = await syncPage.syncSpinner.isVisible().catch(() => false);
+    if (!spinnerVisible) {
+      nonSpinningCount++;
+      // After several consecutive checks with no spinner and no error, consider it success
+      // This handles cases where the icon check fails but sync actually completed
+      if (nonSpinningCount >= requiredNonSpinningChecks) {
+        // Final check - make sure sync button is still there and no error shown
+        const syncBtnVisible = await syncPage.syncBtn.isVisible().catch(() => false);
+        if (syncBtnVisible) {
+          // Brief wait for any final state updates to flush through
+          await page.waitForTimeout(200);
+          return 'success';
+        }
+      }
+    } else {
+      nonSpinningCount = 0; // Reset if spinner is visible again
+    }
+
+    const conflictDialog = page.locator('dialog-sync-conflict');
+    if (await conflictDialog.isVisible()) return 'conflict';
+
+    // Also check for first-sync conflict dialog (mat-d","{
+  const startTime = Date.now();
+
+  // Ensure sync button is visible first
+  await expect(syncPage.syncBtn).toBeVisible({ timeout: 10000 });
+
+  // Track consecutive non-spinning states to confirm sync is truly complete
+  let nonSpinningCount = 0;
+  const requiredNonSpinningChecks = 3;
+
+  while (Date.now() - startTime < timeout) {
+    // Check if sync-state-ico icon exists (shown when hasNoPendingOps)
+    // The icon is small (10px) and absolutely positioned, so use count() check
+    const syncStateIcon = page.locator('.sync-btn mat-icon.sync-state-ico');
+    if ((await syncStateIcon.count()) > 0) {
+      // Brief wait for any final state updates to flush through
+      await page.waitForTimeout(200);
+      return 'success';
+    }
+
+    // Check if spinner is gone (sync not in progress)
+    const spinnerVisible = await syncPage.syncSpinner.isVisible().catch(() => false);
+    if (!spinnerVisible) {
+      nonSpinningCount++;
+      // After several consecutive checks with no spinner and no error, consider it success
+      // This handles cases where the icon check fails but sync actually completed
+      if (nonSpinningCount >= requiredNonSpinningChecks) {
+        // Final check - make sure sync button is still there and no error shown
+        const syncBtnVisible = await syncPage.syncBtn.isVisible().catch(() => false);
+        if (syncBtnVisible) {
+          // Brief wait for any final state updates to flush through
+          await page.waitForTimeout(200);
+          return 'succe","async (
+  page: Page,
+  syncPage: SyncPage,
+  timeout: number = 30000,
+): Promise<'success' | 'conflict' | void> => {
+  const startTime = Date.now();
+
+  // Ensure sync button is visible first
+  await expect(syncPage.syncBtn).toBeVisible({ timeout: 10000 });
+
+  // Track consecutive non-spinning states to confirm sync is truly complete
+  let nonSpinningCount = 0;
+  const requiredNonSpinningChecks = 3;
+
+  while (Date.now() - startTime < timeout) {
+    // Check if sync-state-ico icon exists (shown when hasNoPendingOps)
+    // The icon is small (10px) and absolutely positioned, so use count() check
+    const syncStateIcon = page.locator('.sync-btn mat-icon.sync-state-ico');
+    if ((await syncStateIcon.count()) > 0) {
+      // Brief wait for any final state updates to flush through
+      await page.waitForTimeout(200);
+      return 'success';
+    }
+
+    // Check if spinner is gone (sync not in progress)
+    const spinnerVisible = await syncPage.syncSpinner.isVisible().catch(() => false);
+    if (!spinnerVisible) {
+      nonSpinningCount++;
+      // After several consecutive checks with no spinner and no error, consider it success
+      // This handles cases where the icon check fails but sync actually completed
+      if (nonSpinningCount >= requiredNonSpinningChecks) {
+        // Final check - make sure sync button is still there and no error shown
+        const syncBtnVisible = await syncPage.syncBtn.isVisible().catch(() => false);
+        if (syncBtnVisible) {
+          // Brief",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,documenso/documenso,fd8ceffc1840ed151017aef0cd2b1539,Playwright,packages/app-tests/e2e/document-auth/action-auth.spec.ts,31,ui_action,locator_query,page.getByRole,"page.getByRole('heading', { name: 'Sign Document' })",locator_query,getByRole,,,loop,1,0,,,test_body,ForOfStatement,25,"page.getByRole('heading', { name: 'Sign Document' })","for (const recipient of recipients) {
+    const { token, fields } = recipient;
+
+    const signUrl = `/sign/${token}`;
+
+    await page.goto(signUrl);
+    await expect(page.getByRole('heading', { name: 'Sign Document' })).toBeVisible();
+
+    await signSignaturePad(page);
+
+    for (const field of fields) {
+      await page.locator(`#field-${field.id}`).getByRole('button').click();
+
+      if (field.type === FieldType.TEXT) {
+        await page.locator('#custom-text').fill('TEXT');
+        await page.getByRole('button', { name: 'Save' }).click();
+      }
+
+      await expect(page.locator(`#field-${field.id}`)).toHaveAttribute('data-inserted', 'true');
+    }
+
+    await page.getByRole('button', { name: 'Complete' }).click();
+    await page.getByRole('button', { name: 'Sign' }).click();
+    await page.waitForURL(`${signUrl}/complete`);
+  }","test('[DOCUMENT_AUTH]: should allow signing when no auth setup', async ({ page }) => {
+  const { user, team } = await seedUser();
+
+  const { user: recipientWithAccount } = await seedUser();
+
+  const { recipients } = await seedPendingDocumentWithFullFields({
+    owner: user,
+    teamId: team.id,
+    recipients: [recipientWithAccount, seedTestEmail()],
+  });
+
+  // Check that both are granted access.
+  for (const recipient of recipients) {
+    const { token, fields } = recipient;
+
+    const signUrl = `/sign/${token}`;
+
+    await page.goto(signUrl);
+    await expect(page.getByRole('heading', { name: 'Sign Document' })).toBeVisible();
+
+    await signSignaturePad(page);
+
+    for (const field of fields) {
+      await page.locator(`#field-${field.id}`).getByRole('button').click();
+
+      if (field.type === FieldType.TEXT) {
+        await page.locator('#custom-text').fill('TEXT');
+        await page.getByRole('button', { name: 'Save' }).click();
+      }
+
+      await expect(page.locator(`#field-${field.id}`)).toHaveAttribute('data-inserted', 'true');
+    }
+
+    await page.getByRole('button', { name: 'Complete' }).click();
+    await page.getByRole('button', { name: 'Sign' }).click();
+    await page.waitForURL(`${signUrl}/complete`);
+  }
+})","async ({ page }) => {
+  const { user, team } = await seedUser();
+
+  const { user: recipientWithAccount } = await seedUser();
+
+  const { recipients } = await seedPendingDocumentWithFullFields({
+    owner: user,
+    teamId: team.id,
+    recipients: [recipientWithAccount, seedTestEmail()],
+  });
+
+  // Check that both are granted access.
+  for (const recipient of recipients) {
+    const { token, fields } = recipient;
+
+    const signUrl = `/sign/${token}`;
+
+    await page.goto(signUrl);
+    await expect(page.getByRole('heading', { name: 'Sign Document' })).toBeVisible();
+
+    await signSignaturePad(page);
+
+    for (const field of fields) {
+      await page.locator(`#field-${field.id}`).getByRole('button').click();
+
+      if (field.type === FieldType.TEXT) {
+        await page.locator('#custom-text').fill('TEXT');
+        await page.getByRole('button', { name: 'Save' }).click();
+      }
+
+      await expect(page.locator(`#field-${field.id}`)).toHaveAttribute('data-inserted', 'true');
+    }
+
+    await page.getByRole('button', { name: 'Complete' }).click();
+    await page.getByRole('button', { name: 'Sign' }).click();
+    await page.waitForURL(`${signUrl}/complete`);
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,payloadcms/payload,e0fba0de10e42d7cccd22261be4d7d53,Playwright,test/__helpers/e2e/toggleNav.ts,13,ui_action,keyboard_input,page.keyboard.press,page.keyboard.press('Escape'),keyboard_input,press,,keyboard_entry,loop,1,0,,,helper_body,ForStatement,12,page.keyboard.press('Escape'),"for (let i = 0; i < dialogs.length; i++) {
+    await page.keyboard.press('Escape')
+  }","{
+  // wait for the preferences/media queries to either open or close the nav
+  await expect(page.locator('.template-default--nav-hydrated')).toBeVisible()
+
+  // close all open modals
+  const dialogs = await page.locator('dialog[open]').elementHandles()
+
+  for (let i = 0; i < dialogs.length; i++) {
+    await page.keyboard.press('Escape')
+  }
+
+  // check to see if the nav is already open and if not, open it
+  // use the `--nav-open` modifier class to check if the nav is open
+  // this will prevent clicking nav links that are bleeding off the screen
+  const nav = page.locator('.template-default.template-default--nav-open')
+
+  if (await nav.isVisible()) {
+    return {
+      nav,
+    }
+  }
+
+  // playwright: get first element with .nav-toggler which is VISIBLE (not hidden), could be 2 elements with .nav-toggler on mobile and desktop but only one is visible
+  await page.locator('.nav-toggler >> visible=true').click()
+  await expect(page.locator('.nav--nav-animate[inert], .nav--nav-hydrated[inert]')).toBeHidden()
+  await expect(page.locator('.template-default.template-default--nav-open')).toBeVisible()
+
+  return {
+    nav,
+  }
+}","export async function openNav(page: Page): Promise<{ nav: ReturnType<Page['locator']> }> {
+  // wait for the preferences/media queries to either open or close the nav
+  await expect(page.locator('.template-default--nav-hydrated')).toBeVisible()
+
+  // close all open modals
+  const dialogs = await page.locator('dialog[open]').elementHandles()
+
+  for (let i = 0; i < dialogs.length; i++) {
+    await page.keyboard.press('Escape')
+  }
+
+  // check to see if the nav is already open and if not, open it
+  // use the `--nav-open` modifier class to check if the nav is open
+  // this will prevent clicking nav links that are bleeding off the screen
+  const nav = page.locator('.template-default.template-default--nav-open')
+
+  if (await nav.isVisible()) {
+    return {
+      nav,
+    }
+  }
+
+  // playwright: get first element with .nav-toggler which is VISIBLE (not hidden), could be 2 elements with .nav-toggler on mobile and desktop but only one is visible
+  await page.locator('.nav-toggler >> visible=true').click()
+  await expect(page.locator('.nav--nav-animate[inert], .nav--nav-hydrated[inert]')).toBeHidden()
+  await expect(page.locator('.template-default.template-default--nav-open')).toBeVisible()
+
+  return {
+    nav,
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,deltachat/deltachat-desktop,24127f2eacc0e1b3814a17b9258be114,Playwright,packages/e2e-tests/playwright-helper.ts,239,ui_action,locator_query,page.getByTestId,page.getByTestId('open-settings-menu-item'),locator_query,click,test_id_or_data_contract,,loop_and_branch,1,2,if,,caller_context,if,350,page.getByTestId('open-settings-menu-item'),"
+  const accountList = page.locator('.styles_module_account')
+  await expect(accountList.last()).t","{
+  await page.getByTestId(`account-item-${accountId}`).click({ button: 'right' })
+  await page.getByTestId('open-settings-menu-item').click()
+  const nameLocator = page.getByTestId('profile-display-name')
+  await expect(nameLocator).not.toBeEmpty()
+  const name = await nameLocator.textContent()
+
+  await page.getByTestId('open-advanced-settings').click()
+  await page.getByTestId('open-transport-settings').click()
+  await page.getByLabel('Edit Relay').first().click()
+  const addressLocator = page.locator('#addr')
+  await expect(addressLocator).toHaveValue(/.+@.+/)
+  const address = await addressLocator.inputValue()
+  let password = ''
+  if (includePasswd) {
+    const passwdLocator = page.locator('#password')
+    password = await passwdLocator.inputValue()
+  }
+  await page.getByTestId('cancel').click()
+  await page.getByTestId('transports-settings-close').click()
+  await page.getByTestId('settings-advanced-close').click()
+
+  return {
+    id: accountId,
+    name: name ?? '',
+    address: address ?? '',
+    password: password,
+  }
+}","export async function getProfile(
+  page: Page,
+  accountId: string,
+  includePasswd = false
+): Promise<User> {
+  await page.getByTestId(`account-item-${accountId}`).click({ button: 'right' })
+  await page.getByTestId('open-settings-menu-item').click()
+  const nameLocator = page.getByTestId('profile-display-name')
+  await expect(nameLocator).not.toBeEmpty()
+  const name = await nameLocator.textContent()
+
+  await page.getByTestId('open-advanced-settings').click()
+  await page.getByTestId('open-transport-settings').click()
+  await page.getByLabel('Edit Relay').first().click()
+  const addressLocator = page.locator('#addr')
+  await expect(addressLocator).toHaveValue(/.+@.+/)
+  const address = await addressLocator.inputValue()
+  let password = ''
+  if (includePasswd) {
+    const passwdLocator = page.locator('#password')
+    password = await passwdLocator.inputValue()
+  }
+  await page.getByTestId('cancel').click()
+  await page.getByTestId('transports-settings-close').click()
+  await page.getByTestId('settings-advanced-close').click()
+
+  return {
+    id: accountId,
+    name: name ?? '',
+    address: address ?? '',
+    password: password,
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,payloadcms/payload,fba3de0a0003a745e70ec2e446a9bf08,Playwright,test/__helpers/e2e/helpers.ts,256,ui_action,locator_query,page.locator,page.locator(toastCloseSelector),locator_query,locator,,,loop_and_branch,1,1,if,,helper_body_with_caller_context,if,254,page.locator(toastCloseSelector),"while (count > 0) {
+    await page.locator(toastCloseSelector).first().click()
+    await expect(page.locator(toastCloseSelector)).toHaveCount(count - 1)
+    count--
+  }","{
+  const toastCloseSelector = '.payload-toast-container button.payload-toast-close-button'
+  let count = await page.locator(toastCloseSelector).count()
+
+  while (count > 0) {
+    await page.locator(toastCloseSelector).first().click()
+    await expect(page.locator(toastCloseSelector)).toHaveCount(count - 1)
+    count--
+  }
+}","export async function closeAllToasts(page: Locator | Page): Promise<void> {
+  const toastCloseSelector = '.payload-toast-container button.payload-toast-close-button'
+  let count = await page.locator(toastCloseSelector).count()
+
+  while (count > 0) {
+    await page.locator(toastCloseSelector).first().click()
+    await expect(page.locator(toastCloseSelector)).toHaveCount(count - 1)
+    count--
+  }
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,jetkvm/kvm,c910c0d37119e97179caa5610d02c0b8,Playwright,ui/e2e/helpers.ts,525,ui_action,locator_query,page.locator,"page.locator("".text-red-500, .text-red-600"")",locator_query,locator,,,loop_and_branch,1,2,if,,caller_context,if,797,"page.locator("".text-red-500, .text-red-600"")","page);
+      await disablePasswordFromSettings(page, usedPassword!);
+      return;
+    }
+
+    await resetConfigViaSSH();
+    await restartAppViaSSH();
+    await page.goto(""/"");
+    await page.waitForLoadState(""networkidle"");
+    if (desired.mode === ""password"") {
+      await goToWelcomeMode(page);
+      await selectWelcome","{
+  const passwordInput = page.locator('input[name=""password""]');
+  await expect(passwordInput).toBeVisible({ timeout: 5000 });
+
+  // Check if input is enabled (might be disabled due to rate-limiting)
+  const isEnabled = await passwordInput.isEnabled({ timeout: 3000 }).catch(() => false);
+  if (!isEnabled) {
+    if (expectSuccess) {
+      throw new Error(""Login failed: password input is disabled (likely rate-limited)"");
+    }
+    return { success: false, error: ""Rate limited - input disabled"" };
+  }
+
+  await passwordInput.fill(password, { timeout: 5000 });
+
+  const submitButton = page.getByRole(""button"", { name: /Log in/i });
+  const submitEnabled = await submitButton.isEnabled({ timeout: 3000 }).catch(() => false);
+  if (!submitEnabled) {
+    if (expectSuccess) {
+      throw new Error(""Login failed: submit button is disabled"");
+    }
+    return { success: false, error: ""Submit button disabled"" };
+  }
+  await submitButton.click();
+
+  // Race between successful navigation and error message appearance so failed
+  // logins resolve quickly (~500ms) instead of waiting for the full URL timeout.
+  const errorLocator = page.locator("".text-red-500, .text-red-600"").first();
+  const outcome = await Promise.race([
+    page
+      .waitForURL(url => !url.toString().includes(""/login""), { timeout: 5000 })
+      .then(() => ""navigated"" as const),
+    errorLocator.waitFor({ state: ""visible"", timeout: 5000 }).then(() => ""error"" as const),
+  ]).catch(() => ""time","export async function loginLocal(
+  page: Page,
+  password: string,
+  expectSuccess = true,
+): Promise<{ success: boolean; error?: string }> {
+  const passwordInput = page.locator('input[name=""password""]');
+  await expect(passwordInput).toBeVisible({ timeout: 5000 });
+
+  // Check if input is enabled (might be disabled due to rate-limiting)
+  const isEnabled = await passwordInput.isEnabled({ timeout: 3000 }).catch(() => false);
+  if (!isEnabled) {
+    if (expectSuccess) {
+      throw new Error(""Login failed: password input is disabled (likely rate-limited)"");
+    }
+    return { success: false, error: ""Rate limited - input disabled"" };
+  }
+
+  await passwordInput.fill(password, { timeout: 5000 });
+
+  const submitButton = page.getByRole(""button"", { name: /Log in/i });
+  const submitEnabled = await submitButton.isEnabled({ timeout: 3000 }).catch(() => false);
+  if (!submitEnabled) {
+    if (expectSuccess) {
+      throw new Error(""Login failed: submit button is disabled"");
+    }
+    return { success: false, error: ""Submit button disabled"" };
+  }
+  await submitButton.click();
+
+  // Race between successful navigation and error message appearance so failed
+  // logins resolve quickly (~500ms) instead of waiting for the full URL timeout.
+  const errorLocator = page.locator("".text-red-500, .text-red-600"").first();
+  const outcome = await Promise.race([
+    page
+      .waitForURL(url => !url.toString().includes(""/login""), { timeout: 5000 })
+      .then(",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,swaponline/MultiCurrencyWallet,928a92a000393038ba0156a58a165a75,Puppeteer,tests/e2e/appsSmoke.test.js,284,ui_action,unknown_action,page.evaluate,page.evaluate(() => document.body.textContent),unknown_action,evaluate,,,branch,0,1,try_catch,try,test_body,try_catch,264,page.evaluate(() => document.body.textContent),"try {
+      await goToAppsPage(page)
+
+      const appsNavLink = await page.evaluateHandle(() => {
+        const links = Array.from(document.querySelectorAll('a, button'))
+        return links.find(
+          (el) =>
+            el.textContent?.trim().match(/^Apps$/i) &&
+            el.closest('nav, header, [class*=""nav""], [class*=""header""]')
+        )
+      })
+
+      if (!appsNavLink.asElement()) {
+        console.warn('Apps nav link not found — skipping dropdown test')
+        return
+      }
+
+      await appsNavLink.asElement().hover()
+      await timeOut(500)
+
+      const pageText = await page.evaluate(() => document.body.textContent)
+      for (const app of APPS) {
+        const found = pageText.includes(app.title)
+        console.log(`Dropdown item ""${app.title}"": ${found ? 'FOUND' : 'MISSING'}`)
+        expect(found).toBe(true)
+      }
+
+      await takeScreenshot(page, 'Apps_NavDropdown_Hover')
+    } catch (error) {
+      await takeScreenshot(page, 'Apps_NavDropdown_Error')
+      throw error
+    } finally {
+      await page.close()
+    }","it('hovering Apps nav item reveals dropdown with all app titles', async () => {
+    const page = await newPage()
+    try {
+      await goToAppsPage(page)
+
+      const appsNavLink = await page.evaluateHandle(() => {
+        const links = Array.from(document.querySelectorAll('a, button'))
+        return links.find(
+          (el) =>
+            el.textContent?.trim().match(/^Apps$/i) &&
+            el.closest('nav, header, [class*=""nav""], [class*=""header""]')
+        )
+      })
+
+      if (!appsNavLink.asElement()) {
+        console.warn('Apps nav link not found — skipping dropdown test')
+        return
+      }
+
+      await appsNavLink.asElement().hover()
+      await timeOut(500)
+
+      const pageText = await page.evaluate(() => document.body.textContent)
+      for (const app of APPS) {
+        const found = pageText.includes(app.title)
+        console.log(`Dropdown item ""${app.title}"": ${found ? 'FOUND' : 'MISSING'}`)
+        expect(found).toBe(true)
+      }
+
+      await takeScreenshot(page, 'Apps_NavDropdown_Hover')
+    } catch (error) {
+      await takeScreenshot(page, 'Apps_NavDropdown_Error')
+      throw error
+    } finally {
+      await page.close()
+    }
+  })","async () => {
+    const page = await newPage()
+    try {
+      await goToAppsPage(page)
+
+      const appsNavLink = await page.evaluateHandle(() => {
+        const links = Array.from(document.querySelectorAll('a, button'))
+        return links.find(
+          (el) =>
+            el.textContent?.trim().match(/^Apps$/i) &&
+            el.closest('nav, header, [class*=""nav""], [class*=""header""]')
+        )
+      })
+
+      if (!appsNavLink.asElement()) {
+        console.warn('Apps nav link not found — skipping dropdown test')
+        return
+      }
+
+      await appsNavLink.asElement().hover()
+      await timeOut(500)
+
+      const pageText = await page.evaluate(() => document.body.textContent)
+      for (const app of APPS) {
+        const found = pageText.includes(app.title)
+        console.log(`Dropdown item ""${app.title}"": ${found ? 'FOUND' : 'MISSING'}`)
+        expect(found).toBe(true)
+      }
+
+      await takeScreenshot(page, 'Apps_NavDropdown_Hover')
+    } catch (error) {
+      await takeScreenshot(page, 'Apps_NavDropdown_Error')
+      throw error
+    } finally {
+      await page.close()
+    }
+  }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,swaponline/MultiCurrencyWallet,23193fabc1111f8426b46377f5a0f4de,Puppeteer,tests/e2e/appsSmoke.test.js,419,ui_action,locator_query,page.evaluate,"page.evaluate(() => {
+        const iframe = document.querySelector('iframe')
+        const main = document.querySelector('main')
+        const iframeParent = iframe ? iframe.parentElement : null
+        const cs = iframe ? window.getComputedStyle(iframe) : null
+        const csParent = iframeParent ? window.getComputedStyle(iframeParent) : null
+        return {
+          hasIframe: !!ifram...",locator_query,evaluate,,,branch,0,1,try_catch,try,test_body,try_catch,395,"page.evaluate(() => {
+        const iframe = document.querySelector('iframe')
+        const main = document.querySelector('main')
+        const iframeParent = iframe ? iframe.parentElement : null
+        const cs = iframe ? window.getComputedStyle(iframe) : null
+        const csParent = iframeParent ? window.getComputedStyle(iframeParent) : null
+        return {
+          hasIframe: !!iframe,
+          iframeWidth: iframe ? Math.round(iframe.getBoundingClientRect().width) : 0,
+          iframeSrc: iframe ? iframe.getAttribute('src') : null,
+          iframeDisplay: cs ? cs.display : null,
+          iframeVisibility: cs ? cs.visibility : null,
+          iframeCSWidth: cs ? cs.width : null,
+          parentWidth: iframeParent ? Math.round(iframeParent.getBoundingClientRect().width) : 0,
+          parentDisplay: csParent ? csParent.display : null,
+          parentClass: iframeParent ? iframeParent.className.slice(0, 60) : null,
+          mainWidth: main ? Math.round(main.getBoundingClientRect().width) : 0,
+          hasSecurityNotice: !!document.querySelector('[class*=""securityNotice""]'),
+          hasBackButton: !!Array.from(document.querySelectorAll('button')).find((b) =>
+            b.textContent?.includes('All apps')
+          ),
+          url: window.location.href,
+        }
+      })","try {
+      const targetApp = APPS[0]
+      // Navigate directly to app page with networkidle2 so that CSS + React are
+      // fully applied before we measure getBoundingClientRect().
+      // domcontentloaded is too early (styles not yet injected by webpack bundle).
+      // goToAppsPage sets SO_WalletAppsEnabled=true, navigates to #/apps,
+      // waits 1.5s — CSS and React are fully ready at that point.
+      // Then we do an in-page hash change (no full reload) so the flag stays.
+      await goToAppsPage(page)
+      await page.evaluate((appId) => {
+        window.location.hash = `/apps/${appId}`
+      }, targetApp.id)
+      // Wait for React Router re-render + layout (iframe must have non-zero width)
+      await page
+        .waitForFunction(
+          () => {
+            const iframe = document.querySelector('iframe')
+            return iframe && iframe.getBoundingClientRect().width > 10
+          },
+          { timeout: 10_000 }
+        )
+        .catch(() => {})
+
+      // The iframe should be close to full viewport width
+      const diagInfo = await page.evaluate(() => {
+        const iframe = document.querySelector('iframe')
+        const main = document.querySelector('main')
+        const iframeParent = iframe ? iframe.parentElement : null
+        const cs = iframe ? window.getComputedStyle(iframe) : null
+        const csParent = iframeParent ? window.getComputedStyle(iframeParent) : null
+        return {
+          hasIframe: !!iframe,","it('app view is full-width (no container max-width constraint)', async () => {
+    const page = await newPage()
+    try {
+      const targetApp = APPS[0]
+      // Navigate directly to app page with networkidle2 so that CSS + React are
+      // fully applied before we measure getBoundingClientRect().
+      // domcontentloaded is too early (styles not yet injected by webpack bundle).
+      // goToAppsPage sets SO_WalletAppsEnabled=true, navigates to #/apps,
+      // waits 1.5s — CSS and React are fully ready at that point.
+      // Then we do an in-page hash change (no full reload) so the flag stays.
+      await goToAppsPage(page)
+      await page.evaluate((appId) => {
+        window.location.hash = `/apps/${appId}`
+      }, targetApp.id)
+      // Wait for React Router re-render + layout (iframe must have non-zero width)
+      await page
+        .waitForFunction(
+          () => {
+            const iframe = document.querySelector('iframe')
+            return iframe && iframe.getBoundingClientRect().width > 10
+          },
+          { timeout: 10_000 }
+        )
+        .catch(() => {})
+
+      // The iframe should be close to full viewport width
+      const diagInfo = await page.evaluate(() => {
+        const iframe = document.querySelector('iframe')
+        const main = document.querySelector('main')
+        const iframeParent = iframe ? iframe.parentElement : null
+        const cs = iframe ? window.getComputedStyle(iframe) : null
+        const cs","async () => {
+    const page = await newPage()
+    try {
+      const targetApp = APPS[0]
+      // Navigate directly to app page with networkidle2 so that CSS + React are
+      // fully applied before we measure getBoundingClientRect().
+      // domcontentloaded is too early (styles not yet injected by webpack bundle).
+      // goToAppsPage sets SO_WalletAppsEnabled=true, navigates to #/apps,
+      // waits 1.5s — CSS and React are fully ready at that point.
+      // Then we do an in-page hash change (no full reload) so the flag stays.
+      await goToAppsPage(page)
+      await page.evaluate((appId) => {
+        window.location.hash = `/apps/${appId}`
+      }, targetApp.id)
+      // Wait for React Router re-render + layout (iframe must have non-zero width)
+      await page
+        .waitForFunction(
+          () => {
+            const iframe = document.querySelector('iframe')
+            return iframe && iframe.getBoundingClientRect().width > 10
+          },
+          { timeout: 10_000 }
+        )
+        .catch(() => {})
+
+      // The iframe should be close to full viewport width
+      const diagInfo = await page.evaluate(() => {
+        const iframe = document.querySelector('iframe')
+        const main = document.querySelector('main')
+        const iframeParent = iframe ? iframe.parentElement : null
+        const cs = iframe ? window.getComputedStyle(iframe) : null
+        const csParent = iframeParent ? window.getComputedStyle(iframeParent) : n",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,swaponline/MultiCurrencyWallet,f53b673ffb0c39765bf9e27b5533f1fb,Puppeteer,tests/e2e/appsSmoke.test.js,373,ui_action,selection,page.evaluate,"page.evaluate(
+        (appTitles) => {
+          const btns = Array.from(document.querySelectorAll('button'))
+          return appTitles.filter((title) => btns.some((b) => b.textContent?.trim() === title))
+        },
+        APPS.map((a) => a.title)
+      )",selection,evaluate,,,branch,0,1,try_catch,try,test_body,try_catch,355,"page.evaluate(
+        (appTitles) => {
+          const btns = Array.from(document.querySelectorAll('button'))
+          return appTitles.filter((title) => btns.some((b) => b.textContent?.trim() === title))
+        },
+        APPS.map((a) => a.title)
+      )","try {
+      await goToAppsPage(page)
+      const targetApp = APPS[0]
+
+      // Navigate to first app
+      const url = page.url().split('#')[0]
+      await page.goto(`${url}#/apps/${targetApp.id}`)
+      await timeOut(2_000)
+
+      // No ""All apps"" back button should exist (bar was removed)
+      const hasBackBtn = await page.evaluate(() => {
+        const btns = Array.from(document.querySelectorAll('button'))
+        return !!btns.find((b) => b.textContent?.includes('All apps'))
+      })
+      expect(hasBackBtn).toBe(false)
+      console.log('Back button absent ✓ (full-screen mode)')
+
+      // No duplicate app-title tab buttons either
+      const appTabButtons = await page.evaluate(
+        (appTitles) => {
+          const btns = Array.from(document.querySelectorAll('button'))
+          return appTitles.filter((title) => btns.some((b) => b.textContent?.trim() === title))
+        },
+        APPS.map((a) => a.title)
+      )
+
+      console.log('App tab buttons found:', appTabButtons)
+      expect(appTabButtons.length).toBe(0)
+
+      await takeScreenshot(page, 'Apps_FullScreen_NoNavBar')
+    } catch (error) {
+      await takeScreenshot(page, 'Apps_FullScreen_Error')
+      throw error
+    } finally {
+      await page.close()
+    }","it('app view has no navigation bar — full-screen iframe mode', async () => {
+    // Back-button bar was removed in commit 79f157971: iframe now fills full screen.
+    // Verify: no ""All apps"" back button, no duplicate app-title tab buttons.
+    const page = await newPage()
+    try {
+      await goToAppsPage(page)
+      const targetApp = APPS[0]
+
+      // Navigate to first app
+      const url = page.url().split('#')[0]
+      await page.goto(`${url}#/apps/${targetApp.id}`)
+      await timeOut(2_000)
+
+      // No ""All apps"" back button should exist (bar was removed)
+      const hasBackBtn = await page.evaluate(() => {
+        const btns = Array.from(document.querySelectorAll('button'))
+        return !!btns.find((b) => b.textContent?.includes('All apps'))
+      })
+      expect(hasBackBtn).toBe(false)
+      console.log('Back button absent ✓ (full-screen mode)')
+
+      // No duplicate app-title tab buttons either
+      const appTabButtons = await page.evaluate(
+        (appTitles) => {
+          const btns = Array.from(document.querySelectorAll('button'))
+          return appTitles.filter((title) => btns.some((b) => b.textContent?.trim() === title))
+        },
+        APPS.map((a) => a.title)
+      )
+
+      console.log('App tab buttons found:', appTabButtons)
+      expect(appTabButtons.length).toBe(0)
+
+      await takeScreenshot(page, 'Apps_FullScreen_NoNavBar')
+    } catch (error) {
+      await takeScreenshot(page, 'Apps_FullScreen_Error')
+    ","async () => {
+    // Back-button bar was removed in commit 79f157971: iframe now fills full screen.
+    // Verify: no ""All apps"" back button, no duplicate app-title tab buttons.
+    const page = await newPage()
+    try {
+      await goToAppsPage(page)
+      const targetApp = APPS[0]
+
+      // Navigate to first app
+      const url = page.url().split('#')[0]
+      await page.goto(`${url}#/apps/${targetApp.id}`)
+      await timeOut(2_000)
+
+      // No ""All apps"" back button should exist (bar was removed)
+      const hasBackBtn = await page.evaluate(() => {
+        const btns = Array.from(document.querySelectorAll('button'))
+        return !!btns.find((b) => b.textContent?.includes('All apps'))
+      })
+      expect(hasBackBtn).toBe(false)
+      console.log('Back button absent ✓ (full-screen mode)')
+
+      // No duplicate app-title tab buttons either
+      const appTabButtons = await page.evaluate(
+        (appTitles) => {
+          const btns = Array.from(document.querySelectorAll('button'))
+          return appTitles.filter((title) => btns.some((b) => b.textContent?.trim() === title))
+        },
+        APPS.map((a) => a.title)
+      )
+
+      console.log('App tab buttons found:', appTabButtons)
+      expect(appTabButtons.length).toBe(0)
+
+      await takeScreenshot(page, 'Apps_FullScreen_NoNavBar')
+    } catch (error) {
+      await takeScreenshot(page, 'Apps_FullScreen_Error')
+      throw error
+    } finally {
+      await page.close()
+    }",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,springload/react-accessible-accordion,2675272d353dafd8cca0442fbe1a88fc,Puppeteer,integration/wai-aria.spec.js,248,ui_action,unknown_action,page.evaluate,"page.evaluate(
+                        (button) => button.getAttribute('role'),
+                        buttonHandle,
+                    )",unknown_action,evaluate,,,loop,1,0,,,test_body,ForOfStatement,246,"page.evaluate(
+                        (button) => button.getAttribute('role'),
+                        buttonHandle,
+                    )","for (const buttonHandle of buttonsHandles) {
+                expect(
+                    await page.evaluate(
+                        (button) => button.getAttribute('role'),
+                        buttonHandle,
+                    ),
+                ).toBe('button');
+            }","it(`The title of each accordion header is contained in an element with
+            role button.`, async () => {
+            // TODO: Use 'title' elements inside the headings.
+
+            const { browser, page, buttonsHandles } = await setup();
+            expect(buttonsHandles).toHaveLength(3);
+            for (const buttonHandle of buttonsHandles) {
+                expect(
+                    await page.evaluate(
+                        (button) => button.getAttribute('role'),
+                        buttonHandle,
+                    ),
+                ).toBe('button');
+            }
+        })","async () => {
+            // TODO: Use 'title' elements inside the headings.
+
+            const { browser, page, buttonsHandles } = await setup();
+            expect(buttonsHandles).toHaveLength(3);
+            for (const buttonHandle of buttonsHandles) {
+                expect(
+                    await page.evaluate(
+                        (button) => button.getAttribute('role'),
+                        buttonHandle,
+                    ),
+                ).toBe('button');
+            }
+        }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,springload/react-accessible-accordion,fdef0b8c6611ab25ae6593caa9db8ef1,Puppeteer,integration/wai-aria.spec.js,403,ui_action,unknown_action,page.evaluate,"page.evaluate(
+                    (panel) => panel.getAttribute('aria-labelledby'),
+                    panelHandle,
+                )",unknown_action,evaluate,,,loop,1,0,,,test_body,ForOfStatement,391,"page.evaluate(
+                    (panel) => panel.getAttribute('aria-labelledby'),
+                    panelHandle,
+                )","for (const itemHandle of itemsHandles) {
+                const buttonHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemButton""]',
+                );
+                const panelHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemPanel""]',
+                );
+
+                const buttonId = await page.evaluate(
+                    (button) => button.id,
+                    buttonHandle,
+                );
+                const panelAriaLabelledBy = await page.evaluate(
+                    (panel) => panel.getAttribute('aria-labelledby'),
+                    panelHandle,
+                );
+                const panelRole = await page.evaluate(
+                    (panel) => panel.getAttribute('role'),
+                    panelHandle,
+                );
+
+                expect(panelAriaLabelledBy).toBeTruthy();
+                expect(buttonId).toBeTruthy();
+
+                expect(panelAriaLabelledBy).toEqual(buttonId);
+                expect(panelRole).toEqual('region');
+            }","it(`Optionally, each element that serves as a container for panel
+            content has role region and aria-labelledby with a value that refers
+            to the button that controls display of the panel.`, async () => {
+            const { browser, page, itemsHandles } = await setup();
+            expect(itemsHandles.length).toEqual(3);
+
+            for (const itemHandle of itemsHandles) {
+                const buttonHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemButton""]',
+                );
+                const panelHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemPanel""]',
+                );
+
+                const buttonId = await page.evaluate(
+                    (button) => button.id,
+                    buttonHandle,
+                );
+                const panelAriaLabelledBy = await page.evaluate(
+                    (panel) => panel.getAttribute('aria-labelledby'),
+                    panelHandle,
+                );
+                const panelRole = await page.evaluate(
+                    (panel) => panel.getAttribute('role'),
+                    panelHandle,
+                );
+
+                expect(panelAriaLabelledBy).toBeTruthy();
+                expect(buttonId).toBeTruthy();
+
+                expect(panelAriaLabelledBy).toEqual(buttonId);
+                expect(panelRole).toEqual('region');
+            }
+        })","async () => {
+            const { browser, page, itemsHandles } = await setup();
+            expect(itemsHandles.length).toEqual(3);
+
+            for (const itemHandle of itemsHandles) {
+                const buttonHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemButton""]',
+                );
+                const panelHandle = await itemHandle.$(
+                    '[data-accordion-component=""AccordionItemPanel""]',
+                );
+
+                const buttonId = await page.evaluate(
+                    (button) => button.id,
+                    buttonHandle,
+                );
+                const panelAriaLabelledBy = await page.evaluate(
+                    (panel) => panel.getAttribute('aria-labelledby'),
+                    panelHandle,
+                );
+                const panelRole = await page.evaluate(
+                    (panel) => panel.getAttribute('role'),
+                    panelHandle,
+                );
+
+                expect(panelAriaLabelledBy).toBeTruthy();
+                expect(buttonId).toBeTruthy();
+
+                expect(panelAriaLabelledBy).toEqual(buttonId);
+                expect(panelRole).toEqual('region');
+            }
+        }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,springload/react-accessible-accordion,9bebb12be6c1e9c7dd175fcedf7cde4e,Puppeteer,integration/wai-aria.spec.js,294,ui_action,unknown_action,page.evaluate,"page.evaluate(
+                        (heading) => heading.childNodes.length === 1,
+                        handle,
+                    )",unknown_action,evaluate,,,loop,1,0,,,test_body,ForOfStatement,292,"page.evaluate(
+                        (heading) => heading.childNodes.length === 1,
+                        handle,
+                    )","for (const handle of headingsHandles) {
+                expect(
+                    await page.evaluate(
+                        (heading) => heading.childNodes.length === 1,
+                        handle,
+                    ),
+                ).toEqual(true);
+
+                expect(
+                    await page.evaluate(
+                        (heading) =>
+                            heading.firstChild.getAttribute(
+                                'data-accordion-component',
+                            ) === 'AccordionItemButton',
+                        handle,
+                    ),
+                ).toEqual(true);
+            }","it(`The button element is the only element inside the heading element.
+            That is, if there are other visually persistent elements, they are
+            not included inside the heading element.`, async () => {
+            const { headingsHandles, page } = await setup();
+
+            expect(headingsHandles).toHaveLength(3);
+
+            for (const handle of headingsHandles) {
+                expect(
+                    await page.evaluate(
+                        (heading) => heading.childNodes.length === 1,
+                        handle,
+                    ),
+                ).toEqual(true);
+
+                expect(
+                    await page.evaluate(
+                        (heading) =>
+                            heading.firstChild.getAttribute(
+                                'data-accordion-component',
+                            ) === 'AccordionItemButton',
+                        handle,
+                    ),
+                ).toEqual(true);
+            }
+        })","async () => {
+            const { headingsHandles, page } = await setup();
+
+            expect(headingsHandles).toHaveLength(3);
+
+            for (const handle of headingsHandles) {
+                expect(
+                    await page.evaluate(
+                        (heading) => heading.childNodes.length === 1,
+                        handle,
+                    ),
+                ).toEqual(true);
+
+                expect(
+                    await page.evaluate(
+                        (heading) =>
+                            heading.firstChild.getAttribute(
+                                'data-accordion-component',
+                            ) === 'AccordionItemButton',
+                        handle,
+                    ),
+                ).toEqual(true);
+            }
+        }",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,swaponline/MultiCurrencyWallet,cf6503ba3eaac1698ab95e1938fa681f,Puppeteer,tests/e2e/utils.ts,91,ui_action,keyboard_input,wordInput.press,wordInput.press('Backspace'),keyboard_input,press,,keyboard_entry,loop_and_branch,1,1,try_catch,,helper_body_with_caller_context,try_catch,90,wordInput.press('Backspace'),"for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }","{
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}","async (params: ImportWalletParams) => {
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,swaponline/MultiCurrencyWallet,cf6503ba3eaac1698ab95e1938fa681f,Puppeteer,tests/e2e/utils.ts,97,ui_action,keyboard_input,wordInput.press,wordInput.press('Enter'),keyboard_input,press,,keyboard_entry,loop_and_branch,1,1,try_catch,,helper_body_with_caller_context,try_catch,95,wordInput.press('Enter'),"for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }","{
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}","async (params: ImportWalletParams) => {
+  const { page, seed, timeout = 30_000 } = params
+
+  await clickOn({
+    page,
+    selector: '#preloaderRestoreBtn',
+  })
+  // app creation
+  await timeOut(30_000)
+
+  await page.click('#restoreWalletUseMnemonic')
+
+  await page.waitForSelector('.react-tags__search-input', {
+    timeout,
+  })
+
+  const wordInput: ElementHandle | null = await page.$(`.react-tags__search-input`)
+
+  if (!wordInput) {
+    throw new Error('HTML input for the Mnemonic phrase is not found')
+  }
+
+  // remove default seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.press('Backspace')
+  }
+
+  // type seed
+  for (let i = 0; i < 12; i++) {
+    await wordInput.type(seed[i])
+    await wordInput.press('Enter')
+  }
+
+  await page.click('#walletRecoveryButton')
+
+  const isRecovered = await waitSlowLoadSelector(page, '#finishWalletRecoveryButton', timeout, 20)
+  if (!isRecovered) {
+    throw new Error('Recovery timeout')
+  }
+
+  await page.click('#finishWalletRecoveryButton')
+}",false,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,swaponline/MultiCurrencyWallet,9bc042aceb412f9482f79cb7d2080bc7,Puppeteer,tests/e2e/appsSmoke.test.js,211,ui_action,unknown_action,page.evaluate,"page.evaluate((el) => el.textContent, btn)",unknown_action,evaluate,,,loop_and_branch,1,1,try_catch,try,test_body,try_catch,210,"page.evaluate((el) => el.textContent, btn)","for (const btn of buttons) {
+          const text = await page.evaluate((el) => el.textContent, btn)
+          if (text && text.includes(app.title)) {
+            try {
+              await btn.click()
+              clicked = true
+              break
+            } catch {
+              // button not clickable (e.g. hidden nav dropdown), try next
+            }
+          }
+        }","it(`${app.title} — clicking tile opens iframe`, async () => {
+      const page = await newPage()
+      const consoleErrors = []
+      page.on('pageerror', (err) => consoleErrors.push(err.message))
+
+      try {
+        await goToAppsPage(page)
+
+        const buttons = await page.$$('button')
+        let clicked = false
+        for (const btn of buttons) {
+          const text = await page.evaluate((el) => el.textContent, btn)
+          if (text && text.includes(app.title)) {
+            try {
+              await btn.click()
+              clicked = true
+              break
+            } catch {
+              // button not clickable (e.g. hidden nav dropdown), try next
+            }
+          }
+        }
+
+        if (!clicked) {
+          const url = page.url().split('#')[0]
+          await page.goto(`${url}#/apps/${app.id}`)
+        }
+
+        await timeOut(2_000)
+
+        const currentUrl = page.url()
+        console.log(`${app.title} — navigated to: ${currentUrl}`)
+        expect(currentUrl).toContain(`/apps/${app.id}`)
+
+        const iframe = await page.$('iframe')
+        expect(iframe).not.toBeNull()
+        console.log(`${app.title} — iframe element found`)
+
+        const iframeSrc = await page.evaluate((el) => el?.getAttribute('src'), iframe)
+        console.log(`${app.title} — iframe src: ${iframeSrc}`)
+        expect(iframeSrc).toContain(app.urlPattern)
+        // Verify theme is forwarded to iframe URL
+        expect(iframeSrc","async () => {
+      const page = await newPage()
+      const consoleErrors = []
+      page.on('pageerror', (err) => consoleErrors.push(err.message))
+
+      try {
+        await goToAppsPage(page)
+
+        const buttons = await page.$$('button')
+        let clicked = false
+        for (const btn of buttons) {
+          const text = await page.evaluate((el) => el.textContent, btn)
+          if (text && text.includes(app.title)) {
+            try {
+              await btn.click()
+              clicked = true
+              break
+            } catch {
+              // button not clickable (e.g. hidden nav dropdown), try next
+            }
+          }
+        }
+
+        if (!clicked) {
+          const url = page.url().split('#')[0]
+          await page.goto(`${url}#/apps/${app.id}`)
+        }
+
+        await timeOut(2_000)
+
+        const currentUrl = page.url()
+        console.log(`${app.title} — navigated to: ${currentUrl}`)
+        expect(currentUrl).toContain(`/apps/${app.id}`)
+
+        const iframe = await page.$('iframe')
+        expect(iframe).not.toBeNull()
+        console.log(`${app.title} — iframe element found`)
+
+        const iframeSrc = await page.evaluate((el) => el?.getAttribute('src'), iframe)
+        console.log(`${app.title} — iframe src: ${iframeSrc}`)
+        expect(iframeSrc).toContain(app.urlPattern)
+        // Verify theme is forwarded to iframe URL
+        expect(iframeSrc).toMatch(/theme=(dark|light)/)
+
+        const",true,correct,Control-flow enclosure matches loop/branch/context snippet.
+loop_branch_stratified,WebThingsIO/gateway,09405a4beec3d3668de2a2c3fb2c684d,WebDriverIO,src/test/browser/load-test.ts,49,ui_action,unknown_action,browser.execute,"browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      })",unknown_action,execute,,,branch,0,1,try_catch,try,test_body,try_catch,46,"browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      })","try {
+      const connectivityScrim = await browser.$('#connectivity-scrim');
+      await connectivityScrim.waitForDisplayed();
+      browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      });
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } catch (_e) {
+      // If it didn't appear, just move on.
+    }","it('creates a user', async () => {
+    const browser = getBrowser();
+
+    await browser.url('/');
+
+    const name = await browser.$('#name');
+    const email = await browser.$('#email');
+    const password = await browser.$('#password');
+    const confirmPassword = await browser.$('#confirm-password');
+
+    await name.waitForExist({ timeout: 5000 });
+    await name.setValue('Test User');
+    await email.setValue('test@example.com');
+    await password.setValue('rosebud');
+    await confirmPassword.setValue('rosebud');
+
+    const createUserButton = await browser.$('#create-user-button');
+    await createUserButton.waitForClickable({ timeout: DEFAULT_CLICKABLE_TIMEOUT });
+    await createUserButton.click();
+
+    const menuButton = await browser.$('#menu-button');
+    await menuButton.waitForClickable({ timeout: DEFAULT_CLICKABLE_TIMEOUT });
+
+    await waitForExpect(async () => {
+      const newUrl = await browser.getUrl();
+      expect(newUrl.endsWith('/things')).toBeTruthy();
+    });
+
+    // Wait for the connectivity scrim to appear, then hide it (and wait for the
+    // transition to finish).
+    try {
+      const connectivityScrim = await browser.$('#connectivity-scrim');
+      await connectivityScrim.waitForDisplayed();
+      browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      });
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } catch (_e) {
+      // If it di","async () => {
+    const browser = getBrowser();
+
+    await browser.url('/');
+
+    const name = await browser.$('#name');
+    const email = await browser.$('#email');
+    const password = await browser.$('#password');
+    const confirmPassword = await browser.$('#confirm-password');
+
+    await name.waitForExist({ timeout: 5000 });
+    await name.setValue('Test User');
+    await email.setValue('test@example.com');
+    await password.setValue('rosebud');
+    await confirmPassword.setValue('rosebud');
+
+    const createUserButton = await browser.$('#create-user-button');
+    await createUserButton.waitForClickable({ timeout: DEFAULT_CLICKABLE_TIMEOUT });
+    await createUserButton.click();
+
+    const menuButton = await browser.$('#menu-button');
+    await menuButton.waitForClickable({ timeout: DEFAULT_CLICKABLE_TIMEOUT });
+
+    await waitForExpect(async () => {
+      const newUrl = await browser.getUrl();
+      expect(newUrl.endsWith('/things')).toBeTruthy();
+    });
+
+    // Wait for the connectivity scrim to appear, then hide it (and wait for the
+    // transition to finish).
+    try {
+      const connectivityScrim = await browser.$('#connectivity-scrim');
+      await connectivityScrim.waitForDisplayed();
+      browser.execute(() => {
+        document.getElementById('connectivity-scrim')!.classList.add('hidden');
+      });
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } catch (_e) {
+      // If it didn't appear, just mov",true,correct,Control-flow enclosure matches loop/branch/context snippet.

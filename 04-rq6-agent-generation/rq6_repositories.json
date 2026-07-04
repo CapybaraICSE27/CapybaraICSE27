@@ -1,0 +1,142 @@
+[
+  {
+    "agent_test_case_count": 126,
+    "agent_test_file_count": 11,
+    "application_category": "personal finance / budgeting app",
+    "repo": "actualbudget/actual",
+    "repo_url": "https://github.com/actualbudget/actual"
+  },
+  {
+    "agent_test_case_count": 101,
+    "agent_test_file_count": 15,
+    "application_category": "GraphQL API client",
+    "repo": "altair-graphql/altair",
+    "repo_url": "https://github.com/altair-graphql/altair"
+  },
+  {
+    "agent_test_case_count": 84,
+    "agent_test_file_count": 9,
+    "application_category": "banking / payments demo app",
+    "repo": "cypress-io/cypress-realworld-app",
+    "repo_url": "https://github.com/cypress-io/cypress-realworld-app"
+  },
+  {
+    "agent_test_case_count": 104,
+    "agent_test_file_count": 6,
+    "application_category": "full-stack web app template",
+    "repo": "epicweb-dev/epic-stack",
+    "repo_url": "https://github.com/epicweb-dev/epic-stack"
+  },
+  {
+    "agent_test_case_count": 60,
+    "agent_test_file_count": 3,
+    "application_category": "repository visualization tool",
+    "repo": "git-truck/git-truck",
+    "repo_url": "https://github.com/git-truck/git-truck"
+  },
+  {
+    "agent_test_case_count": 154,
+    "agent_test_file_count": 8,
+    "application_category": "layout/grid UI library",
+    "repo": "gridstack/gridstack.js",
+    "repo_url": "https://github.com/gridstack/gridstack.js"
+  },
+  {
+    "agent_test_case_count": 154,
+    "agent_test_file_count": 7,
+    "application_category": "secret-sharing app",
+    "repo": "HemmeligOrg/Hemmelig.app",
+    "repo_url": "https://github.com/HemmeligOrg/Hemmelig.app"
+  },
+  {
+    "agent_test_case_count": 47,
+    "agent_test_file_count": 6,
+    "application_category": "CMS/admin platform",
+    "repo": "keystonejs/keystone",
+    "repo_url": "https://github.com/keystonejs/keystone"
+  },
+  {
+    "agent_test_case_count": 33,
+    "agent_test_file_count": 1,
+    "application_category": "todo app demo",
+    "repo": "laststance/react-typescript-todomvc-2022",
+    "repo_url": "https://github.com/laststance/react-typescript-todomvc-2022"
+  },
+  {
+    "agent_test_case_count": 128,
+    "agent_test_file_count": 14,
+    "application_category": "blogging/CMS platform",
+    "repo": "letterpad/letterpad",
+    "repo_url": "https://github.com/letterpad/letterpad"
+  },
+  {
+    "agent_test_case_count": 121,
+    "agent_test_file_count": 9,
+    "application_category": "map style editor",
+    "repo": "maplibre/maputnik",
+    "repo_url": "https://github.com/maplibre/maputnik"
+  },
+  {
+    "agent_test_case_count": 68,
+    "agent_test_file_count": 7,
+    "application_category": "admin dashboard framework/demo",
+    "repo": "marmelab/react-admin",
+    "repo_url": "https://github.com/marmelab/react-admin"
+  },
+  {
+    "agent_test_case_count": 122,
+    "agent_test_file_count": 7,
+    "application_category": "diagramming renderer/playground",
+    "repo": "mermaid-js/mermaid",
+    "repo_url": "https://github.com/mermaid-js/mermaid"
+  },
+  {
+    "agent_test_case_count": 109,
+    "agent_test_file_count": 8,
+    "application_category": "animation UI library",
+    "repo": "motiondivision/motion-vue",
+    "repo_url": "https://github.com/motiondivision/motion-vue"
+  },
+  {
+    "agent_test_case_count": 126,
+    "agent_test_file_count": 7,
+    "application_category": "media player UI library",
+    "repo": "openplayerjs/openplayerjs",
+    "repo_url": "https://github.com/openplayerjs/openplayerjs"
+  },
+  {
+    "agent_test_case_count": 142,
+    "agent_test_file_count": 11,
+    "application_category": "task/project management app",
+    "repo": "super-productivity/super-productivity",
+    "repo_url": "https://github.com/super-productivity/super-productivity"
+  },
+  {
+    "agent_test_case_count": 119,
+    "agent_test_file_count": 17,
+    "application_category": "page-transition/navigation library",
+    "repo": "swup/swup",
+    "repo_url": "https://github.com/swup/swup"
+  },
+  {
+    "agent_test_case_count": 70,
+    "agent_test_file_count": 3,
+    "application_category": "drawing/whiteboard app",
+    "repo": "tldraw/tldraw",
+    "repo_url": "https://github.com/tldraw/tldraw"
+  },
+  {
+    "agent_test_case_count": 68,
+    "agent_test_file_count": 7,
+    "application_category": "note-taking/knowledge-base app",
+    "repo": "TriliumNext/Trilium",
+    "repo_url": "https://github.com/TriliumNext/Trilium"
+  },
+  {
+    "agent_test_case_count": 118,
+    "agent_test_file_count": 6,
+    "application_category": "API documentation portal",
+    "repo": "zuplo/zudoku",
+    "repo_url": "https://github.com/zuplo/zudoku"
+  }
+]

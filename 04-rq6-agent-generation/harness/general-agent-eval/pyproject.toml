@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "general-agent-eval"
+version = "0.1.0"
+description = "Harnesses for evaluating general coding agents against isolated repositories."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "annotated-types==0.7.0",
+  "anyio==4.13.0",
+  "attrs==26.1.0",
+  "certifi==2026.4.22",
+  "cffi==2.0.0",
+  "claude-agent-sdk==0.2.82",
+  "click==8.3.3",
+  "cryptography==48.0.0",
+  "h11==0.16.0",
+  "httpcore==1.0.9",
+  "httpx==0.28.1",
+  "httpx-sse==0.4.3",
+  "idna==3.15",
+  "jinja2==3.1.6",
+  "jsonschema==4.26.0",
+  "jsonschema-specifications==2025.9.1",
+  "markupsafe==3.0.3",
+  "mcp==1.27.1",
+  "openai-codex==0.1.0b3",
+  "openai-codex-cli-bin==0.137.0a4",
+  "pycparser==3.0",
+  "pydantic==2.13.4",
+  "pydantic-core==2.46.4",
+  "pydantic-settings==2.14.1",
+  "pyjwt==2.12.1",
+  "python-dotenv==1.2.2",
+  "python-multipart==0.0.28",
+  "referencing==0.37.0",
+  "rpds-py==0.30.0",
+  "sniffio==1.3.1",
+  "sse-starlette==3.4.4",
+  "starlette==1.0.0",
+  "typing-extensions==4.15.0",
+  "typing-inspection==0.4.2",
+  "uvicorn==0.47.0",
+]
+
+[project.scripts]
+general-agent-eval-claude-code = "general_agent_eval.general_agents.claude_code:main"
+general-agent-eval-codex = "general_agent_eval.general_agents.codex:main"
+general-agent-eval-docker-run = "general_agent_eval.orchestration.run:main"
+general-agent-eval-recover = "general_agent_eval.recovery.recover_full_repo:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.4.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/general_agent_eval"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/README.md",
+  "/pyproject.toml",
+  "/docker",
+  "/resources",
+  "/src",
+  "/tests",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

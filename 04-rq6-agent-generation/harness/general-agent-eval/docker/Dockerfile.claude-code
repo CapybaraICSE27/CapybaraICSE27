@@ -1,0 +1,28 @@
+# syntax=docker/dockerfile:1.7
+#
+# Claude Code agent layer: Node.js and the Claude Code CLI on top of the base
+# runtime. (Codex needs no analogous install -- its binary ships in the
+# openai-codex-cli-bin wheel already present in the base image.)
+
+ARG BASE_IMAGE=general-agent-eval-base:latest
+FROM ${BASE_IMAGE}
+
+ARG CLAUDE_CODE_VERSION=2.1.143
+
+ENV NPM_CONFIG_PREFIX=/home/agent/.npm-global \
+    PATH=/home/agent/.npm-global/bin:$PATH
+
+USER root
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends nodejs npm \
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir -p /home/agent/.npm-global \
+    && chown -R agent /home/agent/.npm-global
+
+USER agent
+RUN npm install -g "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}"
+
+USER root
+RUN ln -sf /home/agent/.npm-global/bin/claude /usr/local/bin/claude
+
+USER agent

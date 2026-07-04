@@ -1,0 +1,297 @@
+sample_origin,repo,test_id,framework,line,name,raw_code,verification_intent,verification_intent_final,verification_intent_evidence_basis,verification_intent_matched_signal,assertion_matcher,assertion_semantic_matcher_ast,assertion_subject_kind,assertion_subject_root_ast,assertion_subject_path_json,assertion_subject_text_ast,assertion_subject_semantic_role_ast,assertion_callback_intent_hint_ast,assertion_framework_context,assertion_library_syntax,manual_intent_ok,manual_intent_should_be,manual_notes
+,webiny/webiny-js,e6f21c04181b8d958a545ac9da5cc8f5,Cypress,89,assert.isTrue,assert.isTrue(data),unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,webiny/webiny-js,cbcdb2390c995e17e8923674ed4b877b,Cypress,47,assert.isTrue,assert.isTrue(data),unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,tagspaces/tagspaces,fa9e1b947ba9e04e40835d81ba2e0da4,Playwright,374,expect(videoLocator).toBeSeekableMediaElement,"expect(videoLocator).toBeSeekableMediaElement(6.9, 7)",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,FuelLabs/fuels-wallet,fd65aea179c8cc3c0f259d66c6f3f906,Playwright,822,expect(transferStatus).rejects.toThrowError,"expect(transferStatus).rejects.toThrowError(
+          'address is not authorized for this connection.'
+        )",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,tagspaces/tagspaces,ea628df284dbab64f1ffae52c1362d0a,Playwright,374,expect(videoLocator).toBeSeekableMediaElement,"expect(videoLocator).toBeSeekableMediaElement(6.9, 7)",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,tagspaces/tagspaces,8ef96d737638f3d54ad1e400fe2ef5e9,Playwright,374,expect(videoLocator).toBeSeekableMediaElement,"expect(videoLocator).toBeSeekableMediaElement(6.9, 7)",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,tagspaces/tagspaces,9d6cb99096223fc68d0c96f1c287e004,Playwright,374,expect(videoLocator).toBeSeekableMediaElement,"expect(videoLocator).toBeSeekableMediaElement(6.9, 7)",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,FuelLabs/fuels-wallet,fd65aea179c8cc3c0f259d66c6f3f906,Playwright,667,expect(signedMessagePromise).rejects.toThrowError,"expect(signedMessagePromise).rejects.toThrowError(
+          'address is not authorized for this connection.'
+        )",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,ChromeDevTools/devtools-frontend,40032e7e43432881b975452d64d5e85a,Puppeteer,134,assert.deepInclude,"assert.deepInclude(events, {action: 'performSearch', queryString: 'abc'})",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,ChromeDevTools/devtools-frontend,40032e7e43432881b975452d64d5e85a,Puppeteer,136,assert.deepInclude,"assert.deepInclude(events, {action: 'previousSearchResult'})",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,ChromeDevTools/devtools-frontend,40032e7e43432881b975452d64d5e85a,Puppeteer,135,assert.deepInclude,"assert.deepInclude(events, {action: 'nextSearchResult'})",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,ChromeDevTools/devtools-frontend,130cbd67ac14fb92764500d77f037560,Puppeteer,41,assert.deepEqual,"assert.deepEqual(callbackArgs, '[{""onShown"":{},""onHidden"":{},""onSearch"":{}}]')",unspecified,unspecified,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,AudiusProject/apps,c25497d2afc717de76d6906aa7260b61,Playwright,37,"expect(socialActions.unrepostButton, 'Check for unrepost (ok if fails)')
+    .toBeVisible()
+    .catch","expect(socialActions.unrepostButton, 'Check for unrepost (ok if fails)')
+    .toBeVisible()
+    .catch(() => {})",element_presence,element_presence,lexical_oracle_category_fallback,visibility_oracle,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,OHIF/Viewers,e5611f497dd6755b16a7b673004a3844,Playwright,97,expect(await rightPanelPageObject.measurementsPanel.panel.getMeasurementCount()).toBeGreaterThan,"expect(await rightPanelPageObject.measurementsPanel.panel.getMeasurementCount()).toBeGreaterThan(
+    0
+  )",collection_size,collection_size,ast_assertion_matcher,matcher:toBeGreaterThan,toBeGreaterThan,,unknown,,[],await rightPanelPageObject.measurementsPanel.panel.getMeasurementCount(),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,JetBrains/kotlin-web-site,24f85adb2c31300dd931ba1affd1a1b2,Playwright,113,expect(newPage.url()).toContain,expect(newPage.url()).toContain('https://www.jetbrains.com/'),navigation_outcome,navigation_outcome,ast_assertion_subject,subject:page;basis:ast_page_call;matcher:tocontain,toContain,,page,newPage,"[""newPage"",""url""]",newPage.url(),scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,mattermost/mattermost,632a6644ade9310507d5e71359195d4f,Cypress,56,"expect(hasLicenseKey, hasLicenseKeyMessage).to.equal","expect(hasLicenseKey, hasLicenseKeyMessage).to.equal(true)",value_or_attribute_correctness,value_or_attribute_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:scalar_property,equal,,unknown,expect,"[""expect"",""to"",""equal""]","expect(hasLicenseKey, hasLicenseKeyMessage).to.equal(true)",scalar_property,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,payloadcms/payload,9da029f95c02d128feeff054c42aaab6,Playwright,308,expect(async () => await expect(localeButton).toBeEnabled()).toPass,"expect(async () => await expect(localeButton).toBeEnabled()).toPass({
+      timeout: POLL_TOPASS_TIMEOUT,
+    })",interactive_state,interactive_state,ast_assertion_matcher,matcher:toPass,toPass,,unknown,,[],async () => await expect(localeButton).toBeEnabled(),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,ionic-team/ionic-framework,53cd9d5f3ead5ac604f7e42e59327b37,Playwright,20,expect(page.url()).toContain,expect(page.url()).toContain('#/child/1'),navigation_outcome,navigation_outcome,ast_assertion_subject,subject:page;basis:ast_page_call;matcher:tocontain,toContain,,page,page,"[""page"",""url""]",page.url(),api_object_contract,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,ionic-team/ionic-framework,208c5f84d4a1879fafde81655d1d03c2,Playwright,235,expect(container).toHaveScreenshot,expect(container).toHaveScreenshot(screenshot(`select-solid-focus`)),visual_regression,visual_regression,ast_assertion_subject_semantic_role,subject_semantic_role:visual_snapshot_api,toHaveScreenshot,,unknown,container,"[""container""]",container,visual_snapshot_api,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,porsche-design-system/porsche-design-system,37974db71c9272176c1dca55dc29e5c4,Playwright,367,expect(await getMaskImage(input)).toBe,expect(await getMaskImage(input)).toBe('none'),style_or_visual_state,style_or_visual_state,ast_assertion_matcher,matcher:toBe,toBe,,unknown,,[],await getMaskImage(input),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,documenso/documenso,c69062c051b9f17123393deebfa81cd1,Playwright,247,expect(page1!.count).toBe,expect(page1!.count).toBe(5),collection_size,collection_size,lexical_collection_context,count_property_context,toBe,,unknown,count,"[""count""]",page1!.count,collection_size,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,SonicJs-Org/sonicjs,3c570a4626c2984666e913f329eeb36f,Playwright,99,expect(status).toBe,expect(status).toBe(200),network_contract,network_contract,lexical_api_status_context,matcher:tobe;bare_status_http_code_context,toBe,,unknown,status,"[""status""]",status,scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,actualbudget/actual,5f2bda86a73ac16f37917613f8b057e5,Playwright,117,expect(page).toMatchThemeScreenshots,expect(page).toMatchThemeScreenshots(),visual_regression,visual_regression,lexical_oracle_category_fallback,visual_snapshot_oracle,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,porsche-design-system/porsche-design-system,e22bc57be8668d9b7afeaa76f55ca31f,Playwright,335,expect(textField).toHaveJSProperty,"expect(textField).toHaveJSProperty('value', '1')",value_or_attribute_correctness,value_or_attribute_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:scalar_property,toHaveJSProperty,,unknown,textField,"[""textField""]",textField,scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,appsmithorg/appsmith,2d613007b9a68e487cee22f2580e25fa,Cypress,217,expect(loc.href).to.eq,expect(loc.href).to.eq(loc.origin + redirectUrl),navigation_outcome,navigation_outcome,lexical_navigation_context,location_or_url_subject_context,eq,,unknown,expect,"[""expect"",""to"",""eq""]",expect(loc.href).to.eq(loc.origin + redirectUrl),scalar_property,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,facebook/lexical,2597464489ecee8f3985cf0a9c28bc53,Playwright,130,expect(await hasSelection('.image-caption-container')).toBe,expect(await hasSelection('.image-caption-container')).toBe(false),content_correctness,content_correctness,lexical_oracle_category_fallback,text_content_oracle,toBe,,unknown,,[],await hasSelection('.image-caption-container'),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,vercel-labs/wterm,49d56bbf048ef63e2d6b94636245ac97,Playwright,111,expect(await scrollbackRows.count()).toBeGreaterThan,expect(await scrollbackRows.count()).toBeGreaterThan(0),collection_size,collection_size,lexical_collection_context,count_property_context,toBeGreaterThan,,unknown,,[],await scrollbackRows.count(),collection_size,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,linode/manager,0de80e38289d90e987418b5be841f4a2,Cypress,662,"expect(interception)
+        .to.have.property","expect(interception)
+        .to.have.property('response')",network_contract,network_contract,ast_assertion_matcher,matcher:property;value_attribute_current_matcher,property,,unknown,expect,"[""expect"",""to"",""have"",""property""]","expect(interception)
+        .to.have.property('response')",scalar_property,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,microsoft/fast,3f34ab97483d3e00792964e16af9f72c,Playwright,396,"expect(
+                await element.evaluate(node => {
+                    return (window as any).Observable.getAccessors(node).filter(
+                        (accessor: any) => accessor.name ==","expect(
+                await element.evaluate(node => {
+                    return (window as any).Observable.getAccessors(node).filter(
+                        (accessor: any) => accessor.name === ""attribute"",
+                    );
+                }),
+            ).toEqual([
+                {
+                    Owner: undefined,
+                    attribute: ""some-attribute"",
+      ...",collection_size,collection_size,lexical_collection_filter_context,matcher:toequal;filtered_collection,toEqual,,unknown,,[],"await element.evaluate(node => {
+                    return (window as any).Observable.getAccessors(node).filter(
+                        (accessor: any) => accessor.name === ""attribute"",
+                    );
+                })",,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,CopilotKit/CopilotKit,f57b1bf70f79281d4c8c5b2413f36c6e,Playwright,9,"expect(page.locator("".chat-css-demo-scope"").first()).toBeVisible","expect(page.locator("".chat-css-demo-scope"").first()).toBeVisible()",element_presence,element_presence,lexical_style_context,style_or_class_subject_context,toBeVisible,,locator,page,"[""page"",""locator"",""first""]","page.locator("".chat-css-demo-scope"").first()",element_presence,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,opencollective/opencollective-frontend,99c3d9ceab27202e9931a99bbc31fb37,Cypress,70,expect(result).to.have.property,expect(result).to.have.property('messages'),value_or_attribute_correctness,value_or_attribute_correctness,ast_assertion_matcher,matcher:property;value_attribute_current_matcher,property,,unknown,expect,"[""expect"",""to"",""have"",""property""]",expect(result).to.have.property('messages'),api_object_contract,,cypress,jest,incorrect,api_or_data_contract,"Object/property contract assertion, not scalar value."
+,mattermost/mattermost,ce6fbaf3a0c9aff51f65f9b0e55e8d4a,Cypress,68,"expect(data.isLicensed, hasLicenseMessage).to.equal","expect(data.isLicensed, hasLicenseMessage).to.equal(true)",value_or_attribute_correctness,value_or_attribute_correctness,ast_assertion_subject_path,subject_path:expect.to.equal;matcher:equal;payload_scalar,equal,,unknown,expect,"[""expect"",""to"",""equal""]","expect(data.isLicensed, hasLicenseMessage).to.equal(true)",scalar_property,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,openobserve/openobserve,5d5a555a12d97a8def07f079900da57f,Playwright,600,expect(status).toBe,expect(status).toBe(401),network_contract,network_contract,lexical_api_status_context,matcher:tobe;bare_status_http_code_context,toBe,,unknown,status,"[""status""]",status,scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,freeCodeCamp/freeCodeCamp,3b2ab1cc84b2bc5eb7b4ba12a9630203,Puppeteer,216,expect(idVerificationMessage).toBeNull,expect(idVerificationMessage).toBeNull(),element_presence,element_presence,ast_assertion_subject_semantic_role,subject_semantic_role:scalar_property,toBeNull,,unknown,idVerificationMessage,"[""idVerificationMessage""]",idVerificationMessage,scalar_property,,unknown,playwright,correct,n/a,Verification intent label is acceptable.
+,qwikifiers/qwik-ui,0a894d2c92f3dfd4e80c7f988c5a2b2b,Playwright,85,expect(d.getRoot()).toHaveAttribute,"expect(d.getRoot()).toHaveAttribute('aria-valuetext', '30%')",accessibility_compliance,accessibility_compliance,lexical_accessibility_context,matcher:tohaveattribute;accessibility_context,toHaveAttribute,,unknown,d,"[""d"",""getRoot""]",d.getRoot(),scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,WebThingsIO/gateway,fc8988c2b33fc68aca489894ca2a67c2,WebDriverIO,52,expect(await addon5.hasDisableButton()).toBeTruthy,expect(await addon5.hasDisableButton()).toBeTruthy(),interactive_state,interactive_state,ast_assertion_matcher,matcher:toBeTruthy,toBeTruthy,,unknown,,[],await addon5.hasDisableButton(),,,webdriverio,playwright,correct,n/a,Verification intent label is acceptable.
+,linode/manager,cde6ded40f63eccc938da45fa8a6d41f,Cypress,373,"expect(interception)
+        .to.have.property","expect(interception)
+        .to.have.property('response')",network_contract,network_contract,ast_assertion_matcher,matcher:property;value_attribute_current_matcher,property,,unknown,expect,"[""expect"",""to"",""have"",""property""]","expect(interception)
+        .to.have.property('response')",scalar_property,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,SonicJs-Org/sonicjs,727adeb32c82c7c125320ed3e94d073c,Playwright,250,expect(Array.isArray(data.data.trends)).toBe,expect(Array.isArray(data.data.trends)).toBe(true),api_or_data_contract,api_or_data_contract,ast_assertion_subject_path,subject_path:Array.isArray;matcher:tobe;type_or_shape_contract,toBe,,unknown,Array,"[""Array"",""isArray""]",Array.isArray(data.data.trends),scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,ionic-team/ionic-framework,cb9e1197b911665e77ec80c2ce02aa6a,Playwright,16,expect(page.locator('app-router-link')).toHaveAttribute,"expect(page.locator('app-router-link')).toHaveAttribute('class', 'ion-page ion-page-hidden')",style_or_visual_state,style_or_visual_state,lexical_navigation_context,matcher:tohaveattribute;href_or_url_attribute,toHaveAttribute,,locator,page,"[""page"",""locator""]",page.locator('app-router-link'),style_layout_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,WebThingsIO/gateway,fc8988c2b33fc68aca489894ca2a67c2,WebDriverIO,26,expect(addon1).toBeNull,expect(addon1).toBeNull(),element_presence,element_presence,ast_assertion_subject_semantic_role,subject_semantic_role:scalar_property,toBeNull,,unknown,addon1,"[""addon1""]",addon1,scalar_property,,webdriverio,playwright,correct,n/a,Verification intent label is acceptable.
+,openobserve/openobserve,349f5406293108e1666605c5991db548,Playwright,164,"expect(['training', 'ready', 'failed', 'active', 'paused', 'unknown']).toContain","expect(['training', 'ready', 'failed', 'active', 'paused', 'unknown']).toContain(status)",value_or_attribute_correctness,value_or_attribute_correctness,lexical_scalar_property_context,subject_path:enum;matcher:tocontain;enum_membership,toContain,,unknown,,[],"['training', 'ready', 'failed', 'active', 'paused', 'unknown']",,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,porsche-design-system/porsche-design-system,d5bc01cef12290a94b2d4f06530e8e51,Playwright,42,expect(await getCounterValue(tabsBarUpdateEventCounter)).toBe,expect(await getCounterValue(tabsBarUpdateEventCounter)).toBe('2'),interactive_state,interactive_state,lexical_oracle_category_fallback,count_or_length_oracle,toBe,,unknown,,[],await getCounterValue(tabsBarUpdateEventCounter),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,cloudtogo/pageplug,4d6cc4d0e4368fdef6260a27cfc54a02,Cypress,110,"cy.wait(""@post_Execute"").should","cy.wait(""@post_Execute"").should(
+        ""have.nested.property"",
+        ""response.body.responseMeta.status"",
+        200,
+      )",network_contract,network_contract,lexical_network_payload_context,matcher:havenestedproperty;network_payload_context,should,have.nested.property,unknown,cy,"[""cy"",""wait"",""should""]","cy.wait(""@post_Execute"").should(
+        ""have.nested.property"",
+        ""response.body.responseMeta.status"",
+        200,
+      )",network_status,,cypress,cypress,correct,n/a,Verification intent label is acceptable.
+,UI5/webcomponents,3515becd747f3c4a70d48389056bff55,Cypress,173,"cy.get(""@headerRow"").shadow().find(""#selection-cell"")
+				.should","cy.get(""@headerRow"").shadow().find(""#selection-cell"")
+				.should(testConfigEntry.cases.BOXES.header.exists ? ""exist"" : ""not.exist"")",element_presence,element_presence,lexical_presence_context,element_presence_subject_context,should,,locator,cy,"[""cy"",""get"",""shadow"",""find"",""should""]","cy.get(""@headerRow"").shadow().find(""#selection-cell"")
+				.should(testConfigEntry.cases.BOXES.header.exists ? ""exist"" : ""not.exist"")",scalar_property,,cypress,cypress,correct,n/a,Verification intent label is acceptable.
+,pwa-builder/PWABuilder,75569e7852e1021eb76fa6f729dc39c7,Playwright,79,expect(page.url()).toContain,expect(page.url()).toContain('/reportcard'),navigation_outcome,navigation_outcome,ast_assertion_subject,subject:page;basis:ast_page_call;matcher:tocontain,toContain,,page,page,"[""page"",""url""]",page.url(),api_object_contract,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,mattermost/mattermost,28fa2a74e8decbfc731eb740c76ba059,Cypress,158,expect(response.status).to.be.oneOf,"expect(response.status).to.be.oneOf([200, 201, 204])",network_contract,network_contract,lexical_network_payload_context,matcher:;network_payload_context,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,CopilotKit/CopilotKit,3649d526a502264c80935b4957d467bc,Playwright,107,"expect(card.locator('[data-testid=""stock-change""]')).toContainText","expect(card.locator('[data-testid=""stock-change""]')).toContainText(
+      ""-2.96%"",
+      { timeout: TOOL_TIMEOUT },
+    )",content_correctness,content_correctness,ast_assertion_matcher,matcher:tocontaintext;current_text_matcher,toContainText,,locator,card,"[""card"",""locator""]","card.locator('[data-testid=""stock-change""]')",ui_event_counter,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,ionic-team/ionic-framework,0899b120591d5b71343b68a519e3939a,Playwright,30,expect(toastWrapper).toHaveScreenshot,expect(toastWrapper).toHaveScreenshot(screenshot(`toast-stacked-long-message`)),visual_regression,visual_regression,lexical_text_property_context,matcher:tohavescreenshot;message_text_context,toHaveScreenshot,,unknown,toastWrapper,"[""toastWrapper""]",toastWrapper,visual_snapshot_api,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,WebThingsIO/gateway,6023203603fe9273f616d54cdbc1481c,WebDriverIO,1088,expect(thingTitle).toEqual,expect(thingTitle).toEqual(desc.title),content_correctness,content_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:text_content_payload,toEqual,,unknown,thingTitle,"[""thingTitle""]",thingTitle,text_content_payload,,webdriverio,playwright,correct,n/a,Verification intent label is acceptable.
+,springload/react-accessible-accordion,2f47a99ddc12a46a2b082a978c5d957c,Puppeteer,101,expect(await evaluateIsExpanded(firstButtonHandle)).toEqual,"expect(await evaluateIsExpanded(firstButtonHandle)).toEqual(
+                    true,
+                )",value_or_attribute_correctness,value_or_attribute_correctness,ast_assertion_matcher,matcher:toEqual,toEqual,,unknown,,[],await evaluateIsExpanded(firstButtonHandle),,,unknown,playwright,correct,n/a,Verification intent label is acceptable.
+,springload/react-accessible-accordion,3bb2a6f2276634942acb085518313d18,Puppeteer,156,expect(firstIsFocussed).toEqual,expect(firstIsFocussed).toEqual(true),value_or_attribute_correctness,value_or_attribute_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:scalar_property,toEqual,,unknown,firstIsFocussed,"[""firstIsFocussed""]",firstIsFocussed,scalar_property,,unknown,playwright,correct,n/a,Verification intent label is acceptable.
+,uber/baseweb,b99d47740f30b12a2e060bb2839fc807,Playwright,21,expect(accessibilityReport).toHaveNoAccessibilityIssues,expect(accessibilityReport).toHaveNoAccessibilityIssues(),accessibility_compliance,accessibility_compliance,lexical_oracle_category_fallback,accessibility_oracle,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,tldraw/tldraw,dfecc62a0522e6c6a2d5650890938294,Playwright,52,expect(await getAllShapeTypes(page)).toEqual,expect(await getAllShapeTypes(page)).toEqual(['geo']),api_or_data_contract,api_or_data_contract,ast_assertion_subject_semantic_role,subject_semantic_role:api_object_contract,toEqual,,unknown,,[],await getAllShapeTypes(page),api_object_contract,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,UI5/webcomponents,a065e023fd497e2defe1ee21670c417e,Cypress,4573,"cy.get(""[ui5-multi-combobox]"")
+			.shadow()
+			.find(""[ui5-tokenizer]"")
+			.find(""[ui5-token]"")
+			.should","cy.get(""[ui5-multi-combobox]"")
+			.shadow()
+			.find(""[ui5-tokenizer]"")
+			.find(""[ui5-token]"")
+			.should(""have.length"", 3)",collection_size,collection_size,ast_assertion_subject_semantic_role,subject_semantic_role:collection_size,should,have.length,locator,cy,"[""cy"",""get"",""shadow"",""find"",""find"",""should""]","cy.get(""[ui5-multi-combobox]"")
+			.shadow()
+			.find(""[ui5-tokenizer]"")
+			.find(""[ui5-token]"")
+			.should(""have.length"", 3)",collection_size,,cypress,cypress,correct,n/a,Verification intent label is acceptable.
+,replayio/devtools,d31a9ebcfe3158aea6c5e86a98f94e41,Playwright,728,"expect(await sourceHeader.getAttribute(""data-status"")).toBe","expect(await sourceHeader.getAttribute(""data-status"")).toBe(""active"")",value_or_attribute_correctness,value_or_attribute_correctness,lexical_api_status_context,matcher:tobe;status_context,toBe,,unknown,,[],"await sourceHeader.getAttribute(""data-status"")",,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,appsmithorg/appsmith,db14b7f2a4268ecfa642f2035d4c0d7b,Cypress,405,"this.GetElement(this.locator._toastMsg, ""noVerify"")
+        .should(""have.length.at.least"", length)
+        .eq","this.GetElement(this.locator._toastMsg, ""noVerify"")
+        .should(""have.length.at.least"", length)
+        .eq(index)",collection_size,collection_size,lexical_oracle_category_fallback,count_or_length_oracle,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,UI5/webcomponents,bc48a4327230bbad29b384c70a21d40e,Cypress,564,"cy.get(""@onButtonClick"")
+				.should(""have.been.calledOnce"")
+				.its(""firstCall.args.0.detail"")
+				.should","cy.get(""@onButtonClick"")
+				.should(""have.been.calledOnce"")
+				.its(""firstCall.args.0.detail"")
+				.should(""have.property"", ""clickTarget"")",interactive_state,interactive_state,ast_assertion_semantic_matcher,matcher:haveproperty;value_attribute_current_matcher,should,have.property,locator,cy,"[""cy"",""get"",""should"",""its"",""should""]","cy.get(""@onButtonClick"")
+				.should(""have.been.calledOnce"")
+				.its(""firstCall.args.0.detail"")
+				.should(""have.property"", ""clickTarget"")",scalar_property,,cypress,cypress,correct,n/a,Verification intent label is acceptable.
+,ionic-team/ionic-framework,96baf077e01d399f62ba8b62f99e8654,Playwright,141,expect(toastWrapper).toHaveScreenshot,expect(toastWrapper).toHaveScreenshot(screenshot('toast-message-scale')),visual_regression,visual_regression,lexical_text_property_context,matcher:tohavescreenshot;message_text_context,toHaveScreenshot,,unknown,toastWrapper,"[""toastWrapper""]",toastWrapper,visual_snapshot_api,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,plasmicapp/plasmic,793323a614f6d86750b90a7766cc207c,Cypress,179,expect(funkyComp.cssRules).to.include,expect(funkyComp.cssRules).to.include(`top: 100px`),content_correctness,content_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:text_content_payload;matcher:include,include,,unknown,expect,"[""expect"",""to"",""include""]",expect(funkyComp.cssRules).to.include(`top: 100px`),text_content_payload,,cypress,jest,incorrect,style_or_visual_state,CSS/layout/style value assertion.
+,openclaw/clawhub,f112edd8bb9612e869940680079a5d47,Playwright,59,"expect(page.locator("".skill-card"").first()).toBeVisible","expect(page.locator("".skill-card"").first()).toBeVisible()",element_presence,element_presence,ast_assertion_matcher,matcher:tobevisible;presence_over_weak_subject_role,toBeVisible,,locator,page,"[""page"",""locator"",""first""]","page.locator("".skill-card"").first()",element_presence,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,payloadcms/payload,947b7a82bc2ff5573d0f170c7693109c,Playwright,2243,"expect(menuList.getByText('Sizes > one > Height', { exact: true })).toHaveCount","expect(menuList.getByText('Sizes > one > Height', { exact: true })).toHaveCount(0)",collection_size,collection_size,ast_assertion_subject_path,subject_path:menuList.getByText;matcher:tohavecount,toHaveCount,,locator,menuList,"[""menuList"",""getByText""]","menuList.getByText('Sizes > one > Height', { exact: true })",style_layout_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,porsche-design-system/porsche-design-system,37974db71c9272176c1dca55dc29e5c4,Playwright,360,expect(await getMaskImage(input)).toBe,expect(await getMaskImage(input)).toBe('none'),style_or_visual_state,style_or_visual_state,ast_assertion_matcher,matcher:toBe,toBe,,unknown,,[],await getMaskImage(input),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,pretzelai/pretzelai,e3abaf1c423907323f7864981f565b78,Playwright,130,expect(await nbPanel!.screenshot()).toMatchSnapshot,expect(await nbPanel!.screenshot()).toMatchSnapshot(imageName),visual_regression,visual_regression,lexical_visual_context,matcher:;visual_context,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,plasmicapp/plasmic,aa63f36f23e375585b27f2617d18a177,Cypress,129,expect(+count).to.equal,expect(+count).to.equal(expectedCount),collection_size,collection_size,lexical_collection_context,count_property_context,equal,,unknown,expect,"[""expect"",""to"",""equal""]",expect(+count).to.equal(expectedCount),collection_size,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,UI5/webcomponents,c259a1eec0295dc580c255ea81859225,Cypress,677,"expect(link.accessibleName, ""label for last link is correct"").to.contain","expect(link.accessibleName, ""label for last link is correct"").to.contain(""Link5"")",accessibility_compliance,accessibility_compliance,lexical_navigation_context,matcher:contain;href_or_url_content_matcher,contain,,unknown,expect,"[""expect"",""to"",""contain""]","expect(link.accessibleName, ""label for last link is correct"").to.contain(""Link5"")",text_content_payload,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,open-pencil/open-pencil,1c0c4c2831525b109c64ebdab87291e4,Playwright,84,expect(after?.color.a).toBeCloseTo,"expect(after?.color.a).toBeCloseTo(after?.opacity ?? 0, 3)",style_or_visual_state,style_or_visual_state,lexical_fallback,name_raw_match,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,linode/manager,2243ae14b8553aacc5b34fbcf2757348,Cypress,177,ui.actionMenuItem.findByTitle(menuItem).should('be.disabled').focus,ui.actionMenuItem.findByTitle(menuItem).should('be.disabled').focus(),interactive_state,interactive_state,lexical_fallback,name_raw_match,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,live-codes/livecodes,59edc37100b3b444f20e7b51aae78f18,Playwright,476,expect(await body?.innerHTML()).toContain,expect(await body?.innerHTML()).toContain('Welcome to Liquid'),content_correctness,content_correctness,lexical_html_content_context,matcher:tocontain;html_content_context,toContain,,unknown,,[],await body?.innerHTML(),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,UI5/webcomponents,5d31d2c0d7b593e74e783acc7177c71e,Cypress,50,"cy.wrap(subject)
+		.shadow()
+		.find("".ui5-cp-default-color-button"")
+		.should","cy.wrap(subject)
+		.shadow()
+		.find("".ui5-cp-default-color-button"")
+		.should(""be.visible"")",style_or_visual_state,style_or_visual_state,ast_assertion_subject_semantic_role,subject_semantic_role:style_layout_property,should,be.visible,locator,cy,"[""cy"",""wrap"",""shadow"",""find"",""should""]","cy.wrap(subject)
+		.shadow()
+		.find("".ui5-cp-default-color-button"")
+		.should(""be.visible"")",style_layout_property,,cypress,cypress,correct,n/a,Verification intent label is acceptable.
+,openobserve/openobserve,ba1329a4995dfbf130933ef3f7761b3b,Playwright,734,expect(tooltipText.toLowerCase()).toMatch,expect(tooltipText.toLowerCase()).toMatch(/share\s+url\s+is\s+disabled.*zo_web_url.*configured/i),content_correctness,content_correctness,lexical_navigation_context,matcher:tomatch;href_or_url_content_matcher,toMatch,,unknown,tooltipText,"[""tooltipText"",""toLowerCase""]",tooltipText.toLowerCase(),ui_control_state,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,payloadcms/payload,a00ff3733fa7e055dda8d0f4118893b7,Playwright,1511,"expect(async () => {
+        await expect(
+          page.locator('.payload-toast-item:has-text(""Updated successfully."")'),
+        ).toBeVisible()
+      }).toPass","expect(async () => {
+        await expect(
+          page.locator('.payload-toast-item:has-text(""Updated successfully."")'),
+        ).toBeVisible()
+      }).toPass({
+        timeout: POLL_TOPASS_TIMEOUT,
+      })",element_presence,element_presence,lexical_text_property_context,matcher:topass;message_text_context,toPass,,unknown,,[],"async () => {
+        await expect(
+          page.locator('.payload-toast-item:has-text(""Updated successfully."")'),
+        ).toBeVisible()
+      }",text_content_payload,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,appsmithorg/appsmith,6f073c00de12a81640fe659453fc1606,Cypress,251,expect(response.status).equal,expect(response.status).equal(200),network_contract,network_contract,ast_assertion_subject,subject:network;basis:ast_subject_property_path,equal,,network,response,"[""response"",""status""]",response.status,network_status,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,payloadcms/payload,ab4901ac67d3deb2c12e4cb5b8fa639e,Playwright,312,expect(page.locator('#field-theme-light')).not.toBeChecked,expect(page.locator('#field-theme-light')).not.toBeChecked(),interactive_state,interactive_state,ast_assertion_subject_semantic_role,subject_semantic_role:ui_control_state;matcher:tobechecked,toBeChecked,,unknown,expect,"[""expect"",""not"",""toBeChecked""]",expect(page.locator('#field-theme-light')).not.toBeChecked(),ui_control_state,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,element-hq/element-web,f2a8c563ab7f147713fb5930f7f873be,Playwright,296,"expect(page.locator("".mx_ThreadView .mx_EventTile[data-layout='bubble']"").first()).toBeVisible","expect(page.locator("".mx_ThreadView .mx_EventTile[data-layout='bubble']"").first()).toBeVisible()",element_presence,element_presence,lexical_style_context,style_or_class_subject_context,toBeVisible,,locator,page,"[""page"",""locator"",""first""]","page.locator("".mx_ThreadView .mx_EventTile[data-layout='bubble']"").first()",element_presence,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,microsoft/fast,959233e46db691d5ab511ef4c1f86fd4,Playwright,86,"expect(page.locator(""text=Push Notifications: true"").first()).toBeVisible","expect(page.locator(""text=Push Notifications: true"").first()).toBeVisible()",element_presence,element_presence,lexical_text_property_context,matcher:tobevisible;message_text_context,toBeVisible,,locator,page,"[""page"",""locator"",""first""]","page.locator(""text=Push Notifications: true"").first()",element_presence,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,opentiny/tiny-editor,52c59a8e9b397f1e08e6b839581af9f5,Playwright,11,expect(await editor.innerHTML()).toEqual,"expect(await editor.innerHTML()).toEqual(
+    [
+      '<p>',
+      'Hello ',
+      `<strong>TinyEditor</strong>`,
+      '!',
+      `</p>`,
+    ].join(''),
+  )",content_correctness,content_correctness,lexical_html_content_context,matcher:toequal;html_content_context,toEqual,,unknown,,[],await editor.innerHTML(),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,appsmithorg/appsmith,d62383eb3b0e334fbb44c6a612c1e903,Cypress,954,cy.get(welcomePage.email).should,"cy.get(welcomePage.email).should(""be.visible"")",element_presence,element_presence,ast_assertion_semantic_matcher,matcher:bevisible;presence_over_weak_subject_role,should,be.visible,locator,cy,"[""cy"",""get"",""should""]","cy.get(welcomePage.email).should(""be.visible"")",scalar_property,,cypress,cypress,correct,n/a,Verification intent label is acceptable.
+,appsmithorg/appsmith,0fa4468df22765b72a99915ab5b76c64,Cypress,952,cy.get(welcomePage.firstName).should,"cy.get(welcomePage.firstName).should(""be.visible"")",element_presence,element_presence,ast_assertion_semantic_matcher,matcher:bevisible;presence_over_weak_subject_role,should,be.visible,locator,cy,"[""cy"",""get"",""should""]","cy.get(welcomePage.firstName).should(""be.visible"")",scalar_property,,cypress,cypress,correct,n/a,Verification intent label is acceptable.
+,jupyterlab/jupyterlab,5330e873e145151579fee62737a52919,Playwright,197,expect(newFontSize).toEqual,expect(newFontSize).toEqual(`${fontSize + 1}px`),value_or_attribute_correctness,value_or_attribute_correctness,lexical_style_context,matcher:toequal;style_context,toEqual,,unknown,newFontSize,"[""newFontSize""]",newFontSize,scalar_property,,playwright,playwright,incorrect,style_or_visual_state,CSS/layout/style value assertion.
+,slab/quill,0ac9a7dcde56b76e3a4bc779364f24c8,Playwright,207,expect(await editorPage.root.locator('p').nth(2).innerHTML()).toBe,"expect(await editorPage.root.locator('p').nth(2).innerHTML()).toBe(
+    'AB<strong>C</strong>DA',
+  )",content_correctness,content_correctness,lexical_html_content_context,matcher:tobe;html_content_context,toBe,,unknown,,[],await editorPage.root.locator('p').nth(2).innerHTML(),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,linode/manager,b35002e98f7a8f720780ba389d5fc89d,Cypress,440,"ui.button
+            .findByAttribute('aria-label', 'Zoom In')
+            .should('be.visible')
+            .should('be.enabled')
+            .scrollIntoView","ui.button
+            .findByAttribute('aria-label', 'Zoom In')
+            .should('be.visible')
+            .should('be.enabled')
+            .scrollIntoView()",interactive_state,interactive_state,lexical_oracle_category_fallback,visibility_oracle,,,,,,,,,,,incorrect,accessibility_compliance,Explicit accessibility/ARIA assertion.
+,skyhook-io/radar,66cb3c43d5e5c6599fdad913947875d4,Playwright,25,expect(url.pathname).toBe,expect(url.pathname).toBe('/resources/pods'),navigation_outcome,navigation_outcome,ast_assertion_subject_path,subject_path:url.pathname;matcher:tobe,toBe,,unknown,url,"[""url"",""pathname""]",url.pathname,scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,BuilderIO/builder,01d779bbee23058a7bf1ed311d5d1021,Playwright,35,expect(req!.method()).toBe,expect(req!.method()).toBe('GET'),network_contract,network_contract,ast_assertion_subject_semantic_role,subject_semantic_role:network_payload;matcher:tobe,toBe,,unknown,method,"[""method""]",req!.method(),network_payload,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,openobserve/openobserve,9330a1d188333ad029c83b6e88114875,Playwright,540,expect(Array.isArray(parsed.columns)).toBe,expect(Array.isArray(parsed.columns)).toBe(true),api_or_data_contract,api_or_data_contract,ast_assertion_subject_path,subject_path:Array.isArray;matcher:tobe;type_or_shape_contract,toBe,,unknown,Array,"[""Array"",""isArray""]",Array.isArray(parsed.columns),scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,MyCryptoHQ/MyCrypto,ed64aa2de23eeffde66029e1614bdd51,TestCafe,67,t.expect(approve.exists).ok,t.expect(approve.exists).ok({ timeout: FIXTURES_CONST.HARDHAT_TIMEOUT }),element_presence,element_presence,lexical_presence_context,element_presence_subject_context,ok,,unknown,t,"[""t"",""expect"",""ok""]",t.expect(approve.exists).ok({ timeout: FIXTURES_CONST.HARDHAT_TIMEOUT }),scalar_property,,testcafe,testcafe,correct,n/a,Verification intent label is acceptable.
+,deltachat/deltachat-desktop,5fa9f4fafdf7b387c6d184ed60ccb55a,Playwright,490,"expect(
+    page.locator('.message.outgoing').last().locator('.msg-body .text')
+  ).toHaveText","expect(
+    page.locator('.message.outgoing').last().locator('.msg-body .text')
+  ).toHaveText(`Hello ${userA.name}!`)",content_correctness,content_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:text_content_payload;matcher:tohavetext,toHaveText,,locator,page,"[""page"",""locator"",""last"",""locator""]",page.locator('.message.outgoing').last().locator('.msg-body .text'),text_content_payload,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,WebThingsIO/gateway,56036cfccb93feaf2243b850999ccd98,WebDriverIO,145,expect(thingTitle).toEqual,expect(thingTitle).toEqual(desc.title),content_correctness,content_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:text_content_payload,toEqual,,unknown,thingTitle,"[""thingTitle""]",thingTitle,text_content_payload,,webdriverio,playwright,correct,n/a,Verification intent label is acceptable.
+,payloadcms/payload,2a4c4c2cd63acc9844c91fa576fba0fb,Playwright,81,expect(matchedRequests.length).toBeGreaterThanOrEqual,expect(matchedRequests.length).toBeGreaterThanOrEqual(minimumNumberOfRequests),network_contract,network_contract,ast_assertion_subject_path,subject_path:matchedRequests.length;matcher:tobegreaterthanorequal;network_request_count,toBeGreaterThanOrEqual,,unknown,matchedRequests,"[""matchedRequests"",""length""]",matchedRequests.length,collection_size,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,ChromeDevTools/devtools-frontend,4665600039971a44fcee2d51f7a4f19f,Puppeteer,68,assert.strictEqual,"assert.strictEqual(target, `${inspectedPage.domain()}/blank.html`)",navigation_outcome,navigation_outcome,lexical_oracle_category_fallback,generic_assertion,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,WebThingsIO/gateway,ccbfa60b3d9ecb14c3b7d300e1776dd2,WebDriverIO,370,expect(thingTitle).toEqual,expect(thingTitle).toEqual(desc.title),content_correctness,content_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:text_content_payload,toEqual,,unknown,thingTitle,"[""thingTitle""]",thingTitle,text_content_payload,,webdriverio,playwright,correct,n/a,Verification intent label is acceptable.
+,actualbudget/actual,835ca8cf605901b520244dfdad0028f7,Playwright,297,expect(page).toMatchThemeScreenshots,expect(page).toMatchThemeScreenshots(),visual_regression,visual_regression,lexical_oracle_category_fallback,visual_snapshot_oracle,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,cloudtogo/pageplug,f3b3b5b99f9f306d1270f7b02804d887,Cypress,94,"expect(headers)
+            .to.have.property(""content-disposition"")
+            .that.includes","expect(headers)
+            .to.have.property(""content-disposition"")
+            .that.includes(""attachment;"")",network_contract,network_contract,lexical_fallback,name_raw_match,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,porsche-design-system/porsche-design-system,0782a3082ec5ac3c48bb107b9f0f359e,Playwright,92,expect(await getCounterValue(inputValue)).toBe,expect(await getCounterValue(inputValue)).toBe('Value: hello'),value_or_attribute_correctness,value_or_attribute_correctness,lexical_attribute_context,matcher:tobe;attribute_context,toBe,,unknown,,[],await getCounterValue(inputValue),,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,uber/baseweb,dc71cb93dccd8ae9efeda2b48961278c,Playwright,24,expect(accessibilityReport).toHaveNoAccessibilityIssues,expect(accessibilityReport).toHaveNoAccessibilityIssues(),accessibility_compliance,accessibility_compliance,lexical_oracle_category_fallback,accessibility_oracle,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,documenso/documenso,dc70ee084269a373e41528b6b0a198ad,Playwright,265,"expect(async () => {
+      const recipients = await prisma.recipient.findMany({
+        where: { envelopeId },
+        orderBy: { signingOrder: 'asc' },
+      });
+
+      expect(recipients).toHav","expect(async () => {
+      const recipients = await prisma.recipient.findMany({
+        where: { envelopeId },
+        orderBy: { signingOrder: 'asc' },
+      });
+
+      expect(recipients).toHaveLength(2);
+    }).toPass()",collection_size,collection_size,ast_assertion_matcher,matcher:toPass,toPass,,unknown,,[],"async () => {
+      const recipients = await prisma.recipient.findMany({
+        where: { envelopeId },
+        orderBy: { signingOrder: 'asc' },
+      });
+
+      expect(recipients).toHaveLength(2);
+    }",,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,OHIF/Viewers,7347a8e39447602c005586ff2ac7bbec,Playwright,125,expect(opacity.fill('abc')).rejects.toThrow,expect(opacity.fill('abc')).rejects.toThrow(nonNumericError),style_or_visual_state,style_or_visual_state,ast_assertion_subject_semantic_role,subject_semantic_role:style_layout_property,toThrow,,unknown,expect,"[""expect"",""rejects"",""toThrow""]",expect(opacity.fill('abc')).rejects.toThrow(nonNumericError),style_layout_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,UI5/webcomponents,13f1eb2ed3676e1da247ac3d4bbba76d,Cypress,1160,expect(rect.bottom).to.be.at.most,expect(rect.bottom).to.be.at.most(window.innerHeight),value_or_attribute_correctness,value_or_attribute_correctness,lexical_fallback,name_raw_match,,,,,,,,,,,incorrect,style_or_visual_state,CSS/layout/style value assertion.
+,ionic-team/ionic-framework,cb9e1197b911665e77ec80c2ce02aa6a,Playwright,19,expect(page.locator('app-router-link-page')).toHaveAttribute,"expect(page.locator('app-router-link-page')).toHaveAttribute('class', 'ion-page can-go-back')",style_or_visual_state,style_or_visual_state,lexical_navigation_context,matcher:tohaveattribute;href_or_url_attribute,toHaveAttribute,,locator,page,"[""page"",""locator""]",page.locator('app-router-link-page'),style_layout_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,linode/manager,6c9e016df98fd201e416b03765995a18,Cypress,1748,expect(body['node_pools']).to.be.an,expect(body['node_pools']).to.be.an('array'),api_or_data_contract,api_or_data_contract,lexical_fallback,name_raw_match,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,plasmicapp/plasmic,5af5befcf7ce0501d9cee31629cddd3b,Cypress,264,expect(+count).to.equal,expect(+count).to.equal(newComponentsLength),collection_size,collection_size,lexical_collection_context,count_property_context,equal,,unknown,expect,"[""expect"",""to"",""equal""]",expect(+count).to.equal(newComponentsLength),collection_size,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,CirclonGroup/angular-tree-component,a6fd3fa4e10392a6ae04857df8c411b1,TestCafe,21,t.expect(t.ctx.tree.getNodes().count).eql,t.expect(t.ctx.tree.getNodes().count).eql(1),collection_size,collection_size,lexical_collection_context,count_property_context,eql,,unknown,t,"[""t"",""expect"",""eql""]",t.expect(t.ctx.tree.getNodes().count).eql(1),collection_size,,testcafe,testcafe,correct,n/a,Verification intent label is acceptable.
+,mattermost/mattermost,d878d92716de1653047c2af74dd3ba06,Cypress,47,expect(copyInviteLinkAriaLabel).to.match,expect(copyInviteLinkAriaLabel).to.match(/^team invite link/i),accessibility_compliance,accessibility_compliance,lexical_navigation_context,matcher:match;href_or_url_content_matcher,match,,unknown,expect,"[""expect"",""to"",""match""]",expect(copyInviteLinkAriaLabel).to.match(/^team invite link/i),scalar_property,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,UI5/webcomponents,640596755e7eb411e9221b793fb35bbd,Cypress,1348,expect(layoutsConfig.desktop.TwoColumnsMidExpanded.layout).to.satisfy,"expect(layoutsConfig.desktop.TwoColumnsMidExpanded.layout).to.satisfy((arr: any[]) =>
+				arr.every(item => typeof item === ""string"")
+			)",api_or_data_contract,api_or_data_contract,lexical_style_context,style_or_class_subject_context,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,neo4j-labs/neodash,a97bc9d361c17b2b25bea00334635924,Cypress,60,cy.get('.MuiDialog-paper').should('be.visible').and,"cy.get('.MuiDialog-paper').should('be.visible').and('contain.text', 'Test')",element_presence,element_presence,ast_assertion_subject_semantic_role,subject_semantic_role:text_content_payload;matcher:containtext,and,contain.text,locator,cy,"[""cy"",""get"",""should"",""and""]","cy.get('.MuiDialog-paper').should('be.visible').and('contain.text', 'Test')",text_content_payload,,cypress,cypress,correct,n/a,Verification intent label is acceptable.
+,databuddy-analytics/Databuddy,3e5c595a66127cdc48bedad770e61078,Playwright,48,expect(typeof vital.metricValue).toBe,"expect(typeof vital.metricValue).toBe(""number"")",api_or_data_contract,api_or_data_contract,lexical_object_contract_context,subject_path:;matcher:tobe;type_or_shape_contract,toBe,,unknown,,[],typeof vital.metricValue,,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,springload/react-accessible-accordion,2675272d353dafd8cca0442fbe1a88fc,Puppeteer,245,expect(buttonsHandles).toHaveLength,expect(buttonsHandles).toHaveLength(3),collection_size,collection_size,ast_assertion_subject_semantic_role,subject_semantic_role:collection_size,toHaveLength,,unknown,buttonsHandles,"[""buttonsHandles""]",buttonsHandles,collection_size,,unknown,playwright,correct,n/a,Verification intent label is acceptable.
+,documenso/documenso,5c2e2cb3b95c7914ac69f0cc9632b9d9,Playwright,197,expect(response.headers().location).toBe,expect(response.headers().location).toBe('/'),network_contract,network_contract,ast_assertion_subject_semantic_role,subject_semantic_role:network_payload;matcher:tobe,toBe,,network,response,"[""response"",""headers"",""location""]",response.headers().location,network_payload,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,open-pencil/open-pencil,bc4a441dd1fa1508a75389c5b649bf42,Playwright,97,expect(await getSelectedCount()).toBe,expect(await getSelectedCount()).toBe(1),collection_size,collection_size,lexical_oracle_category_fallback,count_or_length_oracle,toBe,,unknown,,[],await getSelectedCount(),,,playwright,playwright,incorrect,interactive_state,Interactive state/event/call assertion.
+,Tencent/tdesign-vue,9690b5a9409a03ff5d721097974234de,Cypress,159,expect(ele).not.to.have.class,expect(ele).not.to.have.class('t-is-disabled'),style_or_visual_state,style_or_visual_state,lexical_fallback,name_raw_match,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,surveyjs/survey-library,e937d5c99f10e08f429cecc8e1571778,Playwright,105,expect(questionSelector.nth(1)).toHaveCSS,"expect(questionSelector.nth(1)).toHaveCSS(""border-top-color"", ""rgb(204, 204, 204)"")",style_or_visual_state,style_or_visual_state,lexical_style_context,matcher:tohavecss;style_context,toHaveCSS,,unknown,questionSelector,"[""questionSelector"",""nth""]",questionSelector.nth(1),style_layout_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,swaponline/MultiCurrencyWallet,5b5dbec4c3702b53157873bf8a986aea,Puppeteer,274,expect(false).toBe,expect(false).toBe(true),value_or_attribute_correctness,value_or_attribute_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:scalar_property,toBe,,primitive,,[],false,scalar_property,,unknown,playwright,correct,n/a,Verification intent label is acceptable.
+,mattermost/mattermost,589b909fbb201c7f973c9c6c9fb7cd20,Playwright,65,cy.get('#postListContent').should,cy.get('#postListContent').should('be.visible'),element_presence,element_presence,ast_assertion_semantic_matcher,matcher:bevisible;presence_over_weak_subject_role,should,be.visible,locator,cy,"[""cy"",""get"",""should""]",cy.get('#postListContent').should('be.visible'),scalar_property,,playwright,cypress,correct,n/a,Verification intent label is acceptable.
+,databuddy-analytics/Databuddy,e912955b1fb05d44a68c4741ed2d76fd,Playwright,118,expect(rapidEventCount).toBe,expect(rapidEventCount).toBe(10),interactive_state,interactive_state,ast_assertion_subject_path,subject_path:rapidEventCount;matcher:tobe;event_counter_scalar,toBe,,unknown,rapidEventCount,"[""rapidEventCount""]",rapidEventCount,scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.
+,microsoft/fluentui,5ffd80894b31015aa32765a0bfd86289,Cypress,46,cy.get('#after').should,cy.get('#after').should('have.focus'),value_or_attribute_correctness,value_or_attribute_correctness,ast_assertion_subject_semantic_role,subject_semantic_role:scalar_property,should,have.focus,locator,cy,"[""cy"",""get"",""should""]",cy.get('#after').should('have.focus'),scalar_property,,cypress,cypress,incorrect,interactive_state,Interactive state/event/call assertion.
+,WebThingsIO/gateway,fc8988c2b33fc68aca489894ca2a67c2,WebDriverIO,31,expect(addon2).not.toBeNull,expect(addon2).not.toBeNull(),element_presence,element_presence,ast_assertion_subject_semantic_role,subject_semantic_role:scalar_property,toBeNull,,unknown,expect,"[""expect"",""not"",""toBeNull""]",expect(addon2).not.toBeNull(),scalar_property,,webdriverio,playwright,correct,n/a,Verification intent label is acceptable.
+,mattermost/mattermost,b86e9601e0ec8462b34edd9773f79397,Cypress,39,expect(messageParts[i]).equals,expect(messageParts[i]).equals(el.html()),content_correctness,content_correctness,lexical_fallback,name_raw_match,,,,,,,,,,,correct,n/a,Verification intent label is acceptable.
+,Tencent/tdesign-vue,4f5c1a6463de0a95fd629ee1a94a7559,Cypress,89,expect(ele).not.to.have.class,expect(ele).not.to.have.class('t-is-checked'),style_or_visual_state,style_or_visual_state,lexical_fallback,name_raw_match,,,,,,,,,,,incorrect,interactive_state,Interactive state/event/call assertion.
+,UI5/webcomponents-react,2fd558779398749e8d56ae6296076bd1,Cypress,55,cy.get('@result').should,"cy.get('@result').should('have.been.calledWith', {
+      dimensions: [
+        {
+          accessor: 'a',
+          dimensionDefault: true,
+          reactKey: 'a',
+        },
+      ],
+      measures: [
+        {
+          accessor: 'b',
+          measureDefault: true,
+          reactKey: 'b',
+        },
+      ],
+      stackGroups: {},
+      lastInStack: new Set(),
+    })",api_or_data_contract,api_or_data_contract,ast_assertion_subject_semantic_role,subject_semantic_role:api_object_contract,should,have.been.calledWith,locator,cy,"[""cy"",""get"",""should""]","cy.get('@result').should('have.been.calledWith', {
+      dimensions: [
+        {
+          accessor: 'a',
+          dimensionDefault: true,
+          reactKey: 'a',
+        },
+      ],
+      measures: [
+        {
+          accessor: 'b',
+          measureDefault: true,
+          reactKey",api_object_contract,,cypress,cypress,incorrect,interactive_state,Interactive state/event/call assertion.
+,mattermost/mattermost,775dae695dd6e52a321b6fd0d7396053,Cypress,68,"expect(data.isLicensed, hasLicenseMessage).to.equal","expect(data.isLicensed, hasLicenseMessage).to.equal(true)",value_or_attribute_correctness,value_or_attribute_correctness,ast_assertion_subject_path,subject_path:expect.to.equal;matcher:equal;payload_scalar,equal,,unknown,expect,"[""expect"",""to"",""equal""]","expect(data.isLicensed, hasLicenseMessage).to.equal(true)",scalar_property,,cypress,jest,correct,n/a,Verification intent label is acceptable.
+,porsche-design-system/porsche-design-system,caeae4bef5a623519f8164bf3ee858f9,Playwright,391,"expect(status.componentDidLoad['p-scroller'], 'componentDidLoad: p-scroller').toBe","expect(status.componentDidLoad['p-scroller'], 'componentDidLoad: p-scroller').toBe(1)",interactive_state,interactive_state,ast_assertion_subject_path,subject_path:status.componentDidLoad.p-scroller;matcher:tobe;style_subject_context,toBe,,unknown,status,"[""status"",""componentDidLoad"",""p-scroller""]",status.componentDidLoad['p-scroller'],scalar_property,,playwright,playwright,correct,n/a,Verification intent label is acceptable.

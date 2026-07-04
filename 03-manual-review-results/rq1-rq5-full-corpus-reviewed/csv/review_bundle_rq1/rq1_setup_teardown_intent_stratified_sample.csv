@@ -1,0 +1,549 @@
+sample_origin,repo,test_id,framework,line,name,raw_code,feature_type,source_kind,phase,scope,primary_intent,primary_intent_evidence_basis,review_reason,eligibility_basis,provenance_basis,manual_eligibility_ok,manual_phase_ok,manual_scope_ok,manual_intent_ok,manual_suggested_phase,manual_suggested_scope,manual_suggested_intent,manual_error_type,manual_notes
+intent_stratified,invoicerr-app/invoicerr,81896d59b197d04a1e009e7a519c21b5,Cypress,136,cy.login,cy.login(),custom_command_call,test_body,setup,inline_test_body,auth_session_state,ast_cypress_command_role,,cypress_command_role:session_setup,cypress_command_role:session_setup:ast_cypress_session_call|classify_setup:auth_session_setup:lexical_fallback|framework_api_category:setup_utility:callee_name_heuristic|statement_phase_hint_ast:setup:callee_name_heuristic,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,invoicerr-app/invoicerr,af47b0515495b5ad0000bff0206d236e,Cypress,156,cy.login,cy.login(),custom_command_call,test_body,setup,inline_test_body,auth_session_state,ast_cypress_command_role,,cypress_command_role:session_setup,cypress_command_role:session_setup:ast_cypress_session_call|classify_setup:auth_session_setup:lexical_fallback|framework_api_category:setup_utility:callee_name_heuristic|statement_phase_hint_ast:setup:callee_name_heuristic,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,invoicerr-app/invoicerr,7f7dc06dafb289f21b1befdbc3c6d101,Cypress,198,cy.login,cy.login(),custom_command_call,test_body,setup,inline_test_body,auth_session_state,ast_cypress_command_role,,cypress_command_role:session_setup,cypress_command_role:session_setup:ast_cypress_session_call|classify_setup:auth_session_setup:lexical_fallback|framework_api_category:setup_utility:callee_name_heuristic|statement_phase_hint_ast:setup:callee_name_heuristic,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,jhipster/jhipster-sample-app,0e4bdeca40d5f0ce63deb1af78e62faf,Cypress,14,cy.login,"cy.login(username, password)",custom_command_call,test_body,setup,inline_test_body,auth_session_state,ast_cypress_command_role,,cypress_command_role:session_setup,cypress_command_role:session_setup:ast_cypress_session_call|classify_setup:auth_session_setup:lexical_fallback|framework_api_category:setup_utility:callee_name_heuristic|statement_phase_hint_ast:setup:callee_name_heuristic,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,6c61e07597cc529e6f264c79f7e053e6,Cypress,71,cy.setCookie,"cy.setCookie('MMAUTHTOKEN', personalAccessToken)",browser_context_control,test_body,setup,inline_test_body,auth_session_state,ast_literal_argument_context,,framework_api_category:browser_context_control,classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,apitable/apitable,3a2dd9058555c27f208f3695d0d050dc,Cypress,69,cy.setCookie,"cy.setCookie('XSRF-TOKEN', c.split(';')[0].split('=')[1])",setup,cypress_command,setup,helper_or_framework_extension,auth_session_state,ast_literal_argument_context,,framework_api_category:browser_context_control,hook_instance_key|classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,apitable/apitable,04645a70289e7a51917ef9f5f0ca12ee,Cypress,69,cy.setCookie,"cy.setCookie('XSRF-TOKEN', c.split(';')[0].split('=')[1])",setup,cypress_command,setup,helper_or_framework_extension,auth_session_state,ast_literal_argument_context,,framework_api_category:browser_context_control,hook_instance_key|classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,apitable/apitable,f83a382f2c6c23628cd3707b4034a2ab,Cypress,70,cy.setCookie,"cy.setCookie('SESSION', c.split(';')[0].split('=')[1])",setup,cypress_command,setup,helper_or_framework_extension,auth_session_state,ast_literal_argument_context,,framework_api_category:browser_context_control,hook_instance_key|classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,appsmithorg/appsmith,6f210c5f6e6c1f863e3c0d457ed787e8,Cypress,637,"cy.intercept(""POST"", ""/api/v1/applications/publish/*"").as","cy.intercept(""POST"", ""/api/v1/applications/publish/*"").as(""publishApp"")",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:network_mock:lexical_fallback|framework_api_category:network_mock:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,cloudtogo/pageplug,b9e93ffea747ca54dce9d8d062d79fe8,Cypress,669,"cy.intercept(""POST"", ""/track/*"").as","cy.intercept(""POST"", ""/track/*"").as(""postTrack"")",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:network_mock:lexical_fallback|framework_api_category:network_mock:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,cloudtogo/pageplug,91ed38c19f7397cae852c7119347d6ee,Cypress,734,"cy.intercept(""GET"", ""/api/v1/admin/env"").as","cy.intercept(""GET"", ""/api/v1/admin/env"").as(""getEnvVariables"")",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:network_mock:lexical_fallback|framework_api_category:network_mock:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,appsmithorg/appsmith,4ea16178fc82a8e78b6076654030eda2,Cypress,737,"cy.intercept(""POST"", ""/api/v1/datasources/mocks"").as","cy.intercept(""POST"", ""/api/v1/datasources/mocks"").as(""getMockDb"")",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:network_mock:lexical_fallback|framework_api_category:network_mock:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,cypress-io/cypress-realworld-app,aea80843b3f48a95d021eb446542b1d7,Cypress,344,"cy.task(`${operation}:database`, params, { log: logTask }).then","cy.task(`${operation}:database`, params, { log: logTask }).then((data) => {
+    log.snapshot();
+    log.end();
+    return data;
+  })",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:database_seed_setup:lexical_fallback|framework_api_category:backend_task:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,apache/superset,d82b537e44feb1bae37032b9a675708b,Cypress,91,getDatasetId('wb_health_population').then,"getDatasetId('wb_health_population').then(datasetId => {
+    getChartId('Most Populated Countries').then(chartId => {
+      cy.request({
+        method: 'GET',
+        url: `api/v1/dashboard/1-sample-dashboard`,
+      }).then(res => {
+        const { body } = res;
+        const dashboardId = body.result.id;
+        const allFilters: Record<string, unknown>[] = [];
+        filters.forEach(...",cypress_test_utility,helper_function,setup,helper_or_framework_extension,test_data_or_backend_state,ast_framework_api_category,,cypress_test_utility_intercept,classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,apache/superset,8a7dc496177f2f8aebfb0c39e1f00f73,Cypress,92,getChartId('Most Populated Countries').then,"getChartId('Most Populated Countries').then(chartId => {
+      cy.request({
+        method: 'GET',
+        url: `api/v1/dashboard/1-sample-dashboard`,
+      }).then(res => {
+        const { body } = res;
+        const dashboardId = body.result.id;
+        const allFilters: Record<string, unknown>[] = [];
+        filters.forEach((f, i) => {
+          allFilters.push({
+            id: `NAT...",cypress_test_utility,helper_function,setup,helper_or_framework_extension,test_data_or_backend_state,ast_framework_api_category,,cypress_test_utility_intercept,classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,ee136f1e26ef09f861a29248b9293324,Cypress,29,cy.request(options).then,"cy.request(options).then((response) => {
+        expect(response.status).to.equal(201);
+        return cy.wrap({data: response.body, status: response.status});
+    })",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mempool/mempool,ed807b5306a3a1c1c201aa5551032532,Cypress,63,cy.get('#btn-graphs').click().then,"cy.get('#btn-graphs').click().then(() => {
+        cy.viewport('iphone-6');
+        cy.wait(1000);
+        cy.get('.tv-only').should('not.exist');
+      })",cypress_test_utility,test_body,setup,inline_test_body,time_device_permission_emulation,ast_framework_api_category,,cypress_test_utility_intercept,classify_setup:browser_context_control:lexical_fallback|framework_api_category:time_device_emulation:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,usablica/intro.js,5670b3721148a2a0175f97d22ac30234,Cypress,39,cy.window().then,"cy.window().then((win) => {
+      cy.viewport(""macbook-13"");
+
+      win.introJs
+        .tour()
+        .setOptions({
+          steps: [
+            {
+              element: ""#main-section"",
+              intro: ""position bottom"",
+              position: ""bottom"",
+            },
+            {
+              element: ""#clickable-button"",
+              intro: ""position right"",
+        ...",cypress_test_utility,test_body,setup,inline_test_body,time_device_permission_emulation,ast_framework_api_category,,cypress_test_utility_intercept,classify_setup:browser_context_control:lexical_fallback|framework_api_category:time_device_emulation:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,midas-research/audino,2d748095e014e43fe661611f31424e1a,Cypress,78,cy.wrap(waitForResize()).then,"cy.wrap(waitForResize()).then(() => {
+                    cy.get('.cvat_canvas_issue_region').should('exist');
+                    cy.viewport(viewportHeight, viewportWidth);
+                })",cypress_test_utility,test_body,setup,inline_test_body,time_device_permission_emulation,ast_framework_api_category,,cypress_test_utility_intercept,classify_setup:browser_context_control:lexical_fallback|framework_api_category:time_device_emulation:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,midas-research/audino,2d748095e014e43fe661611f31424e1a,Cypress,64,cy.createIssueFromControlButton(createIssueRectangle).then,"cy.createIssueFromControlButton(createIssueRectangle).then(() => {
+                const viewportHeight = Cypress.config('viewportHeight');
+                const viewportWidth = Cypress.config('viewportWidth');
+                function waitForResize() {
+                    return new Cypress.Promise((resolve) => {
+                        cy.window().then((win) => {
+                          ...",cypress_test_utility,test_body,setup,inline_test_body,time_device_permission_emulation,ast_framework_api_category,,cypress_test_utility_intercept,classify_setup:browser_context_control:lexical_fallback|framework_api_category:time_device_emulation:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,incorrect,incorrect,correct,incorrect,n/a,n/a,n/a,eligibility_leakage_ui_wrapper,"Wrapper is dominated by UI workflow/issue creation and resize waiting, not a clean setup/teardown/control unit."
+intent_stratified,cloudtogo/pageplug,ee8b8bcc444b5b4dae639882720b7327,Cypress,25,cy.LogOut,cy.LogOut(),custom_command_call,test_body,teardown,inline_test_body,auth_session_state,ast_callee_name_heuristic,weak_lexical_signal,cypress_command_role:test_data_setup,cypress_command_role:test_data_setup:ast_cypress_data_call|classify_setup:unknown_setup:lexical_fallback|framework_api_category:cleanup:callee_name_heuristic|statement_phase_hint_ast:teardown:callee_name_heuristic,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,cb33e51d2ea4bddd34b23c755a092cf0,Cypress,96,cy.apiLogin,cy.apiLogin(testUser),custom_command_call,test_body,setup,inline_test_body,auth_session_state,ast_callee_name_heuristic,weak_lexical_signal,cypress_command_role:test_data_setup,cypress_command_role:test_data_setup:ast_cypress_data_call|classify_setup:auth_session_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,ee9bd595c82bdd217ba575597aa131c6,Cypress,117,cy.apiLogout,cy.apiLogout(),custom_command_call,test_body,setup,inline_test_body,auth_session_state,ast_callee_name_heuristic,weak_lexical_signal,cypress_command_role:test_data_setup,cypress_command_role:test_data_setup:ast_cypress_data_call|classify_setup:unknown_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,f974fede185d807ccaf10295bd0914aa,Cypress,181,cy.apiLogin,cy.apiLogin(newUser),custom_command_call,test_body,setup,inline_test_body,auth_session_state,ast_callee_name_heuristic,weak_lexical_signal,cypress_command_role:test_data_setup,cypress_command_role:test_data_setup:ast_cypress_data_call|classify_setup:auth_session_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,3d4af5c238edf4471d772398c2fcc826,Cypress,176,cy.getCookie('MMCSRF').then,"cy.getCookie('MMCSRF').then((csrfCookie) => {
+            let headers;
+            if (csrfCookie?.value) {
+                headers = {'X-CSRF-Token': csrfCookie.value};
+            }
+
+            return cy.request({
+                url: '/api/v4/config',
+                method: 'PUT',
+                body: config,
+                headers,
+            }).then((updateResponse) => {
+    ...",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,auth_session_state,lexical_auth_session,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,incorrect,n/a,n/a,test_data_or_backend_state,intent_auth_over_backend_config,"Cookie is only used as CSRF header for a config PUT; dominant setup intent is backend/config state, not auth session."
+intent_stratified,appsmithorg/appsmith,1c0ef0849bf56fb03c6f63ccdfd51482,Cypress,244,cy.request,"cy.request({
+    method: httpMethod,
+    url: ""/api/v1/logout"",
+    headers: {
+      ""X-Requested-By"": ""Appsmith"",
+    },
+  })",setup,cypress_command,setup,helper_or_framework_extension,auth_session_state,lexical_auth_session,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:feature_type|framework_api_category:test_data_api:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,9e040568f9e9c0fb282ed1a10cda457f,Cypress,31,cy.request,"cy.request({
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        url: '/api/v4/users/login',
+        method: 'POST',
+        body: {login_id: user.username || user.email, password: user.password},
+        ...requestOptions,
+    })",setup,cypress_command,setup,helper_or_framework_extension,auth_session_state,lexical_auth_session,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:feature_type|framework_api_category:test_data_api:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,697a16678c9e088448ea042dbcadb07b,Cypress,31,"cy.request({
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        url: '/api/v4/users/login',
+        method: 'POST',
+        body: {login_id: user.username || user.email, password: us","cy.request({
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        url: '/api/v4/users/login',
+        method: 'POST',
+        body: {login_id: user.username || user.email, password: user.password},
+        ...requestOptions,
+    }).then((response) => {
+        if (requestOptions.failOnStatusCode) {
+            expect(response.status).to.equal(200);
+        }
+
+        if (res...",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,auth_session_state,lexical_auth_session,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,plasmicapp/plasmic,fa93dbe67c836f7b7f0d3044a7ac5143,Cypress,83,cy.setCookie,"cy.setCookie(`plasmic:exp.${SPLIT_ID}`, `${SLICE_0_ID}`)",browser_context_control,test_body,setup,inline_test_body,browser_context_or_client_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:browser_context_control,classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,plasmicapp/plasmic,32812cb9039a3ad6e956eaefc392799c,Cypress,93,cy.setCookie,"cy.setCookie(`plasmic:exp.${SPLIT_ID}`, `${SLICE_1_ID}`)",browser_context_control,test_body,setup,inline_test_body,browser_context_or_client_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:browser_context_control,classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,plasmicapp/plasmic,0edf573ba959379251e0595c71f759d7,Cypress,157,cy.setCookie,"cy.setCookie(`plasmic:exp.${SPLIT_ID}`, `${SLICE_0_ID}`)",browser_context_control,test_body,setup,inline_test_body,browser_context_or_client_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:browser_context_control,classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,plasmicapp/plasmic,5701956440d43a23db5212b41e728f1b,Cypress,43,cy.setCookie,"cy.setCookie(""plasmic_seed"", ""0"")",browser_context_control,test_body,setup,inline_test_body,browser_context_or_client_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:browser_context_control,classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,appsmithorg/appsmith,41fa1d1fe8630d5422010d5faf482467,Cypress,184,cy.clearCookie,"cy.clearCookie(""SESSION"")",setup,cypress_command,setup,helper_or_framework_extension,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:cleanup,hook_instance_key|classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,appsmithorg/appsmith,297ade8fbafcc07ea89cc1cacb77a16c,Cypress,184,cy.clearCookie,"cy.clearCookie(""SESSION"")",setup,cypress_command,setup,helper_or_framework_extension,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:cleanup,hook_instance_key|classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,appsmithorg/appsmith,f802a69712f00723fdffcaff624c093d,Cypress,184,cy.clearCookie,"cy.clearCookie(""SESSION"")",setup,cypress_command,setup,helper_or_framework_extension,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:cleanup,hook_instance_key|classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,opencollective/opencollective-frontend,bd899862bf451122ee35fa5d42968a60,Cypress,194,cy.clearCookie,cy.clearCookie('accessTokenPayload'),setup,before,setup,suite_or_fixture,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:cleanup,hook_instance_key|classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,0adf209495c98a32242c8a56f6614322,Cypress,37,cy.request,"cy.request({
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        url: '/api/v4/teams/' + teamId + (permanent ? '?permanent=true' : ''),
+        method: 'DELETE',
+    })",setup,cypress_command,setup,helper_or_framework_extension,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:feature_type|framework_api_category:test_data_api:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,appsmithorg/appsmith,7f4e43c7dce8976e3c2fba2e6a452636,Cypress,385,"cy.request({
+      method: ""DELETE"",
+      url: ""api/v1/applications/"" + appId,
+      failOnStatusCode: false,
+      headers: {
+        ""X-Requested-By"": ""Appsmith"",
+      },
+    }).then","cy.request({
+      method: ""DELETE"",
+      url: ""api/v1/applications/"" + appId,
+      failOnStatusCode: false,
+      headers: {
+        ""X-Requested-By"": ""Appsmith"",
+      },
+    }).then((response) => {
+      cy.log(response.body);
+      cy.log(response.status);
+    })",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,appsmithorg/appsmith,4123c73c3b5730a9e980e7251961972e,Cypress,385,cy.request,"cy.request({
+      method: ""DELETE"",
+      url: ""api/v1/applications/"" + appId,
+      failOnStatusCode: false,
+      headers: {
+        ""X-Requested-By"": ""Appsmith"",
+      },
+    })",setup,cypress_command,setup,helper_or_framework_extension,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:feature_type|framework_api_category:test_data_api:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,cloudtogo/pageplug,e844e4b8ef0c908cb653c029903a85d2,Cypress,436,"cy.request({
+      method: ""DELETE"",
+      url: ""api/v1/workspaces/"" + workspaceId,
+      failOnStatusCode: false,
+      headers: {
+        ""X-Requested-By"": ""Appsmith"",
+      },
+    }).then","cy.request({
+      method: ""DELETE"",
+      url: ""api/v1/workspaces/"" + workspaceId,
+      failOnStatusCode: false,
+      headers: {
+        ""X-Requested-By"": ""Appsmith"",
+      },
+    }).then((response) => {
+      cy.log(response.body);
+      cy.log(response.status);
+    })",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,taiga-family/maskito,74b31b4c032ff3d6945f25dfc417468d,Cypress,4,cy.visit,cy.visit(`/${DemoPath.Number}/API?${queryParams}`),ui_action,beforeEach,setup,per_test_hook,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,DouyinFE/semi-design,eee61dbe550b5e3a38bca5798c4b7b71,Cypress,24,cy.visit,cy.visit('http://127.0.0.1:6006/iframe.html?id=rating--auto-focus&args=&viewMode=story'),ui_action,test_body,setup,inline_test_body,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,classify_setup:unknown_setup:lexical_fallback|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,ueberdosis/tiptap,11bbaabfa6196a2f9a17c709206eaf6b,Cypress,3,cy.visit,cy.visit('/src/Commands/Cut/React/'),ui_action,beforeEach,setup,per_test_hook,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,taiga-family/maskito,7e907e99804cacfe6a26cfbda6aef370,Cypress,8,cy.visit,cy.visit(DemoPath.Phone),ui_action,beforeEach,setup,per_test_hook,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,cloudtogo/pageplug,e0b07c35d7453974d16555b99cfe5219,Cypress,676,cy.intercept,"cy.intercept(""DELETE"", ""/api/v1/actions/*"")",setup,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,cloudtogo/pageplug,bdffb5833abc65e37b62ace3214347e8,Cypress,676,cy.intercept,"cy.intercept(""DELETE"", ""/api/v1/actions/*"")",setup,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,cloudtogo/pageplug,7cbcdbe42a2500efb4433e61422b2bed,Cypress,681,cy.intercept,"cy.intercept(""PUT"", ""/api/v1/applications/*"")",setup,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,appsmithorg/appsmith,6105ca83841388ec20159e9fb4de8a6d,Cypress,607,cy.intercept,"cy.intercept(""GET"", ""/api/v1/pages/*"")",setup,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,linode/manager,6606159458ea6aa7ed689d1bb952edc8,Cypress,210,cy.clock(Date.now()).then,"cy.clock(Date.now()).then((clock) => {
+      // Confirm that Cloud manager polls the requests endpoint no more than once
+      // every 2 seconds.
+      mockGetEventsPolling(mockEvents, mockNowTimestamp).as('getEventsPoll');
+      for (let i = 0; i < pollingSamples; i += 1) {
+        cy.log(
+          `Confirming that Cloud has not made events request... (${
+            i + 1
+          }/$...",cypress_test_utility,test_body,setup,inline_test_body,network_mock_or_spy,lexical_network_mock,weak_lexical_signal,cypress_test_utility_intercept,classify_setup:time_control:lexical_fallback|framework_api_category:time_device_emulation:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,linode/manager,677f9a252a86a37ae7a8c118f568fe16,Cypress,141,cy.clock(mockNow.toJSDate()).then,"cy.clock(mockNow.toJSDate()).then((clock) => {
+      // Confirm that Cloud manager polls the requests endpoint no more than
+      // once every 16 seconds.
+      mockGetEventsPolling([mockEvent], mockNowTimestamp).as('getEventsPoll');
+      for (let i = 0; i < pollingSamples; i += 1) {
+        cy.log(
+          `Confirming that Cloud has not made events request... (${
+            i + 1
+   ...",cypress_test_utility,test_body,setup,inline_test_body,network_mock_or_spy,lexical_network_mock,weak_lexical_signal,cypress_test_utility_intercept,classify_setup:time_control:lexical_fallback|framework_api_category:time_device_emulation:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,cypress-io/cypress-realworld-app,c38212c8d6b4c32fc121dbb22a60930d,Cypress,344,cy.task,"cy.task(`${operation}:database`, params, { log: logTask })",setup,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,ast_callee_name_heuristic,weak_lexical_signal,statement_phase_hint_ast,hook_instance_key|classify_setup:database_seed_setup:feature_type|framework_api_category:backend_task:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,twilio/twilio-video-app-react,a3aafeb44363d6f05f812636f4350497,Cypress,253,cy.task,"cy.task('addParticipant', { name: 'test3', roomName: ROOM_NAME, color: 'green' })",setup,before,setup,suite_or_fixture,test_data_or_backend_state,ast_callee_name_heuristic,weak_lexical_signal,statement_phase_hint_ast,hook_instance_key|classify_setup:hook_setup:feature_type|framework_api_category:backend_task:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,407b6c8eafaebdb905ea025336948d14,Cypress,150,cy.task,"cy.task('externalRequest', {baseUrl, user, method, path, data})",setup,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,ast_callee_name_heuristic,weak_lexical_signal,statement_phase_hint_ast,hook_instance_key|classify_setup:hook_setup:feature_type|framework_api_category:backend_task:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,15ed8199a9b779b8b191fe61a9177cce,Cypress,150,cy.task,"cy.task('externalRequest', {baseUrl, user, method, path, data})",setup,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,ast_callee_name_heuristic,weak_lexical_signal,statement_phase_hint_ast,hook_instance_key|classify_setup:hook_setup:feature_type|framework_api_category:backend_task:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,6db6a1a8b0aae31fb5b7694583dc93f9,Cypress,169,cy.apiGetConfig().then,"cy.apiGetConfig().then(({config: currentConfig}) => {
+        // * Check if config can be updated
+        expectConfigToBeUpdatable(currentConfig, newConfig);
+
+        const config = merge.all([currentConfig, getDefaultConfig(), newConfig]);
+
+        // # Set the modified config
+        return cy.getCookie('MMCSRF').then((csrfCookie) => {
+            let headers;
+            if (csrfCooki...",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:unknown_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,cb62960f0ea62dde205ffc2331f8343d,Cypress,150,"cy.task('externalRequest', {baseUrl, user, method, path, data}).then","cy.task('externalRequest', {baseUrl, user, method, path, data}).then((response: any) => {
+        // Temporarily ignore error related to Cloud
+        const cloudErrorId = [
+            'ent.cloud.request_error',
+            'api.cloud.get_subscription.error',
+        ];
+
+        if (response.data && !cloudErrorId.includes(response.data.id) && failOnStatusCode) {
+            expect(respons...",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:unknown_setup:lexical_fallback|framework_api_category:backend_task:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,c517217b7179d791690a55e75fae8343,Cypress,169,cy.apiGetConfig().then,"cy.apiGetConfig().then(({config: currentConfig}) => {
+        // * Check if config can be updated
+        expectConfigToBeUpdatable(currentConfig, newConfig);
+
+        const config = merge.all([currentConfig, getDefaultConfig(), newConfig]);
+
+        // # Set the modified config
+        return cy.getCookie('MMCSRF').then((csrfCookie) => {
+            let headers;
+            if (csrfCooki...",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:unknown_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,d96ac655545500c4a84e89f2d8d767c7,Cypress,169,cy.apiGetConfig().then,"cy.apiGetConfig().then(({config: currentConfig}) => {
+        // * Check if config can be updated
+        expectConfigToBeUpdatable(currentConfig, newConfig);
+
+        const config = merge.all([currentConfig, getDefaultConfig(), newConfig]);
+
+        // # Set the modified config
+        return cy.getCookie('MMCSRF').then((csrfCookie) => {
+            let headers;
+            if (csrfCooki...",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,ast_framework_api_category,,cypress_test_utility_intercept,hook_instance_key|classify_setup:unknown_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,60275e13177d4550e72ed903076a5cce,Cypress,182,"cy.request({
+                url: '/api/v4/config',
+                method: 'PUT',
+                body: config,
+                headers,
+            }).then","cy.request({
+                url: '/api/v4/config',
+                method: 'PUT',
+                body: config,
+                headers,
+            }).then((updateResponse) => {
+                expect(updateResponse.status).to.equal(200);
+                return cy.apiGetConfig();
+            })",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,lexical_backend_data_setup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,8092f62a909e09c9b9eee08db6c7c36c,Cypress,332,"cy.request<ChannelMembership>({
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        url: '/api/v4/channels/' + channelId + '/members',
+        method: 'POST',
+        body: {","cy.request<ChannelMembership>({
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        url: '/api/v4/channels/' + channelId + '/members',
+        method: 'POST',
+        body: {
+            user_id: userId,
+        },
+    }).then((response) => {
+        expect(response.status).to.equal(201);
+        return cy.wrap({member: response.body});
+    })",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,lexical_backend_data_setup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,cloudtogo/pageplug,2101a15882fcddef59dd7911ff6c900c,Cypress,979,"cy.request({
+    method: ""POST"",
+    url: ""api/v1/users"",
+    headers: {
+      ""content-type"": ""application/json"",
+    },
+    followRedirect: false,
+    form: true,
+    body: {
+      name: un","cy.request({
+    method: ""POST"",
+    url: ""api/v1/users"",
+    headers: {
+      ""content-type"": ""application/json"",
+    },
+    followRedirect: false,
+    form: true,
+    body: {
+      name: uname,
+      email: uname,
+      password: pword,
+    },
+  }).then((response) => {
+    expect(response.status).equal(302);
+    cy.log(response.body);
+  })",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,lexical_backend_data_setup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,ae4a7689f13b94a158ad694548e0c768,Cypress,13,"cy.request({
+            headers: {'X-Requested-With': 'XMLHttpRequest'},
+            url: '/api/v4/users/me/status',
+            method: 'PUT',
+            body: data,
+        }).then","cy.request({
+            headers: {'X-Requested-With': 'XMLHttpRequest'},
+            url: '/api/v4/users/me/status',
+            method: 'PUT',
+            body: data,
+        }).then((response) => {
+            expect(response.status).to.equal(200);
+            return cy.wrap({status: response.body});
+        })",cypress_test_utility,cypress_command,setup,helper_or_framework_extension,test_data_or_backend_state,lexical_backend_data_setup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:lexical_fallback|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,df4258fdca19fa71dcb62433d8ee20d3,Cypress,66,promoteGuestToUser,promoteGuestToUser(user1Data),helper_call,beforeEach,setup,per_test_hook,test_data_or_backend_state,resolved_helper_child_intents,,hook_source_kind:beforeEach:helper_body_phase_hint,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:unknown:unknown_basis|helper_body_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,2cd53e39038e5af6deb99c019c040f7f,Cypress,66,promoteGuestToUser,promoteGuestToUser(user1Data),helper_call,beforeEach,setup,per_test_hook,test_data_or_backend_state,resolved_helper_child_intents,,hook_source_kind:beforeEach:helper_body_phase_hint,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:unknown:unknown_basis|helper_body_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,9e1208fd50e5491904763c5ceed9bf74,Cypress,66,promoteGuestToUser,promoteGuestToUser(user1Data),helper_call,beforeEach,setup,per_test_hook,test_data_or_backend_state,resolved_helper_child_intents,,hook_source_kind:beforeEach:helper_body_phase_hint,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:unknown:unknown_basis|helper_body_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,0ba98a52bda3385cdcf7215ed8a1fc19,Cypress,66,promoteGuestToUser,promoteGuestToUser(user1Data),helper_call,beforeEach,setup,per_test_hook,test_data_or_backend_state,resolved_helper_child_intents,,hook_source_kind:beforeEach:helper_body_phase_hint,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:unknown:unknown_basis|helper_body_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,UI5/webcomponents,05aa6cb8bce9bb21680e9046f83417a8,Cypress,7,cy.viewport,"cy.viewport(1200, 800)",browser_context_control,beforeEach,setup,per_test_hook,time_device_permission_emulation,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:time_device_emulation,hook_instance_key|classify_setup:browser_context_control:feature_type|framework_api_category:time_device_emulation:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,UI5/webcomponents,b6b568498ce74a447b9aa3c0d3799927,Cypress,1395,cy.viewport,"cy.viewport(1000, 400)",browser_context_control,before,setup,suite_or_fixture,time_device_permission_emulation,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:time_device_emulation,hook_instance_key|classify_setup:browser_context_control:feature_type|framework_api_category:time_device_emulation:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mempool/mempool,709c9bee718e313d179106f61804fe73,Cypress,362,cy.viewport,cy.viewport('macbook-16'),browser_context_control,test_body,setup,inline_test_body,time_device_permission_emulation,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:time_device_emulation,classify_setup:browser_context_control:feature_type|framework_api_category:time_device_emulation:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,linode/manager,cbbbf7630b8464154a02cc3e1651d568,Cypress,196,cy.clock,"cy.clock(MOCK_START_DATE.getTime(), ['Date'])",time_control,test_body,setup,inline_test_body,time_device_permission_emulation,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:time_device_emulation,classify_setup:time_control:feature_type|framework_api_category:time_device_emulation:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,mattermost/mattermost,78f479dd439157c85d301e09884d5af1,Cypress,141,cy.tick(waitingTime * 60 * 1000).then,"cy.tick(waitingTime * 60 * 1000).then(() => {
+            // # Open custom status modal
+            cy.uiOpenUserMenu().within(() => {
+                // * Verify that there is no custom status in the dropdown
+                cy.findByText('Set custom status').should('exist').and('be.visible');
+            });
+        })",cypress_test_utility,test_body,setup,inline_test_body,time_device_permission_emulation,ast_framework_api_category,,cypress_test_utility_intercept,classify_setup:unknown_setup:lexical_fallback|framework_api_category:time_device_emulation:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,vm0-ai/vm0,992e9f5209aab063a831b81c5acbfaee,Playwright,43,page.context().storageState,page.context().storageState({ path: STORAGE_STATE }),browser_context_control,test_body,setup,inline_test_body,auth_session_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:auth_session,classify_setup:browser_context_control:feature_type|framework_api_category:auth_session:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,documenso/documenso,70054529d8ea308d82d486fe91d1c5df,Playwright,123,page.goto,page.goto(`/sign/${token}`),ui_action,test_body,setup,inline_test_body,auth_session_state,lexical_auth_session,weak_lexical_signal,navigation_bootstrap_ast,classify_setup:unknown_setup:lexical_fallback|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,documenso/documenso,4392a7263030628dd9c3aea2d90ba580,Playwright,653,page.goto,page.goto(`/sign/${pendingRecipient?.token}`),ui_action,test_body,setup,inline_test_body,auth_session_state,lexical_auth_session,weak_lexical_signal,navigation_bootstrap_ast,classify_setup:unknown_setup:lexical_fallback|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,documenso/documenso,2b8ca65630722d84c612ab0e5e7fe569,Playwright,62,page.goto,page.goto(`/sign/${token}`),ui_action,test_body,setup,inline_test_body,auth_session_state,lexical_auth_session,weak_lexical_signal,navigation_bootstrap_ast,classify_setup:unknown_setup:lexical_fallback|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,jetkvm/kvm,35a81151d6af3eecdad1b0d01764837c,Playwright,548,page.evaluate,"page.evaluate(async () => {
+    await fetch(""/auth/logout"", { method: ""POST"" });
+  })",ui_action,helper_function,setup,helper_or_framework_extension,auth_session_state,lexical_auth_session,weak_lexical_signal,lexical_request_method_or_auth_context,classify_setup:api_seed_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,BuilderIO/builder,b78de74700fcd147d564eaf354832832,Playwright,19,cy.clearCookies,cy.clearCookies(),browser_context_control,test_body,setup,inline_test_body,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:cleanup,classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,BuilderIO/builder,4144eeccda6a7a853c87cb68aa2548c5,Playwright,31,cy.clearCookies,cy.clearCookies(),browser_context_control,test_body,setup,inline_test_body,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:cleanup,classify_setup:browser_context_control:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,openobserve/openobserve,2234f8a8e72ac78a03d1d3c8017f2ab5,Playwright,225,"cleanupPage.evaluate(async ({ orgId, pipelineId, jobId }) => {
+          await fetch(`/api/${orgId}/pipelines/${pipelineId}/backfill/${jobId}`, { method: 'DELETE' });
+        }, { orgId, pipelineId:","cleanupPage.evaluate(async ({ orgId, pipelineId, jobId }) => {
+          await fetch(`/api/${orgId}/pipelines/${pipelineId}/backfill/${jobId}`, { method: 'DELETE' });
+        }, { orgId, pipelineId: testPipelineId, jobId: testBackfillJobId }).catch(() => {})",setup,afterAll,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,openobserve/openobserve,a24e02962b7c93a43c83d08658e2f602,Playwright,231,"cleanupPage.evaluate(async ({ orgId, pipelineId }) => {
+          await fetch(`/api/${orgId}/pipelines/${pipelineId}`, { method: 'DELETE' });
+        }, { orgId, pipelineId: testPipelineId }).catch","cleanupPage.evaluate(async ({ orgId, pipelineId }) => {
+          await fetch(`/api/${orgId}/pipelines/${pipelineId}`, { method: 'DELETE' });
+        }, { orgId, pipelineId: testPipelineId }).catch(() => {})",setup,afterAll,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,openobserve/openobserve,e460d8d7606a5501495037526c4c79f3,Playwright,225,"cleanupPage.evaluate(async ({ orgId, pipelineId, jobId }) => {
+          await fetch(`/api/${orgId}/pipelines/${pipelineId}/backfill/${jobId}`, { method: 'DELETE' });
+        }, { orgId, pipelineId:","cleanupPage.evaluate(async ({ orgId, pipelineId, jobId }) => {
+          await fetch(`/api/${orgId}/pipelines/${pipelineId}/backfill/${jobId}`, { method: 'DELETE' });
+        }, { orgId, pipelineId: testPipelineId, jobId: testBackfillJobId }).catch(() => {})",setup,afterAll,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,openobserve/openobserve,e460d8d7606a5501495037526c4c79f3,Playwright,231,"cleanupPage.evaluate(async ({ orgId, pipelineId }) => {
+          await fetch(`/api/${orgId}/pipelines/${pipelineId}`, { method: 'DELETE' });
+        }, { orgId, pipelineId: testPipelineId }).catch","cleanupPage.evaluate(async ({ orgId, pipelineId }) => {
+          await fetch(`/api/${orgId}/pipelines/${pipelineId}`, { method: 'DELETE' });
+        }, { orgId, pipelineId: testPipelineId }).catch(() => {})",setup,afterAll,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:feature_type|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,redpanda-data/console,59f27432a545e14b2316da23626909e7,Playwright,9,page.goto,"page.goto('/security/users', {
+      waitUntil: 'domcontentloaded',
+    })",ui_action,beforeEach,setup,per_test_hook,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,payloadcms/payload,15c9d259f58fa000ec55786354a2685f,Playwright,241,page.goto,page.goto(categoriesURL.edit(categoryID)),ui_action,test_body,setup,inline_test_body,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,classify_setup:unknown_setup:lexical_fallback|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,CopilotKit/CopilotKit,fc96c694d53f2d37b43ee96e78e6aaec,Playwright,5,page.goto,"page.goto(""/demos/shared-state-streaming"")",ui_action,beforeEach,setup,per_test_hook,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,CopilotKit/CopilotKit,c817dc8b5d25f3e7b99a0429f4d7afb9,Playwright,5,page.goto,"page.goto(""/demos/subagents"")",ui_action,beforeEach,setup,per_test_hook,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,pretzelai/pretzelai,4126d9051a9808de8b4d46027b3d8971,Playwright,25,page.route,"page.route(galata.Routes.extensions, async (route, request) => {
+      const url = request.url();
+      switch (request.method()) {
+        case 'GET':
+          if (!url.includes('query')) {
+            return route.fulfill({
+              status: 200,
+              contentType: 'application/json',
+              body: JSON.stringify(extensionsList)
+            });
+          } else if (u...",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,elizaOS/eliza,33cd1e78074f30d3312d04b11d920b06,Playwright,433,page.route,"page.route(""**/api/auth/me"", async (route) => {
+    if (route.request().method() !== ""GET"") {
+      await route.fallback();
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: ""application/json"",
+      body: JSON.stringify({
+        identity: {
+          id: ""playwright-smoke-owner"",
+          displayName: ""Playwright Smoke"",
+          kind: ""owner"",
+  ...",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,elizaOS/eliza,9c77cf7fd8532ebc5ea8258cbd651e86,Playwright,504,page.route,"page.route(""**/api/cloud/status"", async (route) => {
+    if (route.request().method() !== ""GET"") {
+      await route.fallback();
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: ""application/json"",
+      body: JSON.stringify({
+        connected: false,
+        enabled: false,
+        cloudVoiceProxyAvailable: false,
+        hasApiKey: false,
+      })...",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,porsche-design-system/porsche-design-system,830f55602a6714dc9da45b8b43c2b99e,Playwright,9,page.route,"page.route('**/*', async (route) => {
+    if (route.request().url().includes(ALGOLIA_APP_ID)) {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json; charset=UTF-8',
+        headers: { 'Access-Control-Allow-Origin': '*' },
+        body: JSON.stringify(ALGOLIA_RESPONSE_MOCK),
+      });
+    } else {
+      await route.continue();
+    }
+  })",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,openobserve/openobserve,a5a23f611b02ff660df24dc9be40fd29,Playwright,55,page.evaluate,"page.evaluate(async ({ baseUrl, org, authToken, templatePayload }) => {
+        const response = await fetch(`${baseUrl}/api/${org}/alerts/templates`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Basic ${authToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(templatePayload)
+        });
+        return { sta...",ui_action,beforeAll,setup,suite_or_fixture,test_data_or_backend_state,lexical_backend_data_setup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,openobserve/openobserve,89788ef3bf22fc8a4816c8381c739f66,Playwright,59,page.evaluate,"page.evaluate(async ({ baseUrl, org, authToken, templatePayload }) => {
+        const response = await fetch(`${baseUrl}/api/${org}/alerts/templates`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Basic ${authToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(templatePayload)
+        });
+        return { sta...",ui_action,beforeAll,setup,suite_or_fixture,test_data_or_backend_state,lexical_backend_data_setup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,payloadcms/payload,31ae9ec107b1b909861332604482aa3c,Playwright,58,page.evaluate,"page.evaluate(async () => {
+      const response = await fetch('/api/seed', { method: 'POST' })
+      return response.json()
+    })",ui_action,beforeEach,setup,per_test_hook,test_data_or_backend_state,lexical_backend_data_setup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,openobserve/openobserve,844765c7593fdc5b73aa2727c68adca7,Playwright,83,page.evaluate,"page.evaluate(async ({ baseUrl, org, authToken, destinationPayload }) => {
+        const response = await fetch(`${baseUrl}/api/${org}/alerts/destinations`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Basic ${authToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(destinationPayload)
+        });
+        ret...",ui_action,beforeAll,setup,suite_or_fixture,test_data_or_backend_state,lexical_backend_data_setup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:hook_setup:source_kind|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,synyi/poplar,240896e7c5fd442176eeee91b0542e6f,Puppeteer,128,page.goto,page.goto('http://localhost:8080'),ui_action,test_body,setup,inline_test_body,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,classify_setup:unknown_setup:lexical_fallback|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,swaponline/MultiCurrencyWallet,cf6503ba3eaac1698ab95e1938fa681f,Puppeteer,19,page.goto,page.goto(`${page.url()}history`),ui_action,test_body,setup,inline_test_body,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,classify_setup:unknown_setup:lexical_fallback|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,swaponline/MultiCurrencyWallet,f53b673ffb0c39765bf9e27b5533f1fb,Puppeteer,361,page.goto,page.goto(`${url}#/apps/${targetApp.id}`),ui_action,test_body,setup,inline_test_body,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,classify_setup:unknown_setup:lexical_fallback|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+intent_stratified,synyi/poplar,f4b38f20e3daddc7d15dca2e26143292,Puppeteer,172,page.goto,page.goto('http://localhost:8080'),ui_action,test_body,setup,inline_test_body,navigation_bootstrap,ast_framework_api_category,,navigation_bootstrap_accepted,classify_setup:unknown_setup:lexical_fallback|framework_api_category:navigation:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,appsmithorg/appsmith,d3b08505b8e93d7d6b2fe51d6b253f76,Cypress,686,cy.intercept,"cy.intercept(""PUT"", ""/api/v1/users/leaveWorkspace/*"")",setup,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,mattermost/mattermost,a45833e310acebb43938248a59cf7d2d,Cypress,307,cy.request,"cy.request({
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        url: '/api/v4/channels/' + channelId,
+        method: 'DELETE',
+    })",setup,cypress_command,setup,helper_or_framework_extension,cleanup_restore_state,lexical_cleanup,weak_lexical_signal,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:api_seed_setup:feature_type|framework_api_category:test_data_api:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,appsmithorg/appsmith,9813f4a850ab850ebdcbd0a3236ce9c2,Cypress,634,cy.intercept,"cy.intercept(""GET"", ""/api/v1/workspaces"")",setup,cypress_command,setup,helper_or_framework_extension,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,plasmicapp/plasmic,296e9f6653730a36351f7d38802109c7,Cypress,2124,"cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })
+    .fetchCsrf","cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })
+    .fetchCsrf()",custom_command_call,afterEach,teardown,per_test_hook,auth_session_state,lexical_auth_session,weak_lexical_signal|framework_mapping_unclear,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,plasmicapp/plasmic,95c6a3e64420bb815fdbdd3a9b0c5ec7,Cypress,2124,"cy.fetchCsrf()
+    .request","cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })",custom_command_call,afterEach,teardown,per_test_hook,auth_session_state,lexical_auth_session,weak_lexical_signal|framework_mapping_unclear,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,plasmicapp/plasmic,5af5befcf7ce0501d9cee31629cddd3b,Cypress,2124,"cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })
+    .fetchCsrf","cy.fetchCsrf()
+    .request({
+      url: ""/api/v1/auth/login"",
+      method: ""POST"",
+      body: { email, password },
+      log: false,
+    })
+    .fetchCsrf()",custom_command_call,afterEach,teardown,per_test_hook,auth_session_state,lexical_auth_session,weak_lexical_signal|framework_mapping_unclear,lexical_request_method_or_auth_context,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,Unleash/unleash,327831eb6ad1ac722e6c0e6f17e8c4bc,Cypress,23,userIds.forEach,"userIds.forEach((id) => {
+            cy.request('DELETE', `${baseUrl}/api/admin/user-admin/${id}`);
+        })",helper_call,after,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal|helper_body_unavailable,hook_source_kind:after:framework_api_category:test_data_api,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,Unleash/unleash,b9604399b6e42a682fbac7db4f447a0f,Cypress,53,userIds.forEach,"userIds.forEach((id) => {
+            cy.request('DELETE', `${baseUrl}/api/admin/user-admin/${id}`);
+        })",helper_call,after,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal|helper_body_unavailable,hook_source_kind:after:framework_api_category:test_data_api,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,Unleash/unleash,bef91ed5427dc51faaefcb156ae113bd,Cypress,23,userIds.forEach,"userIds.forEach((id) => {
+            cy.request('DELETE', `${baseUrl}/api/admin/user-admin/${id}`);
+        })",helper_call,after,teardown,suite_or_fixture,cleanup_restore_state,lexical_cleanup,weak_lexical_signal|helper_body_unavailable,hook_source_kind:after:framework_api_category:test_data_api,hook_instance_key|classify_setup:teardown_cleanup:source_kind|framework_api_category:test_data_api:ast_nested_framework_api|statement_phase_hint_ast:setup:ast_nested_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,linode/manager,45ce1de9fa437e268baa2de8ee3c67e9,Cypress,54,cy.clearLocalStorage,cy.clearLocalStorage(tokenLocalStorageKey),custom_command_call,test_body,setup,inline_test_body,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal|helper_body_unavailable|framework_mapping_unclear,framework_api_category:cleanup,classify_setup:unknown_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,midas-research/audino,329cf5635a2e67f03f15670769d96c79,Cypress,17,cy.clearLocalStorage,cy.clearLocalStorage('token'),custom_command_call,test_body,setup,inline_test_body,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal|helper_body_unavailable|framework_mapping_unclear,framework_api_category:cleanup,classify_setup:unknown_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,webiny/webiny-js,06268bca9c278690169d993c89372576,Cypress,21,cy.clearLocalStorage,cy.clearLocalStorage(),custom_command_call,test_body,unclear,inline_test_body,cleanup_restore_state,ast_callee_name_heuristic,weak_lexical_signal|helper_body_unavailable|framework_mapping_unclear,framework_api_category:cleanup,classify_setup:unknown_setup:lexical_fallback|framework_api_category:unknown:unknown_basis,correct,correct,correct,correct,n/a,n/a,n/a,n/a,"Eligible cleanup/browser-state operation; phase is ambiguous from isolated test-body snippet, so unclear is acceptable."
+review_queue,elizaOS/eliza,79cfd1302ee37f189ba8ea8da310a70b,Playwright,504,page.route,"page.route(""**/api/cloud/status"", async (route) => {
+    if (route.request().method() !== ""GET"") {
+      await route.fallback();
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: ""application/json"",
+      body: JSON.stringify({
+        connected: false,
+        enabled: false,
+        cloudVoiceProxyAvailable: false,
+        hasApiKey: false,
+      })...",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,elizaOS/eliza,9c77cf7fd8532ebc5ea8258cbd651e86,Playwright,461,page.route,"page.route(""**/api/auth/sessions"", async (route) => {
+    if (route.request().method() !== ""GET"") {
+      await route.fallback();
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: ""application/json"",
+      body: JSON.stringify({ sessions: [] }),
+    });
+  })",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.
+review_queue,elizaOS/eliza,f8e0f6a667e1fdd570927c2f8c7b7ad6,Playwright,473,page.route,"page.route(""**/api/agents"", async (route) => {
+    if (route.request().method() !== ""GET"") {
+      await route.fallback();
+      return;
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: ""application/json"",
+      body: JSON.stringify({ agents: [] }),
+    });
+  })",setup,beforeEach,setup,per_test_hook,network_mock_or_spy,ast_callee_name_heuristic,weak_lexical_signal,framework_api_category:network_mock,hook_instance_key|classify_setup:network_mock:feature_type|framework_api_category:network_mock:ast_known_framework_api|statement_phase_hint_ast:setup:ast_known_framework_api,correct,correct,correct,correct,n/a,n/a,n/a,n/a,Reviewed as valid RQ1 setup/control/teardown unit; phase/scope/intent match evidence.

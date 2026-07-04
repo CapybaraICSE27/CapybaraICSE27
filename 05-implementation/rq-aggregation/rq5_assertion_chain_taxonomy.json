@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "description": "RQ5-B assertion chain AST metadata codebook and coverage limits (Milestone 3).",
+  "field_notes": {
+    "assertion_framework_context": "Test framework from extraction context (Playwright, Cypress, etc.).",
+    "assertion_library_syntax": "Assertion library/syntax family inferred from AST (may differ from test framework).",
+    "assertion_framework": "Legacy alias for assertion_library_syntax in event CSVs.",
+    "assertion_callback_intent_hint_ast": "Primary verification-intent hint inferred from nested assertion matcher/property/literal-argument AST nodes inside Cypress should(callback)/and(callback).",
+    "assertion_callback_intent_basis_ast": "AST evidence basis for callback intent hints; currently ast_callback_nested_assertion.",
+    "assertion_callback_nested_matchers_json": "Nested semantic matcher names collected from callback assertion AST nodes.",
+    "assertion_callback_subject_properties_json": "Subject property/callee segments collected from callback assertion AST nodes.",
+    "chain_matcher_sequence_json": "Ordered matcher sequence for all semantic assertion matchers in an assertion chain.",
+    "non_assertion_chain_methods_json": "Ordered non-assertion call methods in the same chain, such as Cypress get/find/eq query methods.",
+    "chain_group_rows_json": "Review-bundle-only packet showing all sibling matcher rows that share a sampled assertion_chain_root_id."
+  },
+  "partial_coverage_note": "Assertion-chain metrics are AST-tagged chain metrics among assertions with chain metadata. Always report assertions_with_chain_fields and assertions_missing_chain_metadata_count alongside chained/standalone fractions. Residual AST gaps: Chai property chains (.to.equal, .to.be.visible), Nightwatch browser.assert wrappers, WebDriverIO element matchers, exotic grouped contexts, and assertions inside unsupported callback wrappers."
+}

@@ -1,0 +1,60 @@
+[submodule "projects/swup"]
+	path = projects/swup
+	url = https://github.com/swup/swup.git
+[submodule "projects/openplayerjs"]
+	path = projects/openplayerjs
+	url = https://github.com/openplayerjs/openplayerjs.git
+[submodule "projects/motion-vue"]
+	path = projects/motion-vue
+	url = https://github.com/motiondivision/motion-vue.git
+[submodule "projects/zudoku"]
+	path = projects/zudoku
+	url = https://github.com/zuplo/zudoku.git
+[submodule "projects/gridstack"]
+	path = projects/gridstack
+	url = https://github.com/gridstack/gridstack.js.git
+[submodule "projects/actual"]
+	path = projects/actual
+	url = https://github.com/actualbudget/actual.git
+[submodule "projects/epic-stack"]
+	path = projects/epic-stack
+	url = https://github.com/epicweb-dev/epic-stack.git
+[submodule "projects/hemmelig"]
+	path = projects/hemmelig
+	url = https://github.com/HemmeligOrg/Hemmelig.app.git
+[submodule "projects/cypress-realworld-app"]
+	path = projects/cypress-realworld-app
+	url = https://github.com/cypress-io/cypress-realworld-app.git
+[submodule "projects/mermaid"]
+	path = projects/mermaid
+	url = https://github.com/mermaid-js/mermaid.git
+[submodule "projects/trilium"]
+	path = projects/trilium
+	url = https://github.com/TriliumNext/Trilium.git
+[submodule "projects/letterpad"]
+	path = projects/letterpad
+	url = https://github.com/letterpad/letterpad.git
+[submodule "projects/keystone"]
+	path = projects/keystone
+	url = https://github.com/keystonejs/keystone.git
+[submodule "projects/react-admin"]
+	path = projects/react-admin
+	url = https://github.com/marmelab/react-admin.git
+[submodule "projects/super-productivity"]
+	path = projects/super-productivity
+	url = https://github.com/super-productivity/super-productivity.git
+[submodule "projects/maputnik"]
+	path = projects/maputnik
+	url = https://github.com/maplibre/maputnik.git
+[submodule "projects/altair"]
+	path = projects/altair
+	url = https://github.com/altair-graphql/altair.git
+[submodule "projects/git-truck"]
+	path = projects/git-truck
+	url = https://github.com/git-truck/git-truck.git
+[submodule "projects/todomvc"]
+	path = projects/todomvc
+	url = https://github.com/laststance/react-typescript-todomvc-2022.git
+[submodule "projects/tldraw"]
+	path = projects/tldraw
+	url = https://github.com/tldraw/tldraw.git

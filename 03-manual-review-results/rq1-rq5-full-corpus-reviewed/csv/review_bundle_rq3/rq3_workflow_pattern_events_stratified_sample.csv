@@ -1,0 +1,1101 @@
+repo,test_id,framework,line,name,raw_code,abstraction_kind,interaction_ownership,reuse_scope,workflow_evidence_basis,manual_abstraction_kind_ok,manual_abstraction_kind_should_be,manual_workflow_evidence_ok,manual_workflow_evidence_should_be,manual_notes,event_snippet,snippet_truncated,file_path,enclosing_function_or_helper_snippet,test_body_context_snippet
+appsmithorg/appsmith,9eb09a8e89ca5fa446f075729f1ed4a1,Cypress,434,PageLeftPane.assertAbsence,"PageLeftPane.assertAbsence(""Child_Page Copy"")",page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"PageLeftPane.assertAbsence(""Child_Page Copy"")",false,,,
+cloudtogo/pageplug,d220af6f12e8bc52cae2ddaf48a956ba,Cypress,874,cy.NavigateToPaginationTab,cy.NavigateToPaginationTab(),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.NavigateToPaginationTab(),false,,,
+mattermost/mattermost,96da78ced4e670aeb6bd2f5eb1ebcf90,Cypress,15,cy.get,cy.get('#group_profile'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('#group_profile'),false,,,
+mattermost/mattermost,c5dde010b8df18e9909c7b9142685f3d,Cypress,434,cy.apiSaveSkipStepsPreference,"cy.apiSaveSkipStepsPreference(createdUser.id, 'true')",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveSkipStepsPreference(createdUser.id, 'true')",false,,,
+appsmithorg/appsmith,f35dc6632f73c3619586215f011173ae,Cypress,18,_.homePage.InviteUserToWorkspaceErrorMessage,"_.homePage.InviteUserToWorkspaceErrorMessage(workspaceId, ""abcdef"")",domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"_.homePage.InviteUserToWorkspaceErrorMessage(workspaceId, ""abcdef"")",false,,,
+surveyjs/survey-library,1add1cfa8c225712ff5ee9581b036d78,Playwright,120,page.evaluate,"page.evaluate(() => {
+      const self: any = window;
+      // eslint-disable-next-line surveyjs/eslint-plugin-i18n/allowed-in-shadow-dom
+      const surveyElement: HTMLElement = document.getElementById(""surveyElement"") as HTMLElement;
+      surveyElement.innerHTML = """";
+
+      const shadowRoot = surveyElement.attachShadow({ mode: ""open"" });
+      const rootElement = document.createElement(...",domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate(() => {
+      const self: any = window;
+      // eslint-disable-next-line surveyjs/eslint-plugin-i18n/allowed-in-shadow-dom
+      const surveyElement: HTMLElement = document.getElementById(""surveyElement"") as HTMLElement;
+      surveyElement.innerHTML = """";
+
+      const shadowRoot = surveyElement.attachShadow({ mode: ""open"" });
+      const rootElement = document.createElement(...",false,,,
+ONEARMY/community-platform,2a294ba4d5e642bcef485b7bf4b04aff,Cypress,48,cy.step,cy.step('Verify page changed'),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.step('Verify page changed'),false,,,
+mattermost/mattermost,087de6bb2f88ccb31c985b34a5737c9d,Cypress,516,cy.apiSaveUserPreference,"cy.apiSaveUserPreference(preferences, userId)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveUserPreference(preferences, userId)",false,,,
+jetkvm/kvm,73431005e1179a096ee513cad0b74225,Playwright,97,sendKeypress,"sendKeypress(page, keyCode, false)",domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"sendKeypress(page, keyCode, false)",false,,,
+cloudtogo/pageplug,f2d139d78edbf5bfa5453fcbb723dd98,Cypress,417,cy.EnableAllCodeEditors,cy.EnableAllCodeEditors(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.EnableAllCodeEditors(),false,,,
+epicweb-dev/epic-stack,ad29897276bfc1ca55d8df448b2bb359,Playwright,252,prepareGitHubUser,prepareGitHubUser(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,prepareGitHubUser(),false,,,
+mattermost/mattermost,190d5a8de745ab1c7b67e84612508069,Cypress,62,cy.uiCloseRHS,cy.uiCloseRHS(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.uiCloseRHS(),false,,,
+nrwl/nx-examples,833f19f94edceabd0b95df4423321b39,Cypress,23,getPage,getPage(),page_object,page_object_method,page_object_library,callee_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getPage(),false,,,
+mattermost/mattermost,4c32669af528d6388745c87b5b57b055,Cypress,100,cy.apiLogin,"cy.apiLogin(admin, requestOptions)",hook_setup_flow,custom_command_body,file_local_helper,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiLogin(admin, requestOptions)",false,,,
+mattermost/mattermost,f9815cf2067a6294d8ba4fe05d12bdf1,Cypress,116,sysadminSetup,sysadminSetup(response.user),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,sysadminSetup(response.user),false,,,
+nrwl/nx-examples,299a34f9dbdbc9224846b4d7cb06a1ca,Cypress,17,getPage,getPage(),page_object,page_object_method,page_object_library,callee_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getPage(),false,,,
+cloudtogo/pageplug,f1b39ce75631fc96df56809da0d96742,Cypress,20,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.JS),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.JS),false,,,
+seerr-team/seerr,18f46ea9de6db322b63c1d694f0f5ca8,Cypress,29,cy.login,"cy.login(Cypress.env('ADMIN_EMAIL'), Cypress.env('ADMIN_PASSWORD'))",hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.login(Cypress.env('ADMIN_EMAIL'), Cypress.env('ADMIN_PASSWORD'))",false,,,
+mattermost/mattermost,4080bdeb101581f32c15c41e2257a22c,Cypress,116,sysadminSetup,sysadminSetup(response.user),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,sysadminSetup(response.user),false,,,
+eigenpal/docx-editor,a3b535beda92395b1c703355ce5e2740,Playwright,126,page.evaluate,"page.evaluate((text) => {
+    // Search only in editor content area
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+
+    let node: Text | n...",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate((text) => {
+    // Search only in editor content area
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+
+    let node: Text | n...",false,,,
+epicweb-dev/epic-stack,0749d0adb57a7b62ae839957b0dca977,Playwright,202,prepareGitHubUser,prepareGitHubUser(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,prepareGitHubUser(),false,,,
+VOICEVOX/voicevox,4c0584ca7cc7cb21667a144102f10a33,Playwright,64,test.step,"test.step(""ソング画面に移動"", async () => {
+    await navigateToMain(page);
+    await expect(page.getByText(""ソング"")).toBeVisible();
+    await page.getByText(""ソング"").click();
+
+    // 見やすいようにスナップを1/8に変更
+    await page.getByLabel(""スナップ"").click();
+    await page.getByRole(""option"", { name: ""1/8"", exact: true }).click();
+  })",playwright_test_step,helper_expanded,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step(""ソング画面に移動"", async () => {
+    await navigateToMain(page);
+    await expect(page.getByText(""ソング"")).toBeVisible();
+    await page.getByText(""ソング"").click();
+
+    // 見やすいようにスナップを1/8に変更
+    await page.getByLabel(""スナップ"").click();
+    await page.getByRole(""option"", { name: ""1/8"", exact: true }).click();
+  })",false,,,
+surveyjs/survey-library,afdfb46f4e4ab1e7d7db3ee55486c0ae,Playwright,82,page.evaluate,"page.evaluate(([json, isDesignMode, props]) => {
+    // eslint-disable-next-line no-console
+    console.error = (msg) => {
+      throw new Error(msg);
+    };
+    // eslint-disable-next-line no-console
+    console.warn = (msg) => {
+      throw new Error(msg);
+    };
+    // eslint-disable-next-line no-console
+    console.log(""surveyjs console.error and console.warn override"");
+
+    (wind...",domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate(([json, isDesignMode, props]) => {
+    // eslint-disable-next-line no-console
+    console.error = (msg) => {
+      throw new Error(msg);
+    };
+    // eslint-disable-next-line no-console
+    console.warn = (msg) => {
+      throw new Error(msg);
+    };
+    // eslint-disable-next-line no-console
+    console.log(""surveyjs console.error and console.warn override"");
+
+    (wind...",false,,,
+ohcnetwork/care_fe,c8a5465deb922bdc1cb552ab2be9d616,Playwright,34,test.step,"test.step(""Open prescription form"", async () => {
+      await page.getByRole(""link"", { name: /Create/i }).click();
+      await expect(
+        page.getByText(/Add Medication|Add another Medication/i),
+      ).toBeVisible();
+    })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step(""Open prescription form"", async () => {
+      await page.getByRole(""link"", { name: /Create/i }).click();
+      await expect(
+        page.getByText(/Add Medication|Add another Medication/i),
+      ).toBeVisible();
+    })",false,,,
+cloudtogo/pageplug,0f0b848f01478864b4772bfb552b8dc4,Cypress,1545,cy.get(`[data-header=${columnName}] .header-menu .bp3-popover2-target`).click,"cy.get(`[data-header=${columnName}] .header-menu .bp3-popover2-target`).click(
+    { force: true },
+  )",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get(`[data-header=${columnName}] .header-menu .bp3-popover2-target`).click(
+    { force: true },
+  )",false,,,
+appsmithorg/appsmith,de5f1b59480428e09838a90aa8ba0daa,Cypress,962,cy.get,cy.get(welcomePage.continueButton),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.continueButton),false,,,
+eigenpal/docx-editor,1548fc2f8c41f298efe53128cbea839d,Playwright,15,page.evaluate,"page.evaluate((text) => {
+    // Search only in editor content area, not toolbar (which has icon text like ""format_bold"")
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, ...",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate((text) => {
+    // Search only in editor content area, not toolbar (which has icon text like ""format_bold"")
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, ...",false,,,
+epicweb-dev/epic-stack,a307cd62ded23598eeb63f536907bc51,Playwright,356,insertNewUser,insertNewUser({ password: originalPassword }),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,insertNewUser({ password: originalPassword }),false,,,
+redpanda-data/console,ff839a2795ddae7413ee380f70049449,Playwright,17,test.step,"test.step('Verify message in messages tab', async () => {
+      await page.goto(`/topics/${topicName}`);
+      await expect(page.getByText(messageContent)).toBeVisible();
+    })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('Verify message in messages tab', async () => {
+      await page.goto(`/topics/${topicName}`);
+      await expect(page.getByText(messageContent)).toBeVisible();
+    })",false,,,
+getpaseo/paseo,e33b1ece33fce048eed8ef9fba400a84,Playwright,103,page.getByRole,"page.getByRole(""button"", { name: removeAccessibilityLabel })",domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.getByRole(""button"", { name: removeAccessibilityLabel })",false,,,
+appsmithorg/appsmith,1c0ef0849bf56fb03c6f63ccdfd51482,Cypress,45,cy.getTableV2DataSelector,"cy.getTableV2DataSelector(""1"", ""3"")",domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.getTableV2DataSelector(""1"", ""3"")",false,,,
+OpenRailAssociation/osrd,e90018bcafa8dee07fde8450b7d76a4b,Playwright,212,test.step,"test.step('Launch simulation and verify outputs', async () => {
+      await stdcmPage.verifyValidSimulationLaunch(
+        STDCM_TRANSLATIONS.simulation.results.status.completed
+      );
+      await stdcmSimulationResultPage.verifyTableData(POSTERIOR_LINKED_TRAIN_TABLE_DATA_PATH);
+    })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('Launch simulation and verify outputs', async () => {
+      await stdcmPage.verifyValidSimulationLaunch(
+        STDCM_TRANSLATIONS.simulation.results.status.completed
+      );
+      await stdcmSimulationResultPage.verifyTableData(POSTERIOR_LINKED_TRAIN_TABLE_DATA_PATH);
+    })",false,,,
+UI5/webcomponents,9be733a93f273b159499deba617bec61,Cypress,130,"cy.stub(internals, ""windows"").value","cy.stub(internals, ""windows"").value(false)",cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.stub(internals, ""windows"").value(false)",false,,,
+epicweb-dev/epic-stack,e75b4cc7b0f0e09bdf58cb969371363d,Playwright,413,insertNewUser,insertNewUser(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,insertNewUser(),false,,,
+ONEARMY/community-platform,9aebabf8f4cd2babd50033ea49010688,Cypress,17,cy.step,cy.step('Reset Password requires email'),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.step('Reset Password requires email'),false,,,
+apache/apisix-dashboard,7373ee146e1403b0ca55cc3908583100,Playwright,88,test.step,"test.step('verify proto can be retrieved via API', async () => {
+      const proto = await e2eReq
+        .get<unknown, APISIXType['RespProtoDetail']>(
+          `${API_PROTOS}/${createdProtoId}`
+        )
+        .then((v) => v.data);
+
+      expect(proto.value?.id).toBe(createdProtoId);
+      expect(proto.value?.content).toBe(protoContent);
+      expect(proto.value?.create_time).toBeDefi...",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('verify proto can be retrieved via API', async () => {
+      const proto = await e2eReq
+        .get<unknown, APISIXType['RespProtoDetail']>(
+          `${API_PROTOS}/${createdProtoId}`
+        )
+        .then((v) => v.data);
+
+      expect(proto.value?.id).toBe(createdProtoId);
+      expect(proto.value?.content).toBe(protoContent);
+      expect(proto.value?.create_time).toBeDefi...",false,,,
+mattermost/mattermost,43c3c808116403d05a0c3a386826460e,Cypress,120,sysadminSetup,sysadminSetup(sysadmin),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,sysadminSetup(sysadmin),false,,,
+mattermost/mattermost,7858059494116810c32f6e23b916afdd,Cypress,50,cy.clickPostDotMenu,cy.clickPostDotMenu(permalinkPostId),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.clickPostDotMenu(permalinkPostId),false,,,
+OpenRailAssociation/osrd,e010b135e2dbaa38f63d57e6f3725a14,Playwright,120,test.step,"test.step('First unique train - data & no tooltip', async () => {
+          await roundTripPage.verifyRoundTripCardData({
+            roundTripCardIndex: 3,
+            expectedCard: FirstUniqueTrain,
+          });
+          await roundTripPage.verifyNoTooltipDisplayed({ roundTripCardIndex: 3 });
+        })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('First unique train - data & no tooltip', async () => {
+          await roundTripPage.verifyRoundTripCardData({
+            roundTripCardIndex: 3,
+            expectedCard: FirstUniqueTrain,
+          });
+          await roundTripPage.verifyNoTooltipDisplayed({ roundTripCardIndex: 3 });
+        })",false,,,
+apache/superset,37f545f3cc49e81434e12ff9712746e1,Cypress,82,skipLogin,skipLogin(),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,skipLogin(),false,,,
+payloadcms/payload,d82358b7e233c831810fbe6c36239254,Playwright,1917,user2Page.locator,user2Page.locator('.payload__modal-container'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('.payload__modal-container'),false,,,
+Adamant-im/adamant-im,ebfdb82fbf59a1c356f54674d2dbd526,Playwright,41,page.getByRole,"page.getByRole('button', { name: 'Login', exact: true })",domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.getByRole('button', { name: 'Login', exact: true })",false,,,
+twilio/twilio-video-app-react,adff8e7cb4f2a02ed276eb6a855bdfdd,Cypress,12,cy.get('#input-user-name').type,cy.get('#input-user-name').type(username),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('#input-user-name').type(username),false,,,
+plasmicapp/plasmic,10462c294a11d7b0596f170472ba12d0,Cypress,0,createNewPage,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+epicweb-dev/epic-stack,7437dea6ce7bb10c128a6afdc0b69ba8,Playwright,152,prepareGitHubUser,prepareGitHubUser(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,prepareGitHubUser(),false,,,
+mattermost/mattermost,86c444997e07588cf43ca1afe81ac07e,Cypress,44,cy.uiGetReplyTextBox,cy.uiGetReplyTextBox(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.uiGetReplyTextBox(),false,,,
+KittyCAD/modeling-app,1dc02f908da49afdf0006a4debf611d8,Playwright,1929,test.step,"test.step('Enter sketch edit mode and exit it', async () => {
+      await expect(page.getByText('Building feature tree')).not.toBeVisible({
+        timeout: 10000,
+      })
+      const solveSketchOperation = await toolbar.getFeatureTreeOperation(
+        'sketch001',
+        0
+      )
+      await solveSketchOperation.dblclick()
+      await page.waitForTimeout(1000)
+      await expect(too...",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('Enter sketch edit mode and exit it', async () => {
+      await expect(page.getByText('Building feature tree')).not.toBeVisible({
+        timeout: 10000,
+      })
+      const solveSketchOperation = await toolbar.getFeatureTreeOperation(
+        'sketch001',
+        0
+      )
+      await solveSketchOperation.dblclick()
+      await page.waitForTimeout(1000)
+      await expect(too...",false,,,
+mattermost/mattermost,b729e99959b154c0edfa62c31ff834dd,Cypress,54,cy.clickEmojiInEmojiPicker,cy.clickEmojiInEmojiPicker('smiley'),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.clickEmojiInEmojiPicker('smiley'),false,,,
+mattermost/mattermost,5e19deeaafea1be956662298ee4b8500,Cypress,120,sysadminSetup,sysadminSetup(sysadmin),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,sysadminSetup(sysadmin),false,,,
+porsche-design-system/porsche-design-system,df65c480f0d95756b1da5b6cc8dad42f,Playwright,330,getCssClasses,getCssClasses(bullet3),domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getCssClasses(bullet3),false,,,
+tldraw/tldraw,e3934d4dc75315c85c7c22af0246ef25,Playwright,45,page.goto,page.goto('http://localhost:5420/end-to-end'),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.goto('http://localhost:5420/end-to-end'),false,,,
+cloudtogo/pageplug,ba88a03b50d5a8d6196b82764aae61bd,Cypress,98,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.UI),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.UI),false,,,
+appsmithorg/appsmith,c84e5d3223da6b17b6d9ccd2857d42a7,Cypress,24,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.UI),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.UI),false,,,
+appsmithorg/appsmith,71eee8524cd3dff9830c6626929c5815,Cypress,29,_.table.toggleColumnEditableViaColSettingsPane,"_.table.toggleColumnEditableViaColSettingsPane(
+        ""amount"",
+        ""v2"",
+        true,
+        true,
+      )",domain_helper,hook_attached,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"_.table.toggleColumnEditableViaColSettingsPane(
+        ""amount"",
+        ""v2"",
+        true,
+        true,
+      )",false,,,
+UI5/webcomponents,a24af798169324a30cdd97107c6e862c,Cypress,26,"cy.wrap(subject)
+		.shadow()
+		.find","cy.wrap(subject)
+		.shadow()
+		.find(""[ui5-split-button]"")",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.wrap(subject)
+		.shadow()
+		.find(""[ui5-split-button]"")",false,,,
+eigenpal/docx-editor,3ba242fdf160783a6a993ca1fb7ce66c,Playwright,429,page.evaluate,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",false,,,
+payloadcms/payload,6e85c2ddee7a03b1092d038993eedc03,Playwright,1444,user2Page.goto,user2Page.goto(`${serverURL}/admin`),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.goto(`${serverURL}/admin`),false,,,
+epicweb-dev/epic-stack,a887b7d96acbab08fc0f0858663a274c,Playwright,339,insertNewUser,insertNewUser({ password }),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,insertNewUser({ password }),false,,,
+payloadcms/payload,18afe5649f1c1a8b6d26a534576cc4a5,Playwright,237,page.locator,page.locator('.payload-toast-container .toast-error'),framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator('.payload-toast-container .toast-error'),false,,,
+mattermost/mattermost,7a6b6e8d431a9599a5c2c7e5f1a2e616,Cypress,53,cy.apiAddUserToChannel,"cy.apiAddUserToChannel(channel.id, user.id)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiAddUserToChannel(channel.id, user.id)",false,,,
+appsmithorg/appsmith,832bb6a7b27db5c10aedf3852fd78f88,Cypress,210,cy.validateLicense,cy.validateLicense(),cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.validateLicense(),false,,,
+appsmithorg/appsmith,715439339f3f6043573db63c5efbaa5f,Cypress,962,cy.get,cy.get(welcomePage.continueButton),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.continueButton),false,,,
+cloudtogo/pageplug,7ef528aebd4ec9e81dc9a2f0ed8ba162,Cypress,14,entityExplorer.NavigateToSwitcher,"entityExplorer.NavigateToSwitcher(""Explorer"")",domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"entityExplorer.NavigateToSwitcher(""Explorer"")",false,,,
+cloudtogo/pageplug,b3a228776c0548f0e6e842b9ec04336e,Cypress,939,cy.get(welcomePage.proficiencyGroupButton).eq,cy.get(welcomePage.proficiencyGroupButton).eq(0),cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.proficiencyGroupButton).eq(0),false,,,
+facebook/lexical,114432a287b94c3c692a8fe59555e0b1,Playwright,136,focusEditor,focusEditor(page),domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,focusEditor(page),false,,,
+UI5/webcomponents,89e1507a094ab37323341d52ccd54c89,Cypress,0,eq,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+fastapi/full-stack-fastapi-template,9e1c482be14ec30b403d28c6274eb95d,Playwright,33,logInUser,"logInUser(page, email, password)",domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"logInUser(page, email, password)",false,,,
+mattermost/mattermost,9b6840867bbebd9e1c4d4c3d5a86f46b,Cypress,116,sysadminSetup,sysadminSetup(response.user),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,sysadminSetup(response.user),false,,,
+mattermost/mattermost,507538bdb97f3b8192a8fe0bd5f1cc43,Cypress,113,cy.apiLogin,"cy.apiLogin(admin, requestOptions)",hook_setup_flow,custom_command_body,file_local_helper,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiLogin(admin, requestOptions)",false,,,
+facebook/lexical,48856f9e7fc01cf0be4808618e0bba55,Playwright,971,"leftFrame
+      .locator('input[data-test-id=""table-modal-rows""]')
+      .fill","leftFrame
+      .locator('input[data-test-id=""table-modal-rows""]')
+      .fill(String(rows))",domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"leftFrame
+      .locator('input[data-test-id=""table-modal-rows""]')
+      .fill(String(rows))",false,,,
+cloudtogo/pageplug,b4b9be770bd2de72d86719e2aa288edf,Cypress,733,cy.backFromPropertyPanel,cy.backFromPropertyPanel(),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.backFromPropertyPanel(),false,,,
+cloudtogo/pageplug,b42556a00c6d3cd6cacf18f1a58a8330,Cypress,0,eq,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+cloudtogo/pageplug,ff85c3f535aa1e0b94257d6a028d2a5f,Cypress,923,cy.get,cy.get(welcomePage.lastName),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.lastName),false,,,
+mattermost/mattermost,a545d1b2f7424c74bdeebe7bec46685d,Cypress,98,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table').find,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table').find('tbody > tr'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table').find('tbody > tr'),false,,,
+midas-research/audino,62855aaace6626514bbab3c0db6fd4f8,Cypress,468,cy.get('.cvat-canvas-container').click,"cy.get('.cvat-canvas-container').click(createRectangleParams.secondX, createRectangleParams.secondY)",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get('.cvat-canvas-container').click(createRectangleParams.secondX, createRectangleParams.secondY)",false,,,
+mattermost/mattermost,fbe2140adc96dbd3049332e2889bd962,Cypress,325,cy.postIncomingWebhook,"cy.postIncomingWebhook({url: incomingWebhook.url, data: distinctOptionsPayload, waitFor: 'attachment-pretext'})",hook_setup_flow,custom_command_body,framework_extension,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.postIncomingWebhook({url: incomingWebhook.url, data: distinctOptionsPayload, waitFor: 'attachment-pretext'})",false,,,
+linode/manager,206236a24e3354fa7c6342bd044b6fd7,Cypress,31,mockGetAccount,mockGetAccount(cachedAccount),domain_helper,hook_attached,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,mockGetAccount(cachedAccount),false,,,
+mattermost/mattermost,1531a7ece4ea3dc4aada497a5a352f41,Playwright,110,userPage.locator,"userPage.locator('[data-testid=""fileAttachmentList""]')",framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"userPage.locator('[data-testid=""fileAttachmentList""]')",false,,,
+KittyCAD/modeling-app,8c6b3a3ac0e5d0b10def40b93d762390,Playwright,1027,test.step,"test.step('Delete sweep via feature tree selection', async () => {
+      const sweep = await toolbar.getFeatureTreeOperation('Sweep', 0)
+      await sweep.click()
+      await page.keyboard.press('Delete')
+      await editor.expectEditor.not.toContain(editedSweepDeclaration)
+    })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('Delete sweep via feature tree selection', async () => {
+      const sweep = await toolbar.getFeatureTreeOperation('Sweep', 0)
+      await sweep.click()
+      await page.keyboard.press('Delete')
+      await editor.expectEditor.not.toContain(editedSweepDeclaration)
+    })",false,,,
+midas-research/audino,7368db4408fbcc17b1aa2795bbf4ee75,Cypress,470,cy.get,cy.get('.cvat-canvas-container'),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('.cvat-canvas-container'),false,,,
+cloudtogo/pageplug,0cae25705127a4115166dc28c758c618,Cypress,342,homePage.EditAppFromAppHover,homePage.EditAppFromAppHover(appName),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,homePage.EditAppFromAppHover(appName),false,,,
+jhipster/jhipster-sample-app,0e4bdeca40d5f0ce63deb1af78e62faf,Cypress,14,cy.login,"cy.login(username, password)",hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.login(username, password)",false,,,
+mattermost/mattermost,a468b5f056b2b2dcf69eca52bd86587b,Cypress,98,cy.wait(TIMEOUTS.ONE_SEC).get,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),false,,,
+nrwl/nx-examples,39bf269b5a17c2058407b7555c5188e8,Cypress,13,getPage,getPage(),page_object,page_object_method,page_object_library,callee_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getPage(),false,,,
+payloadcms/payload,74d3c1069a5cc9f3903c456ebe87c48e,Playwright,2066,user2Page.locator,user2Page.locator('.payload__modal-container'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('.payload__modal-container'),false,,,
+mattermost/mattermost,df36c7eb76b09fbea0f19ab7f3234c8c,Cypress,439,cy.apiDisableTutorials,cy.apiDisableTutorials(createdUser.id),domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.apiDisableTutorials(createdUser.id),false,,,
+payloadcms/payload,4f06a82d5cc414ce55a44c03deeb7548,Playwright,2001,user2Page.locator,user2Page.locator('.payload__modal-container'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('.payload__modal-container'),false,,,
+dyrector-io/dyrectorio,b6dcab57c964ecab229fc84737d17bb4,Playwright,44,page.locator,"page.locator('button:has-text(""Save"")')",domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.locator('button:has-text(""Save"")')",false,,,
+playcanvas/editor,74ae89d2e57845fabfd210212e29d0f9,Playwright,105,page.evaluate,"page.evaluate((projectId) => {
+        return window.editor.api.globals.rest.projects.projectDelete({ projectId }).promisify();
+    }, projectId)",domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate((projectId) => {
+        return window.editor.api.globals.rest.projects.projectDelete({ projectId }).promisify();
+    }, projectId)",false,,,
+payloadcms/payload,4319da96b2a0f0c20fba4dbecf6207af,Playwright,1691,user2Page.locator,user2Page.locator('#field-fieldA'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('#field-fieldA'),false,,,
+mattermost/mattermost,0785d94696464db135d6dbb7f245032a,Cypress,419,generateRandomUser,"generateRandomUser(prefix, createAt)",domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"generateRandomUser(prefix, createAt)",false,,,
+facebook/lexical,2ac845ccd7bf98034beb1d6c78d6d674,Playwright,209,page.keyboard.press,page.keyboard.press('ArrowLeft'),domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.keyboard.press('ArrowLeft'),false,,,
+cloudtogo/pageplug,8da124bd95d34d10261828a8417192cb,Cypress,20,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.Queries),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.Queries),false,,,
+nhn/tui.grid,864790294b16af0dd6e20fdb6eefa624,Cypress,94,cy.getCell,"cy.getCell(0, 'name')",domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.getCell(0, 'name')",false,,,
+cloudtogo/pageplug,57942e200ff763e7ec75959b37af0899,Cypress,26,_.debuggerHelper.AssertSelectedTab,"_.debuggerHelper.AssertSelectedTab(
+      Cypress.env(""MESSAGES"").DEBUGGER_RESPONSE(),
+    )",domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"_.debuggerHelper.AssertSelectedTab(
+      Cypress.env(""MESSAGES"").DEBUGGER_RESPONSE(),
+    )",false,,,
+mattermost/mattermost,ab69fb7542d988168a5773803e94e0b8,Cypress,98,cy.wait(TIMEOUTS.ONE_SEC).get,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),false,,,
+mattermost/mattermost,b30f21ee18f704d278c9850ee31f942d,Cypress,450,cy.apiSaveUserPreference,"cy.apiSaveUserPreference(preferences, userId)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveUserPreference(preferences, userId)",false,,,
+cloudtogo/pageplug,8febb645d4fd7eebabcd5c795472ac42,Cypress,39,apiPage.RunAPI,apiPage.RunAPI(),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,apiPage.RunAPI(),false,,,
+mattermost/mattermost,c3841afa84b1ac271a51f09ac8f51956,Cypress,194,cy.externalRequest,"cy.externalRequest({user, method: 'put', path: 'config', data: getDefaultConfig(), failOnStatusCode: false})",cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.externalRequest({user, method: 'put', path: 'config', data: getDefaultConfig(), failOnStatusCode: false})",false,,,
+mattermost/mattermost,adda2d6ebc7a05ae9ebaede0a40a6bbd,Cypress,444,cy.apiSaveOnboardingPreference,"cy.apiSaveOnboardingPreference(createdUser.id, 'skip', 'true')",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveOnboardingPreference(createdUser.id, 'skip', 'true')",false,,,
+getpaseo/paseo,ca77ca41955161089ec9b8aab73682b7,Playwright,178,page.locator,"page.locator('[data-testid=""terminal-surface""]')",domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.locator('[data-testid=""terminal-surface""]')",false,,,
+mattermost/mattermost,92273b0039b822112aa297618151f221,Cypress,116,sysadminSetup,sysadminSetup(response.user),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,sysadminSetup(response.user),false,,,
+mattermost/mattermost,e40aa6ef6b3946a5a0149032e20b2513,Cypress,99,cy.apiLogin,cy.apiLogin(otherUser),hook_setup_flow,custom_command_body,unknown,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.apiLogin(otherUser),false,,,
+appsmithorg/appsmith,de36e94575ceccd4c2c79ed0deada4c2,Cypress,27,cy.getTableV2DataSelector,"cy.getTableV2DataSelector(""0"", ""0"")",domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.getTableV2DataSelector(""0"", ""0"")",false,,,
+cloudtogo/pageplug,41fcdfb341e22d3efed8a0ff600fd983,Cypress,217,cy.validateLicense,cy.validateLicense(),cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.validateLicense(),false,,,
+mattermost/mattermost,5873bcab19945fa30de2c83d9fb3c156,Cypress,98,cy.wait(TIMEOUTS.ONE_SEC).get,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),false,,,
+cloudtogo/pageplug,03bcbd62d68554b70f3c85a2f8ffb71d,Cypress,935,cy.get,cy.get(welcomePage.verifyPassword),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.verifyPassword),false,,,
+payloadcms/payload,503ad89fb1c6d9a8b6fbf02078649db1,Playwright,234,page.locator,page.locator('.payload-toast-container'),framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator('.payload-toast-container'),false,,,
+cloudtogo/pageplug,bce0d76a708e3e997458fe6aa1867183,Cypress,929,cy.get,cy.get(welcomePage.firstName),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.firstName),false,,,
+open-telemetry/opentelemetry-demo,c0ba61b62fa5ea4a188284726f619690,Cypress,54,getElementByField,getElementByField(CypressFields.ProductDescription),domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getElementByField(CypressFields.ProductDescription),false,,,
+deltachat/deltachat-desktop,8b78861fa9b1313034a4c16845b28e85,Playwright,245,page.getByTestId('open-transport-settings').click,page.getByTestId('open-transport-settings').click(),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.getByTestId('open-transport-settings').click(),false,,,
+nrwl/nx-examples,f865579becdcab3d2c587c83490d6afb,Cypress,17,getPage,getPage(),page_object,page_object_method,page_object_library,callee_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getPage(),false,,,
+payloadcms/payload,63df79bd72f9146d53452d9a1c4db61d,Playwright,73,toggler.click,toggler.click(),domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,toggler.click(),false,,,
+cloudtogo/pageplug,bfe40f8cfbe0838069feb2a4b9af215f,Cypress,925,cy.get,cy.get(welcomePage.password),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.password),false,,,
+cloudtogo/pageplug,467b0aa174708259333548c331ddc156,Cypress,14,_.agHelper.AddDsl,"_.agHelper.AddDsl(""formdsl1"")",domain_helper,hook_attached,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"_.agHelper.AddDsl(""formdsl1"")",false,,,
+appsmithorg/appsmith,e9dfa8b59b584e10b7f3b60faf0b8683,Cypress,959,cy.get(welcomePage.firstName).type,"cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""))",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""))",false,,,
+cloudtogo/pageplug,3f9763b819db95ee8feca4feb0c53211,Cypress,462,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.UI),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.UI),false,,,
+mattermost/mattermost,cd2d614870d4a02dbba48689e50e8268,Cypress,436,cy.apiSaveOnboardingTaskListPreference,"cy.apiSaveOnboardingTaskListPreference(createdUser.id, 'onboarding_task_list_show', 'false')",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveOnboardingTaskListPreference(createdUser.id, 'onboarding_task_list_show', 'false')",false,,,
+appsmithorg/appsmith,3a9495fc5cc15677f2ff67a05244b4a1,Cypress,102,cy.openFieldConfiguration,"cy.openFieldConfiguration(""object"")",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.openFieldConfiguration(""object"")",false,,,
+mattermost/mattermost,ed8d91cfa5d7903612c830d8600814bd,Cypress,98,cy.wait(TIMEOUTS.ONE_SEC).get,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),false,,,
+mattermost/mattermost,7f97119fbe766cf97c67ef568725fa01,Cypress,106,cy.apiLoginWithMFA,"cy.apiLoginWithMFA(admin, token)",hook_setup_flow,custom_command_body,file_local_helper,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiLoginWithMFA(admin, token)",false,,,
+cloudtogo/pageplug,9b0406d870ac28c6dbaa88df44c89c6e,Cypress,134,cy.UncheckWidgetProperties,cy.UncheckWidgetProperties(commonlocators.hideToolbarCheckbox),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.UncheckWidgetProperties(commonlocators.hideToolbarCheckbox),false,,,
+appsmithorg/appsmith,b24e24b200b4823e14a828c519689d63,Cypress,62,cy.selectDropdownValue,"cy.selectDropdownValue(commonlocators.jsonFormFieldType, ""Checkbox"")",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.selectDropdownValue(commonlocators.jsonFormFieldType, ""Checkbox"")",false,,,
+UI5/webcomponents,4d0de5a058075e7fb7cae3c67338bb75,Cypress,14,"cy.get(""@datePicker"")
+		.shadow","cy.get(""@datePicker"")
+		.shadow()",cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get(""@datePicker"")
+		.shadow()",false,,,
+marmelab/react-admin,ab264e4adfe4446fa331b1f901ee0054,Cypress,98,cy.get,cy.get(this.elements.snackbar),page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(this.elements.snackbar),false,,,
+epicweb-dev/epic-stack,eac805a32d9baeebde549fe3dc853984,Playwright,4,insertNewUser,insertNewUser(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,insertNewUser(),false,,,
+mattermost/mattermost,da8e5a6308a36d53345b927de43a54bc,Cypress,516,cy.apiSaveUserPreference,"cy.apiSaveUserPreference(preferences, userId)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveUserPreference(preferences, userId)",false,,,
+cloudtogo/pageplug,f945d7e64ade8e03d8006d7fc9372b69,Cypress,18,_.entityExplorer.ActionContextMenuByEntityName,"_.entityExplorer.ActionContextMenuByEntityName({
+        entityNameinLeftSidebar: ""Page2"",
+        action: ""Hide"",
+        entityType: EntityItems.Page,
+      })",domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"_.entityExplorer.ActionContextMenuByEntityName({
+        entityNameinLeftSidebar: ""Page2"",
+        action: ""Hide"",
+        entityType: EntityItems.Page,
+      })",false,,,
+cloudtogo/pageplug,4f0bc2044f6c923bb231438c11e434fe,Cypress,175,cy.getCodeInput,"cy.getCodeInput("".js-editor"")",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.getCodeInput("".js-editor"")",false,,,
+appsmithorg/appsmith,529ee1a1b312880d13d7452022d21678,Cypress,429,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.UI),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.UI),false,,,
+sanity-io/sanity,9b42dcaab4992eb3f1f506db6ab99c7d,Playwright,448,_testContext.getUniqueDocumentId,_testContext.getUniqueDocumentId(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,_testContext.getUniqueDocumentId(),false,,,
+mattermost/mattermost,990f4f970dd75d79f6f2daa50dbbb8fe,Cypress,236,cy.findByRole,"cy.findByRole('dialog', {name: 'Direct Messages'})",domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.findByRole('dialog', {name: 'Direct Messages'})",false,,,
+appsmithorg/appsmith,4bfd603e109f19758b5319d284942b2d,Cypress,26,homePage.ImportApp,"homePage.ImportApp(""apiMultiPartData.json"")",page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"homePage.ImportApp(""apiMultiPartData.json"")",false,,,
+algolia/docsearch,536668a5f7c1a525df95036b2d27aa3f,Cypress,20,cy.typeQueryMatching,cy.typeQueryMatching(),domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.typeQueryMatching(),false,,,
+appsmithorg/appsmith,d473b62388c3231b4c4cbb5b6d0ea464,Cypress,72,PageLeftPane.expandCollapseItem,"PageLeftPane.expandCollapseItem(""Container4"")",page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"PageLeftPane.expandCollapseItem(""Container4"")",false,,,
+ionic-team/ionic-framework,e8a129013463e5dd585bee487163a207,Cypress,516,cy.ionPageVisible,cy.ionPageVisible('inputs'),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.ionPageVisible('inputs'),false,,,
+mattermost/mattermost,852fad4acc5b7294e38dacc08429544b,Cypress,32,"cy.get('div.post-list__dynamic').should('be.visible').
+        scrollTo","cy.get('div.post-list__dynamic').should('be.visible').
+        scrollTo('bottom', {duration: TIMEOUTS.ONE_SEC})",domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get('div.post-list__dynamic').should('be.visible').
+        scrollTo('bottom', {duration: TIMEOUTS.ONE_SEC})",false,,,
+cloudtogo/pageplug,2ffd35d75d81b77d62d4325f2cdb3d31,Cypress,141,cy.skipSignposting,cy.skipSignposting(),cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.skipSignposting(),false,,,
+mattermost/mattermost,cd071807ad064f1ccd64423ef6737fe1,Cypress,516,cy.apiSaveUserPreference,"cy.apiSaveUserPreference(preferences, userId)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveUserPreference(preferences, userId)",false,,,
+Portabase/portabase,7510644406e55bdca61858e49d15c3e9,Playwright,40,create,"create(page, ""Google Drive"", invalidChannelName, async (page) => {
+            await page.getByLabel(/Client ID/).fill(getEnv(""E2E_STORAGE_GOOGLE_DRIVE_CLIENT_ID""));
+            await page.getByLabel(/Client Secret/).fill(""wrong-google-drive-client-secret"");
+            await page.getByLabel(/Folder ID/).fill(getEnv(""E2E_STORAGE_GOOGLE_DRIVE_FOLDER_ID""));
+        })",domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"create(page, ""Google Drive"", invalidChannelName, async (page) => {
+            await page.getByLabel(/Client ID/).fill(getEnv(""E2E_STORAGE_GOOGLE_DRIVE_CLIENT_ID""));
+            await page.getByLabel(/Client Secret/).fill(""wrong-google-drive-client-secret"");
+            await page.getByLabel(/Folder ID/).fill(getEnv(""E2E_STORAGE_GOOGLE_DRIVE_FOLDER_ID""));
+        })",false,,,
+cloudtogo/pageplug,e00ff4598b7d583885649ca5039836ed,Cypress,926,cy.get,cy.get(welcomePage.verifyPassword),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.verifyPassword),false,,,
+nhn/tui.grid,61d325f0a7faf2b82c899c1e56b2b9a3,Cypress,22,cy.gridInstance,cy.gridInstance(),domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.gridInstance(),false,,,
+cloudtogo/pageplug,adbd0adbda20f62dd2ae6d3fc2c28c37,Cypress,1373,cy.get,cy.get(commonlocators.lazyCodeEditorRendered),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(commonlocators.lazyCodeEditorRendered),false,,,
+payloadcms/payload,356359477e9f763a40631f48af4685ff,Playwright,255,page.locator,page.locator(toastCloseSelector),framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator(toastCloseSelector),false,,,
+invoicerr-app/invoicerr,7f7dc06dafb289f21b1befdbc3c6d101,Cypress,198,cy.login,cy.login(),hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.login(),false,,,
+KittyCAD/modeling-app,bd086280143278c1f379cf3616d35f2b,Playwright,150,test.step,"test.step('Insert a second time and expect error', async () => {
+        await toolbar.insertButton.click()
+        await cmdBar.selectOption({ name: 'bracket.kcl' }).click()
+        await expect(
+          page.getByText('This file is already imported')
+        ).toBeVisible()
+        await cmdBar.closeCmdBar()
+      })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('Insert a second time and expect error', async () => {
+        await toolbar.insertButton.click()
+        await cmdBar.selectOption({ name: 'bracket.kcl' }).click()
+        await expect(
+          page.getByText('This file is already imported')
+        ).toBeVisible()
+        await cmdBar.closeCmdBar()
+      })",false,,,
+cloudtogo/pageplug,1c56a4e58cda6497e91029a4ebcf0589,Cypress,712,cy.backFromPropertyPanel,cy.backFromPropertyPanel(),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.backFromPropertyPanel(),false,,,
+cloudtogo/pageplug,a51224ad27166d127e121fed2750a083,Cypress,21,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.UI),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.UI),false,,,
+cloudtogo/pageplug,5224f8648bf83ec701269a0a4f04af56,Cypress,142,agHelper.ClearNType,"agHelper.ClearNType(
+      appPage.bookname + ""//"" + locators._inputField,
+      ""A man called ove"",
+      0,
+      true,
+    )",domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"agHelper.ClearNType(
+      appPage.bookname + ""//"" + locators._inputField,
+      ""A man called ove"",
+      0,
+      true,
+    )",false,,,
+mattermost/mattermost,7f2af4c57f7060b05158ac9dc832a43e,Cypress,39,cy.get,cy.get('div.post-list__dynamic'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('div.post-list__dynamic'),false,,,
+cloudtogo/pageplug,ac74301f29bbc3ef429ca3010240fdf0,Cypress,59,cy.EnableAllCodeEditors,cy.EnableAllCodeEditors(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.EnableAllCodeEditors(),false,,,
+mattermost/mattermost,49c4cefb10076a4dc5cc194dd1a1546e,Cypress,91,cy.getRecentEmail,cy.getRecentEmail(testUser),hook_setup_flow,custom_command_body,framework_extension,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.getRecentEmail(testUser),false,,,
+cloudtogo/pageplug,9ea70f4665359a644f796c0b9a883cdc,Cypress,51,cy.getTableV2DataSelector,"cy.getTableV2DataSelector(""0"", ""4"")",domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.getTableV2DataSelector(""0"", ""4"")",false,,,
+eigenpal/docx-editor,5c3c49f3a9acacf6d631c33ebc9cb2db,Playwright,165,page.evaluate,"page.evaluate((text) => {
+    // Search only in editor content area
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+
+    let node: Text | n...",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate((text) => {
+    // Search only in editor content area
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+
+    let node: Text | n...",false,,,
+caplin/FlexLayout,d5bbfa10092216ba6df1423470fd06f9,Playwright,714,findPath,"findPath(page, ""/ts1/tb0"")",domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"findPath(page, ""/ts1/tb0"")",false,,,
+apitable/apitable,2cfd122c5115b2834d8d300db7e6e638,Cypress,95,cy.wait(1000).get('.ant-collapse > .ant-collapse-item:nth-child(2) ul > li').contains,cy.wait(1000).get('.ant-collapse > .ant-collapse-item:nth-child(2) ul > li').contains(nodeName),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.wait(1000).get('.ant-collapse > .ant-collapse-item:nth-child(2) ul > li').contains(nodeName),false,,,
+mattermost/mattermost,e83a4b44de1ab39b46d219513907615c,Cypress,100,cy.apiLogin,"cy.apiLogin(admin, requestOptions)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiLogin(admin, requestOptions)",false,,,
+cloudtogo/pageplug,9fc9379654224a21611a929868901c12,Cypress,311,homePage.ImportApp,"homePage.ImportApp(""ImportAppAllAccess.json"", workspaceName)",page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"homePage.ImportApp(""ImportAppAllAccess.json"", workspaceName)",false,,,
+eigenpal/docx-editor,fc5ef8582652759a3b7804310985b086,Playwright,429,page.evaluate,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",false,,,
+mattermost/mattermost,171ad448440d99d3fa81397ca29d2819,Cypress,189,cy.apiGetConfig,cy.apiGetConfig(),hook_setup_flow,custom_command_body,file_local_helper,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.apiGetConfig(),false,,,
+appsmithorg/appsmith,de36e94575ceccd4c2c79ed0deada4c2,Cypress,15,_.homePage.NavigateToHome,_.homePage.NavigateToHome(),domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,_.homePage.NavigateToHome(),false,,,
+marmelab/react-admin,0255aca9e6181dfbb5aa853407cfc49c,Cypress,14,CreatePage.navigate,CreatePage.navigate(),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,CreatePage.navigate(),false,,,
+Monogatari/Monogatari,f84c7628f165ea282f0a6b0eec2dc68b,Cypress,55,cy.proceed,cy.proceed (),domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.proceed (),false,,,
+mattermost/mattermost,5a338c523270809db05a473906fbb2cb,Cypress,98,cy.wait(TIMEOUTS.ONE_SEC).get,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),false,,,
+appsmithorg/appsmith,fe3030bb2fcd3ad3476511b0cde8ffc6,Cypress,33,homePage.CreateAppInWorkspace,"homePage.CreateAppInWorkspace(workspaceName, appName)",page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"homePage.CreateAppInWorkspace(workspaceName, appName)",false,,,
+marmelab/react-admin,580d75443add9dc3dc408f4078406c7c,Cypress,25,cy.get,cy.get(this.elements.appLoader),page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(this.elements.appLoader),false,,,
+appsmithorg/appsmith,5a4fd38f7587896adf0b5216117c153b,Cypress,429,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.UI),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.UI),false,,,
+appsmithorg/appsmith,a861e1cca28a9549327c3d4550fcea1f,Cypress,320,"this.agHelper
+      .GetElement(this._existingWorkspaceCreateNewApp(workspaceName))
+      .last()
+      .scrollIntoView()
+      .should(""be.visible"")
+      .click","this.agHelper
+      .GetElement(this._existingWorkspaceCreateNewApp(workspaceName))
+      .last()
+      .scrollIntoView()
+      .should(""be.visible"")
+      .click({ force: true })",domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"this.agHelper
+      .GetElement(this._existingWorkspaceCreateNewApp(workspaceName))
+      .last()
+      .scrollIntoView()
+      .should(""be.visible"")
+      .click({ force: true })",false,,,
+sanity-io/sanity,921afa368df8398da0f4f8b3b6726ca9,Playwright,27,page.locator,page.locator(targetSelector),domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator(targetSelector),false,,,
+ohcnetwork/care_fe,400970074de8d88c7f5edcb0d42ba744,Playwright,419,test.step,"test.step(""Select No — optional dependent appears"", async () => {
+        await selectBooleanOption(page, ""Is Conscious"", ""No"");
+        await checkVisibility(page, ""Additional Observations"", true);
+      })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step(""Select No — optional dependent appears"", async () => {
+        await selectBooleanOption(page, ""Is Conscious"", ""No"");
+        await checkVisibility(page, ""Additional Observations"", true);
+      })",false,,,
+mattermost/mattermost,de946e31a898e429ff59b93f29bda153,Cypress,444,cy.apiSaveOnboardingPreference,"cy.apiSaveOnboardingPreference(createdUser.id, 'skip', 'true')",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveOnboardingPreference(createdUser.id, 'skip', 'true')",false,,,
+cypress-io/cypress-realworld-app,9dc2a72ff9201c1a3bdce5135845474e,Cypress,133,cy.visualSnapshot,"cy.visualSnapshot(""Logged in as user A"")",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.visualSnapshot(""Logged in as user A"")",false,,,
+mattermost/mattermost,96da78ced4e670aeb6bd2f5eb1ebcf90,Cypress,0,children,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+midas-research/audino,3d8a1ed38e17701fbb1625d8c0a5eb6f,Cypress,23,cy.get,cy.get('.cvat-player-settings-reset-zoom-checkbox'),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('.cvat-player-settings-reset-zoom-checkbox'),false,,,
+cloudtogo/pageplug,3b343008c9d715d3262869508bf5156b,Cypress,417,cy.EnableAllCodeEditors,cy.EnableAllCodeEditors(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.EnableAllCodeEditors(),false,,,
+appsmithorg/appsmith,f489ce912bd499c90f6889f406b8e20c,Cypress,112,$ele.find,"$ele.find("".t--appsmith-logo"")",cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"$ele.find("".t--appsmith-logo"")",false,,,
+appsmithorg/appsmith,77a1b20c1fba7f39a4a57f971a57f678,Cypress,959,cy.get(welcomePage.firstName).type,"cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""))",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get(welcomePage.firstName).type(Cypress.env(""USERNAME""))",false,,,
+sanity-io/sanity,ee05956d29dc49605eb8b345640a7c13,Playwright,136,_testContext.getUniqueDocumentId,_testContext.getUniqueDocumentId(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,_testContext.getUniqueDocumentId(),false,,,
+payloadcms/payload,7585a1537d98f025081254dfa0829dbc,Playwright,1547,user2Page.locator,user2Page.locator('#field-fieldA'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('#field-fieldA'),false,,,
+linode/manager,a465bcaed454727a722e75b08c5d4fe9,Cypress,215,cy.visitWithLogin,"cy.visitWithLogin('/volumes', {
+      localStorageOverrides,
+      preferenceOverrides,
+    })",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.visitWithLogin('/volumes', {
+      localStorageOverrides,
+      preferenceOverrides,
+    })",false,,,
+SonicJs-Org/sonicjs,3bc276445df9768730e89274b8b2130d,Playwright,391,page.goto,page.goto('/admin'),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.goto('/admin'),false,,,
+opensearch-project/OpenSearch-Dashboards,89b4aad231258d6f15a5012db78df265,Cypress,0,verifyHitCount,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+cloudtogo/pageplug,a1ee9fde0eeffeac428bf540aaf7dacb,Cypress,0,first,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+payloadcms/payload,9024ab887f0e478252492d21094f6ac6,Playwright,306,page.locator,"page.locator(`[data-locale=""${newLocale}""]`)",framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.locator(`[data-locale=""${newLocale}""]`)",false,,,
+mattermost/mattermost,1b195569d749077ab52300991117cbb6,Playwright,268,username.replace,"username.replace('@', '')",domain_helper,helper_expanded,file_local_helper,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"username.replace('@', '')",false,,,
+appsmithorg/appsmith,f233d352d8c5a58f1293e6e37dd44a93,Cypress,971,cy.get,cy.get(welcomePage.useCaseGroupButton),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.useCaseGroupButton),false,,,
+payloadcms/payload,6f9feb318bbb2bc771c365c253f8fd33,Playwright,1444,user2Page.goto,user2Page.goto(`${serverURL}/admin`),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.goto(`${serverURL}/admin`),false,,,
+facebook/lexical,d3763f9c98f443e7d44970a78dd70517,Playwright,344,assertHTML,"assertHTML(
+    page,
+    IS_TABLE_HORIZONTAL_SCROLL
+      ? wrapTableHtml(expectedHtml, options)
+      : expectedHtml,
+    IS_TABLE_HORIZONTAL_SCROLL && expectedHtmlFrameRight !== undefined
+      ? wrapTableHtml(expectedHtmlFrameRight, options)
+      : expectedHtmlFrameRight,
+    options,
+    ...args,
+  )",domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"assertHTML(
+    page,
+    IS_TABLE_HORIZONTAL_SCROLL
+      ? wrapTableHtml(expectedHtml, options)
+      : expectedHtml,
+    IS_TABLE_HORIZONTAL_SCROLL && expectedHtmlFrameRight !== undefined
+      ? wrapTableHtml(expectedHtmlFrameRight, options)
+      : expectedHtmlFrameRight,
+    options,
+    ...args,
+  )",false,,,
+plasmicapp/plasmic,070ddafc1d7c37703f9d711ac74eeafd,Playwright,21,page.locator,"page.locator("".rsbuild-error-overlay"")",domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.locator("".rsbuild-error-overlay"")",false,,,
+cloudtogo/pageplug,124acde6326423558dbc20ff8187fb97,Cypress,970,cy.get,"cy.get(""#loading"")",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get(""#loading"")",false,,,
+cloudtogo/pageplug,441d2e6cc0a41bc285704c12705846b7,Cypress,122,cy.NavigateToPaginationTab,cy.NavigateToPaginationTab(),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.NavigateToPaginationTab(),false,,,
+appsmithorg/appsmith,3b871e1b56672a9b5d23fc187860ff4e,Cypress,806,"this.agHelper
+      .GetElement(this._leftPanel)
+      .contains(""span"", workspaceName)
+      .click","this.agHelper
+      .GetElement(this._leftPanel)
+      .contains(""span"", workspaceName)
+      .click({ force: true })",domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"this.agHelper
+      .GetElement(this._leftPanel)
+      .contains(""span"", workspaceName)
+      .click({ force: true })",false,,,
+appsmithorg/appsmith,f40de0a6e19f2a7fc21664d6a7d49fc5,Cypress,143,cy.skipSignposting,cy.skipSignposting(),cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.skipSignposting(),false,,,
+cloudtogo/pageplug,07d5d1451cb0448a170421fa9473847c,Cypress,12,apiPage.CreateAndFillApi,"apiPage.CreateAndFillApi(
+      dataManager.dsValues[dataManager.defaultEnviorment].mockApiUrl + ""00"",
+      ""AbortApi"",
+      0,
+    )",page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"apiPage.CreateAndFillApi(
+      dataManager.dsValues[dataManager.defaultEnviorment].mockApiUrl + ""00"",
+      ""AbortApi"",
+      0,
+    )",false,,,
+mattermost/mattermost,7f2af4c57f7060b05158ac9dc832a43e,Cypress,32,cy.get,cy.get('div.post-list__dynamic'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('div.post-list__dynamic'),false,,,
+mattermost/mattermost,d5f50b48a864796dbcbdd953ed99a50c,Cypress,450,cy.apiSaveUserPreference,"cy.apiSaveUserPreference(preferences, userId)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveUserPreference(preferences, userId)",false,,,
+appsmithorg/appsmith,844d47a3cb2a6996677b5cca0fc28a21,Cypress,0,parents,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+seerr-team/seerr,3f35cbae6a9505a0badbeb01955677af,Cypress,33,cy.login,"cy.login(Cypress.env('USER_EMAIL'), Cypress.env('USER_PASSWORD'))",hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.login(Cypress.env('USER_EMAIL'), Cypress.env('USER_PASSWORD'))",false,,,
+chaskiq/chaskiq,17a55ced2f47a9b7312282c72c258afd,Cypress,74,cy.app,"cy.app('scenarios/' + name, options)",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.app('scenarios/' + name, options)",false,,,
+cloudtogo/pageplug,86e191351f51da0832fcc8f21974a466,Cypress,247,dataSources.ReadQueryTableResponse,dataSources.ReadQueryTableResponse(0),domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,dataSources.ReadQueryTableResponse(0),false,,,
+mattermost/mattermost,d3b73da9ec1358a4097aa59bc17c8a11,Cypress,302,cy.apiGetConfig,cy.apiGetConfig(),domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.apiGetConfig(),false,,,
+mattermost/mattermost,2c825f71928afc11dea57b18e1760bf3,Cypress,106,cy.apiLoginWithMFA,"cy.apiLoginWithMFA(admin, token)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiLoginWithMFA(admin, token)",false,,,
+eigenpal/docx-editor,d298168e97b89d5990d651e4133299c8,Playwright,126,page.evaluate,"page.evaluate((text) => {
+    // Search only in editor content area
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+
+    let node: Text | n...",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate((text) => {
+    // Search only in editor content area
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+
+    let node: Text | n...",false,,,
+appsmithorg/appsmith,e45d0f4f1f91639d4100937c8b51736c,Cypress,429,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.UI),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.UI),false,,,
+VOICEVOX/voicevox,5297167fda8c3026afb2f8946e7c9fbd,Playwright,5,test.step,"test.step(""最初の画面に移動"", async () => {
+    const BASE_URL = ""http://localhost:7357/"";
+    await page.setViewportSize({ width: 1024, height: 630 });
+    await page.goto(BASE_URL);
+  })",playwright_test_step,hook_attached,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step(""最初の画面に移動"", async () => {
+    const BASE_URL = ""http://localhost:7357/"";
+    await page.setViewportSize({ width: 1024, height: 630 });
+    await page.goto(BASE_URL);
+  })",false,,,
+apache/superset,a53dfc0301658ecf65e0af98eb81c85d,Cypress,46,cy.verifySliceSuccess,cy.verifySliceSuccess({ waitAlias: '@chartData' }),domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.verifySliceSuccess({ waitAlias: '@chartData' }),false,,,
+appsmithorg/appsmith,b2c0c113ed583c5bb492b8f9d7afe79d,Cypress,33,cy.fillRedshiftDatasourceForm,cy.fillRedshiftDatasourceForm(true),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.fillRedshiftDatasourceForm(true),false,,,
+mattermost/mattermost,9b66dc7146c70394fa67d725a7d1e718,Cypress,39,"cy.get('div.post-list__dynamic').should('be.visible').
+        scrollTo","cy.get('div.post-list__dynamic').should('be.visible').
+        scrollTo(0, '70%', {duration: TIMEOUTS.ONE_SEC})",domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get('div.post-list__dynamic').should('be.visible').
+        scrollTo(0, '70%', {duration: TIMEOUTS.ONE_SEC})",false,,,
+mattermost/mattermost,f795e27f25835b4759b34c7429850fce,Cypress,15,cy.get,cy.get('#group_profile'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('#group_profile'),false,,,
+codex-team/editor.js,989320ed3c5afd5f412fa566439bde82,Cypress,13,cy.createEditor,"cy.createEditor(Object.assign(editorConfig || {}, {
+    data: {
+      blocks: textBlocks.map((text) => ({
+        type: 'paragraph',
+        data: {
+          text,
+        },
+      })),
+    },
+  }))",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.createEditor(Object.assign(editorConfig || {}, {
+    data: {
+      blocks: textBlocks.map((text) => ({
+        type: 'paragraph',
+        data: {
+          text,
+        },
+      })),
+    },
+  }))",false,,,
+nhn/tui.grid,f06f1192538efe2e2173326dad5e96d1,Cypress,80,cy.createGrid,"cy.createGrid({
+    data: { ...(dataSource || data) },
+    columns,
+    useClientSort: false,
+    pageOptions: { perPage: PER_PAGE },
+  })",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.createGrid({
+    data: { ...(dataSource || data) },
+    columns,
+    useClientSort: false,
+    pageOptions: { perPage: PER_PAGE },
+  })",false,,,
+midas-research/audino,1c03a5eab9a8e41d42acdb1ad648b6e6,Cypress,679,cy.switchLabel,"cy.switchLabel(createCuboidParams.labelName, 'draw-cuboid')",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.switchLabel(createCuboidParams.labelName, 'draw-cuboid')",false,,,
+mattermost/mattermost,08de02b6de6970c9f99671d179edfee1,Cypress,68,cy.uiPostDropdownMenuShortcut,"cy.uiPostDropdownMenuShortcut(postId, 'Edit', 'E')",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.uiPostDropdownMenuShortcut(postId, 'Edit', 'E')",false,,,
+bytedance/flowgram.ai,b1e1b3ddaf4e44063892ef27f73f2a0e,Playwright,28,getOffsetByLocator,getOffsetByLocator(agentLocator),domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getOffsetByLocator(agentLocator),false,,,
+payloadcms/payload,18afe5649f1c1a8b6d26a534576cc4a5,Playwright,256,page.locator,page.locator(toastCloseSelector),framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator(toastCloseSelector),false,,,
+mattermost/mattermost,2321607698be2ed2d20fa9f4fb0ab504,Cypress,116,sysadminSetup,sysadminSetup(response.user),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,sysadminSetup(response.user),false,,,
+ionic-team/ionic-framework,e0e18d2eb529c6de48e50da155840480,Cypress,527,cy.ionPageVisible,cy.ionPageVisible('tab1'),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.ionPageVisible('tab1'),false,,,
+mattermost/mattermost,879926e70c7191417a4d679046868837,Cypress,98,cy.wait(TIMEOUTS.ONE_SEC).get,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.wait(TIMEOUTS.ONE_SEC).get('.job-table__table'),false,,,
+payloadcms/payload,657f0babe7022dabc37512010a3a5d52,Playwright,291,page.click,"page.click('body', { position: { x: 0, y: 0 } })",framework_page_instance,hook_attached,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.click('body', { position: { x: 0, y: 0 } })",false,,,
+appsmithorg/appsmith,7c84134cecc630f67fb2eee285b64a7c,Cypress,99,cy.getTableV2DataSelector,"cy.getTableV2DataSelector(""0"", ""4"")",domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.getTableV2DataSelector(""0"", ""4"")",false,,,
+surveyjs/survey-library,39f115bae5416dda21b780efe94c2707,Playwright,429,resetFocusToBody,resetFocusToBody(page),domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,resetFocusToBody(page),false,,,
+runtipi/runtipi,1b7344fac94f4f5819e2a15243c50e82,Playwright,20,page.goto,page.goto('/login'),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.goto('/login'),false,,,
+invoicerr-app/invoicerr,8884bddae8774432096c99a67b6f3c19,Cypress,80,cy.login,cy.login(),hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.login(),false,,,
+appsmithorg/appsmith,cb8ed3a81675878204cdcde63af6615e,Cypress,129,cy.readTableV2dataPublish,"cy.readTableV2dataPublish(""2"", ""1"")",domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.readTableV2dataPublish(""2"", ""1"")",false,,,
+appsmithorg/appsmith,f4b2093048cd9eac8e009f0c4b35eddc,Cypress,44,_.agHelper.GetNClick,"_.agHelper.GetNClick(homePage.workspaceSettingOption, 0)",domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"_.agHelper.GetNClick(homePage.workspaceSettingOption, 0)",false,,,
+appsmithorg/appsmith,9436ffcfa9997b28ba12051d735b0381,Cypress,55,cy.LoginFromAPI,"cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""))",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.LoginFromAPI(Cypress.env(""USERNAME""), Cypress.env(""PASSWORD""))",false,,,
+mattermost/mattermost,c59c4714a03bfcf1ea1f45be8ab986e1,Cypress,233,cy.apiCreateTeam,"cy.apiCreateTeam(DEFAULT_TEAM.name, DEFAULT_TEAM.display_name, 'O', false)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiCreateTeam(DEFAULT_TEAM.name, DEFAULT_TEAM.display_name, 'O', false)",false,,,
+microsoft/fluentui,e019db0cb6bbd029d8c006af6d9f806b,Playwright,89,test.step,"test.step('should set the `rel` property and attribute on the internal anchor element', async () => {
+      const anchor = element.locator('a');
+
+      await expect(anchor).toHaveAttribute('rel', 'external');
+    })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('should set the `rel` property and attribute on the internal anchor element', async () => {
+      const anchor = element.locator('a');
+
+      await expect(anchor).toHaveAttribute('rel', 'external');
+    })",false,,,
+sheinsight/shineout,77350891528baad1a512646d3f00b3f2,Cypress,9,cy.get(selector).trigger,cy.get(selector).trigger('click'),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(selector).trigger('click'),false,,,
+appsmithorg/appsmith,f8b3bab47b1e1df33ded27a612d154de,Cypress,151,_.gitSync.CreateGitBranch,"_.gitSync.CreateGitBranch(tempBranch1, true)",domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"_.gitSync.CreateGitBranch(tempBranch1, true)",false,,,
+appsmithorg/appsmith,e9dfa8b59b584e10b7f3b60faf0b8683,Cypress,429,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.UI),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.UI),false,,,
+mattermost/mattermost,3ec7bf0a346286946850f77bc0141f32,Cypress,443,cy.apiSaveOnboardingPreference,"cy.apiSaveOnboardingPreference(createdUser.id, 'hide', 'true')",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveOnboardingPreference(createdUser.id, 'hide', 'true')",false,,,
+SonicJs-Org/sonicjs,9dadfc3a9be807833cbf8ceebc7c1e5b,Playwright,364,page.locator,page.locator('#form-response .bg-green-100'),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator('#form-response .bg-green-100'),false,,,
+ONEARMY/community-platform,696ef64a0d8706074bfc9aee835e1122,Cypress,191,cy.step,cy.step('Updated settings display on contact tab'),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.step('Updated settings display on contact tab'),false,,,
+payloadcms/payload,4f06a82d5cc414ce55a44c03deeb7548,Playwright,1995,user2Page.locator,user2Page.locator('#field-globalText'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('#field-globalText'),false,,,
+super-productivity/super-productivity,46dd415dee0e6f5a76d30f09dd5ce4ef,Playwright,200,page.locator,"page.locator('mat-dialog-container', {
+      hasText: 'Conflicting Data',
+    })",framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.locator('mat-dialog-container', {
+      hasText: 'Conflicting Data',
+    })",false,,,
+appsmithorg/appsmith,bf5c780a3e512c17829645cc9e34a0b3,Cypress,955,cy.get,cy.get(welcomePage.password),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.password),false,,,
+cloudtogo/pageplug,52bb78614be3eaf298aa494bdeaafc7a,Cypress,100,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.Queries),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.Queries),false,,,
+webiny/webiny-js,e6f21c04181b8d958a545ac9da5cc8f5,Cypress,57,cy.securityReadRole,"cy.securityReadRole({ slug: ""anonymous"" })",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.securityReadRole({ slug: ""anonymous"" })",false,,,
+mattermost/mattermost,5caa6b14affeb717db177efc124b7a77,Cypress,241,cy.apiGetChannelsForUser,"cy.apiGetChannelsForUser('me', defaultTeam.id)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiGetChannelsForUser('me', defaultTeam.id)",false,,,
+nrwl/nx-examples,0b5fecf47fbce6496567a832ee676fcc,Cypress,13,getPage,getPage(),page_object,page_object_method,page_object_library,callee_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getPage(),false,,,
+payloadcms/payload,4319da96b2a0f0c20fba4dbecf6207af,Playwright,1643,user2Page.locator,user2Page.locator('#field-fieldA'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('#field-fieldA'),false,,,
+payloadcms/payload,f7ffa006ee57606157f1ff0b34009c74,Playwright,329,page.locator,"page.locator('[data-form-ready=""false""]')",framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.locator('[data-form-ready=""false""]')",false,,,
+facebook/lexical,a9c3cfc3256135d6ea993c19e2a26ae7,Playwright,144,page.goto,page.goto(url),domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.goto(url),false,,,
+cloudtogo/pageplug,1bfbf905a20c8dc686529dfc3cc4337e,Cypress,51,cy.testJsontext,"cy.testJsontext(""label"", ""{{[]}}"")",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.testJsontext(""label"", ""{{[]}}"")",false,,,
+SonicJs-Org/sonicjs,04fc17001220be428214217908a3a660,Playwright,391,page.goto,page.goto('/admin'),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.goto('/admin'),false,,,
+appsmithorg/appsmith,efadbd665a02c39dcbefed2502000a3d,Cypress,990,expect(interception.request.body).contains,"expect(interception.request.body).contains(""signupForNewsletter=true"")",cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"expect(interception.request.body).contains(""signupForNewsletter=true"")",false,,,
+eigenpal/docx-editor,fa5e02110f48bb444c86749c345e6e1a,Playwright,429,page.evaluate,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",false,,,
+appsmithorg/appsmith,f18586c33920be3e38ed15a015f9341a,Cypress,130,cy.updateCodeInput,"cy.updateCodeInput(
+        "".t--property-control-text"",
+        `{{SingleSelectTree1.selectedOptionValue}}`,
+      )",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.updateCodeInput(
+        "".t--property-control-text"",
+        `{{SingleSelectTree1.selectedOptionValue}}`,
+      )",false,,,
+cloudtogo/pageplug,93cfc0bf38a9baf07cbc0fb55c0b904c,Cypress,226,cy.saveTableCellValue,"cy.saveTableCellValue(0, 0)",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.saveTableCellValue(0, 0)",false,,,
+appsmithorg/appsmith,42e1e669b0adacf79cdf2832d1971a88,Cypress,586,agHelper.GetNClick,agHelper.GetNClick(propPane._actionSelectorPopupClose),domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,agHelper.GetNClick(propPane._actionSelectorPopupClose),false,,,
+ONEARMY/community-platform,2e419d9f67346bf8cca1cc15b58b176e,Cypress,257,cy.step,cy.step('Delete button should be visible to research author'),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.step('Delete button should be visible to research author'),false,,,
+ONEARMY/community-platform,47ca5c12b5cbcfb58a6a3606c7880565,Cypress,302,cy.step,cy.step('Access the create project'),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.step('Access the create project'),false,,,
+appsmithorg/appsmith,8d5143845cef8f26ce2b02108b804ac1,Cypress,102,locators._widgetInDeployed,locators._widgetInDeployed(draggableWidgets.BUTTON),domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,locators._widgetInDeployed(draggableWidgets.BUTTON),false,,,
+marmelab/react-admin,ccc0a7f88221e01d9809f81b91dbc411,Cypress,278,EditUserPage.navigate,EditUserPage.navigate(),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,EditUserPage.navigate(),false,,,
+mattermost/mattermost,42dbf01f059d57fe82a4d532fdf0736b,Cypress,104,cy.get,cy.get('#selectItems input'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('#selectItems input'),false,,,
+linode/manager,3992fe6449058cdff3562e4e7b137b05,Cypress,0,parent,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+mattermost/mattermost,1b267b5f1bcc64cb0df6911348997175,Cypress,145,cy.getLastPost,cy.getLastPost(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.getLastPost(),false,,,
+openobserve/openobserve,7b0c2fe4e885412978d2da3ecb42722d,Playwright,164,button.click,button.click(),domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,button.click(),false,,,
+patternfly/patternfly-react,39f127394339c21106020ed9f399e353,Cypress,0,eq,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+payloadcms/payload,aa776bee4ab2c09f2a95bf99122d206d,Playwright,1472,user2Page.locator,user2Page.locator('#field-fieldA'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('#field-fieldA'),false,,,
+cloudtogo/pageplug,d7f20a841bd6efaed3a3994305983c7c,Cypress,336,deployMode.DeployApp,deployMode.DeployApp(),domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,deployMode.DeployApp(),false,,,
+appsmithorg/appsmith,4aefda5aacbcc1a9426845d0c72d6dc6,Cypress,1062,"cy
+      .get(selector)
+      .contains","cy
+      .get(selector)
+      .contains(containsText, { matchCase: false })",domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy
+      .get(selector)
+      .contains(containsText, { matchCase: false })",false,,,
+eigenpal/docx-editor,a7537370bfbf7beec7baffc9e331953f,Playwright,90,page.evaluate,"page.evaluate((text) => {
+    // Search only in editor content area
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+
+    let node: Text | n...",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate((text) => {
+    // Search only in editor content area
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, NodeFilter.SHOW_TEXT, null);
+
+    let node: Text | n...",false,,,
+surveyjs/survey-creator,7da4b48c033dd7a8c2a572ffdb8edd31,Playwright,562,getToolboxItemByText,"getToolboxItemByText(page, ""Single-Line Input"")",domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"getToolboxItemByText(page, ""Single-Line Input"")",false,,,
+mattermost/mattermost,cfa8f226c1c7915736e975c579136890,Cypress,104,cy.dbGetUser,cy.dbGetUser({username: admin.username}),hook_setup_flow,custom_command_body,framework_extension,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.dbGetUser({username: admin.username}),false,,,
+mattermost/mattermost,7840324452598e18034a0c99767860bf,Cypress,189,cy.apiGetConfig,cy.apiGetConfig(),hook_setup_flow,custom_command_body,file_local_helper,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.apiGetConfig(),false,,,
+apache/apisix-dashboard,a6db7a88734f4846f7b30159e1f6a551,Playwright,36,test.step,"test.step('navigate to plugin configs page', async () => {
+    await pluginConfigsPom.getPluginConfigNavBtn(page).click();
+    await pluginConfigsPom.isIndexPage(page);
+  })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('navigate to plugin configs page', async () => {
+    await pluginConfigsPom.getPluginConfigNavBtn(page).click();
+    await pluginConfigsPom.isIndexPage(page);
+  })",false,,,
+mattermost/mattermost,91cae7c3588ddbfe470ff7692aab613c,Cypress,516,cy.apiSaveUserPreference,"cy.apiSaveUserPreference(preferences, userId)",hook_setup_flow,custom_command_body,file_local_helper,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveUserPreference(preferences, userId)",false,,,
+facebook/lexical,dc510c569ac36b2264b19fb27ddefe6d,Playwright,971,"leftFrame
+      .locator('input[data-test-id=""table-modal-rows""]')
+      .fill","leftFrame
+      .locator('input[data-test-id=""table-modal-rows""]')
+      .fill(String(rows))",domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"leftFrame
+      .locator('input[data-test-id=""table-modal-rows""]')
+      .fill(String(rows))",false,,,
+ontola/atomic-server,9e880a1718b1063dacdc582b57a2e090,Playwright,361,"page.getByRole('button', { name: 'Save' }).click","page.getByRole('button', { name: 'Save' }).click()",framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.getByRole('button', { name: 'Save' }).click()",false,,,
+cloudtogo/pageplug,ae4031dc1a4be5701cadd46bc15ef0b8,Cypress,18,apiPage.CreateApi,"apiPage.CreateApi(""Api2"", ""POST"")",page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"apiPage.CreateApi(""Api2"", ""POST"")",false,,,
+mattermost/mattermost,e1afd3e587ce46a82853c20a1dad884e,Cypress,70,cy.getLastPostId,cy.getLastPostId(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.getLastPostId(),false,,,
+appsmithorg/appsmith,a52626cf739b77ad2c49cf1d34943b01,Cypress,90,apiPage.SelectPaneTab,"apiPage.SelectPaneTab(""Pagination"")",page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"apiPage.SelectPaneTab(""Pagination"")",false,,,
+mattermost/mattermost,c1af9fdd8b77f81010b8454e97b737c3,Cypress,100,cy.apiLogin,"cy.apiLogin(admin, requestOptions)",hook_setup_flow,custom_command_body,file_local_helper,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiLogin(admin, requestOptions)",false,,,
+eigenpal/docx-editor,212b0f87a3bbef01b7adc19dc86f8dc9,Playwright,429,page.evaluate,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",false,,,
+mattermost/mattermost,bf068507b86190e7f6e8969a52ad49bf,Cypress,48,cy.apiCreateUser,cy.apiCreateUser({prefix: 'other'}),hook_setup_flow,custom_command_body,unknown,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.apiCreateUser({prefix: 'other'}),false,,,
+cloudtogo/pageplug,b9be32c23d37ce6c850a435cf15be805,Cypress,18,cy.generateUUID,cy.generateUUID(),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.generateUUID(),false,,,
+mattermost/mattermost,338cd2654e028f1c5fe52fe92d13fa36,Cypress,137,cy.apiAddUserToTeam,"cy.apiAddUserToTeam(otherTeam.id, user.id)",hook_setup_flow,custom_command_body,unknown,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiAddUserToTeam(otherTeam.id, user.id)",false,,,
+mattermost/mattermost,358693e52d0bcb84be13ec42bccfef53,Cypress,234,cy.urlHealthCheck,"cy.urlHealthCheck({
+        name: 'Webhook Server',
+        url: webhookBaseUrl,
+        helperMessage,
+        method: 'get',
+        httpStatus: 200,
+    })",cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.urlHealthCheck({
+        name: 'Webhook Server',
+        url: webhookBaseUrl,
+        helperMessage,
+        method: 'get',
+        httpStatus: 200,
+    })",false,,,
+mattermost/mattermost,3edd38fff77ce3910c01be6e1043830b,Cypress,99,cy.uiSave,cy.uiSave(),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.uiSave(),false,,,
+algolia/docsearch,ce30af8251f832956706d7387278f5fd,Cypress,23,cy.modalIsVisibleAndFocused,cy.modalIsVisibleAndFocused(),cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.modalIsVisibleAndFocused(),false,,,
+midas-research/audino,d8206bdf43b6f52a1ffba581439fabe4,Cypress,108,cy.openJob,cy.openJob(),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.openJob(),false,,,
+activist-org/activist,7c6613660ca4c528e1383174163ffb8e,Playwright,11,newHomePage,newHomePage(page),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,newHomePage(page),false,,,
+cloudtogo/pageplug,799e49467d247ee3bd3eb73e927d9063,Cypress,48,homePage.CreateAppInWorkspace,homePage.CreateAppInWorkspace(workspaceName),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,homePage.CreateAppInWorkspace(workspaceName),false,,,
+mattermost/mattermost,d3a00e72553646f622a3522c76eee157,Cypress,419,generateRandomUser,"generateRandomUser(prefix, createAt)",domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"generateRandomUser(prefix, createAt)",false,,,
+nhn/tui.grid,e8a74fdea5b27d8a70a2e08137036f0e,Cypress,269,cy.getRsideBody,cy.getRsideBody(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.getRsideBody(),false,,,
+seerr-team/seerr,6fd9ef537aebdc9dd7f6cac72b7ffc48,Cypress,29,cy.login,"cy.login(Cypress.env('ADMIN_EMAIL'), Cypress.env('ADMIN_PASSWORD'))",hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.login(Cypress.env('ADMIN_EMAIL'), Cypress.env('ADMIN_PASSWORD'))",false,,,
+appsmithorg/appsmith,94d97b48736f035988c6d01df41d0738,Cypress,23,homePage.RenameApplication,"homePage.RenameApplication(""EchoApiCMSApp"")",page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"homePage.RenameApplication(""EchoApiCMSApp"")",false,,,
+seerr-team/seerr,73e9388afcfee5d8ad9fd3efedb286ce,Cypress,29,cy.login,"cy.login(Cypress.env('ADMIN_EMAIL'), Cypress.env('ADMIN_PASSWORD'))",hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.login(Cypress.env('ADMIN_EMAIL'), Cypress.env('ADMIN_PASSWORD'))",false,,,
+cloudtogo/pageplug,8a2dc4867a026e6397ea57efaf9a0e65,Cypress,922,cy.get,cy.get(welcomePage.firstName),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.firstName),false,,,
+payloadcms/payload,7585a1537d98f025081254dfa0829dbc,Playwright,1520,user2Page.goto,user2Page.goto(simpleUrl.edit(simpleDoc.id)),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.goto(simpleUrl.edit(simpleDoc.id)),false,,,
+invoicerr-app/invoicerr,81896d59b197d04a1e009e7a519c21b5,Cypress,136,cy.login,cy.login(),hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.login(),false,,,
+plasmicapp/plasmic,fc58f3981ec3a6c6e76d752dae40994e,Playwright,29,goToProject,"goToProject(page, `/projects/${projectId}`)",domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"goToProject(page, `/projects/${projectId}`)",false,,,
+KittyCAD/modeling-app,329ec0c224262c12c5cbee16953ef382,Playwright,313,test.step,"test.step(`Center on selection from menu`, async () => {
+      await scene.clickGizmoMenuItem('Center view on selection')
+    })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step(`Center on selection from menu`, async () => {
+      await scene.clickGizmoMenuItem('Center view on selection')
+    })",false,,,
+marmelab/react-admin,de83c6e81b19248f73e14857a185ba1d,Cypress,31,cy.visit,cy.visit(url),page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.visit(url),false,,,
+mattermost/mattermost,f1fdb2d3fff727a2a69e3a3bef36b7b1,Cypress,98,cy.apiSaveMessageDisplayPreference,cy.apiSaveMessageDisplayPreference('compact'),domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.apiSaveMessageDisplayPreference('compact'),false,,,
+sanity-io/sanity,96135417ba7194d9669febf1258423fb,Playwright,79,_testContext.getUniqueDocumentId,_testContext.getUniqueDocumentId(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,_testContext.getUniqueDocumentId(),false,,,
+appsmithorg/appsmith,57b68f2c2d50d234b9a6d6d69dae1611,Cypress,14,PageLeftPane.switchToAddNew,PageLeftPane.switchToAddNew(),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchToAddNew(),false,,,
+payloadcms/payload,fd2c5ba4e02bf15f889203e8e6fdad81,Playwright,1870,user2Page.locator,user2Page.locator('#field-globalText'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('#field-globalText'),false,,,
+appsmithorg/appsmith,8da4ce4e242e58346fb7b4d6016eea51,Cypress,68,_.deployMode.NavigateBacktoEditor,_.deployMode.NavigateBacktoEditor(),domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,_.deployMode.NavigateBacktoEditor(),false,,,
+codex-team/editor.js,b2e38856c5858e24759d040bf86aa778,Cypress,337,cy.createEditor,"cy.createEditor({
+      tools: {
+        testTool1: TestTune1,
+        testTool2: TestTune2,
+      },
+      tunes: ['testTool1', 'testTool2'],
+      data: {
+        blocks: [
+          {
+            type: 'paragraph',
+            data: {
+              text: 'Hello',
+            },
+          },
+        ],
+      },
+    })",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.createEditor({
+      tools: {
+        testTool1: TestTune1,
+        testTool2: TestTune2,
+      },
+      tunes: ['testTool1', 'testTool2'],
+      data: {
+        blocks: [
+          {
+            type: 'paragraph',
+            data: {
+              text: 'Hello',
+            },
+          },
+        ],
+      },
+    })",false,,,
+mattermost/mattermost,02838ac83eed4fd0d97ea36c242c653c,Cypress,35,cy.postMessageAs,"cy.postMessageAs({sender: otherUser, message: `${num} ${getRandomId()}`, channelId: offTopicChannelId})",hook_setup_flow,custom_command_body,unknown,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.postMessageAs({sender: otherUser, message: `${num} ${getRandomId()}`, channelId: offTopicChannelId})",false,,,
+cloudtogo/pageplug,03ac1350ce05485dbf99ceecec4c0894,Cypress,299,GenerateCRUDNValidateDeployPage,"GenerateCRUDNValidateDeployPage(
+        ""348f344247b0c1a935b1223072ef9d8a"",
+        ""CLASSIC TOY TRAIN SET TRACK CARRIAGES LIGHT"" +
+          "" ENGINE BOXED BOYS KIDS BATTERY"",
+        ""ccf"",
+        ""uniq_id"",
+      )",page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"GenerateCRUDNValidateDeployPage(
+        ""348f344247b0c1a935b1223072ef9d8a"",
+        ""CLASSIC TOY TRAIN SET TRACK CARRIAGES LIGHT"" +
+          "" ENGINE BOXED BOYS KIDS BATTERY"",
+        ""ccf"",
+        ""uniq_id"",
+      )",false,,,
+appsmithorg/appsmith,b617422ab5ac8b5a33d9bd31db333fef,Cypress,186,cy.visit,"cy.visit({
+    method: ""POST"",
+    url: `api/v1/login${redirectUrl ? ""?redirectUrl="" + redirectUrl : """"}`,
+    headers: {
+      origin: baseURL,
+      ""X-Requested-By"": ""Appsmith"",
+    },
+    followRedirect: true,
+    body: {
+      username: uname,
+      password: pword,
+    },
+    timeout: 60000,
+  })",cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.visit({
+    method: ""POST"",
+    url: `api/v1/login${redirectUrl ? ""?redirectUrl="" + redirectUrl : """"}`,
+    headers: {
+      origin: baseURL,
+      ""X-Requested-By"": ""Appsmith"",
+    },
+    followRedirect: true,
+    body: {
+      username: uname,
+      password: pword,
+    },
+    timeout: 60000,
+  })",false,,,
+nrwl/nx-examples,833f19f94edceabd0b95df4423321b39,Cypress,24,getPage,getPage(),page_object,page_object_method,page_object_library,callee_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getPage(),false,,,
+cloudtogo/pageplug,875e7b3cdf72667faf2beb82d2df997b,Cypress,923,cy.get,cy.get(welcomePage.lastName),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.lastName),false,,,
+cloudtogo/pageplug,7ffebf4cce8bf5e5801170d52611d7dd,Cypress,930,cy.get,cy.get(welcomePage.continueButton),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.continueButton),false,,,
+payloadcms/payload,3d3c4fa4e8617168030284a3c0b53c7a,Playwright,228,page.locator,page.locator('.form-submit .popup__trigger-wrap > .popup-button'),framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator('.form-submit .popup__trigger-wrap > .popup-button'),false,,,
+deltachat/deltachat-desktop,9c9f09619b1d9966f05159bbe8f55bad,Playwright,536,page.locator,page.locator('#newgroup button'),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator('#newgroup button'),false,,,
+mattermost/mattermost,956ee3b18a6d446188abef4832a1a418,Cypress,350,getAdminAccount,getAdminAccount(),cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getAdminAccount(),false,,,
+OpenRailAssociation/osrd,f75e72ec170545ccf362c93a94fab9d1,Playwright,147,test.step,"test.step('Select itinerary and verify distance', async () => {
+        await operationalStudiesPage.openRouteTab();
+        await routeTab.performPathfindingByTrigram({
+          originTrigram: 'WS',
+          destinationTrigram: 'NES',
+        });
+        await operationalStudiesPage.checkPathfindingDistance('46.050 km');
+      })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('Select itinerary and verify distance', async () => {
+        await operationalStudiesPage.openRouteTab();
+        await routeTab.performPathfindingByTrigram({
+          originTrigram: 'WS',
+          destinationTrigram: 'NES',
+        });
+        await operationalStudiesPage.checkPathfindingDistance('46.050 km');
+      })",false,,,
+marmelab/react-admin,04552154476c665dff41c1db3c43df55,Cypress,15,CreatePage.waitUntilVisible,CreatePage.waitUntilVisible(),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,CreatePage.waitUntilVisible(),false,,,
+appsmithorg/appsmith,663f27ab650e7ecd9f791aa9e7d80a4e,Cypress,104,AppSidebar.navigate,AppSidebar.navigate(AppSidebarButton.Libraries),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,AppSidebar.navigate(AppSidebarButton.Libraries),false,,,
+appsmithorg/appsmith,db4b86d40b30505ca623d05393c0910f,Cypress,63,locators._widgetInDeployed,locators._widgetInDeployed(draggableWidgets.BUTTON),domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,locators._widgetInDeployed(draggableWidgets.BUTTON),false,,,
+mattermost/mattermost,90638f30e87a7bf7bddcf96b276146b4,Cypress,116,sysadminSetup,sysadminSetup(response.user),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,sysadminSetup(response.user),false,,,
+eigenpal/docx-editor,6b711c9767ccecb0058b97a83710b0be,Playwright,429,page.evaluate,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",false,,,
+seerr-team/seerr,b550b8782906ce9f5678b96ea86a67aa,Cypress,29,cy.login,"cy.login(Cypress.env('ADMIN_EMAIL'), Cypress.env('ADMIN_PASSWORD'))",hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.login(Cypress.env('ADMIN_EMAIL'), Cypress.env('ADMIN_PASSWORD'))",false,,,
+cloudtogo/pageplug,51367f0056471a1fda1d6c68b764993a,Cypress,957,expect(interception.request.body).contains,"expect(interception.request.body).contains(
+        ""allowCollectingAnonymousData=true"",
+      )",cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"expect(interception.request.body).contains(
+        ""allowCollectingAnonymousData=true"",
+      )",false,,,
+KittyCAD/modeling-app,b291cccbd4b9a818d62958071a90db45,Playwright,3277,test.step,"test.step('Edit parameters', async () => {
+        await test.step('Edit tolerance', async () => {
+          await cmdBar.expectState({
+            stage: 'arguments',
+            commandName: 'GDT Flatness',
+            currentArgKey: 'tolerance',
+            currentArgValue: '0.1mm',
+            headerArguments: {
+              Tolerance: '0.1mm',
+              Precision: '5',
+        ...",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step('Edit parameters', async () => {
+        await test.step('Edit tolerance', async () => {
+          await cmdBar.expectState({
+            stage: 'arguments',
+            commandName: 'GDT Flatness',
+            currentArgKey: 'tolerance',
+            currentArgValue: '0.1mm',
+            headerArguments: {
+              Tolerance: '0.1mm',
+              Precision: '5',
+        ...",false,,,
+mattermost/mattermost,b1ffaee43e7332a0ef8abeda4f5c72c6,Cypress,165,cy.clickPostCommentIcon,cy.clickPostCommentIcon(),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.clickPostCommentIcon(),false,,,
+mattermost/mattermost,9637cfd207a31f9e11c179a128702a5a,Cypress,135,cy.apiLogin,cy.apiLogin(testUser),hook_setup_flow,custom_command_body,unknown,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.apiLogin(testUser),false,,,
+cloudtogo/pageplug,75e334034fcb80061b44b3a54c5dbc06,Cypress,52,_.table.DownloadFromTable,"_.table.DownloadFromTable(""Download as Excel"")",domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"_.table.DownloadFromTable(""Download as Excel"")",false,,,
+apache/superset,d82b537e44feb1bae37032b9a675708b,Cypress,88,cy.createSampleDashboards,cy.createSampleDashboards([0]),hook_setup_flow,custom_command_body,framework_extension,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.createSampleDashboards([0]),false,,,
+webiny/webiny-js,187c0345c7a4a2d188978ba201ac5591,Cypress,87,cy.login,"cy.login({ username: user.email, password })",domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.login({ username: user.email, password })",false,,,
+payloadcms/payload,c01cd2daa30d2eacfeb538a9647103bb,Playwright,2107,user2Page.locator,user2Page.locator('.payload__modal-container'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('.payload__modal-container'),false,,,
+neo4j/neo4j-browser,d8b2d80d4ee3e596c238ed234d677b4c,Cypress,0,executeCommand,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+mattermost/mattermost,4345814f6205808f46896785eaca641f,Cypress,39,cy.apiCreateChannel,"cy.apiCreateChannel(team.id, channelPrefix.name, channelPrefix.displayName)",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiCreateChannel(team.id, channelPrefix.name, channelPrefix.displayName)",false,,,
+UI5/webcomponents,92d08705bb9ca3e0ef2996d972a546b9,Cypress,0,shadow,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+mattermost/mattermost,858c6efe4daab333eb2030d8fab1071a,Cypress,230,teams.find,teams.find((team) => team.name === DEFAULT_TEAM.name),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,teams.find((team) => team.name === DEFAULT_TEAM.name),false,,,
+mattermost/mattermost,e5c260c3d1e4e317a5e932eee2072b3b,Cypress,101,cy.findByRole,"cy.findByRole('combobox', {name: 'Search for people'})",domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.findByRole('combobox', {name: 'Search for people'})",false,,,
+mattermost/mattermost,00bbe4c02b1cba20e6bc2a7e05b4759e,Cypress,137,cy.externalRequest,"cy.externalRequest({user: admin, method: 'DELETE', path: `posts/${postId}`})",hook_setup_flow,custom_command_body,framework_extension,ast_cypress_data_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.externalRequest({user: admin, method: 'DELETE', path: `posts/${postId}`})",false,,,
+mattermost/mattermost,ddbbd0a518a543231ddfa0c4df32602a,Cypress,435,cy.apiSaveOnboardingTaskListPreference,"cy.apiSaveOnboardingTaskListPreference(createdUser.id, 'onboarding_task_list_open', 'false')",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveOnboardingTaskListPreference(createdUser.id, 'onboarding_task_list_open', 'false')",false,,,
+appsmithorg/appsmith,4904792a850130d88449e574eb72d4ab,Cypress,429,PageLeftPane.switchSegment,PageLeftPane.switchSegment(PagePaneSegment.UI),page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,PageLeftPane.switchSegment(PagePaneSegment.UI),false,,,
+Adamant-im/adamant-im,194afeff60fd953c7364317bb16215c4,Playwright,29,page.locator,page.locator('.passphrase-generator__box'),domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator('.passphrase-generator__box'),false,,,
+sanity-io/sanity,0426e1f222186000c61ebe9f7f6c4b9d,Playwright,298,_testContext.getUniqueDocumentId,_testContext.getUniqueDocumentId(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,_testContext.getUniqueDocumentId(),false,,,
+cloudtogo/pageplug,b69d3a3b3310ec5138886b2ced33e4d2,Cypress,270,cy.openPropertyPane,cy.openPropertyPane(widgetName),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.openPropertyPane(widgetName),false,,,
+sanity-io/sanity,fa6a4ce211bd1850d6d79d1dbd479adf,Playwright,107,_testContext.getUniqueDocumentId,_testContext.getUniqueDocumentId(),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,_testContext.getUniqueDocumentId(),false,,,
+mattermost/mattermost,97aa2d7ce78a2d51a679932649cd813e,Cypress,461,cy.clickPostCommentIcon,cy.clickPostCommentIcon(webhookMessageId),domain_helper,helper_expanded,file_local_helper,ast_no_cypress_setup_or_ui_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.clickPostCommentIcon(webhookMessageId),false,,,
+mempool/mempool,87ede9337aeac44bdea3cdac760eadf7,Cypress,62,cy.waitForSkeletonGone,cy.waitForSkeletonGone(),domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.waitForSkeletonGone(),false,,,
+midas-research/audino,f72e76e180c980800af3a1fddccc19df,Cypress,770,cy.get('.ant-input-number-input').clear,cy.get('.ant-input-number-input').clear(),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('.ant-input-number-input').clear(),false,,,
+mattermost/mattermost,4f49e784dcae7c26d9e374fa4ecdaa03,Cypress,32,cy.getLastPost,cy.getLastPost(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.getLastPost(),false,,,
+mattermost/mattermost,db4e6361f45c409866a9dce711b643d7,Cypress,17,cy.get,cy.get('#input_password-input'),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('#input_password-input'),false,,,
+neo4j/neo4j-browser,889f62831b5c500094b86bc835461abf,Cypress,0,first,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+midas-research/audino,4f8325894adf707320a723fd542ea2a9,Cypress,0,greaterThan,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+appsmithorg/appsmith,e151665c60381d4045efa08054114dcc,Cypress,53,cy.updateCodeInput,"cy.updateCodeInput("".t--property-control-text"", input)",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.updateCodeInput("".t--property-control-text"", input)",false,,,
+element-hq/element-web,869051be17f7d5ea98a1b7a9b71eae7b,Playwright,175,targetUser.leave,targetUser.leave(room.roomId),playwright_fixture,fixture_callback,playwright_fixture_scope,ast_playwright_fixture_param,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,targetUser.leave(room.roomId),false,,,
+payloadcms/payload,650b11e56a9760e32fbc5269ad261e69,Playwright,279,page.locator,page.locator('.popup__content'),framework_page_instance,hook_attached,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator('.popup__content'),false,,,
+UI5/webcomponents,8b3a7f9d0f4cac211572b56e4515a87f,Cypress,0,eq,,unresolved_helper,unresolved,unknown,resolution_status,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,,false,,,
+caplin/FlexLayout,97e75771dee7f8af0acf9f423fad1917,Playwright,659,findPath,"findPath(page, '/ts1/tabstrip')",domain_helper,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"findPath(page, '/ts1/tabstrip')",false,,,
+Gisto/Gisto,8d155715df1cbb63671ef2b548c20646,Playwright,17,page.goto,page.goto('/settings'),domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.goto('/settings'),false,,,
+replayio/devtools,4d55e3a449ff60dc16ef83ee15356e89,Playwright,58,item.click,item.click(),domain_helper,helper_expanded,file_local_helper,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,item.click(),false,,,
+appsmithorg/appsmith,8554c0f42f5bb535c36419fd791caf33,Cypress,970,cy.get,cy.get(welcomePage.submitButton),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.submitButton),false,,,
+appsmithorg/appsmith,2303a7e4d368a9e47dac55c05a4bb0ed,Cypress,119,cy.get,"cy.get(""@workspaceName"")",cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get(""@workspaceName"")",false,,,
+payloadcms/payload,74d3c1069a5cc9f3903c456ebe87c48e,Playwright,2041,user2Page.goto,user2Page.goto(globalUrl.global('global-with-versions')),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.goto(globalUrl.global('global-with-versions')),false,,,
+cloudtogo/pageplug,366c351069544cada42e5c7e2584e0e0,Cypress,30,cy.openFieldConfiguration,"cy.openFieldConfiguration(""name"")",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.openFieldConfiguration(""name"")",false,,,
+payloadcms/payload,aa776bee4ab2c09f2a95bf99122d206d,Playwright,1461,user2Page.goto,user2Page.goto(simpleUrl.edit(simpleDoc.id)),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.goto(simpleUrl.edit(simpleDoc.id)),false,,,
+payloadcms/payload,7464094edec2de946d0430525bdc3ce8,Playwright,255,page.locator,page.locator(toastCloseSelector),framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator(toastCloseSelector),false,,,
+mattermost/mattermost,c3841afa84b1ac271a51f09ac8f51956,Cypress,83,runDataRetentionAndVerifyPostDeleted,"runDataRetentionAndVerifyPostDeleted(testTeam, testChannel, postText)",domain_helper,helper_expanded,file_local_helper,ast_local_imported_helper,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"runDataRetentionAndVerifyPostDeleted(testTeam, testChannel, postText)",false,,,
+appsmithorg/appsmith,7f1c92f04eb2e7e155e91c31a6510830,Cypress,959,cy.get,cy.get(welcomePage.firstName),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.firstName),false,,,
+cloudtogo/pageplug,f8804a7fb5d52432579e4cf0e037cc25,Cypress,933,cy.get(welcomePage.password).type,"cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""))",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get(welcomePage.password).type(Cypress.env(""PASSWORD""))",false,,,
+eigenpal/docx-editor,18200463eacfdfd64deff662916c3c32,Playwright,429,page.evaluate,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",false,,,
+cloudtogo/pageplug,fb6e54f95ae4fd736ae264cc42244835,Cypress,924,cy.get,cy.get(welcomePage.email),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.email),false,,,
+mattermost/mattermost,cdad11f8a9c2cb301ea711d610d176ac,Cypress,39,cy.get,cy.get('div.post-list__dynamic'),domain_helper,helper_expanded,file_local_helper,ast_cypress_wait_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('div.post-list__dynamic'),false,,,
+OHIF/Viewers,45a31fc14c06db68ca73c5de12867314,Playwright,21,page.goto,page.goto(`/${mode}/${datasources}?StudyInstanceUIDs=${studyInstanceUID}`),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.goto(`/${mode}/${datasources}?StudyInstanceUIDs=${studyInstanceUID}`),false,,,
+mattermost/mattermost,73a39df41023161b6dde09ea67e40ae4,Cypress,43,cy.uiGetChannelHeaderButton,cy.uiGetChannelHeaderButton(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.uiGetChannelHeaderButton(),false,,,
+mattermost/mattermost,99781f96eac04209dda4114687d56cfb,Cypress,419,generateRandomUser,"generateRandomUser(prefix, createAt)",domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"generateRandomUser(prefix, createAt)",false,,,
+cloudtogo/pageplug,164e2f8510bbb1308557945565e636d3,Cypress,941,cy.get(welcomePage.useCaseGroupButton).eq,cy.get(welcomePage.useCaseGroupButton).eq(0),cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.useCaseGroupButton).eq(0),false,,,
+mattermost/mattermost,9798481baef9bddb4a9fb2cf835fa051,Cypress,68,cy.uiGetProductMenuButton,cy.uiGetProductMenuButton(),domain_helper,helper_expanded,file_local_helper,ast_cypress_locator_query_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.uiGetProductMenuButton(),false,,,
+appsmithorg/appsmith,9f16873bd57c47cd26e5eb0d10bce5d4,Cypress,956,cy.get,cy.get(welcomePage.verifyPassword),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(welcomePage.verifyPassword),false,,,
+mattermost/mattermost,cf1e472d1f9d960b89204f65582ed8f4,Cypress,419,generateRandomUser,"generateRandomUser(prefix, createAt)",domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"generateRandomUser(prefix, createAt)",false,,,
+mattermost/mattermost,b589523f87d72565698cc7bda24a49f9,Cypress,97,getAdminAccount,getAdminAccount(),cypress_custom_command,custom_command_body,framework_extension,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,getAdminAccount(),false,,,
+payloadcms/payload,d82358b7e233c831810fbe6c36239254,Playwright,1905,user2Page.locator,user2Page.locator('#field-globalText'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('#field-globalText'),false,,,
+mattermost/mattermost,f61f7e3839f425612c10af2ac0163d81,Cypress,8,cy.get,"cy.get('.DataRetentionSettings .admin-console__header', {timeout: TIMEOUTS.TWO_MIN})",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_custom_command_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get('.DataRetentionSettings .admin-console__header', {timeout: TIMEOUTS.TWO_MIN})",false,,,
+SonicJs-Org/sonicjs,4a99e8cd04ac7f6ab91375112d697c51,Playwright,376,page.goto,page.goto('/admin'),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.goto('/admin'),false,,,
+linode/manager,04d60f330b324104513873a305cf3650,Cypress,31,mockGetAccount,mockGetAccount(cachedAccount),domain_helper,hook_attached,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,mockGetAccount(cachedAccount),false,,,
+payloadcms/payload,1bd7fde39e8015c0b3e7def4be12bae6,Playwright,329,page.locator,"page.locator('[data-form-ready=""false""]')",framework_page_instance,hook_attached,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.locator('[data-form-ready=""false""]')",false,,,
+payloadcms/payload,74d3c1069a5cc9f3903c456ebe87c48e,Playwright,2046,user2Page.locator,user2Page.locator('#field-text'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('#field-text'),false,,,
+cloudtogo/pageplug,441d2e6cc0a41bc285704c12705846b7,Cypress,842,apiPage.SelectPaneTab,"apiPage.SelectPaneTab(""Pagination"")",page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"apiPage.SelectPaneTab(""Pagination"")",false,,,
+mattermost/mattermost,f1ce7c84956f11d2fbe4714ab96faf91,Cypress,419,generateRandomUser,"generateRandomUser(prefix, createAt)",domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"generateRandomUser(prefix, createAt)",false,,,
+cloudtogo/pageplug,cb2a9fd1618cf2292c2046b0e48bffd0,Cypress,935,cy.get(welcomePage.verifyPassword).type,"cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""))",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get(welcomePage.verifyPassword).type(Cypress.env(""PASSWORD""))",false,,,
+eigenpal/docx-editor,a40e981fbb091d446969364320c2bd1f,Playwright,429,page.evaluate,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate(() => {
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    return contentArea?.textContent || '';
+  })",false,,,
+invoicerr-app/invoicerr,d876dc18ccf3ab2494d79665c0fa5964,Cypress,110,cy.login,cy.login(),hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.login(),false,,,
+appsmithorg/appsmith,1910e7963be6fad920099b4e70d943a8,Cypress,370,homePage.DeleteApplication,homePage.DeleteApplication(appName),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,homePage.DeleteApplication(appName),false,,,
+cloudtogo/pageplug,27a16c3404a7b1f8527f19e71d0011e1,Cypress,46,PageLeftPane.expandCollapseItem,"PageLeftPane.expandCollapseItem(""List1"")",page_object,page_object_method,page_object_library,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"PageLeftPane.expandCollapseItem(""List1"")",false,,,
+Monogatari/Monogatari,14c7950dfc2e79ae65f6ed4abfdcb847,Cypress,87,cy.rollback,cy.rollback (),domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.rollback (),false,,,
+cloudtogo/pageplug,799e49467d247ee3bd3eb73e927d9063,Cypress,286,homePage.DeleteApplication,homePage.DeleteApplication(appName),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,homePage.DeleteApplication(appName),false,,,
+payloadcms/payload,199f264077c0b45a6317ef8bd8d58e43,Playwright,237,page.locator,page.locator('.payload-toast-container .toast-error'),framework_page_instance,helper_expanded,file_local_helper,ast_page_symbol_origin,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,page.locator('.payload-toast-container .toast-error'),false,,,
+appsmithorg/appsmith,98e016d0a745212aee1f1f7da1ed20bc,Cypress,288,homePage.DeleteApplication,homePage.DeleteApplication(appName),page_object,page_object_method,page_object_library,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,homePage.DeleteApplication(appName),false,,,
+payloadcms/payload,c01cd2daa30d2eacfeb538a9647103bb,Playwright,2165,user2Page.locator,user2Page.locator('#field-text'),framework_page_instance,direct_in_test,unknown,ast_page_object_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,user2Page.locator('#field-text'),false,,,
+VOICEVOX/voicevox,ad5efed08083c5c83fbe9882ad6e6bea,Playwright,40,test.step,"test.step(""ノートの追加"", async () => {
+    expect(await getCurrentNoteCount()).toBe(0);
+    await sequencer.click({ position: { x: 100, y: 171 } });
+    expect(await getCurrentNoteCount()).toBe(1);
+    await sequencer.click({ position: { x: 200, y: 171 } });
+    expect(await getCurrentNoteCount()).toBe(2);
+  })",playwright_test_step,direct_in_test,unknown,feature_type,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"test.step(""ノートの追加"", async () => {
+    expect(await getCurrentNoteCount()).toBe(0);
+    await sequencer.click({ position: { x: 100, y: 171 } });
+    expect(await getCurrentNoteCount()).toBe(1);
+    await sequencer.click({ position: { x: 200, y: 171 } });
+    expect(await getCurrentNoteCount()).toBe(2);
+  })",false,,,
+nhn/tui.grid,d9a958cfeba1de9ff54bf712e9690a92,Cypress,30,cy.createGrid,"cy.createGrid({ data, columns, ...options })",domain_helper,helper_expanded,file_local_helper,ast_cypress_custom_call_only,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.createGrid({ data, columns, ...options })",false,,,
+midas-research/audino,979ea5bf720e8d0235be5fc3f3b612f7,Cypress,1186,"cy.get('.cvat-task-job-list')
+        .contains('a', `Job #${jobID}`)
+        .parents('.cvat-job-item')
+        .find('.cvat-job-item-stage').click","cy.get('.cvat-task-job-list')
+        .contains('a', `Job #${jobID}`)
+        .parents('.cvat-job-item')
+        .find('.cvat-job-item-stage').click()",cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.get('.cvat-task-job-list')
+        .contains('a', `Job #${jobID}`)
+        .parents('.cvat-job-item')
+        .find('.cvat-job-item-stage').click()",false,,,
+mattermost/mattermost,2b6a6c31a3c3a3b7789c50382f4d408e,Cypress,116,sysadminSetup,sysadminSetup(response.user),domain_helper,helper_expanded,file_local_helper,ast_helper_name_heuristic,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,sysadminSetup(response.user),false,,,
+mattermost/mattermost,75bd1031905f02a1b7801329fccdd4b7,Cypress,230,teams.find,teams.find((team) => team.name === DEFAULT_TEAM.name),domain_helper,hook_attached,file_local_helper,helper_depth,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,teams.find((team) => team.name === DEFAULT_TEAM.name),false,,,
+invoicerr-app/invoicerr,3a8d692c2ce3e11bd058b646f460e172,Cypress,90,cy.login,cy.login(),hook_setup_flow,custom_command_body,framework_extension,ast_cypress_session_call,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.login(),false,,,
+taiga-family/maskito,5ec4664b527b084e12eef3df2ede8b57,Cypress,5,cy.get,cy.get('#demo-content input'),cypress_custom_command,custom_command_body,framework_extension,ast_cypress_ui_action_chain,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get('#demo-content input'),false,,,
+mattermost/mattermost,1d5528315c47f27f065ae99cec0d745c,Cypress,443,cy.apiSaveOnboardingPreference,"cy.apiSaveOnboardingPreference(createdUser.id, 'hide', 'true')",domain_helper,custom_command_body,file_local_helper,regex_fallback,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"cy.apiSaveOnboardingPreference(createdUser.id, 'hide', 'true')",false,,,
+marmelab/react-admin,1bb5cfc066f1c40dcdc51819bacb02ed,Cypress,84,cy.get,cy.get(this.elements.snackbar),page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,cy.get(this.elements.snackbar),false,,,
+eigenpal/docx-editor,35bad486319c1c5a3fc47c6cd612d205,Playwright,15,page.evaluate,"page.evaluate((text) => {
+    // Search only in editor content area, not toolbar (which has icon text like ""format_bold"")
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, ...",page_object,page_object_method,page_object_library,source_kind,correct,n/a,correct,n/a,Workflow abstraction/evidence is acceptable.,"page.evaluate((text) => {
+    // Search only in editor content area, not toolbar (which has icon text like ""format_bold"")
+    const contentArea =
+      document.querySelector('.ProseMirror') ||
+      document.querySelector('.docx-editor-pages') ||
+      document.querySelector('.docx-ai-editor');
+    if (!contentArea) return false;
+
+    const walker = document.createTreeWalker(contentArea, ...",false,,,

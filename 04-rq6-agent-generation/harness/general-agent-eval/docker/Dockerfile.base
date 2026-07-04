@@ -1,0 +1,69 @@
+# syntax=docker/dockerfile:1.7
+#
+# Base agent runtime: Python, the harness package plus its dependencies, the
+# non-root agent user, and the general CLI tooling agents rely on. The agent and
+# workload layers (Dockerfile.{claude-code,codex,java,genome-nexus}) build
+# `FROM ${BASE_IMAGE}` on top of this image, so anything shared lives here and
+# nothing agent- or target-specific does.
+
+FROM python:3.11.14-slim-bookworm
+
+ARG AGENT_UID=1000
+ARG AGENT_GID=1000
+ARG TARGETARCH
+ARG UV_VERSION=0.11.14
+
+RUN case "${TARGETARCH}" in \
+        amd64|arm64) ;; \
+        *) echo "TARGETARCH must be provided by Docker BuildKit/buildx; got '${TARGETARCH}'" >&2; exit 1 ;; \
+    esac
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    DISABLE_AUTOUPDATER=1 \
+    PATH=/home/agent/.local/bin:$PATH \
+    PYTHONPATH=/app/src \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    UV_SYSTEM_PYTHON=1
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        bash \
+        ca-certificates \
+        curl \
+        git \
+        gnupg \
+        openssh-client \
+        ripgrep \
+        rsync \
+        tini \
+        unzip \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY pyproject.toml README.md /tmp/general-agent-eval/
+COPY src /tmp/general-agent-eval/src
+
+# Installs the project plus its deps. The codex agent's native binary ships inside
+# the openai-codex-cli-bin wheel (a core dep) and is resolved from site-packages by
+# the SDK, so the codex layer needs no separate agent install -- only the base.
+RUN python -m pip install --no-cache-dir "uv==${UV_VERSION}" \
+    && uv pip install --system --no-cache /tmp/general-agent-eval
+
+RUN set -eux; \
+    if getent group "${AGENT_GID}" >/dev/null; then \
+        agent_group="$(getent group "${AGENT_GID}" | cut -d: -f1)"; \
+    else \
+        groupadd --gid "${AGENT_GID}" agent; \
+        agent_group=agent; \
+    fi; \
+    useradd --uid "${AGENT_UID}" --gid "${agent_group}" --create-home --shell /bin/bash agent; \
+    mkdir -p /workspace; \
+    chown -R agent:"${agent_group}" /home/agent /workspace
+
+USER agent
+WORKDIR /app
+
+ENTRYPOINT ["/usr/bin/tini", "--"]
+CMD ["python", "--version"]

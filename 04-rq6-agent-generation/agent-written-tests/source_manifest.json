@@ -1,0 +1,2569 @@
+{
+  "artifact": "rq6_agent_human_20repo_20260627 combined_agent20 source files",
+  "source_file_manifest": "manifests/agent_final20_manifest.jsonl",
+  "source_test_cases": "combined_agent20/agent_written_tests/test_cases.jsonl",
+  "source_provenance": "combined_agent20/COMBINED_PROVENANCE.json",
+  "archived_from": "Pinned subject-repo commits using raw.githubusercontent.com, one source file per unique manifest file_path.",
+  "combined_repos": 20,
+  "combined_tests": 2054,
+  "recovered_test_count_sum": 2054,
+  "source_runs": [
+    "rq6_agent_static_19repo_20260627_112014",
+    "rq6_agent_add_tldraw_20260627_143313"
+  ],
+  "files": 162,
+  "repos": [
+    {
+      "repo": "HemmeligOrg/Hemmelig.app",
+      "tests": 154,
+      "files": 7,
+      "commit": "629b2ec971027184f1685c7b7aea95c1dfab5f43"
+    },
+    {
+      "repo": "TriliumNext/Trilium",
+      "tests": 68,
+      "files": 7,
+      "commit": "fe94c296ae6ce596d0f7634077a151cdac3d005d"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "tests": 126,
+      "files": 11,
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "tests": 101,
+      "files": 15,
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "tests": 84,
+      "files": 9,
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c"
+    },
+    {
+      "repo": "epicweb-dev/epic-stack",
+      "tests": 104,
+      "files": 6,
+      "commit": "0c3060abe3ac261e95a49124f59fe14dbb0d6e80"
+    },
+    {
+      "repo": "git-truck/git-truck",
+      "tests": 60,
+      "files": 3,
+      "commit": "bfb2024611f50582084f5fa2ddd68c77bd602409"
+    },
+    {
+      "repo": "gridstack/gridstack.js",
+      "tests": 154,
+      "files": 8,
+      "commit": "b2af38b4cf3e0b2040520007fa90f05229970664"
+    },
+    {
+      "repo": "keystonejs/keystone",
+      "tests": 47,
+      "files": 6,
+      "commit": "fbab4436a9ac71e332318ae35854c2eea9ac8e68"
+    },
+    {
+      "repo": "laststance/react-typescript-todomvc-2022",
+      "tests": 33,
+      "files": 1,
+      "commit": "116dd1f51bc7fe206958401c3251d43bcc051e52"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "tests": 128,
+      "files": 14,
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "tests": 121,
+      "files": 9,
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200"
+    },
+    {
+      "repo": "marmelab/react-admin",
+      "tests": 68,
+      "files": 7,
+      "commit": "6f79ddb5eacfac65170edceb52703862cdce40d0"
+    },
+    {
+      "repo": "mermaid-js/mermaid",
+      "tests": 122,
+      "files": 7,
+      "commit": "969521aed9ae4f3c54a959ce27f85b2283c4e92f"
+    },
+    {
+      "repo": "motiondivision/motion-vue",
+      "tests": 109,
+      "files": 8,
+      "commit": "509fc3287287b728625688989047ec6636fe7130"
+    },
+    {
+      "repo": "openplayerjs/openplayerjs",
+      "tests": 126,
+      "files": 7,
+      "commit": "359f196bb83022b596b99dd31212ef3905193afb"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "tests": 142,
+      "files": 11,
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999"
+    },
+    {
+      "repo": "swup/swup",
+      "tests": 119,
+      "files": 17,
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23"
+    },
+    {
+      "repo": "tldraw/tldraw",
+      "tests": 70,
+      "files": 3,
+      "commit": "26f673ed8c713fa3068149a5bd9d4ffe05941476"
+    },
+    {
+      "repo": "zuplo/zudoku",
+      "tests": 118,
+      "files": 6,
+      "commit": "578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce"
+    }
+  ],
+  "entries": [
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/accounts.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/accounts.spec.ts",
+      "sha256": "8ebaf9c9f7a4d34614b01ec6655315b590a5e63feda6d893a83117f0984405e4",
+      "bytes": 7022,
+      "test_count": 22,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/accounts.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/bank-sync.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/bank-sync.spec.ts",
+      "sha256": "47fabfb1696918e4581cdcac9331e9891fb0286f92c1f5dd575f491e14698dc8",
+      "bytes": 2134,
+      "test_count": 7,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/bank-sync.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/budget.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/budget.spec.ts",
+      "sha256": "26112ec3fb44e09ffa21e02c24df236f4349891f574dece401f3af177f423d78",
+      "bytes": 4129,
+      "test_count": 14,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/budget.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/config-server.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/config-server.spec.ts",
+      "sha256": "26b5437822b3287de21c9d8a46d6586dbe3bce7dd5be2df093a05885cf53e6a4",
+      "bytes": 2508,
+      "test_count": 7,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/config-server.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/navigation.spec.ts",
+      "sha256": "10cb5962e4a6fbcf752343141d6f00256d07c1ece183313c5a1941168927dd67",
+      "bytes": 3901,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/payees.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/payees.spec.ts",
+      "sha256": "e4f560d4734065394638b58e7525cd01e45a9631ccb929cd818f31c4655dd29c",
+      "bytes": 2371,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/payees.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/reports.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/reports.spec.ts",
+      "sha256": "ba9e9e687c9fae8189c3b9d6226278fdc44fa90321b85ec119e563c535e01b5c",
+      "bytes": 2729,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/reports.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/rules.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/rules.spec.ts",
+      "sha256": "2b258d6250b9baaf651122bbf19f370422bfc8308cc74eef91c75c365b15ec73",
+      "bytes": 2825,
+      "test_count": 10,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/rules.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/schedules.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/schedules.spec.ts",
+      "sha256": "b5d77ef1d92f8333ae5adac611f11a9b085e1062231d460cf947789dcdefdfe4",
+      "bytes": 3289,
+      "test_count": 13,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/schedules.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/settings.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/settings.spec.ts",
+      "sha256": "4997649c21e1fb34a5438ea5b14053e607ec542199b9899438b689fc7d410817",
+      "bytes": 3727,
+      "test_count": 16,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/settings.spec.ts"
+    },
+    {
+      "repo": "actualbudget/actual",
+      "repo_url": "https://github.com/actualbudget/actual",
+      "commit": "2683a36ab810e74fc8787c7ef4c55889d0045df6",
+      "original_file_path": "packages/desktop-client/e2e/rq6-agent/tags.spec.ts",
+      "local_file_path": "source_files/actualbudget__actual/packages/desktop-client/e2e/rq6-agent/tags.spec.ts",
+      "sha256": "04b77a1d5119ccd4104a5c0cee2a4a0a3386703fb42bea2664538bbb021f2033",
+      "bytes": 1667,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/actualbudget/actual/2683a36ab810e74fc8787c7ef4c55889d0045df6/packages/desktop-client/e2e/rq6-agent/tags.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/01-app-shell.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/01-app-shell.spec.ts",
+      "sha256": "05ac26c0266c7a51b1c1b0d47e16007aa43d307e1846057e22367aded9c0cf64",
+      "bytes": 2446,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/01-app-shell.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/02-window-tabs.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/02-window-tabs.spec.ts",
+      "sha256": "d79fab3bdfc3659b8d73fb99d78633c9d0458742cba0a7fdee8f2c837ad731a1",
+      "bytes": 2858,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/02-window-tabs.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/03-url-box.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/03-url-box.spec.ts",
+      "sha256": "263bd1e5b209786102269da9d0f51a385869db9c71af0db46c171de16a795324",
+      "bytes": 2185,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/03-url-box.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/04-query-editor.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/04-query-editor.spec.ts",
+      "sha256": "930bc86cd0d3f5a467f52977db5c7d0675ed59975874583f38975b6585bd0e31",
+      "bytes": 3669,
+      "test_count": 12,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/04-query-editor.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/05-headers-dialog.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/05-headers-dialog.spec.ts",
+      "sha256": "e59a404e6135b8f1c417d89ccaab6431bf69ec5f130c781a784fe415b52e6144",
+      "bytes": 2463,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/05-headers-dialog.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/06-request-handler-dialog.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/06-request-handler-dialog.spec.ts",
+      "sha256": "b7830554643d193338c1019df998654595e5c41e5c014229a2dc86c4bf3e829c",
+      "bytes": 1937,
+      "test_count": 5,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/06-request-handler-dialog.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/07-history-dialog.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/07-history-dialog.spec.ts",
+      "sha256": "f6190c3c3dadb5e20b99ff77408c3d2c649519368ffbc522819c6161a357a64b",
+      "bytes": 2148,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/07-history-dialog.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/08-request-extensions-dialog.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/08-request-extensions-dialog.spec.ts",
+      "sha256": "ad47121676859bb277910232086b6b8d4769b4cd0c52bf17bb5a8c12909fbbff",
+      "bytes": 1453,
+      "test_count": 3,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/08-request-extensions-dialog.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/09-collections-panel.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/09-collections-panel.spec.ts",
+      "sha256": "073d942d23a61b1ecd92251d20f88140afb5e303198513643c807fd233b188c4",
+      "bytes": 3546,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/09-collections-panel.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/10-settings-dialog.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/10-settings-dialog.spec.ts",
+      "sha256": "76720f55412abf3c5de8a497e1b919abb48afc9b460061442b2a607ecf0f0c99",
+      "bytes": 3638,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/10-settings-dialog.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/11-environment-manager.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/11-environment-manager.spec.ts",
+      "sha256": "48515e8006527244fb8c5539c982caa8313ed125497b1cc9d468c54a804da2cb",
+      "bytes": 3353,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/11-environment-manager.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/12-docs-panel.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/12-docs-panel.spec.ts",
+      "sha256": "88b604384ba6b0d833a6aee6afc19c25765ebf90d1133bd9ccd6cb2e137b3556",
+      "bytes": 1727,
+      "test_count": 4,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/12-docs-panel.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/13-header-menu.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/13-header-menu.spec.ts",
+      "sha256": "ae5309c3a8e6067933ccb4f1608083d2072e488f46c1c63cba5c60ec83f725fd",
+      "bytes": 2501,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/13-header-menu.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/14-query-result-panel.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/14-query-result-panel.spec.ts",
+      "sha256": "92a1a14c1f9799ffee2eb7dc79cf96b761f622e15bef7f6e283ded0b4c64555f",
+      "bytes": 1183,
+      "test_count": 5,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/14-query-result-panel.spec.ts"
+    },
+    {
+      "repo": "altair-graphql/altair",
+      "repo_url": "https://github.com/altair-graphql/altair",
+      "commit": "1dff3a1014bed38d608f05ec11ec73d84b4ac957",
+      "original_file_path": "packages/altair-app/e2e/rq6-agent/15-side-menu-prettify.spec.ts",
+      "local_file_path": "source_files/altair-graphql__altair/packages/altair-app/e2e/rq6-agent/15-side-menu-prettify.spec.ts",
+      "sha256": "63c81ddbdb56971354085f8ecf7d614841c789ca0bccb5a54e305d30159d0d94",
+      "bytes": 2078,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/altair-graphql/altair/1dff3a1014bed38d608f05ec11ec73d84b4ac957/packages/altair-app/e2e/rq6-agent/15-side-menu-prettify.spec.ts"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "repo_url": "https://github.com/cypress-io/cypress-realworld-app",
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c",
+      "original_file_path": "tests/rq6-agent/auth.spec.ts",
+      "local_file_path": "source_files/cypress-io__cypress-realworld-app/tests/rq6-agent/auth.spec.ts",
+      "sha256": "f1dfa21e48e2daca21210d07fd3e6dbbceda147df5bfaf236a3ec4a44dcbccd4",
+      "bytes": 6675,
+      "test_count": 15,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/632e01a0cced4e1779992c800293c96abd13ce4c/tests/rq6-agent/auth.spec.ts"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "repo_url": "https://github.com/cypress-io/cypress-realworld-app",
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c",
+      "original_file_path": "tests/rq6-agent/bank-accounts.spec.ts",
+      "local_file_path": "source_files/cypress-io__cypress-realworld-app/tests/rq6-agent/bank-accounts.spec.ts",
+      "sha256": "d8b2bd05a1e31bbbbd59dc76a2c6131163e8059c8d420dd1ee58de147eb0a6c5",
+      "bytes": 6877,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/632e01a0cced4e1779992c800293c96abd13ce4c/tests/rq6-agent/bank-accounts.spec.ts"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "repo_url": "https://github.com/cypress-io/cypress-realworld-app",
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c",
+      "original_file_path": "tests/rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/cypress-io__cypress-realworld-app/tests/rq6-agent/navigation.spec.ts",
+      "sha256": "dfee47c45109343dd910b8c2152afecdc0292348eb4750763c2eca10fc2c654f",
+      "bytes": 3904,
+      "test_count": 16,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/632e01a0cced4e1779992c800293c96abd13ce4c/tests/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "repo_url": "https://github.com/cypress-io/cypress-realworld-app",
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c",
+      "original_file_path": "tests/rq6-agent/notifications.spec.ts",
+      "local_file_path": "source_files/cypress-io__cypress-realworld-app/tests/rq6-agent/notifications.spec.ts",
+      "sha256": "696fb056bbb8d77e201796e3c95e78f6499e616110a6bf01595d8b6b2a842ba4",
+      "bytes": 3581,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/632e01a0cced4e1779992c800293c96abd13ce4c/tests/rq6-agent/notifications.spec.ts"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "repo_url": "https://github.com/cypress-io/cypress-realworld-app",
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c",
+      "original_file_path": "tests/rq6-agent/onboarding.spec.ts",
+      "local_file_path": "source_files/cypress-io__cypress-realworld-app/tests/rq6-agent/onboarding.spec.ts",
+      "sha256": "4796626839fefdb0a46f7f6d6101505c44d26b2c928e7f58b6f207d65e50d479",
+      "bytes": 4960,
+      "test_count": 5,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/632e01a0cced4e1779992c800293c96abd13ce4c/tests/rq6-agent/onboarding.spec.ts"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "repo_url": "https://github.com/cypress-io/cypress-realworld-app",
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c",
+      "original_file_path": "tests/rq6-agent/transaction-create.spec.ts",
+      "local_file_path": "source_files/cypress-io__cypress-realworld-app/tests/rq6-agent/transaction-create.spec.ts",
+      "sha256": "47b4068e39934e1fedae72e9857616d348840c75602b4bfa89a4f4155232878f",
+      "bytes": 6260,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/632e01a0cced4e1779992c800293c96abd13ce4c/tests/rq6-agent/transaction-create.spec.ts"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "repo_url": "https://github.com/cypress-io/cypress-realworld-app",
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c",
+      "original_file_path": "tests/rq6-agent/transaction-detail.spec.ts",
+      "local_file_path": "source_files/cypress-io__cypress-realworld-app/tests/rq6-agent/transaction-detail.spec.ts",
+      "sha256": "c3fd3b5af774075e3ae40cd444bde19b43cd459145b61ef6266d4b94f81f6531",
+      "bytes": 4578,
+      "test_count": 7,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/632e01a0cced4e1779992c800293c96abd13ce4c/tests/rq6-agent/transaction-detail.spec.ts"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "repo_url": "https://github.com/cypress-io/cypress-realworld-app",
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c",
+      "original_file_path": "tests/rq6-agent/transactions.spec.ts",
+      "local_file_path": "source_files/cypress-io__cypress-realworld-app/tests/rq6-agent/transactions.spec.ts",
+      "sha256": "e0336a9ebc41b3f8eb9fd10a284f3e300cff3af167f4656970f13c2084837053",
+      "bytes": 4128,
+      "test_count": 7,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/632e01a0cced4e1779992c800293c96abd13ce4c/tests/rq6-agent/transactions.spec.ts"
+    },
+    {
+      "repo": "cypress-io/cypress-realworld-app",
+      "repo_url": "https://github.com/cypress-io/cypress-realworld-app",
+      "commit": "632e01a0cced4e1779992c800293c96abd13ce4c",
+      "original_file_path": "tests/rq6-agent/user-settings.spec.ts",
+      "local_file_path": "source_files/cypress-io__cypress-realworld-app/tests/rq6-agent/user-settings.spec.ts",
+      "sha256": "8de9030a7baeb05037ff726d70a940c51968002c824fdb0b70a4d41134fa4a71",
+      "bytes": 3403,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/cypress-io/cypress-realworld-app/632e01a0cced4e1779992c800293c96abd13ce4c/tests/rq6-agent/user-settings.spec.ts"
+    },
+    {
+      "repo": "epicweb-dev/epic-stack",
+      "repo_url": "https://github.com/epicweb-dev/epic-stack",
+      "commit": "0c3060abe3ac261e95a49124f59fe14dbb0d6e80",
+      "original_file_path": "tests/e2e/rq6-agent/auth.spec.ts",
+      "local_file_path": "source_files/epicweb-dev__epic-stack/tests/e2e/rq6-agent/auth.spec.ts",
+      "sha256": "3840573c708cccd5b9f5cdbc2070f95434c032e190120d98112dcf157d736d34",
+      "bytes": 6929,
+      "test_count": 20,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/epicweb-dev/epic-stack/0c3060abe3ac261e95a49124f59fe14dbb0d6e80/tests/e2e/rq6-agent/auth.spec.ts"
+    },
+    {
+      "repo": "epicweb-dev/epic-stack",
+      "repo_url": "https://github.com/epicweb-dev/epic-stack",
+      "commit": "0c3060abe3ac261e95a49124f59fe14dbb0d6e80",
+      "original_file_path": "tests/e2e/rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/epicweb-dev__epic-stack/tests/e2e/rq6-agent/navigation.spec.ts",
+      "sha256": "e751448c4a029dc3617261ffd36eb22c14950f88b7ff4f6920e4923266112983",
+      "bytes": 6039,
+      "test_count": 19,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/epicweb-dev/epic-stack/0c3060abe3ac261e95a49124f59fe14dbb0d6e80/tests/e2e/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "epicweb-dev/epic-stack",
+      "repo_url": "https://github.com/epicweb-dev/epic-stack",
+      "commit": "0c3060abe3ac261e95a49124f59fe14dbb0d6e80",
+      "original_file_path": "tests/e2e/rq6-agent/notes.spec.ts",
+      "local_file_path": "source_files/epicweb-dev__epic-stack/tests/e2e/rq6-agent/notes.spec.ts",
+      "sha256": "aadf6cfb1887767aed7ada0edf310d5f61ac35aae50d07d28a6a45ace73865ad",
+      "bytes": 8381,
+      "test_count": 18,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/epicweb-dev/epic-stack/0c3060abe3ac261e95a49124f59fe14dbb0d6e80/tests/e2e/rq6-agent/notes.spec.ts"
+    },
+    {
+      "repo": "epicweb-dev/epic-stack",
+      "repo_url": "https://github.com/epicweb-dev/epic-stack",
+      "commit": "0c3060abe3ac261e95a49124f59fe14dbb0d6e80",
+      "original_file_path": "tests/e2e/rq6-agent/public-pages.spec.ts",
+      "local_file_path": "source_files/epicweb-dev__epic-stack/tests/e2e/rq6-agent/public-pages.spec.ts",
+      "sha256": "015cd91e31b5ad3b030312f23af53c1d35fa095a928700a5e5cd3a6023b0516c",
+      "bytes": 1902,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/epicweb-dev/epic-stack/0c3060abe3ac261e95a49124f59fe14dbb0d6e80/tests/e2e/rq6-agent/public-pages.spec.ts"
+    },
+    {
+      "repo": "epicweb-dev/epic-stack",
+      "repo_url": "https://github.com/epicweb-dev/epic-stack",
+      "commit": "0c3060abe3ac261e95a49124f59fe14dbb0d6e80",
+      "original_file_path": "tests/e2e/rq6-agent/settings.spec.ts",
+      "local_file_path": "source_files/epicweb-dev__epic-stack/tests/e2e/rq6-agent/settings.spec.ts",
+      "sha256": "3bd6aa843d8ccd079d7420c67681cd6816627a5af9c62f96590344699f19a61e",
+      "bytes": 6913,
+      "test_count": 18,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/epicweb-dev/epic-stack/0c3060abe3ac261e95a49124f59fe14dbb0d6e80/tests/e2e/rq6-agent/settings.spec.ts"
+    },
+    {
+      "repo": "epicweb-dev/epic-stack",
+      "repo_url": "https://github.com/epicweb-dev/epic-stack",
+      "commit": "0c3060abe3ac261e95a49124f59fe14dbb0d6e80",
+      "original_file_path": "tests/e2e/rq6-agent/users.spec.ts",
+      "local_file_path": "source_files/epicweb-dev__epic-stack/tests/e2e/rq6-agent/users.spec.ts",
+      "sha256": "8388cab2678a60ebe4361b1b1c7d2ab83768ddfa5e5de27caea3830208c37f76",
+      "bytes": 6372,
+      "test_count": 21,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/epicweb-dev/epic-stack/0c3060abe3ac261e95a49124f59fe14dbb0d6e80/tests/e2e/rq6-agent/users.spec.ts"
+    },
+    {
+      "repo": "git-truck/git-truck",
+      "repo_url": "https://github.com/git-truck/git-truck",
+      "commit": "bfb2024611f50582084f5fa2ddd68c77bd602409",
+      "original_file_path": "e2e/rq6-agent/browse.spec.ts",
+      "local_file_path": "source_files/git-truck__git-truck/e2e/rq6-agent/browse.spec.ts",
+      "sha256": "e8461398177da7d0c07492cae19af90a3a4026b663fc3624b21edcb761166820",
+      "bytes": 11043,
+      "test_count": 22,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/git-truck/git-truck/bfb2024611f50582084f5fa2ddd68c77bd602409/e2e/rq6-agent/browse.spec.ts"
+    },
+    {
+      "repo": "git-truck/git-truck",
+      "repo_url": "https://github.com/git-truck/git-truck",
+      "commit": "bfb2024611f50582084f5fa2ddd68c77bd602409",
+      "original_file_path": "e2e/rq6-agent/ui-showcase.spec.ts",
+      "local_file_path": "source_files/git-truck__git-truck/e2e/rq6-agent/ui-showcase.spec.ts",
+      "sha256": "e36fd85fe11f2fe4aa9eebce6907b90eaca07648e4a1496cc2659b73b1c15877",
+      "bytes": 6300,
+      "test_count": 16,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/git-truck/git-truck/bfb2024611f50582084f5fa2ddd68c77bd602409/e2e/rq6-agent/ui-showcase.spec.ts"
+    },
+    {
+      "repo": "git-truck/git-truck",
+      "repo_url": "https://github.com/git-truck/git-truck",
+      "commit": "bfb2024611f50582084f5fa2ddd68c77bd602409",
+      "original_file_path": "e2e/rq6-agent/view.spec.ts",
+      "local_file_path": "source_files/git-truck__git-truck/e2e/rq6-agent/view.spec.ts",
+      "sha256": "ef3a5713c3112bd719d2d6ac1c2a7afe67c599aef2ca19e7f63dd8486894cd4a",
+      "bytes": 10106,
+      "test_count": 22,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/git-truck/git-truck/bfb2024611f50582084f5fa2ddd68c77bd602409/e2e/rq6-agent/view.spec.ts"
+    },
+    {
+      "repo": "gridstack/gridstack.js",
+      "repo_url": "https://github.com/gridstack/gridstack.js",
+      "commit": "b2af38b4cf3e0b2040520007fa90f05229970664",
+      "original_file_path": "e2e/rq6-agent/demo-advanced.spec.ts",
+      "local_file_path": "source_files/gridstack__gridstack.js/e2e/rq6-agent/demo-advanced.spec.ts",
+      "sha256": "3819469e773323eef10f3bd21010b678884bf6ef2152ca867590d099ca37d862",
+      "bytes": 16180,
+      "test_count": 44,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/gridstack/gridstack.js/b2af38b4cf3e0b2040520007fa90f05229970664/e2e/rq6-agent/demo-advanced.spec.ts"
+    },
+    {
+      "repo": "gridstack/gridstack.js",
+      "repo_url": "https://github.com/gridstack/gridstack.js",
+      "commit": "b2af38b4cf3e0b2040520007fa90f05229970664",
+      "original_file_path": "e2e/rq6-agent/demo-core.spec.ts",
+      "local_file_path": "source_files/gridstack__gridstack.js/e2e/rq6-agent/demo-core.spec.ts",
+      "sha256": "c8c782744e5e64b22b5aac47c92f64ccaee4907a31891ef14e2f1595b74584bf",
+      "bytes": 12433,
+      "test_count": 36,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/gridstack/gridstack.js/b2af38b4cf3e0b2040520007fa90f05229970664/e2e/rq6-agent/demo-core.spec.ts"
+    },
+    {
+      "repo": "gridstack/gridstack.js",
+      "repo_url": "https://github.com/gridstack/gridstack.js",
+      "commit": "b2af38b4cf3e0b2040520007fa90f05229970664",
+      "original_file_path": "e2e/rq6-agent/demo-index.spec.ts",
+      "local_file_path": "source_files/gridstack__gridstack.js/e2e/rq6-agent/demo-index.spec.ts",
+      "sha256": "bdd59f27f430b1b0a6bc321a3e1e1fec40f3b98cd219599dd4b6a59b934a916a",
+      "bytes": 2688,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/gridstack/gridstack.js/b2af38b4cf3e0b2040520007fa90f05229970664/e2e/rq6-agent/demo-index.spec.ts"
+    },
+    {
+      "repo": "gridstack/gridstack.js",
+      "repo_url": "https://github.com/gridstack/gridstack.js",
+      "commit": "b2af38b4cf3e0b2040520007fa90f05229970664",
+      "original_file_path": "e2e/rq6-agent/demo-nested.spec.ts",
+      "local_file_path": "source_files/gridstack__gridstack.js/e2e/rq6-agent/demo-nested.spec.ts",
+      "sha256": "5f63428db9d7adda2acf47474cac9c5bfd0271789f84e2d76ba1a2fbfb760d6b",
+      "bytes": 7973,
+      "test_count": 19,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/gridstack/gridstack.js/b2af38b4cf3e0b2040520007fa90f05229970664/e2e/rq6-agent/demo-nested.spec.ts"
+    },
+    {
+      "repo": "gridstack/gridstack.js",
+      "repo_url": "https://github.com/gridstack/gridstack.js",
+      "commit": "b2af38b4cf3e0b2040520007fa90f05229970664",
+      "original_file_path": "e2e/rq6-agent/demo-responsive.spec.ts",
+      "local_file_path": "source_files/gridstack__gridstack.js/e2e/rq6-agent/demo-responsive.spec.ts",
+      "sha256": "db3d5e93c0ea731b9b412788982006750b0764c5ebf55ff613dc010322140474",
+      "bytes": 5465,
+      "test_count": 15,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/gridstack/gridstack.js/b2af38b4cf3e0b2040520007fa90f05229970664/e2e/rq6-agent/demo-responsive.spec.ts"
+    },
+    {
+      "repo": "gridstack/gridstack.js",
+      "repo_url": "https://github.com/gridstack/gridstack.js",
+      "commit": "b2af38b4cf3e0b2040520007fa90f05229970664",
+      "original_file_path": "e2e/rq6-agent/demo-serialization.spec.ts",
+      "local_file_path": "source_files/gridstack__gridstack.js/e2e/rq6-agent/demo-serialization.spec.ts",
+      "sha256": "7fd7e403f41175eaaa4b15d9d90af9392d8c84452549ed7b8bd0f6296a64540e",
+      "bytes": 3259,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/gridstack/gridstack.js/b2af38b4cf3e0b2040520007fa90f05229970664/e2e/rq6-agent/demo-serialization.spec.ts"
+    },
+    {
+      "repo": "gridstack/gridstack.js",
+      "repo_url": "https://github.com/gridstack/gridstack.js",
+      "commit": "b2af38b4cf3e0b2040520007fa90f05229970664",
+      "original_file_path": "e2e/rq6-agent/demo-two-grids.spec.ts",
+      "local_file_path": "source_files/gridstack__gridstack.js/e2e/rq6-agent/demo-two-grids.spec.ts",
+      "sha256": "939230a502502384c8e74234e46971b68fd8a3e57b25886fd999cdeacf1f74e4",
+      "bytes": 4776,
+      "test_count": 14,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/gridstack/gridstack.js/b2af38b4cf3e0b2040520007fa90f05229970664/e2e/rq6-agent/demo-two-grids.spec.ts"
+    },
+    {
+      "repo": "gridstack/gridstack.js",
+      "repo_url": "https://github.com/gridstack/gridstack.js",
+      "commit": "b2af38b4cf3e0b2040520007fa90f05229970664",
+      "original_file_path": "e2e/rq6-agent/gridstack-fixture.spec.ts",
+      "local_file_path": "source_files/gridstack__gridstack.js/e2e/rq6-agent/gridstack-fixture.spec.ts",
+      "sha256": "86d1c2dc9caef92deff619fc89af7b81793ad16ca89450187c862d33a9501a66",
+      "bytes": 4072,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/gridstack/gridstack.js/b2af38b4cf3e0b2040520007fa90f05229970664/e2e/rq6-agent/gridstack-fixture.spec.ts"
+    },
+    {
+      "repo": "HemmeligOrg/Hemmelig.app",
+      "repo_url": "https://github.com/HemmeligOrg/Hemmelig.app",
+      "commit": "629b2ec971027184f1685c7b7aea95c1dfab5f43",
+      "original_file_path": "tests/e2e/rq6-agent/auth.spec.ts",
+      "local_file_path": "source_files/HemmeligOrg__Hemmelig.app/tests/e2e/rq6-agent/auth.spec.ts",
+      "sha256": "7ed9553b8154563ddd86c75bf43d9389bc3542afdb917fe929159b529adb7428",
+      "bytes": 14185,
+      "test_count": 34,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/HemmeligOrg/Hemmelig.app/629b2ec971027184f1685c7b7aea95c1dfab5f43/tests/e2e/rq6-agent/auth.spec.ts"
+    },
+    {
+      "repo": "HemmeligOrg/Hemmelig.app",
+      "repo_url": "https://github.com/HemmeligOrg/Hemmelig.app",
+      "commit": "629b2ec971027184f1685c7b7aea95c1dfab5f43",
+      "original_file_path": "tests/e2e/rq6-agent/dashboard.spec.ts",
+      "local_file_path": "source_files/HemmeligOrg__Hemmelig.app/tests/e2e/rq6-agent/dashboard.spec.ts",
+      "sha256": "17df7520c719c1f56304a7c91761d33db9e59c81901e7b033869f5d495bd6e5d",
+      "bytes": 12668,
+      "test_count": 35,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/HemmeligOrg/Hemmelig.app/629b2ec971027184f1685c7b7aea95c1dfab5f43/tests/e2e/rq6-agent/dashboard.spec.ts"
+    },
+    {
+      "repo": "HemmeligOrg/Hemmelig.app",
+      "repo_url": "https://github.com/HemmeligOrg/Hemmelig.app",
+      "commit": "629b2ec971027184f1685c7b7aea95c1dfab5f43",
+      "original_file_path": "tests/e2e/rq6-agent/home.spec.ts",
+      "local_file_path": "source_files/HemmeligOrg__Hemmelig.app/tests/e2e/rq6-agent/home.spec.ts",
+      "sha256": "18e728b8c80414833eee84d990ec562ad538823b709417612a6964533c036569",
+      "bytes": 10512,
+      "test_count": 26,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/HemmeligOrg/Hemmelig.app/629b2ec971027184f1685c7b7aea95c1dfab5f43/tests/e2e/rq6-agent/home.spec.ts"
+    },
+    {
+      "repo": "HemmeligOrg/Hemmelig.app",
+      "repo_url": "https://github.com/HemmeligOrg/Hemmelig.app",
+      "commit": "629b2ec971027184f1685c7b7aea95c1dfab5f43",
+      "original_file_path": "tests/e2e/rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/HemmeligOrg__Hemmelig.app/tests/e2e/rq6-agent/navigation.spec.ts",
+      "sha256": "674067210c42a890618dc8cec8e711a3c2ef10ea3cf1bc3507f13a453f3ce1ba",
+      "bytes": 4956,
+      "test_count": 18,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/HemmeligOrg/Hemmelig.app/629b2ec971027184f1685c7b7aea95c1dfab5f43/tests/e2e/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "HemmeligOrg/Hemmelig.app",
+      "repo_url": "https://github.com/HemmeligOrg/Hemmelig.app",
+      "commit": "629b2ec971027184f1685c7b7aea95c1dfab5f43",
+      "original_file_path": "tests/e2e/rq6-agent/request-secret.spec.ts",
+      "local_file_path": "source_files/HemmeligOrg__Hemmelig.app/tests/e2e/rq6-agent/request-secret.spec.ts",
+      "sha256": "127275566fdfa7b7cfb008fc1be775104e9e46b8320ee87175e3327ab4de801d",
+      "bytes": 5432,
+      "test_count": 10,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/HemmeligOrg/Hemmelig.app/629b2ec971027184f1685c7b7aea95c1dfab5f43/tests/e2e/rq6-agent/request-secret.spec.ts"
+    },
+    {
+      "repo": "HemmeligOrg/Hemmelig.app",
+      "repo_url": "https://github.com/HemmeligOrg/Hemmelig.app",
+      "commit": "629b2ec971027184f1685c7b7aea95c1dfab5f43",
+      "original_file_path": "tests/e2e/rq6-agent/secret-view.spec.ts",
+      "local_file_path": "source_files/HemmeligOrg__Hemmelig.app/tests/e2e/rq6-agent/secret-view.spec.ts",
+      "sha256": "5ba81ec4db75769929aa111fc615291d12aff222e475d062cb88dbd03938286b",
+      "bytes": 10865,
+      "test_count": 15,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/HemmeligOrg/Hemmelig.app/629b2ec971027184f1685c7b7aea95c1dfab5f43/tests/e2e/rq6-agent/secret-view.spec.ts"
+    },
+    {
+      "repo": "HemmeligOrg/Hemmelig.app",
+      "repo_url": "https://github.com/HemmeligOrg/Hemmelig.app",
+      "commit": "629b2ec971027184f1685c7b7aea95c1dfab5f43",
+      "original_file_path": "tests/e2e/rq6-agent/static-pages.spec.ts",
+      "local_file_path": "source_files/HemmeligOrg__Hemmelig.app/tests/e2e/rq6-agent/static-pages.spec.ts",
+      "sha256": "043c903db2daf07ccaac78415cd78d1bab0222ecf876c3b5b3385e63864c801b",
+      "bytes": 5296,
+      "test_count": 16,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/HemmeligOrg/Hemmelig.app/629b2ec971027184f1685c7b7aea95c1dfab5f43/tests/e2e/rq6-agent/static-pages.spec.ts"
+    },
+    {
+      "repo": "keystonejs/keystone",
+      "repo_url": "https://github.com/keystonejs/keystone",
+      "commit": "fbab4436a9ac71e332318ae35854c2eea9ac8e68",
+      "original_file_path": "rq6-agent/dashboard.spec.ts",
+      "local_file_path": "source_files/keystonejs__keystone/rq6-agent/dashboard.spec.ts",
+      "sha256": "1e907db95177d047b852885b897f8287acb98e32b407090ccee0f0a0a259737a",
+      "bytes": 2263,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/keystonejs/keystone/fbab4436a9ac71e332318ae35854c2eea9ac8e68/rq6-agent/dashboard.spec.ts"
+    },
+    {
+      "repo": "keystonejs/keystone",
+      "repo_url": "https://github.com/keystonejs/keystone",
+      "commit": "fbab4436a9ac71e332318ae35854c2eea9ac8e68",
+      "original_file_path": "rq6-agent/init.spec.ts",
+      "local_file_path": "source_files/keystonejs__keystone/rq6-agent/init.spec.ts",
+      "sha256": "9ff3da94237eac117fd3ca6d396600159ed737f4dc71c279473adf0de4bf37ef",
+      "bytes": 776,
+      "test_count": 1,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/keystonejs/keystone/fbab4436a9ac71e332318ae35854c2eea9ac8e68/rq6-agent/init.spec.ts"
+    },
+    {
+      "repo": "keystonejs/keystone",
+      "repo_url": "https://github.com/keystonejs/keystone",
+      "commit": "fbab4436a9ac71e332318ae35854c2eea9ac8e68",
+      "original_file_path": "rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/keystonejs__keystone/rq6-agent/navigation.spec.ts",
+      "sha256": "8dc9033cb894c37e22e6db25f7b754cd7e82836dc55a31948f2c369fbd915186",
+      "bytes": 2503,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/keystonejs/keystone/fbab4436a9ac71e332318ae35854c2eea9ac8e68/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "keystonejs/keystone",
+      "repo_url": "https://github.com/keystonejs/keystone",
+      "commit": "fbab4436a9ac71e332318ae35854c2eea9ac8e68",
+      "original_file_path": "rq6-agent/signin.spec.ts",
+      "local_file_path": "source_files/keystonejs__keystone/rq6-agent/signin.spec.ts",
+      "sha256": "4202d75984d18a70e25c82ebc72304fe7a5dc761224a8161b920924c9d902caf",
+      "bytes": 3416,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/keystonejs/keystone/fbab4436a9ac71e332318ae35854c2eea9ac8e68/rq6-agent/signin.spec.ts"
+    },
+    {
+      "repo": "keystonejs/keystone",
+      "repo_url": "https://github.com/keystonejs/keystone",
+      "commit": "fbab4436a9ac71e332318ae35854c2eea9ac8e68",
+      "original_file_path": "rq6-agent/users-crud.spec.ts",
+      "local_file_path": "source_files/keystonejs__keystone/rq6-agent/users-crud.spec.ts",
+      "sha256": "51cae81064f0793e630ba8b99a9b9fb2a69c1cb5733374f2e97247ed57bf9de5",
+      "bytes": 9217,
+      "test_count": 14,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/keystonejs/keystone/fbab4436a9ac71e332318ae35854c2eea9ac8e68/rq6-agent/users-crud.spec.ts"
+    },
+    {
+      "repo": "keystonejs/keystone",
+      "repo_url": "https://github.com/keystonejs/keystone",
+      "commit": "fbab4436a9ac71e332318ae35854c2eea9ac8e68",
+      "original_file_path": "rq6-agent/users-list.spec.ts",
+      "local_file_path": "source_files/keystonejs__keystone/rq6-agent/users-list.spec.ts",
+      "sha256": "d94c382f6408a5756c78456f120e566f0f237f2b52d04efed4a4a0aaf6e73683",
+      "bytes": 3684,
+      "test_count": 10,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/keystonejs/keystone/fbab4436a9ac71e332318ae35854c2eea9ac8e68/rq6-agent/users-list.spec.ts"
+    },
+    {
+      "repo": "laststance/react-typescript-todomvc-2022",
+      "repo_url": "https://github.com/laststance/react-typescript-todomvc-2022",
+      "commit": "116dd1f51bc7fe206958401c3251d43bcc051e52",
+      "original_file_path": "rq6-agent/todomvc.spec.ts",
+      "local_file_path": "source_files/laststance__react-typescript-todomvc-2022/rq6-agent/todomvc.spec.ts",
+      "sha256": "6747244ebc4f98595467499928a5eedeb46dde465b786fa7890e3eb5fe95be26",
+      "bytes": 15044,
+      "test_count": 33,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/laststance/react-typescript-todomvc-2022/116dd1f51bc7fe206958401c3251d43bcc051e52/rq6-agent/todomvc.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/analytics.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/analytics.spec.ts",
+      "sha256": "528b16802c7073e486f0d34baeec1e99109b0b3c0213b8b6ee772961cbe88ca2",
+      "bytes": 938,
+      "test_count": 3,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/analytics.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/creatives.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/creatives.spec.ts",
+      "sha256": "a0b2d70d7d1c863a3d452c6e04e9fcd24b955aad2fe306248f292de24d7050cd",
+      "bytes": 2348,
+      "test_count": 5,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/creatives.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/domain-mapping.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/domain-mapping.spec.ts",
+      "sha256": "fa64be821c320c08643791908265b1547041acfd7b36902592952721381ff35a",
+      "bytes": 993,
+      "test_count": 3,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/domain-mapping.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/login.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/login.spec.ts",
+      "sha256": "c6fe929e6df017802253678741d0408366762cf5ca567b1e5c5b98da01ed1054",
+      "bytes": 11378,
+      "test_count": 48,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/login.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/media.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/media.spec.ts",
+      "sha256": "86f0a8a8fa3ddffa2ac7e1ff8675a217f44c625fbf0f639a551e6ddc67de20e5",
+      "bytes": 912,
+      "test_count": 3,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/media.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/membership.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/membership.spec.ts",
+      "sha256": "6017334efb9905a65b660e2233788753fb29a52c69f89e72d69e5c2154cf9db4",
+      "bytes": 1671,
+      "test_count": 4,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/membership.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/navigation.spec.ts",
+      "sha256": "3d042a382f86367768d754c45341c969ce38dd905855b4e23855abc6c408e451",
+      "bytes": 4776,
+      "test_count": 20,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/onboarding.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/onboarding.spec.ts",
+      "sha256": "71f2fa728160a15d45bde7be1cb47695636282ac89a0be20946c314e9cc1ea50",
+      "bytes": 2081,
+      "test_count": 4,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/onboarding.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/posts.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/posts.spec.ts",
+      "sha256": "55b109c2d93db69427a005a4785eabef783d088f9eecc2a789ea2f2f8ee837c2",
+      "bytes": 4130,
+      "test_count": 12,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/posts.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/profile.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/profile.spec.ts",
+      "sha256": "8feccec6d5b7e02c7ade0cf55788e316b866dd4b5f483192b7eae1e255a51dcb",
+      "bytes": 1285,
+      "test_count": 4,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/profile.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/settings.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/settings.spec.ts",
+      "sha256": "bf96dda5cd7dcf58615a279fbaa9cc7e790506e9e432d147bf1fff688533a03a",
+      "bytes": 4335,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/settings.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/subscribers.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/subscribers.spec.ts",
+      "sha256": "4268a7b105b9d6b3d62d330214c5b4178fc0402c910fa0c0dc956d130f3af9f0",
+      "bytes": 1062,
+      "test_count": 3,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/subscribers.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/tags.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/tags.spec.ts",
+      "sha256": "2803541538cd581900d54a5679b4a0b5bdf4fa794ed0c7cfdf7e0fb40b72b76e",
+      "bytes": 1198,
+      "test_count": 4,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/tags.spec.ts"
+    },
+    {
+      "repo": "letterpad/letterpad",
+      "repo_url": "https://github.com/letterpad/letterpad",
+      "commit": "5639e09b738f9c90ca877cd4a7c95f562e1bdc62",
+      "original_file_path": "rq6-agent/themes.spec.ts",
+      "local_file_path": "source_files/letterpad__letterpad/rq6-agent/themes.spec.ts",
+      "sha256": "020b8755467ac4368288fa77feef00bcb18ac6c812d1d51d685188db7d2ae29f",
+      "bytes": 1185,
+      "test_count": 4,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/letterpad/letterpad/5639e09b738f9c90ca877cd4a7c95f562e1bdc62/rq6-agent/themes.spec.ts"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "repo_url": "https://github.com/maplibre/maputnik",
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200",
+      "original_file_path": "rq6-agent/layer-editor.spec.ts",
+      "local_file_path": "source_files/maplibre__maputnik/rq6-agent/layer-editor.spec.ts",
+      "sha256": "9c32e18db7d786b35544c640740576e76ba4cdbdda7596f4af3648fd8cb10e77",
+      "bytes": 4923,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/maplibre/maputnik/c0f938cacb29c2b56f06d20d8375c4351f53d200/rq6-agent/layer-editor.spec.ts"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "repo_url": "https://github.com/maplibre/maputnik",
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200",
+      "original_file_path": "rq6-agent/layers.spec.ts",
+      "local_file_path": "source_files/maplibre__maputnik/rq6-agent/layers.spec.ts",
+      "sha256": "9349b74494bbd97e43e1862d125fb8a7b3c9235d58fc0bb146ea8666bfcf8c45",
+      "bytes": 6375,
+      "test_count": 12,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/maplibre/maputnik/c0f938cacb29c2b56f06d20d8375c4351f53d200/rq6-agent/layers.spec.ts"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "repo_url": "https://github.com/maplibre/maputnik",
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200",
+      "original_file_path": "rq6-agent/modal-export.spec.ts",
+      "local_file_path": "source_files/maplibre__maputnik/rq6-agent/modal-export.spec.ts",
+      "sha256": "6193c9be911d7bc9bea24501bd3e2a4efd1905367fa77f0f59b95ca6c4f45ba3",
+      "bytes": 2897,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/maplibre/maputnik/c0f938cacb29c2b56f06d20d8375c4351f53d200/rq6-agent/modal-export.spec.ts"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "repo_url": "https://github.com/maplibre/maputnik",
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200",
+      "original_file_path": "rq6-agent/modal-open.spec.ts",
+      "local_file_path": "source_files/maplibre__maputnik/rq6-agent/modal-open.spec.ts",
+      "sha256": "47bfacf1f2168f9195b66cc2fdd23f95fc7ff8bb713ede1b62879b19bfd1a846",
+      "bytes": 4878,
+      "test_count": 12,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/maplibre/maputnik/c0f938cacb29c2b56f06d20d8375c4351f53d200/rq6-agent/modal-open.spec.ts"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "repo_url": "https://github.com/maplibre/maputnik",
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200",
+      "original_file_path": "rq6-agent/modal-other.spec.ts",
+      "local_file_path": "source_files/maplibre__maputnik/rq6-agent/modal-other.spec.ts",
+      "sha256": "da1c187240e33e09f89502aa8e986c7a00d13a078e58d4f090250d418f7d19e8",
+      "bytes": 11268,
+      "test_count": 27,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/maplibre/maputnik/c0f938cacb29c2b56f06d20d8375c4351f53d200/rq6-agent/modal-other.spec.ts"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "repo_url": "https://github.com/maplibre/maputnik",
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200",
+      "original_file_path": "rq6-agent/modal-settings.spec.ts",
+      "local_file_path": "source_files/maplibre__maputnik/rq6-agent/modal-settings.spec.ts",
+      "sha256": "d374071fc1ba1a8bb3f09aad6c3356799f88da08fdb5a8c6389c157884d1cdbb",
+      "bytes": 5463,
+      "test_count": 14,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/maplibre/maputnik/c0f938cacb29c2b56f06d20d8375c4351f53d200/rq6-agent/modal-settings.spec.ts"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "repo_url": "https://github.com/maplibre/maputnik",
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200",
+      "original_file_path": "rq6-agent/modal-sources.spec.ts",
+      "local_file_path": "source_files/maplibre__maputnik/rq6-agent/modal-sources.spec.ts",
+      "sha256": "143b5f1213f4b09fd143612d81f8e0fe83b7ab24a233b69170cdbff57bfc1c6c",
+      "bytes": 6684,
+      "test_count": 14,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/maplibre/maputnik/c0f938cacb29c2b56f06d20d8375c4351f53d200/rq6-agent/modal-sources.spec.ts"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "repo_url": "https://github.com/maplibre/maputnik",
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200",
+      "original_file_path": "rq6-agent/toolbar.spec.ts",
+      "local_file_path": "source_files/maplibre__maputnik/rq6-agent/toolbar.spec.ts",
+      "sha256": "c8da908185c2e0490ec411660f293edcf03dc72a0429e838f19065583e2edda2",
+      "bytes": 4866,
+      "test_count": 18,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/maplibre/maputnik/c0f938cacb29c2b56f06d20d8375c4351f53d200/rq6-agent/toolbar.spec.ts"
+    },
+    {
+      "repo": "maplibre/maputnik",
+      "repo_url": "https://github.com/maplibre/maputnik",
+      "commit": "c0f938cacb29c2b56f06d20d8375c4351f53d200",
+      "original_file_path": "rq6-agent/url-state.spec.ts",
+      "local_file_path": "source_files/maplibre__maputnik/rq6-agent/url-state.spec.ts",
+      "sha256": "70d0246aa8b4f72b58afae69bb704a98d20b79a7fca7e90ad2d38a80565db4f7",
+      "bytes": 2745,
+      "test_count": 7,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/maplibre/maputnik/c0f938cacb29c2b56f06d20d8375c4351f53d200/rq6-agent/url-state.spec.ts"
+    },
+    {
+      "repo": "marmelab/react-admin",
+      "repo_url": "https://github.com/marmelab/react-admin",
+      "commit": "6f79ddb5eacfac65170edceb52703862cdce40d0",
+      "original_file_path": "rq6-agent/auth.spec.ts",
+      "local_file_path": "source_files/marmelab__react-admin/rq6-agent/auth.spec.ts",
+      "sha256": "36ea4a5d1f785f3f91651a8cc54659cb9c16e57827cc1c35e16d9f8d8531b9d6",
+      "bytes": 3510,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/marmelab/react-admin/6f79ddb5eacfac65170edceb52703862cdce40d0/rq6-agent/auth.spec.ts"
+    },
+    {
+      "repo": "marmelab/react-admin",
+      "repo_url": "https://github.com/marmelab/react-admin",
+      "commit": "6f79ddb5eacfac65170edceb52703862cdce40d0",
+      "original_file_path": "rq6-agent/companies.spec.ts",
+      "local_file_path": "source_files/marmelab__react-admin/rq6-agent/companies.spec.ts",
+      "sha256": "19caa591c0451031e351aabcd8b819490779f17d3fb19084143ebf100ce3f765",
+      "bytes": 4775,
+      "test_count": 10,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/marmelab/react-admin/6f79ddb5eacfac65170edceb52703862cdce40d0/rq6-agent/companies.spec.ts"
+    },
+    {
+      "repo": "marmelab/react-admin",
+      "repo_url": "https://github.com/marmelab/react-admin",
+      "commit": "6f79ddb5eacfac65170edceb52703862cdce40d0",
+      "original_file_path": "rq6-agent/contacts.spec.ts",
+      "local_file_path": "source_files/marmelab__react-admin/rq6-agent/contacts.spec.ts",
+      "sha256": "2cb35b72b7e10625113c133c4970d6ad0f16ecd39cc2762898f729b2612083db",
+      "bytes": 7998,
+      "test_count": 13,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/marmelab/react-admin/6f79ddb5eacfac65170edceb52703862cdce40d0/rq6-agent/contacts.spec.ts"
+    },
+    {
+      "repo": "marmelab/react-admin",
+      "repo_url": "https://github.com/marmelab/react-admin",
+      "commit": "6f79ddb5eacfac65170edceb52703862cdce40d0",
+      "original_file_path": "rq6-agent/dashboard.spec.ts",
+      "local_file_path": "source_files/marmelab__react-admin/rq6-agent/dashboard.spec.ts",
+      "sha256": "214ce344f11ca44d79e0f0a7015c77242b9e249620c62815989aa4af259faec5",
+      "bytes": 3669,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/marmelab/react-admin/6f79ddb5eacfac65170edceb52703862cdce40d0/rq6-agent/dashboard.spec.ts"
+    },
+    {
+      "repo": "marmelab/react-admin",
+      "repo_url": "https://github.com/marmelab/react-admin",
+      "commit": "6f79ddb5eacfac65170edceb52703862cdce40d0",
+      "original_file_path": "rq6-agent/deals.spec.ts",
+      "local_file_path": "source_files/marmelab__react-admin/rq6-agent/deals.spec.ts",
+      "sha256": "c6d4cf615b8e38e686b467f481b719ab62d7341ec1d8b8423ead260939d121dd",
+      "bytes": 5801,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/marmelab/react-admin/6f79ddb5eacfac65170edceb52703862cdce40d0/rq6-agent/deals.spec.ts"
+    },
+    {
+      "repo": "marmelab/react-admin",
+      "repo_url": "https://github.com/marmelab/react-admin",
+      "commit": "6f79ddb5eacfac65170edceb52703862cdce40d0",
+      "original_file_path": "rq6-agent/sales.spec.ts",
+      "local_file_path": "source_files/marmelab__react-admin/rq6-agent/sales.spec.ts",
+      "sha256": "df9fc5e0dfb52867b193e41a3fb55707943f48e7caceb3ac8ab6fac84718afc4",
+      "bytes": 3919,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/marmelab/react-admin/6f79ddb5eacfac65170edceb52703862cdce40d0/rq6-agent/sales.spec.ts"
+    },
+    {
+      "repo": "marmelab/react-admin",
+      "repo_url": "https://github.com/marmelab/react-admin",
+      "commit": "6f79ddb5eacfac65170edceb52703862cdce40d0",
+      "original_file_path": "rq6-agent/settings.spec.ts",
+      "local_file_path": "source_files/marmelab__react-admin/rq6-agent/settings.spec.ts",
+      "sha256": "c7f1524f51ddb2656e9cf95d6747c9842e3ae11224347613959f825ea255b35f",
+      "bytes": 4547,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/marmelab/react-admin/6f79ddb5eacfac65170edceb52703862cdce40d0/rq6-agent/settings.spec.ts"
+    },
+    {
+      "repo": "mermaid-js/mermaid",
+      "repo_url": "https://github.com/mermaid-js/mermaid",
+      "commit": "969521aed9ae4f3c54a959ce27f85b2283c4e92f",
+      "original_file_path": "rq6-agent/advanced-diagrams.spec.ts",
+      "local_file_path": "source_files/mermaid-js__mermaid/rq6-agent/advanced-diagrams.spec.ts",
+      "sha256": "42f7dcbad5546b77a0e64bcc7445669237332eb0306e05d2304d3a2f01d114d0",
+      "bytes": 10243,
+      "test_count": 28,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/mermaid-js/mermaid/969521aed9ae4f3c54a959ce27f85b2283c4e92f/rq6-agent/advanced-diagrams.spec.ts"
+    },
+    {
+      "repo": "mermaid-js/mermaid",
+      "repo_url": "https://github.com/mermaid-js/mermaid",
+      "commit": "969521aed9ae4f3c54a959ce27f85b2283c4e92f",
+      "original_file_path": "rq6-agent/core-diagrams.spec.ts",
+      "local_file_path": "source_files/mermaid-js__mermaid/rq6-agent/core-diagrams.spec.ts",
+      "sha256": "9ef33e835f17b7df4af04bcdcfa73234a215e80b816d699bc2718c6eb828bc5f",
+      "bytes": 8665,
+      "test_count": 25,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/mermaid-js/mermaid/969521aed9ae4f3c54a959ce27f85b2283c4e92f/rq6-agent/core-diagrams.spec.ts"
+    },
+    {
+      "repo": "mermaid-js/mermaid",
+      "repo_url": "https://github.com/mermaid-js/mermaid",
+      "commit": "969521aed9ae4f3c54a959ce27f85b2283c4e92f",
+      "original_file_path": "rq6-agent/data-charts.spec.ts",
+      "local_file_path": "source_files/mermaid-js__mermaid/rq6-agent/data-charts.spec.ts",
+      "sha256": "bef6a3a40c43ce6e88e4df55a617aad46e9d1e1a2710ac7db713190fa69b87c3",
+      "bytes": 4718,
+      "test_count": 15,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/mermaid-js/mermaid/969521aed9ae4f3c54a959ce27f85b2283c4e92f/rq6-agent/data-charts.spec.ts"
+    },
+    {
+      "repo": "mermaid-js/mermaid",
+      "repo_url": "https://github.com/mermaid-js/mermaid",
+      "commit": "969521aed9ae4f3c54a959ce27f85b2283c4e92f",
+      "original_file_path": "rq6-agent/dev-pages.spec.ts",
+      "local_file_path": "source_files/mermaid-js__mermaid/rq6-agent/dev-pages.spec.ts",
+      "sha256": "3bdbd51c9896a399e2967a4c0fd0452afab6b538a78974d352a5196beda65c2d",
+      "bytes": 5203,
+      "test_count": 14,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/mermaid-js/mermaid/969521aed9ae4f3c54a959ce27f85b2283c4e92f/rq6-agent/dev-pages.spec.ts"
+    },
+    {
+      "repo": "mermaid-js/mermaid",
+      "repo_url": "https://github.com/mermaid-js/mermaid",
+      "commit": "969521aed9ae4f3c54a959ce27f85b2283c4e92f",
+      "original_file_path": "rq6-agent/entity-diagrams.spec.ts",
+      "local_file_path": "source_files/mermaid-js__mermaid/rq6-agent/entity-diagrams.spec.ts",
+      "sha256": "575bb8fdd1982de30427ebc70163c97a7a391ffe05ca2273902bc53915107ea8",
+      "bytes": 4046,
+      "test_count": 10,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/mermaid-js/mermaid/969521aed9ae4f3c54a959ce27f85b2283c4e92f/rq6-agent/entity-diagrams.spec.ts"
+    },
+    {
+      "repo": "mermaid-js/mermaid",
+      "repo_url": "https://github.com/mermaid-js/mermaid",
+      "commit": "969521aed9ae4f3c54a959ce27f85b2283c4e92f",
+      "original_file_path": "rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/mermaid-js__mermaid/rq6-agent/navigation.spec.ts",
+      "sha256": "4354e2ac1f86710b52fac88297031e9efec4ee15eddc30f6790b3a8d90361042",
+      "bytes": 2450,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/mermaid-js/mermaid/969521aed9ae4f3c54a959ce27f85b2283c4e92f/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "mermaid-js/mermaid",
+      "repo_url": "https://github.com/mermaid-js/mermaid",
+      "commit": "969521aed9ae4f3c54a959ce27f85b2283c4e92f",
+      "original_file_path": "rq6-agent/specialty-diagrams.spec.ts",
+      "local_file_path": "source_files/mermaid-js__mermaid/rq6-agent/specialty-diagrams.spec.ts",
+      "sha256": "d7f3c7d9850e3048903bb8dc894456540c78376d57680fc50f84d8a547f3f603",
+      "bytes": 6341,
+      "test_count": 19,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/mermaid-js/mermaid/969521aed9ae4f3c54a959ce27f85b2283c4e92f/rq6-agent/specialty-diagrams.spec.ts"
+    },
+    {
+      "repo": "motiondivision/motion-vue",
+      "repo_url": "https://github.com/motiondivision/motion-vue",
+      "commit": "509fc3287287b728625688989047ec6636fe7130",
+      "original_file_path": "tests/rq6-agent/animate-presence.spec.ts",
+      "local_file_path": "source_files/motiondivision__motion-vue/tests/rq6-agent/animate-presence.spec.ts",
+      "sha256": "ec4dc4a57f427a6c5dd475447b447f9ac9b1b5a9729d0e479025e3b707a7565b",
+      "bytes": 8298,
+      "test_count": 18,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/motiondivision/motion-vue/509fc3287287b728625688989047ec6636fe7130/tests/rq6-agent/animate-presence.spec.ts"
+    },
+    {
+      "repo": "motiondivision/motion-vue",
+      "repo_url": "https://github.com/motiondivision/motion-vue",
+      "commit": "509fc3287287b728625688989047ec6636fe7130",
+      "original_file_path": "tests/rq6-agent/directive.spec.ts",
+      "local_file_path": "source_files/motiondivision__motion-vue/tests/rq6-agent/directive.spec.ts",
+      "sha256": "186e99b79b989badb2fc09b90d256932174fdf88b5d47d71a58d09b7ded0f17b",
+      "bytes": 5618,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/motiondivision/motion-vue/509fc3287287b728625688989047ec6636fe7130/tests/rq6-agent/directive.spec.ts"
+    },
+    {
+      "repo": "motiondivision/motion-vue",
+      "repo_url": "https://github.com/motiondivision/motion-vue",
+      "commit": "509fc3287287b728625688989047ec6636fe7130",
+      "original_file_path": "tests/rq6-agent/drag.spec.ts",
+      "local_file_path": "source_files/motiondivision__motion-vue/tests/rq6-agent/drag.spec.ts",
+      "sha256": "6275b3e9f6addc4968cb3610a7d097b9f5cea4e54d838841b4fcd236f93f7f9a",
+      "bytes": 5741,
+      "test_count": 15,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/motiondivision/motion-vue/509fc3287287b728625688989047ec6636fe7130/tests/rq6-agent/drag.spec.ts"
+    },
+    {
+      "repo": "motiondivision/motion-vue",
+      "repo_url": "https://github.com/motiondivision/motion-vue",
+      "commit": "509fc3287287b728625688989047ec6636fe7130",
+      "original_file_path": "tests/rq6-agent/gestures.spec.ts",
+      "local_file_path": "source_files/motiondivision__motion-vue/tests/rq6-agent/gestures.spec.ts",
+      "sha256": "ba36054765e5c54052c85f1f9caf6c907619d9da106f88879155c7cb35be764d",
+      "bytes": 3068,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/motiondivision/motion-vue/509fc3287287b728625688989047ec6636fe7130/tests/rq6-agent/gestures.spec.ts"
+    },
+    {
+      "repo": "motiondivision/motion-vue",
+      "repo_url": "https://github.com/motiondivision/motion-vue",
+      "commit": "509fc3287287b728625688989047ec6636fe7130",
+      "original_file_path": "tests/rq6-agent/layout.spec.ts",
+      "local_file_path": "source_files/motiondivision__motion-vue/tests/rq6-agent/layout.spec.ts",
+      "sha256": "848b999b01cc9821e7fc457b157805037b7a1f45118c6a4f8b8d00c1ae962f46",
+      "bytes": 2191,
+      "test_count": 5,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/motiondivision/motion-vue/509fc3287287b728625688989047ec6636fe7130/tests/rq6-agent/layout.spec.ts"
+    },
+    {
+      "repo": "motiondivision/motion-vue",
+      "repo_url": "https://github.com/motiondivision/motion-vue",
+      "commit": "509fc3287287b728625688989047ec6636fe7130",
+      "original_file_path": "tests/rq6-agent/misc.spec.ts",
+      "local_file_path": "source_files/motiondivision__motion-vue/tests/rq6-agent/misc.spec.ts",
+      "sha256": "c83116170b1c314d81d2ac9d63559862dc9c9d7de54f36c2a391ba8d73f486d1",
+      "bytes": 10647,
+      "test_count": 26,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/motiondivision/motion-vue/509fc3287287b728625688989047ec6636fe7130/tests/rq6-agent/misc.spec.ts"
+    },
+    {
+      "repo": "motiondivision/motion-vue",
+      "repo_url": "https://github.com/motiondivision/motion-vue",
+      "commit": "509fc3287287b728625688989047ec6636fe7130",
+      "original_file_path": "tests/rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/motiondivision__motion-vue/tests/rq6-agent/navigation.spec.ts",
+      "sha256": "b160ca028eeba748b492ee15e36368f761d96e51ccd9b96efb6f9111bf78d95a",
+      "bytes": 1670,
+      "test_count": 4,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/motiondivision/motion-vue/509fc3287287b728625688989047ec6636fe7130/tests/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "motiondivision/motion-vue",
+      "repo_url": "https://github.com/motiondivision/motion-vue",
+      "commit": "509fc3287287b728625688989047ec6636fe7130",
+      "original_file_path": "tests/rq6-agent/scroll.spec.ts",
+      "local_file_path": "source_files/motiondivision__motion-vue/tests/rq6-agent/scroll.spec.ts",
+      "sha256": "11b4b32349e3190fd58da1a4e2d5c04ef6d90726bbe08b374c60b2257361b32e",
+      "bytes": 7999,
+      "test_count": 22,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/motiondivision/motion-vue/509fc3287287b728625688989047ec6636fe7130/tests/rq6-agent/scroll.spec.ts"
+    },
+    {
+      "repo": "openplayerjs/openplayerjs",
+      "repo_url": "https://github.com/openplayerjs/openplayerjs",
+      "commit": "359f196bb83022b596b99dd31212ef3905193afb",
+      "original_file_path": "e2e/rq6-agent/ads.spec.ts",
+      "local_file_path": "source_files/openplayerjs__openplayerjs/e2e/rq6-agent/ads.spec.ts",
+      "sha256": "b689bd7caff380742fd307950ab60ff05019482b2573c8d32c3c241c799a43a9",
+      "bytes": 3214,
+      "test_count": 14,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/openplayerjs/openplayerjs/359f196bb83022b596b99dd31212ef3905193afb/e2e/rq6-agent/ads.spec.ts"
+    },
+    {
+      "repo": "openplayerjs/openplayerjs",
+      "repo_url": "https://github.com/openplayerjs/openplayerjs",
+      "commit": "359f196bb83022b596b99dd31212ef3905193afb",
+      "original_file_path": "e2e/rq6-agent/controls.spec.ts",
+      "local_file_path": "source_files/openplayerjs__openplayerjs/e2e/rq6-agent/controls.spec.ts",
+      "sha256": "86d8c73e6bae417cf53e506e4faa9d188950732514ccdc9b46a3af7107f7513f",
+      "bytes": 7831,
+      "test_count": 23,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/openplayerjs/openplayerjs/359f196bb83022b596b99dd31212ef3905193afb/e2e/rq6-agent/controls.spec.ts"
+    },
+    {
+      "repo": "openplayerjs/openplayerjs",
+      "repo_url": "https://github.com/openplayerjs/openplayerjs",
+      "commit": "359f196bb83022b596b99dd31212ef3905193afb",
+      "original_file_path": "e2e/rq6-agent/live.spec.ts",
+      "local_file_path": "source_files/openplayerjs__openplayerjs/e2e/rq6-agent/live.spec.ts",
+      "sha256": "15a18cb7afbf7e247ccae2364504059c84395dd454ca6f888a764a23621b45cf",
+      "bytes": 3820,
+      "test_count": 18,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/openplayerjs/openplayerjs/359f196bb83022b596b99dd31212ef3905193afb/e2e/rq6-agent/live.spec.ts"
+    },
+    {
+      "repo": "openplayerjs/openplayerjs",
+      "repo_url": "https://github.com/openplayerjs/openplayerjs",
+      "commit": "359f196bb83022b596b99dd31212ef3905193afb",
+      "original_file_path": "e2e/rq6-agent/pages.spec.ts",
+      "local_file_path": "source_files/openplayerjs__openplayerjs/e2e/rq6-agent/pages.spec.ts",
+      "sha256": "b7932080da351ea85a35617d4d345ea1f060feccaae8b9a5c7d1c772a5eaee1b",
+      "bytes": 13321,
+      "test_count": 37,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/openplayerjs/openplayerjs/359f196bb83022b596b99dd31212ef3905193afb/e2e/rq6-agent/pages.spec.ts"
+    },
+    {
+      "repo": "openplayerjs/openplayerjs",
+      "repo_url": "https://github.com/openplayerjs/openplayerjs",
+      "commit": "359f196bb83022b596b99dd31212ef3905193afb",
+      "original_file_path": "e2e/rq6-agent/playback.spec.ts",
+      "local_file_path": "source_files/openplayerjs__openplayerjs/e2e/rq6-agent/playback.spec.ts",
+      "sha256": "b61b9bcf8c8e70555850f727181cb92e1ad38fe1f9101b6466c081662169d0b3",
+      "bytes": 5495,
+      "test_count": 16,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/openplayerjs/openplayerjs/359f196bb83022b596b99dd31212ef3905193afb/e2e/rq6-agent/playback.spec.ts"
+    },
+    {
+      "repo": "openplayerjs/openplayerjs",
+      "repo_url": "https://github.com/openplayerjs/openplayerjs",
+      "commit": "359f196bb83022b596b99dd31212ef3905193afb",
+      "original_file_path": "e2e/rq6-agent/source-management.spec.ts",
+      "local_file_path": "source_files/openplayerjs__openplayerjs/e2e/rq6-agent/source-management.spec.ts",
+      "sha256": "fcb6aaaa75aaa9d529fb6e9f59cfb1e1086017102be721161a5efef2b48cccd6",
+      "bytes": 4086,
+      "test_count": 10,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/openplayerjs/openplayerjs/359f196bb83022b596b99dd31212ef3905193afb/e2e/rq6-agent/source-management.spec.ts"
+    },
+    {
+      "repo": "openplayerjs/openplayerjs",
+      "repo_url": "https://github.com/openplayerjs/openplayerjs",
+      "commit": "359f196bb83022b596b99dd31212ef3905193afb",
+      "original_file_path": "e2e/rq6-agent/youtube.spec.ts",
+      "local_file_path": "source_files/openplayerjs__openplayerjs/e2e/rq6-agent/youtube.spec.ts",
+      "sha256": "3d1b20ad0659f66b08b9d13bc793945f4f39e50e429b118b6b9c59ba4d8a3f0d",
+      "bytes": 3032,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/openplayerjs/openplayerjs/359f196bb83022b596b99dd31212ef3905193afb/e2e/rq6-agent/youtube.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/accessibility.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/accessibility.spec.ts",
+      "sha256": "1e83dfa29907ba4453c321a8201d7a66b6ad2c6eeed3d4da6c6bfb963ef3cb74",
+      "bytes": 3673,
+      "test_count": 10,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/accessibility.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/config.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/config.spec.ts",
+      "sha256": "f4340f83388fb2c8c7a33399d4b2e43c61c5dd76c3d26ab451749ccfb16692d6",
+      "bytes": 4380,
+      "test_count": 12,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/config.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/daily-summary.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/daily-summary.spec.ts",
+      "sha256": "f04675f2c4c8dd7e6f07dc9da3bd91035e58fb5cba208554cc10ca3f97bff6ec",
+      "bytes": 4373,
+      "test_count": 13,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/daily-summary.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/header-interactions.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/header-interactions.spec.ts",
+      "sha256": "ea443646c747dc952a8de36867bc8c2267c7f186d65a3285e6feb5082420a894",
+      "bytes": 5346,
+      "test_count": 13,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/header-interactions.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/navigation.spec.ts",
+      "sha256": "02875602af775b31c4828dc8ad5c2848e2f63c17270faaef3ce7a8057138894d",
+      "bytes": 6658,
+      "test_count": 18,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/onboarding.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/onboarding.spec.ts",
+      "sha256": "c3ef451d58796352bd66fbe9e858ab6ccf2764ee2662ae6c1dd9bb06379ee491",
+      "bytes": 4002,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/onboarding.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/pages.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/pages.spec.ts",
+      "sha256": "4dfbfe130425d075c9979ebaad00053d6f6687f8265eb8eb0908ab747cdb434b",
+      "bytes": 7656,
+      "test_count": 22,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/pages.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/schedule-boards.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/schedule-boards.spec.ts",
+      "sha256": "460dc8ea2b8034216f3636eeaad4e4fca634e2e348620705a34939928ed0511e",
+      "bytes": 5239,
+      "test_count": 15,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/schedule-boards.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/search.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/search.spec.ts",
+      "sha256": "0ecf5ead2a073435b525baca5b1fa3c98877dbdcd41825ee1ae3ea73344f2f60",
+      "bytes": 2824,
+      "test_count": 7,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/search.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/task-interactions.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/task-interactions.spec.ts",
+      "sha256": "a74ccda08fd744bea89448cc3e24e7539aa9ea9a59c9bd5ce3961e0b45cc7569",
+      "bytes": 6401,
+      "test_count": 12,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/task-interactions.spec.ts"
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "repo_url": "https://github.com/super-productivity/super-productivity",
+      "commit": "76a21c9d19efbb30003c3ecb87c77c0f87569999",
+      "original_file_path": "e2e/rq6-agent/tasks.spec.ts",
+      "local_file_path": "source_files/super-productivity__super-productivity/e2e/rq6-agent/tasks.spec.ts",
+      "sha256": "4432f98e457b9509ac2223c026c9330cb799cc3953f96f03633763e8b74f902c",
+      "bytes": 5743,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/super-productivity/super-productivity/76a21c9d19efbb30003c3ecb87c77c0f87569999/e2e/rq6-agent/tasks.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/alpinejs.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/alpinejs.spec.ts",
+      "sha256": "4a3d5e3b270329e530f4b5079abab6f3478abcf16f1e8ae751c013df408a3c8a",
+      "bytes": 2292,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/alpinejs.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/animation-classes.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/animation-classes.spec.ts",
+      "sha256": "6ed0a9ff319274d4c5aa6be4f5555145a97859094a871b7b7dfdd23543002fb0",
+      "bytes": 4455,
+      "test_count": 7,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/animation-classes.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/animation-timing.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/animation-timing.spec.ts",
+      "sha256": "6412ad9bf96ba2904dad1bf14265ba33d1406ee1c0336e182f4d46e45c6fca7a",
+      "bytes": 2241,
+      "test_count": 7,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/animation-timing.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/cache.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/cache.spec.ts",
+      "sha256": "2c99a7216e56b48a354c1d3ef623b66580c98a8cad953a0d06d4d0bdf36a20a3",
+      "bytes": 3564,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/cache.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/containers.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/containers.spec.ts",
+      "sha256": "278a8a5e91d0be1dbf8dcbfee933aef951f12c9a15a15274b5a328c0104b26e9",
+      "bytes": 2635,
+      "test_count": 9,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/containers.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/history.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/history.spec.ts",
+      "sha256": "d5de4e7e1268d1aa09d25dacf35590d17781fc44511b7fc1bd1964e85970dc5c",
+      "bytes": 2825,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/history.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/ignore-visits.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/ignore-visits.spec.ts",
+      "sha256": "d240d343ae18530ecdbe5085e9e9cccd18aebb882789917333d423b9cdc1feea",
+      "bytes": 1662,
+      "test_count": 4,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/ignore-visits.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/link-resolution.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/link-resolution.spec.ts",
+      "sha256": "0004a23616e8d2da657956452eee7526c2bb995e2ccdc6886436cb5917c90750",
+      "bytes": 3681,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/link-resolution.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/link-selector.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/link-selector.spec.ts",
+      "sha256": "6a58edaa85f1584e793db083d1b14c340582f99b2cdf21eea621a44a2e4f9801",
+      "bytes": 1665,
+      "test_count": 4,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/link-selector.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/native-mode.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/native-mode.spec.ts",
+      "sha256": "a6bd10238844c652a14c7b941d78d2fc66ad3c1d75ec43c60ad33364c1006c04",
+      "bytes": 2236,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/native-mode.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/navigation.spec.ts",
+      "sha256": "266f766c0758eb605c45a08cd3f8d3e9803c0184d120e8ddc5f32fd16316209d",
+      "bytes": 4017,
+      "test_count": 13,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/persist.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/persist.spec.ts",
+      "sha256": "17b14a768c66824b432257616e80d7b573d4e878353dc9b53494a801983066c7",
+      "bytes": 2438,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/persist.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/plugins/body-class-plugin.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/plugins/body-class-plugin.spec.ts",
+      "sha256": "ac9a916a84087d4b128c8f4a94da6c496b9f04d66893f34f46b1d1bf4f00f749",
+      "bytes": 2259,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/plugins/body-class-plugin.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/plugins/scroll-plugin.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/plugins/scroll-plugin.spec.ts",
+      "sha256": "afacfda159b7038bd44cd1240aaf99a767d38d0f48bdf184a90976d42051c72a",
+      "bytes": 2505,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/plugins/scroll-plugin.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/rapid-navigation.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/rapid-navigation.spec.ts",
+      "sha256": "21e60f891895fe469025b7a5d65ed19696663cf70d77efd940bceea534fcc989",
+      "bytes": 3137,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/rapid-navigation.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/redirects.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/redirects.spec.ts",
+      "sha256": "b10b6f462a85856d8dbb15f6ce273abb6887b79eae3d0acc55c069c642f0b6ae",
+      "bytes": 2444,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/redirects.spec.ts"
+    },
+    {
+      "repo": "swup/swup",
+      "repo_url": "https://github.com/swup/swup",
+      "commit": "958c59726fc2dd377ad20eada488f857f8d0fd23",
+      "original_file_path": "tests/functional/rq6-agent/scrolling.spec.ts",
+      "local_file_path": "source_files/swup__swup/tests/functional/rq6-agent/scrolling.spec.ts",
+      "sha256": "3987002caae71559bbcf1df8a1ee882be1edbf9473a873b3cbd0fb0eda11d5d7",
+      "bytes": 2635,
+      "test_count": 7,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/swup/swup/958c59726fc2dd377ad20eada488f857f8d0fd23/tests/functional/rq6-agent/scrolling.spec.ts"
+    },
+    {
+      "repo": "tldraw/tldraw",
+      "repo_url": "https://github.com/tldraw/tldraw",
+      "commit": "26f673ed8c713fa3068149a5bd9d4ffe05941476",
+      "original_file_path": "rq6-agent/examples.spec.ts",
+      "local_file_path": "source_files/tldraw__tldraw/rq6-agent/examples.spec.ts",
+      "sha256": "35a9af1cffca38ae676696590068452edd8f312872aa41d07028ea5ce598657d",
+      "bytes": 7644,
+      "test_count": 43,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/tldraw/tldraw/26f673ed8c713fa3068149a5bd9d4ffe05941476/rq6-agent/examples.spec.ts"
+    },
+    {
+      "repo": "tldraw/tldraw",
+      "repo_url": "https://github.com/tldraw/tldraw",
+      "commit": "26f673ed8c713fa3068149a5bd9d4ffe05941476",
+      "original_file_path": "rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/tldraw__tldraw/rq6-agent/navigation.spec.ts",
+      "sha256": "ebbb83c4add2e3ba95c6ab7c9682256bbea12acde4c3f57a59d44fb849f13ec1",
+      "bytes": 9746,
+      "test_count": 24,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/tldraw/tldraw/26f673ed8c713fa3068149a5bd9d4ffe05941476/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "tldraw/tldraw",
+      "repo_url": "https://github.com/tldraw/tldraw",
+      "commit": "26f673ed8c713fa3068149a5bd9d4ffe05941476",
+      "original_file_path": "rq6-agent/special-pages.spec.ts",
+      "local_file_path": "source_files/tldraw__tldraw/rq6-agent/special-pages.spec.ts",
+      "sha256": "3e0032e5cf1f5339780832b3ed145679464685540c7303029f10cb65d654d05d",
+      "bytes": 1672,
+      "test_count": 3,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/tldraw/tldraw/26f673ed8c713fa3068149a5bd9d4ffe05941476/rq6-agent/special-pages.spec.ts"
+    },
+    {
+      "repo": "TriliumNext/Trilium",
+      "repo_url": "https://github.com/TriliumNext/Trilium",
+      "commit": "fe94c296ae6ce596d0f7634077a151cdac3d005d",
+      "original_file_path": "rq6-agent/01-auth.spec.ts",
+      "local_file_path": "source_files/TriliumNext__Trilium/rq6-agent/01-auth.spec.ts",
+      "sha256": "facbbbf61e2c922fd49eaba1ced45ed2cb5700c55410798fd2649262379f4704",
+      "bytes": 3719,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/TriliumNext/Trilium/fe94c296ae6ce596d0f7634077a151cdac3d005d/rq6-agent/01-auth.spec.ts"
+    },
+    {
+      "repo": "TriliumNext/Trilium",
+      "repo_url": "https://github.com/TriliumNext/Trilium",
+      "commit": "fe94c296ae6ce596d0f7634077a151cdac3d005d",
+      "original_file_path": "rq6-agent/02-setup.spec.ts",
+      "local_file_path": "source_files/TriliumNext__Trilium/rq6-agent/02-setup.spec.ts",
+      "sha256": "80edea427ef81e748b4ad9f84d326ec1cc9e208af89ccfad2d20c66ffe4592d1",
+      "bytes": 7456,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/TriliumNext/Trilium/fe94c296ae6ce596d0f7634077a151cdac3d005d/rq6-agent/02-setup.spec.ts"
+    },
+    {
+      "repo": "TriliumNext/Trilium",
+      "repo_url": "https://github.com/TriliumNext/Trilium",
+      "commit": "fe94c296ae6ce596d0f7634077a151cdac3d005d",
+      "original_file_path": "rq6-agent/03-main-app.spec.ts",
+      "local_file_path": "source_files/TriliumNext__Trilium/rq6-agent/03-main-app.spec.ts",
+      "sha256": "c49273b7810a722d109546ad1ba9259a6ff75d721cd4ec6d877eb07c1db432bd",
+      "bytes": 4921,
+      "test_count": 15,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/TriliumNext/Trilium/fe94c296ae6ce596d0f7634077a151cdac3d005d/rq6-agent/03-main-app.spec.ts"
+    },
+    {
+      "repo": "TriliumNext/Trilium",
+      "repo_url": "https://github.com/TriliumNext/Trilium",
+      "commit": "fe94c296ae6ce596d0f7634077a151cdac3d005d",
+      "original_file_path": "rq6-agent/04-note-tree.spec.ts",
+      "local_file_path": "source_files/TriliumNext__Trilium/rq6-agent/04-note-tree.spec.ts",
+      "sha256": "d868250384f97074a32521a0e0e46d00fe0b31bea485d9169f22b13492096f8a",
+      "bytes": 5700,
+      "test_count": 8,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/TriliumNext/Trilium/fe94c296ae6ce596d0f7634077a151cdac3d005d/rq6-agent/04-note-tree.spec.ts"
+    },
+    {
+      "repo": "TriliumNext/Trilium",
+      "repo_url": "https://github.com/TriliumNext/Trilium",
+      "commit": "fe94c296ae6ce596d0f7634077a151cdac3d005d",
+      "original_file_path": "rq6-agent/05-note-editor.spec.ts",
+      "local_file_path": "source_files/TriliumNext__Trilium/rq6-agent/05-note-editor.spec.ts",
+      "sha256": "fbf88c26599886af7085ad3bc17a76c1352cc72001851e2c4cb203de4db0343b",
+      "bytes": 8429,
+      "test_count": 11,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/TriliumNext/Trilium/fe94c296ae6ce596d0f7634077a151cdac3d005d/rq6-agent/05-note-editor.spec.ts"
+    },
+    {
+      "repo": "TriliumNext/Trilium",
+      "repo_url": "https://github.com/TriliumNext/Trilium",
+      "commit": "fe94c296ae6ce596d0f7634077a151cdac3d005d",
+      "original_file_path": "rq6-agent/06-settings.spec.ts",
+      "local_file_path": "source_files/TriliumNext__Trilium/rq6-agent/06-settings.spec.ts",
+      "sha256": "a4b7accb986942f50383ca31e264b5c8ff653d5127d5500db2d28b1ce1a58627",
+      "bytes": 7098,
+      "test_count": 16,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/TriliumNext/Trilium/fe94c296ae6ce596d0f7634077a151cdac3d005d/rq6-agent/06-settings.spec.ts"
+    },
+    {
+      "repo": "TriliumNext/Trilium",
+      "repo_url": "https://github.com/TriliumNext/Trilium",
+      "commit": "fe94c296ae6ce596d0f7634077a151cdac3d005d",
+      "original_file_path": "rq6-agent/07-launcher-flows.spec.ts",
+      "local_file_path": "source_files/TriliumNext__Trilium/rq6-agent/07-launcher-flows.spec.ts",
+      "sha256": "151774743bd60ddfd49fd96ef83e4d87bea26e1f04bbee195f5dfa79e1a4ccef",
+      "bytes": 5486,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/TriliumNext/Trilium/fe94c296ae6ce596d0f7634077a151cdac3d005d/rq6-agent/07-launcher-flows.spec.ts"
+    },
+    {
+      "repo": "zuplo/zudoku",
+      "repo_url": "https://github.com/zuplo/zudoku",
+      "commit": "578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce",
+      "original_file_path": "e2e/rq6-agent/api-reference.spec.ts",
+      "local_file_path": "source_files/zuplo__zudoku/e2e/rq6-agent/api-reference.spec.ts",
+      "sha256": "81d1107d52a1fc68bda3b517550050635e8a14fabdf0a76cec2882415ccb12b2",
+      "bytes": 9894,
+      "test_count": 15,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/zuplo/zudoku/578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce/e2e/rq6-agent/api-reference.spec.ts"
+    },
+    {
+      "repo": "zuplo/zudoku",
+      "repo_url": "https://github.com/zuplo/zudoku",
+      "commit": "578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce",
+      "original_file_path": "e2e/rq6-agent/catalog.spec.ts",
+      "local_file_path": "source_files/zuplo__zudoku/e2e/rq6-agent/catalog.spec.ts",
+      "sha256": "c2e11b9a87ac19706c5011c83c2301d0fd987d9ce6c1747b41025f1f4c90c808",
+      "bytes": 11278,
+      "test_count": 25,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/zuplo/zudoku/578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce/e2e/rq6-agent/catalog.spec.ts"
+    },
+    {
+      "repo": "zuplo/zudoku",
+      "repo_url": "https://github.com/zuplo/zudoku",
+      "commit": "578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce",
+      "original_file_path": "e2e/rq6-agent/docs.spec.ts",
+      "local_file_path": "source_files/zuplo__zudoku/e2e/rq6-agent/docs.spec.ts",
+      "sha256": "782ed241721492f38106352463a3de532cfc5394334bdcbf606aaef4bdf90c5b",
+      "bytes": 13110,
+      "test_count": 26,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/zuplo/zudoku/578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce/e2e/rq6-agent/docs.spec.ts"
+    },
+    {
+      "repo": "zuplo/zudoku",
+      "repo_url": "https://github.com/zuplo/zudoku",
+      "commit": "578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce",
+      "original_file_path": "e2e/rq6-agent/landing.spec.ts",
+      "local_file_path": "source_files/zuplo__zudoku/e2e/rq6-agent/landing.spec.ts",
+      "sha256": "74544b36a6010d10a5e0567d4764113c7fa4fd1848d2a4e4c73ca8f0ed6de1a9",
+      "bytes": 13409,
+      "test_count": 32,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/zuplo/zudoku/578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce/e2e/rq6-agent/landing.spec.ts"
+    },
+    {
+      "repo": "zuplo/zudoku",
+      "repo_url": "https://github.com/zuplo/zudoku",
+      "commit": "578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce",
+      "original_file_path": "e2e/rq6-agent/navigation.spec.ts",
+      "local_file_path": "source_files/zuplo__zudoku/e2e/rq6-agent/navigation.spec.ts",
+      "sha256": "6ad83e493cf9415c36213938b7f7651e68bfce19c037e6cb15e5eb55f95288db",
+      "bytes": 7875,
+      "test_count": 14,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/zuplo/zudoku/578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce/e2e/rq6-agent/navigation.spec.ts"
+    },
+    {
+      "repo": "zuplo/zudoku",
+      "repo_url": "https://github.com/zuplo/zudoku",
+      "commit": "578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce",
+      "original_file_path": "e2e/rq6-agent/protected.spec.ts",
+      "local_file_path": "source_files/zuplo__zudoku/e2e/rq6-agent/protected.spec.ts",
+      "sha256": "10bd6fd73357cbcef4f6cc43db4b546360b2fe16559935ea8bcc1e6edf298391",
+      "bytes": 3448,
+      "test_count": 6,
+      "framework": "Playwright",
+      "file_detected_frameworks": [
+        "Playwright"
+      ],
+      "recovery_url": "https://raw.githubusercontent.com/zuplo/zudoku/578d1e4ae0a93645b7c9a66c8c5f0b813f5a62ce/e2e/rq6-agent/protected.spec.ts"
+    }
+  ]
+}

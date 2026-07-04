@@ -1,0 +1,17 @@
+# syntax=docker/dockerfile:1.7
+#
+# Codex agent layer: the Codex binary ships in the openai-codex-cli-bin wheel
+# already installed in the base image, so this layer only adds bubblewrap, which
+# Codex uses to enforce its read_only / workspace_write sandbox modes. (The
+# Docker runner defaults the sandbox to full_access since the container is the
+# boundary, but the lower modes need bwrap.)
+
+ARG BASE_IMAGE=general-agent-eval-base:latest
+FROM ${BASE_IMAGE}
+
+USER root
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends bubblewrap \
+    && rm -rf /var/lib/apt/lists/*
+
+USER agent

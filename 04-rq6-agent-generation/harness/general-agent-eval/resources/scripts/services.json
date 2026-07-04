@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "description": "Registry of JavaScript frontend services for Playwright E2E evaluation. Consumed by resources/scripts/run-with-service.sh. Each entry declares how to build and start a local dev/preview server so the agent can explore the running UI and generate Playwright tests.",
+  "placeholders": {
+    "${PORT}": "HTTP port the server is launched on (default_port unless overridden via --service-port)."
+  },
+  "services": {
+    "sample-js-app": {
+      "description": "Sample JavaScript frontend (Vite dev server) for Playwright E2E testing. Replace this entry with your actual project.",
+      "repo_subdir": ".",
+      "build_system": "npm",
+      "rest_style": null,
+      "build": [
+        "npm ci"
+      ],
+      "run": "npm run dev -- --port ${PORT} --host 127.0.0.1",
+      "artifact_glob": null,
+      "default_port": 5173,
+      "base_path": "/",
+      "health_path": "/",
+      "health_timeout_seconds": 120,
+      "external_dependencies": [],
+      "env": {},
+      "notes": "Vite dev server example. Adjust 'run' for other bundlers: Next.js uses 'npm run dev -- -p ${PORT}', Create React App uses 'PORT=${PORT} npm start'."
+    },
+
+    "swup": {
+      "description": "swup page-transition library — static test fixture pages served at /.",
+      "repo_subdir": ".",
+      "build_system": "npm",
+      "build": [
+        "npm ci",
+        "npm run test:e2e:instrument"
+      ],
+      "run": "npx --yes serve -n -S -L -p ${PORT} --config ./tests/config/serve.json",
+      "default_port": 8274,
+      "base_path": "/",
+      "health_path": "/",
+      "health_timeout_seconds": 60,
+      "env": {},
+      "notes": "Serves from tests/fixtures/ (serve.json sets public: tests/fixtures). The instrument step copies dist/ -> tests/fixtures/dist/ so the HTML pages can load Swup. Do NOT use --clear-tests with this project: the tests/ directory contains both test specs (tests/functional/) AND the app-serving config (tests/config/serve.json) and fixture pages (tests/fixtures/), so clearing tests/ would break the server startup. The existing Playwright config is at tests/config/playwright.config.ts; testDir is tests/functional/."
+    },
+
+    "openplayerjs": {
+      "description": "OpenPlayerJS HTML5 media player — example HTML pages at /examples/.",
+      "repo_subdir": ".",
+      "build_system": "pnpm",
+      "build": [
+        "node -e \"const fs=require('fs'),cp=require('child_process');const p=JSON.parse(fs.readFileSync('package.json','utf8'));delete p.engines;p.packageManager='pnpm@'+cp.execSync('pnpm --version').toString().trim();fs.writeFileSync('package.json',JSON.stringify(p,null,2),'utf8')\"",
+        "node -e \"const fs=require('fs');let w=fs.readFileSync('pnpm-workspace.yaml','utf8');w=w.replace('engineStrict: true','engineStrict: false').replace('unrs-resolver: set this to true or false','unrs-resolver: true');fs.writeFileSync('pnpm-workspace.yaml',w,'utf8')\"",
+        "CI=true pnpm install --no-frozen-lockfile"
+      ],
+      "run": "npx --yes serve -l ${PORT} .",
+      "default_port": 4173,
+      "base_path": "/",
+      "health_path": "/examples/basic.html",
+      "health_timeout_seconds": 300,
+      "env": {},
+      "notes": "Serves from the repo root so importmap paths (./packages/*/dist/) in example HTML pages resolve correctly. Build patches package.json (removes strict engines field) and pnpm-workspace.yaml (sets engineStrict:false, approves unrs-resolver) before installing. The dist/ package artifacts are already staged from the host build, so 'pnpm run build' is skipped to save time. The existing Playwright config is playwright.config.ts; testDir is e2e/."
+    },
+
+    "gridstack": {
+      "description": "gridstack.js drag-and-drop grid layout — interactive demo pages at /demo/.",
+      "repo_subdir": ".",
+      "build_system": "yarn",
+      "build": [
+        "corepack enable yarn",
+        "yarn install --frozen-lockfile"
+      ],
+      "run": "npx --yes serve -l ${PORT} .",
+      "default_port": 8080,
+      "base_path": "/",
+      "health_path": "/demo/",
+      "health_timeout_seconds": 60,
+      "env": {},
+      "notes": "default_port 8080 matches the playwright.config.ts baseURL (http://localhost:8080). Serves from the repo root so demo/ pages can resolve ../dist/gridstack-all.js. The dist/ artifacts are already staged from the host build; rebuild steps (grunt/webpack) are skipped. The existing Playwright config is playwright.config.ts; testDir is e2e/."
+    },
+
+    "motion-vue": {
+      "description": "motion-vue Vue animation library — Vite playground at /.",
+      "repo_subdir": ".",
+      "build_system": "pnpm",
+      "build": [
+        "pnpm install --frozen-lockfile"
+      ],
+      "run": "pnpm --filter @motion-vue/playground-vite dev --port ${PORT} --host 127.0.0.1",
+      "default_port": 5173,
+      "base_path": "/",
+      "health_path": "/",
+      "health_timeout_seconds": 120,
+      "env": {},
+      "notes": "Starts the Vite dev server for the @motion-vue/playground-vite package. Health probe may need a few seconds while Vite compiles on first request. The existing Playwright config is playwright.config.ts; testDir is tests/."
+    },
+
+    "zudoku": {
+      "description": "Zudoku API documentation framework — cosmo-cargo example at /.",
+      "repo_subdir": ".",
+      "build_system": "pnpm",
+      "build": [
+        "pnpm install --frozen-lockfile"
+      ],
+      "run": "npx --yes serve -l ${PORT} examples/cosmo-cargo/dist",
+      "default_port": 4321,
+      "base_path": "/",
+      "health_path": "/",
+      "health_timeout_seconds": 60,
+      "env": {},
+      "notes": "Serves the pre-built cosmo-cargo static site (examples/cosmo-cargo/dist/ is already staged from the host build). default_port 4321 matches the playwright.config.ts default (process.env.PORT || 4321); PORT is exported by run-with-service.sh so the playwright config picks up the correct baseURL. The existing Playwright config is playwright.config.ts; testDir is e2e/."
+    }
+  }
+}

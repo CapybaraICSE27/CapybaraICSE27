@@ -1,0 +1,21 @@
+repo,repo_url,application_category,agent_test_file_count,agent_test_case_count
+actualbudget/actual,https://github.com/actualbudget/actual,personal finance / budgeting app,11,126
+altair-graphql/altair,https://github.com/altair-graphql/altair,GraphQL API client,15,101
+cypress-io/cypress-realworld-app,https://github.com/cypress-io/cypress-realworld-app,banking / payments demo app,9,84
+epicweb-dev/epic-stack,https://github.com/epicweb-dev/epic-stack,full-stack web app template,6,104
+git-truck/git-truck,https://github.com/git-truck/git-truck,repository visualization tool,3,60
+gridstack/gridstack.js,https://github.com/gridstack/gridstack.js,layout/grid UI library,8,154
+HemmeligOrg/Hemmelig.app,https://github.com/HemmeligOrg/Hemmelig.app,secret-sharing app,7,154
+keystonejs/keystone,https://github.com/keystonejs/keystone,CMS/admin platform,6,47
+laststance/react-typescript-todomvc-2022,https://github.com/laststance/react-typescript-todomvc-2022,todo app demo,1,33
+letterpad/letterpad,https://github.com/letterpad/letterpad,blogging/CMS platform,14,128
+maplibre/maputnik,https://github.com/maplibre/maputnik,map style editor,9,121
+marmelab/react-admin,https://github.com/marmelab/react-admin,admin dashboard framework/demo,7,68
+mermaid-js/mermaid,https://github.com/mermaid-js/mermaid,diagramming renderer/playground,7,122
+motiondivision/motion-vue,https://github.com/motiondivision/motion-vue,animation UI library,8,109
+openplayerjs/openplayerjs,https://github.com/openplayerjs/openplayerjs,media player UI library,7,126
+super-productivity/super-productivity,https://github.com/super-productivity/super-productivity,task/project management app,11,142
+swup/swup,https://github.com/swup/swup,page-transition/navigation library,17,119
+tldraw/tldraw,https://github.com/tldraw/tldraw,drawing/whiteboard app,3,70
+TriliumNext/Trilium,https://github.com/TriliumNext/Trilium,note-taking/knowledge-base app,7,68
+zuplo/zudoku,https://github.com/zuplo/zudoku,API documentation portal,6,118

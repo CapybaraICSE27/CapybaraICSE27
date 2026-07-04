@@ -1,0 +1,13 @@
+{
+  "name": "ui-file-discovery-phase1-v6",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Phase 1 UI test file inventory discovery using Python orchestration and ts-morph.",
+  "scripts": {
+    "analyze-one": "node analyze_repo_ui_files.cjs"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.3",
+    "ts-morph": "^25.0.1"
+  }
+}

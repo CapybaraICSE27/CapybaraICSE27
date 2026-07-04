@@ -1,0 +1,108 @@
+{
+  "artifact_id": "ui-test-rq-companion-artifact",
+  "description": "Replication package for the UI-test empirical study and RQ6 agent-generation benchmark.",
+  "full_corpus": {
+    "inventory_repo_count": 353,
+    "inventory_test_file_count": 9955,
+    "path": "01-dataset-construction/full-ui-test-corpus",
+    "phase2_schema_version": 43,
+    "repo_count": 352,
+    "test_case_count": 51657,
+    "test_file_count": 9941
+  },
+  "analysis_model": {
+    "path": "02-analysis-model/framework-api-mappings",
+    "mapping_files": [
+      "02-analysis-model/framework-api-mappings/framework_api_mapping_schema.md",
+      "02-analysis-model/framework-api-mappings/framework_category_mapping.md",
+      "02-analysis-model/framework-api-mappings/rq1_setup_teardown_api_mapping.csv",
+      "02-analysis-model/framework-api-mappings/rq4_ui_action_api_mapping.csv",
+      "02-analysis-model/framework-api-mappings/rq5_assertion_api_mapping.csv"
+    ],
+    "rq_mapping_count": 3
+  },
+  "implementation_sources": {
+    "file_count": 201,
+    "path": "05-implementation",
+    "pipeline_runner": "run_companion_pipeline.py"
+  },
+  "manual_review": {
+    "csv_index": "03-manual-review-results/rq1-rq5-full-corpus-reviewed/csv_index.json",
+    "direct_csv_count": 22,
+    "memo": "03-manual-review-results/rq1-rq5-full-corpus-reviewed/MANUAL_AUDIT_ALL_RQS_FULL_CORPUS_148PM_MEMO.md",
+    "path": "03-manual-review-results/rq1-rq5-full-corpus-reviewed",
+    "review_bundle_zip": "03-manual-review-results/rq1-rq5-full-corpus-reviewed/review_bundle_rq1-5-full-corpus-human-filled.zip",
+    "review_bundle_zip_sha256": "a80bf932917cd3c8bf53c7ba1dad90c2e98fe6d386dac13b8b2ac33c5171d5c6",
+    "review_bundle_zip_size_bytes": 271952,
+    "rq_count": 5,
+    "summary_json": "03-manual-review-results/rq1-rq5-full-corpus-reviewed/manual_audit_all_rqs_full_corpus_148pm_summary.json",
+    "zip_csv_count": 22
+  },
+  "rq6_agent_written_tests": {
+    "path": "04-rq6-agent-generation/agent-written-tests",
+    "repo_count": 20,
+    "test_case_count": 2054,
+    "test_file_count": 162
+  },
+  "rq6_benchmark": {
+    "manifest_rows": 162,
+    "path": "04-rq6-agent-generation/benchmark/capybara-benchmark",
+    "repo_count": 20,
+    "repo_counts": {
+      "HemmeligOrg/Hemmelig.app": 7,
+      "TriliumNext/Trilium": 7,
+      "actualbudget/actual": 11,
+      "altair-graphql/altair": 15,
+      "cypress-io/cypress-realworld-app": 9,
+      "epicweb-dev/epic-stack": 6,
+      "git-truck/git-truck": 3,
+      "gridstack/gridstack.js": 8,
+      "keystonejs/keystone": 6,
+      "laststance/react-typescript-todomvc-2022": 1,
+      "letterpad/letterpad": 14,
+      "maplibre/maputnik": 9,
+      "marmelab/react-admin": 7,
+      "mermaid-js/mermaid": 7,
+      "motiondivision/motion-vue": 8,
+      "openplayerjs/openplayerjs": 7,
+      "super-productivity/super-productivity": 11,
+      "swup/swup": 17,
+      "tldraw/tldraw": 3,
+      "zuplo/zudoku": 6
+    },
+    "repository_categories_csv": "04-rq6-agent-generation/rq6_repositories.csv",
+    "repository_categories_json": "04-rq6-agent-generation/rq6_repositories.json",
+    "repository_category_count": 20,
+    "test_file_count": 162
+  },
+  "rq6_harness": {
+    "file_count": 42,
+    "path": "04-rq6-agent-generation/harness/general-agent-eval",
+    "prompt_templates": [
+      "04-rq6-agent-generation/harness/general-agent-eval/src/general_agent_eval/prompts/system_prompt_js_ui.jinja2",
+      "04-rq6-agent-generation/harness/general-agent-eval/src/general_agent_eval/prompts/user_prompt_js_ui.jinja2"
+    ]
+  },
+  "source_archives": {
+    "capybara-benchmark-rq6-agent-eval.zip": {
+      "file_count": 16,
+      "path": "source_archives/capybara-benchmark-rq6-agent-eval.zip",
+      "root_entries": [
+        "capybara-benchmark"
+      ],
+      "sha256": "a76dc7054d55cc4711b24488658b3ed4c20fd1d7346384a4f5c4dae52da6e5e4",
+      "size_bytes": 17622,
+      "uncompressed_bytes": 100461
+    },
+    "general-agent-eval-capybara-artifact.zip": {
+      "file_count": 42,
+      "path": "source_archives/general-agent-eval-capybara-artifact.zip",
+      "root_entries": [
+        "general-agent-eval"
+      ],
+      "sha256": "851c117434cd6e025e547bad260ef6a0c37db071b369072052bce59d276e4442",
+      "size_bytes": 136365,
+      "uncompressed_bytes": 417429
+    }
+  }
+}

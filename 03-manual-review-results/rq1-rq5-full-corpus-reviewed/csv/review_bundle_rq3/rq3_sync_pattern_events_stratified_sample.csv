@@ -1,0 +1,1803 @@
+repo,test_id,framework,line,name,raw_code,sync_pattern,sync_target,sync_placement,is_fixed_delay,sync_arg_kind,sync_call_kind_ast,sync_arg_kind_ast,is_condition_based,is_network_based,is_assertion_retry,is_framework_auto_wait_inferred,sync_evidence_basis,manual_sync_pattern_ok,manual_sync_pattern_should_be,manual_sync_target_ok,manual_sync_target_should_be,manual_sync_arg_kind_ok,manual_sync_arg_kind_should_be,manual_notes,event_snippet,snippet_truncated,file_path,enclosing_function_or_helper_snippet,test_body_context_snippet
+tinacms/tinacms,a2d0ca289aaf426a9842676312a22fb2,Playwright,59,page.waitForResponse,"page.waitForResponse(
+    (resp) => resp.url().includes('/graphql') && resp.status() === 200,
+    { timeout: 15000 }
+  )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+    (resp) => resp.url().includes('/graphql') && resp.status() === 200,
+    { timeout: 15000 }
+  )",false,,,
+jupyterlab/jupyterlab,11c17fdf6a6d6eceb2b1692c74351527,Playwright,145,"page.getByText('8', { exact: true }).waitFor","page.getByText('8', { exact: true }).waitFor()",element_state_wait,element,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText('8', { exact: true }).waitFor()",false,,,
+silevis/reactgrid,575e612c33b97d9ea18006190127d71a,Cypress,125,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+openobserve/openobserve,6d38c662f74716a9d6c89d5cfc09c77a,Playwright,140,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 15000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 15000 })",false,,,
+payloadcms/payload,8460b20d4a71794d1d20a79c6a6e9b8e,Playwright,432,"expect(() =>
+      expect(frame.locator(renderedPageTitleLocator)).toHaveText(`For Testing: ${initialTitle}`),
+    ).toPass","expect(() =>
+      expect(frame.locator(renderedPageTitleLocator)).toHaveText(`For Testing: ${initialTitle}`),
+    ).toPass({
+      timeout: POLL_TOPASS_TIMEOUT,
+    })",assertion_retry_wait,assertion,test_body,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() =>
+      expect(frame.locator(renderedPageTitleLocator)).toHaveText(`For Testing: ${initialTitle}`),
+    ).toPass({
+      timeout: POLL_TOPASS_TIMEOUT,
+    })",false,,,
+super-productivity/super-productivity,1b22fbfae42771b5c86dd438feda5b73,Playwright,417,"page
+        .waitForEvent","page
+        .waitForEvent('download', { timeout: 60000 })",event_wait,event,test_body,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+        .waitForEvent('download', { timeout: 60000 })",false,,,
+surveyjs/survey-creator,d7ee46d8b1e85f302a04b8a1e2db6b23,Playwright,70,page.waitForFunction,"page.waitForFunction(() => !!window[""creator""])",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(() => !!window[""creator""])",false,,,
+openobserve/openobserve,3ca3f535907a8b0773c01488788fa693,Playwright,69,page.waitForResponse,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",false,,,
+jupyterlab/jupyterlab,dd45e2f2d46492047d18b1394489d0c1,Playwright,125,page.waitForResponse,"page.waitForResponse(
+        response =>
+          response.request().method() === 'PUT' &&
+          /api\/workspaces/.test(response.request().url()) &&
+          response.request().postDataJSON().data['layout-restorer:data'][
+            'main'
+          ] === null
+      )",network_wait,network,test_body,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+        response =>
+          response.request().method() === 'PUT' &&
+          /api\/workspaces/.test(response.request().url()) &&
+          response.request().postDataJSON().data['layout-restorer:data'][
+            'main'
+          ] === null
+      )",false,,,
+SonicJs-Org/sonicjs,0bab1debd54fac4d5c074f38fd251572,Playwright,382,expect(page).toHaveURL,expect(page).toHaveURL(/\/admin/),assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(page).toHaveURL(/\/admin/),false,,,
+linode/manager,0078539371398af8b5309b234165cf27,Cypress,1602,cy.wait,"cy.wait([
+      '@getCluster',
+      '@getNodePoolsNoTags',
+      '@getTieredVersions',
+      '@getType',
+      '@getControlPlaneAcl',
+    ])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait([
+      '@getCluster',
+      '@getNodePoolsNoTags',
+      '@getTieredVersions',
+      '@getType',
+      '@getControlPlaneAcl',
+    ])",false,,,
+carbon-design-system/carbon-components-svelte,6511712f27116d402937fe18d3096f78,Playwright,107,page.waitForEvent,"page.waitForEvent(""filechooser"")",event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForEvent(""filechooser"")",false,,,
+super-productivity/super-productivity,773bc7631c6b5e446fc3195a147e97cd,Playwright,1013,page.waitForTimeout,page.waitForTimeout(UI_SETTLE_SMALL),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(UI_SETTLE_SMALL),false,,,
+MyCryptoHQ/MyCrypto,a4b1dbf8f050dd1b204ff591c01c5b39,TestCafe,53,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+SonicJs-Org/sonicjs,97e480f9bed511a4352b800cdf9ffe54,Playwright,354,expect(page.locator('#form-response .bg-green-100')).toBeVisible,expect(page.locator('#form-response .bg-green-100')).toBeVisible({ timeout: 10000 }),assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(page.locator('#form-response .bg-green-100')).toBeVisible({ timeout: 10000 }),false,,,
+appsmithorg/appsmith,c3bd38b21c94cdd0e97bbc0105e1c326,Cypress,79,cy.wait,"cy.wait(""@getWorkspace"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getWorkspace"")",false,,,
+openobserve/openobserve,39d07d7a5949f42dd94406d85c5015a0,Playwright,99,page.waitForFunction,"page.waitForFunction(
+    () => {
+      const dialog = document.querySelector('[data-test=""dialog-box""]');
+      if (!dialog) return false;
+
+      // Find the confirm button with data-test attribute inside dialog
+      const button = dialog.querySelector('[data-test=""confirm-button""]');
+      if (!button) return false;
+
+      // Check if button is stable (has computed style and is not ani...",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(
+    () => {
+      const dialog = document.querySelector('[data-test=""dialog-box""]');
+      if (!dialog) return false;
+
+      // Find the confirm button with data-test attribute inside dialog
+      const button = dialog.querySelector('[data-test=""confirm-button""]');
+      if (!button) return false;
+
+      // Check if button is stable (has computed style and is not ani...",false,,,
+MyCryptoHQ/MyCrypto,ba598ad12e3bb472c7bd68a1696086ac,TestCafe,29,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+jetkvm/kvm,34990f2516e7c566c47171d8d0a407b1,Playwright,566,page.waitForLoadState,"page.waitForLoadState(""networkidle"")",navigation_or_load_wait,navigation,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState(""networkidle"")",false,,,
+appsmithorg/appsmith,9418878137e1aba0d0d575927fd65cf1,Cypress,1858,cy.waitUntil,"cy.waitUntil(() => this.IsContainerReady(containerName), {
+        interval: 5000,
+        timeout: 60000,
+      })",predicate_or_custom_condition,predicate,hook,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(() => this.IsContainerReady(containerName), {
+        interval: 5000,
+        timeout: 60000,
+      })",false,,,
+silevis/reactgrid,cb083fa7a4996f91350b0dac0d1d62e2,Cypress,221,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+cypress-io/cypress-realworld-app,62ca8aaa2fdb558d7d313df78bde6faf,Cypress,370,cy.wait,cy.wait(`@${feed.routeAlias}`),network_wait,network,test_body,False,alias_expression,wait_api,network_alias_expression,False,True,False,False,ast_template_literal_head,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(`@${feed.routeAlias}`),false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,63,cy.wait,cy.wait(SECOND * 180),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 180),false,,,
+openobserve/openobserve,e51ed64f6c5978ed20925e6b26ca9a99,Playwright,23,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 10000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 10000 })",false,,,
+patternfly/patternfly-react,43b46a5bd72b951fbb89fce1a0113a1d,Cypress,46,cy.wait,cy.wait(defaultExitDelay + 100),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(defaultExitDelay + 100),false,,,
+mattermost/mattermost,9518187b7c7828a372ab5a82fd579aba,Cypress,57,cy.wait,cy.wait(TIMEOUTS.HALF_SEC),fixed_delay,time,test_body,True,constant_or_expression,wait_api,constant_or_expression,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(TIMEOUTS.HALF_SEC),false,,,
+codex-team/editor.js,d24f0db3dd344bc217c6e486ee1b7e0d,Cypress,261,"cy.get(`[data-cy=${NESTED_EDITOR_ID}]`)
+        .find('.ce-inline-tool-input')
+        .click()
+        .wait","cy.get(`[data-cy=${NESTED_EDITOR_ID}]`)
+        .find('.ce-inline-tool-input')
+        .click()
+        .wait(100)",fixed_delay,time,test_body,True,literal_ms,wait_api,literal_ms,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(`[data-cy=${NESTED_EDITOR_ID}]`)
+        .find('.ce-inline-tool-input')
+        .click()
+        .wait(100)",false,,,
+BuilderIO/builder,5f7672571306772bae948cc479c14d70,Playwright,36,page.waitForEvent,"page.waitForEvent(
+    'console',
+    msg => msg.text().includes(GEN2_SDK_LOADED_MSG) || msg.text().includes(GEN1_SDK_LOADED_MSG)
+  )",event_wait,event,helper,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForEvent(
+    'console',
+    msg => msg.text().includes(GEN2_SDK_LOADED_MSG) || msg.text().includes(GEN1_SDK_LOADED_MSG)
+  )",false,,,
+silevis/reactgrid,0237d73c17772dc0148b99d14be95417,Cypress,37,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+mattermost/mattermost,b016a1c65277bd943966a09ff6d45c44,Cypress,187,cy.waitUntil,"cy.waitUntil(checkFn, options)",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(checkFn, options)",false,,,
+SonicJs-Org/sonicjs,5ff5ab84c24d02b651268212f889c706,Playwright,273,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 15000 })",navigation_or_load_wait,navigation,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 15000 })",false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,35,cy.wait,cy.wait(SECOND * 3),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 3),false,,,
+plasmicapp/plasmic,a9c59e39308216622c400d732c63197f,Cypress,30,"cy.insertFromAddDrawer(""Text"")
+          .then(focusFrame)
+          .find("".__wab_editor"")
+          .wait","cy.insertFromAddDrawer(""Text"")
+          .then(focusFrame)
+          .find("".__wab_editor"")
+          .wait(1000)",fixed_delay,time,test_body,True,literal_ms,wait_api,literal_ms,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.insertFromAddDrawer(""Text"")
+          .then(focusFrame)
+          .find("".__wab_editor"")
+          .wait(1000)",false,,,
+silevis/reactgrid,9f01286c73f8908c5f333af31923b59b,Cypress,28,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+RackulaLives/Rackula,63b5095b873224ae34d8ecf9d632ca06,Playwright,149,expect(bottomSheet).toBeVisible,expect(bottomSheet).toBeVisible(),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(bottomSheet).toBeVisible(),false,,,
+super-productivity/super-productivity,3321ca8d30dff3b4916ed62033261997,Playwright,163,"page
+    .waitForFunction","page
+    .waitForFunction(
+      (name) => {
+        const cards = Array.from(document.querySelectorAll('plugin-management mat-card'));
+        const targetCard = cards.find((card) => {
+          const title = card.querySelector('mat-card-title')?.textContent || '';
+          return title.includes(name);
+        });
+
+        if (targetCard) {
+          return true;
+        }
+        return false;
+...",predicate_or_custom_condition,predicate,hook,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForFunction(
+      (name) => {
+        const cards = Array.from(document.querySelectorAll('plugin-management mat-card'));
+        const targetCard = cards.find((card) => {
+          const title = card.querySelector('mat-card-title')?.textContent || '';
+          return title.includes(name);
+        });
+
+        if (targetCard) {
+          return true;
+        }
+        return false;
+...",false,,,
+jitsucom/jitsu,f1227d3e166ff66d6e919f2224db4043,Playwright,225,page.waitForFunction,"page.waitForFunction(() => window[""jitsu""] !== undefined, undefined, {
+    timeout: 1000,
+    polling: 100,
+  })",predicate_or_custom_condition,predicate,test_body,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(() => window[""jitsu""] !== undefined, undefined, {
+    timeout: 1000,
+    polling: 100,
+  })",false,,,
+MyCryptoHQ/MyCrypto,a4b1dbf8f050dd1b204ff591c01c5b39,TestCafe,51,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+openobserve/openobserve,8984b59fbf380bac7cfbf576608abbad,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+super-productivity/super-productivity,3d3f37b4e012ec35ec530863ffeda459,Playwright,997,page.waitForTimeout,page.waitForTimeout(UI_SETTLE_STANDARD),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(UI_SETTLE_STANDARD),false,,,
+cloudtogo/pageplug,2985cfd28faa7424da39317e611e1893,Cypress,435,cy.wait,cy.wait(500),fixed_delay,time,helper,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(500),false,,,
+FuelLabs/fuels-wallet,fd65aea179c8cc3c0f259d66c6f3f906,Playwright,871,context.waitForEvent,"context.waitForEvent('page', {
+        predicate: (page) => page.url().includes(extensionId),
+        timeout: 10_000,
+      })",event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"context.waitForEvent('page', {
+        predicate: (page) => page.url().includes(extensionId),
+        timeout: 10_000,
+      })",false,,,
+linode/manager,7779a14229566aac3068816bb435bcf1,Cypress,1384,cy.wait,"cy.wait([
+        '@getEnterpriseTieredVersions',
+        '@getStandardTieredVersions',
+        '@getLinodeTypes',
+      ])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait([
+        '@getEnterpriseTieredVersions',
+        '@getStandardTieredVersions',
+        '@getLinodeTypes',
+      ])",false,,,
+openobserve/openobserve,20a861a0c9465d51b75d8be42d3c208e,Playwright,22,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 30000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 30000 })",false,,,
+openobserve/openobserve,c548b0c6d70edb979668bf2289ec5b10,Playwright,511,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 3000 })",navigation_or_load_wait,navigation,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 3000 })",false,,,
+cloudtogo/pageplug,decb1890b094fc2271b5aae88c9f6bd6,Cypress,227,cy.wait,cy.wait(2000),fixed_delay,time,hook,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(2000),false,,,
+openobserve/openobserve,841f12408643afc6fb97a1699d2f5123,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+JetBrains/kotlin-web-site,3d034bfb8fd0181697eacfcffe4e8d79,Playwright,64,context.waitForEvent,context.waitForEvent('page'),event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,context.waitForEvent('page'),false,,,
+openobserve/openobserve,65d7e8fd0c863dc513e43ce15b36e401,Playwright,21,page.waitForResponse,"page.waitForResponse(
+        (response) =>
+          /\/api\/.*\/dashboards/.test(response.url()) &&
+          response.status() === 200,
+        { timeout: 30000 }
+      )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+        (response) =>
+          /\/api\/.*\/dashboards/.test(response.url()) &&
+          response.status() === 200,
+        { timeout: 30000 }
+      )",false,,,
+super-productivity/super-productivity,c2ab27ae3c61d99538263d6d0820e54b,Playwright,128,"page
+    .waitForEvent","page
+    .waitForEvent('download', { timeout: 90000 })",event_wait,event,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForEvent('download', { timeout: 90000 })",false,,,
+SonicJs-Org/sonicjs,82c0dc356ab0b6176ac3332e0d5bbbe1,Playwright,392,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 15000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 15000 })",false,,,
+super-productivity/super-productivity,8a6fae1f98174e7d8bbc38b249d9f617,Playwright,124,page.waitForURL,"page.waitForURL(routeRegex, { timeout: 20000 })",navigation_or_load_wait,navigation,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForURL(routeRegex, { timeout: 20000 })",false,,,
+linode/manager,227ff4e960d70bd1b09b73e16743dce3,Cypress,196,cy.wait,"cy.wait(['@getCluster', '@getNodePools', '@getTieredVersions'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@getCluster', '@getNodePools', '@getTieredVersions'])",false,,,
+cypress-io/cypress-realworld-app,62ca8aaa2fdb558d7d313df78bde6faf,Cypress,374,cy.wait,cy.wait(`@${feed.routeAlias}`),network_wait,network,test_body,False,alias_expression,wait_api,network_alias_expression,False,True,False,False,ast_template_literal_head,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(`@${feed.routeAlias}`),false,,,
+silevis/reactgrid,0237d73c17772dc0148b99d14be95417,Cypress,40,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+dyrector-io/dyrectorio,2957ada4f8a19942cd272de0fb3c65a4,Playwright,38,"expect(page.locator('div.card:has(h5:has-text(""1.0.0"")) .bg-error-red:has-text(""DEFAULT"")')).toHaveCount","expect(page.locator('div.card:has(h5:has-text(""1.0.0"")) .bg-error-red:has-text(""DEFAULT"")')).toHaveCount(1)",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(page.locator('div.card:has(h5:has-text(""1.0.0"")) .bg-error-red:has-text(""DEFAULT"")')).toHaveCount(1)",false,,,
+ohcnetwork/care_fe,dbdee4a9f70cd30d93d4061819a2c0ad,Playwright,167,page.waitForResponse,"page.waitForResponse(
+      (resp) =>
+        resp.url().includes(""/product_knowledge/"") &&
+        resp.request().method() === ""GET"" &&
+        resp.status() === 200,
+    )",network_wait,network,test_body,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+      (resp) =>
+        resp.url().includes(""/product_knowledge/"") &&
+        resp.request().method() === ""GET"" &&
+        resp.status() === 200,
+    )",false,,,
+cloudtogo/pageplug,cd128de001d75b150783fc3db30c9844,Cypress,956,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,94,cy.wait,cy.wait(SECOND * 0.5),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 0.5),false,,,
+appsmithorg/appsmith,dd5a91fe209c95ef65fa50d0c9442624,Cypress,64,cy.wait,"cy.wait(""@updateLayout"")",network_wait,network,test_body,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@updateLayout"")",false,,,
+cypress-io/cypress-realworld-app,20e07e7f584debfdebb4f24f5d12aa0c,Cypress,295,cy.wait,cy.wait(`@${feed.routeAlias}`),network_wait,network,test_body,False,alias_expression,wait_api,network_alias_expression,False,True,False,False,ast_template_literal_head,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(`@${feed.routeAlias}`),false,,,
+mattermost/mattermost,2ca84d151b108306a4e3bb4af09513b9,Cypress,698,"cy.uiGetPostTextBox().
+            clear().
+            invoke('val', MESSAGES.HUGE).
+            wait","cy.uiGetPostTextBox().
+            clear().
+            invoke('val', MESSAGES.HUGE).
+            wait(TIMEOUTS.HALF_SEC)",unresolved_custom_wait,,test_body,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.uiGetPostTextBox().
+            clear().
+            invoke('val', MESSAGES.HUGE).
+            wait(TIMEOUTS.HALF_SEC)",false,,,
+cloudtogo/pageplug,ff28962d425deb521831192702e9537c,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+openobserve/openobserve,502da00a79b539763ef146c41448b552,Playwright,99,page.waitForFunction,"page.waitForFunction(
+    () => {
+      const dialog = document.querySelector('[data-test=""dialog-box""]');
+      if (!dialog) return false;
+
+      // Find the confirm button with data-test attribute inside dialog
+      const button = dialog.querySelector('[data-test=""confirm-button""]');
+      if (!button) return false;
+
+      // Check if button is stable (has computed style and is not ani...",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(
+    () => {
+      const dialog = document.querySelector('[data-test=""dialog-box""]');
+      if (!dialog) return false;
+
+      // Find the confirm button with data-test attribute inside dialog
+      const button = dialog.querySelector('[data-test=""confirm-button""]');
+      if (!button) return false;
+
+      // Check if button is stable (has computed style and is not ani...",false,,,
+archestra-ai/archestra,dbfb1d035d8a05e6452771468757afd3,Playwright,92,"expect(async () => {
+    attempts++;
+    if (attempts > 1) {
+      await page.reload();
+      await page.waitForLoadState(""domcontentloaded"");
+    }
+    await expect(locator).toBeVisible({ timeout: 50","expect(async () => {
+    attempts++;
+    if (attempts > 1) {
+      await page.reload();
+      await page.waitForLoadState(""domcontentloaded"");
+    }
+    await expect(locator).toBeVisible({ timeout: 5000 });
+    if (checkEnabled) {
+      await expect(locator).toBeEnabled({ timeout: 5000 });
+    }
+  }).toPass({ timeout, intervals })",assertion_retry_wait,assertion,helper,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+    attempts++;
+    if (attempts > 1) {
+      await page.reload();
+      await page.waitForLoadState(""domcontentloaded"");
+    }
+    await expect(locator).toBeVisible({ timeout: 5000 });
+    if (checkEnabled) {
+      await expect(locator).toBeEnabled({ timeout: 5000 });
+    }
+  }).toPass({ timeout, intervals })",false,,,
+KittyCAD/modeling-app,646f509e3c768cae60c50ee3f552e3ce,Playwright,122,page.waitForTimeout,page.waitForTimeout(timeout * 10),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(timeout * 10),false,,,
+linode/manager,331d4db0340a306be067e25b3e5c94c7,Cypress,783,cy.wait,"cy.wait(['@getConfigs', '@getDisks', '@getLinode', '@getVolumes'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@getConfigs', '@getDisks', '@getLinode', '@getVolumes'])",false,,,
+super-productivity/super-productivity,57b50e5013f463c3962d43f7d7cbd491,Playwright,128,"page
+    .waitForEvent","page
+    .waitForEvent('download', { timeout: 90000 })",event_wait,event,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForEvent('download', { timeout: 90000 })",false,,,
+openobserve/openobserve,a29be83e44525f945e0dc9737a9a3fe2,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+ValueCell-ai/ClawX,666caf7716e18f9aa920f8d1e818b35f,Playwright,86,app.waitForEvent,"app.waitForEvent('close', { timeout: timeoutMs })",event_wait,event,helper,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"app.waitForEvent('close', { timeout: timeoutMs })",false,,,
+cloudtogo/pageplug,c52d469eb6f173f7108ba7ee0e6d0954,Cypress,161,cy.waitUntil,"cy.waitUntil(
+          () =>
+            cy
+              .xpath(""//div[contains(@class, ' t--widget-textwidget')][1]"")
+              .eq(0)
+              .contains(""State:"", { timeout: 30000 })
+              .should(""exist""),
+          {
+            errorMsg: ""Execute call did not complete evn after 10 secs"",
+            timeout: 20000,
+            interval: 1000,
+          },
+      ...",predicate_or_custom_condition,predicate,test_body,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(
+          () =>
+            cy
+              .xpath(""//div[contains(@class, ' t--widget-textwidget')][1]"")
+              .eq(0)
+              .contains(""State:"", { timeout: 30000 })
+              .should(""exist""),
+          {
+            errorMsg: ""Execute call did not complete evn after 10 secs"",
+            timeout: 20000,
+            interval: 1000,
+          },
+      ...",false,,,
+silevis/reactgrid,cb083fa7a4996f91350b0dac0d1d62e2,Cypress,223,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+payloadcms/payload,5b8106e066f1a7d444ba96a080db8171,Playwright,148,expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",assertion_retry_wait,assertion,hook,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",false,,,
+payloadcms/payload,1472bc1d9a9523b2eae3cf6768f20742,Playwright,1598,"expect(async () => {
+        await expect(page.locator('.export-preview table')).toBeVisible()
+      }).toPass","expect(async () => {
+        await expect(page.locator('.export-preview table')).toBeVisible()
+      }).toPass({ timeout: POLL_TOPASS_TIMEOUT })",assertion_retry_wait,assertion,test_body,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+        await expect(page.locator('.export-preview table')).toBeVisible()
+      }).toPass({ timeout: POLL_TOPASS_TIMEOUT })",false,,,
+BuilderIO/builder,28ee549ef4012f470dc12e20cfd7052b,Playwright,36,page.waitForEvent,"page.waitForEvent(
+    'console',
+    msg => msg.text().includes(GEN2_SDK_LOADED_MSG) || msg.text().includes(GEN1_SDK_LOADED_MSG)
+  )",event_wait,event,helper,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForEvent(
+    'console',
+    msg => msg.text().includes(GEN2_SDK_LOADED_MSG) || msg.text().includes(GEN1_SDK_LOADED_MSG)
+  )",false,,,
+appsmithorg/appsmith,30775af5bc547c55cc72721bcaba899a,Cypress,215,cy.location().should,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",false,,,
+cloudtogo/pageplug,8febb645d4fd7eebabcd5c795472ac42,Cypress,227,cy.wait,cy.wait(2000),fixed_delay,time,hook,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(2000),false,,,
+mattermost/mattermost,70523e4805f7d3b0cd7bf3b598d1ab1b,Cypress,105,cy.postMessage(todayMessage).wait,cy.postMessage(todayMessage).wait(TIMEOUTS.ONE_SEC),fixed_delay,time,hook,True,constant_or_expression,wait_api,timeout_constant,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.postMessage(todayMessage).wait(TIMEOUTS.ONE_SEC),false,,,
+appsmithorg/appsmith,e8a54889c460b4bd33e4edbc1ff7fcc3,Cypress,79,cy.wait,"cy.wait(""@getWorkspace"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getWorkspace"")",false,,,
+otterscan/otterscan,7d2bee191e859dc51aedf3c8ecc1cf17,Cypress,99,txResponse.wait,txResponse.wait(),unresolved_custom_wait,,hook,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,txResponse.wait(),false,,,
+multica-ai/multica,ceb4ada437a2fb9fc711be985f8a46cd,Playwright,29,page.waitForURL,"page.waitForURL(""**/issues"", { timeout: 10000 })",navigation_or_load_wait,navigation,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForURL(""**/issues"", { timeout: 10000 })",false,,,
+super-productivity/super-productivity,3d3f37b4e012ec35ec530863ffeda459,Playwright,985,page.waitForTimeout,page.waitForTimeout(UI_SETTLE_EXTENDED),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(UI_SETTLE_EXTENDED),false,,,
+super-productivity/super-productivity,63e12b83d6931f7c57957417a563fd5b,Playwright,128,"page
+    .waitForEvent","page
+    .waitForEvent('download', { timeout: 90000 })",event_wait,event,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForEvent('download', { timeout: 90000 })",false,,,
+mattermost/mattermost,882b251ffce9da86e9ccc8f5b5c914f1,Cypress,50,cy.wait,"cy.wait(['@customerUpdate', '@subscribe'])",network_wait,network,hook,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@customerUpdate', '@subscribe'])",false,,,
+activist-org/activist,f8493c6e535e5ccde9496a22e33b3506,Playwright,178,"page
+        .waitForLoadState","page
+        .waitForLoadState(""networkidle"", { timeout: 15000 })",navigation_or_load_wait,navigation,test_body,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+        .waitForLoadState(""networkidle"", { timeout: 15000 })",false,,,
+cloudtogo/pageplug,386ed35cca367cf253bfd5cea3a18d8f,Cypress,965,"cy.get("".multi-select-dropdown"")
+    .contains(text)
+    .click({ force: true })
+    .should","cy.get("".multi-select-dropdown"")
+    .contains(text)
+    .click({ force: true })
+    .should(""have.text"", text)",assertion_retry_wait,assertion,helper,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get("".multi-select-dropdown"")
+    .contains(text)
+    .click({ force: true })
+    .should(""have.text"", text)",false,,,
+KittyCAD/modeling-app,bb92f3b466f865b6cad756f42feb97ff,Playwright,115,tronApp.electron.waitForEvent,tronApp.electron.waitForEvent('window'),event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,tronApp.electron.waitForEvent('window'),false,,,
+linode/manager,5741ca1d06f7d6a238a35fb39a1874f9,Cypress,452,cy.wait,cy.wait(Array(4).fill('@getMetrics')),network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_fill_alias,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(Array(4).fill('@getMetrics')),false,,,
+openobserve/openobserve,4ed2f59e9f483ae96d6a71e350204788,Playwright,69,page.waitForResponse,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",false,,,
+live-codes/livecodes,25ff543a6e5344105b274f666ea3a42e,Playwright,6,app.waitForLoadState,app.waitForLoadState(),navigation_or_load_wait,navigation,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,app.waitForLoadState(),false,,,
+BuilderIO/builder,d2c7bd4d7be81e0c588be29d5303caca,Playwright,49,cy.wait,cy.wait(customerSignMeIn),unresolved_custom_wait,,test_body,False,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(customerSignMeIn),false,,,
+mattermost/mattermost,717ea4aee04c872a66a08f878814b986,Cypress,76,cy.findByText('Manage members').click().wait,cy.findByText('Manage members').click().wait(TIMEOUTS.FIVE_SEC),fixed_delay,time,test_body,True,constant_or_expression,wait_api,timeout_constant,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.findByText('Manage members').click().wait(TIMEOUTS.FIVE_SEC),false,,,
+payloadcms/payload,2823adf1562dfbe4d8ed2b26b35a3e14,Playwright,23,"expect(async () => {
+      await expect(
+        page.locator('.autosave:has-text(""Last saved less than a minute ago"")'),
+      ).toBeVisible()
+    }).toPass","expect(async () => {
+      await expect(
+        page.locator('.autosave:has-text(""Last saved less than a minute ago"")'),
+      ).toBeVisible()
+    }).toPass({
+      timeout: POLL_TOPASS_TIMEOUT,
+    })",assertion_retry_wait,assertion,helper,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+      await expect(
+        page.locator('.autosave:has-text(""Last saved less than a minute ago"")'),
+      ).toBeVisible()
+    }).toPass({
+      timeout: POLL_TOPASS_TIMEOUT,
+    })",false,,,
+cloudtogo/pageplug,3be2e3bfb9be8dfc1f89033c3a264117,Cypress,94,cy.wait,"cy.wait(""@getConsolidatedData"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getConsolidatedData"")",false,,,
+cloudtogo/pageplug,379063108046f910a6c94ec219cd2037,Cypress,94,cy.wait,"cy.wait(""@getConsolidatedData"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getConsolidatedData"")",false,,,
+cloudtogo/pageplug,8e7fe2563b6568d053ae9cd4ee1de82e,Cypress,956,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+SonicJs-Org/sonicjs,bb4902e5a97aa74fabf14543d00d14d9,Playwright,392,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 15000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 15000 })",false,,,
+payloadcms/payload,eeb144e7988a17541bc365e5a1e077da,Playwright,148,expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",assertion_retry_wait,assertion,hook,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",false,,,
+midas-research/audino,bd052cf69e87661f4f31468f7823e0f2,Cypress,40,cy.wait,cy.wait(waitTime),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(waitTime),false,,,
+cloudtogo/pageplug,c696310ae6fcf55063421de8c4fa551b,Cypress,76,cy.wait,"cy.wait(""@getWorkspace"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getWorkspace"")",false,,,
+cloudtogo/pageplug,e2fede59ed3c06d8623b04c02ff61e9b,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+linode/manager,d55f2fcce60d82e5beecdc7265ee7f38,Cypress,376,cy.wait,cy.wait(Array(4).fill('@getMetrics')),network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_fill_alias,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(Array(4).fill('@getMetrics')),false,,,
+mattermost/mattermost,5998e50d6ba73c1056d6d4a5793fe59a,Cypress,493,cy.wait,cy.wait(TIMEOUTS.HALF_SEC),fixed_delay,time,hook,True,constant_or_expression,wait_api,timeout_constant,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(TIMEOUTS.HALF_SEC),false,,,
+super-productivity/super-productivity,773bc7631c6b5e446fc3195a147e97cd,Playwright,1038,page.waitForTimeout,page.waitForTimeout(UI_SETTLE_EXTENDED),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(UI_SETTLE_EXTENDED),false,,,
+cloudtogo/pageplug,9da0074fcb4396cdb035e72899b53c2e,Cypress,947,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+pinterest/gestalt,ab79ae044f30574f8dc362d253d9fbe2,Playwright,13,"page
+    .waitForFunction","page
+    .waitForFunction(
+      ({
+        selector,
+        args: {
+          targetItems,
+          targetItemsLT,
+          targetItemsLTE,
+          targetItemsGT,
+          targetItemsGTE,
+          scrollHeight,
+        },
+      }) => {
+        const items = Array.from(document.querySelectorAll(selector));
+        const loadedItems = items.filter((item) => item.style.visibilit...",predicate_or_custom_condition,predicate,helper,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForFunction(
+      ({
+        selector,
+        args: {
+          targetItems,
+          targetItemsLT,
+          targetItemsLTE,
+          targetItemsGT,
+          targetItemsGTE,
+          scrollHeight,
+        },
+      }) => {
+        const items = Array.from(document.querySelectorAll(selector));
+        const loadedItems = items.filter((item) => item.style.visibilit...",false,,,
+mozilla/fxa,23b21f4e1bcee053f45f265f2028e0e7,Playwright,939,page.waitForURL,page.waitForURL(/signin_passwordless_code/),navigation_or_load_wait,navigation,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForURL(/signin_passwordless_code/),false,,,
+mattermost/mattermost,addd29393308a15e94c11cd1e63f3fd2,Cypress,197,"cy.findByRole('textbox', {name: 'Search and add channels'}).
+                    should('be.focused').
+                    type(testChannel.display_name, {force: true}).
+                    wait","cy.findByRole('textbox', {name: 'Search and add channels'}).
+                    should('be.focused').
+                    type(testChannel.display_name, {force: true}).
+                    wait(timeouts.HALF_SEC)",unresolved_custom_wait,,test_body,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.findByRole('textbox', {name: 'Search and add channels'}).
+                    should('be.focused').
+                    type(testChannel.display_name, {force: true}).
+                    wait(timeouts.HALF_SEC)",false,,,
+super-productivity/super-productivity,8a6fae1f98174e7d8bbc38b249d9f617,Playwright,114,loadingWrapper.waitFor,"loadingWrapper.waitFor({ state: 'hidden', timeout: 30000 })",element_state_wait,element,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"loadingWrapper.waitFor({ state: 'hidden', timeout: 30000 })",false,,,
+openobserve/openobserve,f54e9f6f45f5bfdbd923c7504baeae42,Playwright,126,page.waitForResponse,"page.waitForResponse(
+    async (response) => {
+      const url = response.url();
+      const method = response.request().method();
+
+      // Check if this is a DELETE request to dashboards endpoint
+      const isDeleteEndpoint = method === 'DELETE' &&
+                                /\/api\/.*\/dashboards\/\d+/.test(url);
+
+      if (isDeleteEndpoint) {
+        testLogger.debug(`Delete A...",network_wait,network,helper,False,,wait_api,,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+    async (response) => {
+      const url = response.url();
+      const method = response.request().method();
+
+      // Check if this is a DELETE request to dashboards endpoint
+      const isDeleteEndpoint = method === 'DELETE' &&
+                                /\/api\/.*\/dashboards\/\d+/.test(url);
+
+      if (isDeleteEndpoint) {
+        testLogger.debug(`Delete A...",false,,,
+swimlane/ngx-ui,b0c7cf103753657023373a14bc4bc8e8,Cypress,85,cy.get('.ngx-date-time-dialog').should,cy.get('.ngx-date-time-dialog').should('not.exist'),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.get('.ngx-date-time-dialog').should('not.exist'),false,,,
+linode/manager,68f6da25b74c621d9d33ba0d0e042984,Cypress,660,cy.wait,"cy.wait(['@deleteBucket', '@getBuckets'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@deleteBucket', '@getBuckets'])",false,,,
+openobserve/openobserve,37893968eedc3f1df3b0d0c48003d67d,Playwright,69,page.waitForResponse,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,78,cy.wait,cy.wait(SECOND * 3),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 3),false,,,
+seek-oss/playroom,9d1d1908a757374db7758125c5f02c07,Cypress,496,cy.wait,cy.wait(CYPRESS_DEFAULT_WAIT_TIME),fixed_delay,time,helper,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(CYPRESS_DEFAULT_WAIT_TIME),false,,,
+linode/manager,cde6ded40f63eccc938da45fa8a6d41f,Cypress,190,cy.wait,cy.wait(Array(6).fill('@getMetrics')),network_wait,network,hook,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_fill_alias,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(Array(6).fill('@getMetrics')),false,,,
+cloudtogo/pageplug,e1b922f0c331f1434e20c1bc21283108,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+super-productivity/super-productivity,7a17ddbf9ab4982436b7109288b21fd1,Playwright,173,page.waitForTimeout,page.waitForTimeout(200),fixed_delay,time,helper,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(200),false,,,
+ValueCell-ai/ClawX,ef1a54183cb1f900f46b04a8a7b98958,Playwright,71,app.waitForEvent,"app.waitForEvent('window', { timeout: 2_000 })",event_wait,event,helper,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"app.waitForEvent('window', { timeout: 2_000 })",false,,,
+openobserve/openobserve,c0866c87358549391bb7d27fb7271d9a,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+openobserve/openobserve,e60a8e609e5d793a46d66eaa5ae96a98,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+bbc/simorgh,3ef683b7ec99cfe090cf6ef68235cd1d,Cypress,323,cy.wait,cy.wait(requestAlias),unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(requestAlias),false,,,
+appsmithorg/appsmith,d840d004dba86cca5e3a870c3a8cfecd,Cypress,215,cy.location().should,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",false,,,
+mempool/mempool,ff29b5b08cd4c35eda3997af16948a04,Cypress,58,cy.waitUntil,"cy.waitUntil(() => {
+    return Cypress.$('.skeleton-loader').length === 0;
+  }, { verbose: true, description: 'waitForSkeletonGone', errorMsg: 'skeleton loaders never went away', timeout: 15000, interval: 50 })",predicate_or_custom_condition,predicate,hook,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(() => {
+    return Cypress.$('.skeleton-loader').length === 0;
+  }, { verbose: true, description: 'waitForSkeletonGone', errorMsg: 'skeleton loaders never went away', timeout: 15000, interval: 50 })",false,,,
+FuelLabs/fuels-wallet,fd65aea179c8cc3c0f259d66c6f3f906,Playwright,609,context.waitForEvent,"context.waitForEvent('page', {
+          predicate: (page) => page.url().includes(extensionId),
+          timeout: 10_000,
+        })",event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"context.waitForEvent('page', {
+          predicate: (page) => page.url().includes(extensionId),
+          timeout: 10_000,
+        })",false,,,
+UI5/webcomponents,33c312d4a16d0ac754b0b33b928c472a,Cypress,628,"cy.get(""#nli3a"")
+			.shadow()
+			.find("".ui5-nli-footer-showMore"")
+			.shadow()
+			.find("".ui5-link-root"")
+			.should(""have.attr"", ""aria-label"", 'Less button. Show the texts with truncation')
+			.and","cy.get(""#nli3a"")
+			.shadow()
+			.find("".ui5-nli-footer-showMore"")
+			.shadow()
+			.find("".ui5-link-root"")
+			.should(""have.attr"", ""aria-label"", 'Less button. Show the texts with truncation')
+			.and(""have.attr"", ""aria-expanded"", ""true"")",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(""#nli3a"")
+			.shadow()
+			.find("".ui5-nli-footer-showMore"")
+			.shadow()
+			.find("".ui5-link-root"")
+			.should(""have.attr"", ""aria-label"", 'Less button. Show the texts with truncation')
+			.and(""have.attr"", ""aria-expanded"", ""true"")",false,,,
+ionic-team/ionic-framework,10c68fe6966f94a5c0586e5c2f10a989,Playwright,339,expect(minutesColumn).toHaveJSProperty,"expect(minutesColumn).toHaveJSProperty('value', 45)",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(minutesColumn).toHaveJSProperty('value', 45)",false,,,
+MyCryptoHQ/MyCrypto,401df23203d72266a4ff78f50a4e913a,TestCafe,37,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+payloadcms/payload,cad9b33373e1c406dbf33610dac18168,Playwright,148,expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",assertion_retry_wait,assertion,hook,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",false,,,
+CopilotKit/CopilotKit,7670830ea4edd1284b7b0548cef0c5e5,Playwright,55,"expect(
+      suggestions.filter({ hasText: ""Escalate ticket #12347"" }).first(),
+    ).toBeVisible","expect(
+      suggestions.filter({ hasText: ""Escalate ticket #12347"" }).first(),
+    ).toBeVisible({ timeout: 15_000 })",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(
+      suggestions.filter({ hasText: ""Escalate ticket #12347"" }).first(),
+    ).toBeVisible({ timeout: 15_000 })",false,,,
+super-productivity/super-productivity,63e12b83d6931f7c57957417a563fd5b,Playwright,556,pageB.waitForSelector,"pageB.waitForSelector('magic-side-nav', { state: 'visible', timeout: 30000 })",element_state_wait,element,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"pageB.waitForSelector('magic-side-nav', { state: 'visible', timeout: 30000 })",false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,85,cy.wait,cy.wait(SECOND * 3),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 3),false,,,
+super-productivity/super-productivity,bdc18d912dd9210be69f692b4ae4bfd4,Playwright,128,"page
+    .waitForEvent","page
+    .waitForEvent('download', { timeout: 90000 })",event_wait,event,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForEvent('download', { timeout: 90000 })",false,,,
+linode/manager,2cc7919c0c8632c773053a016fa8e3e7,Cypress,153,cy.wait,"cy.wait(['@updateVPC', '@getVPCs'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@updateVPC', '@getVPCs'])",false,,,
+live-codes/livecodes,06915fe076665a427046166ebfa325d2,Playwright,44,app.waitForFunction,"app.waitForFunction(`document.activeElement.closest(""${selector}"") != null`)",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"app.waitForFunction(`document.activeElement.closest(""${selector}"") != null`)",false,,,
+appsmithorg/appsmith,9ffb40a99b3cc3caaf02d1aa9bb4f9e8,Cypress,569,cy.waitUntil,cy.waitUntil(() => input.hasFocus()),predicate_or_custom_condition,predicate,helper,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.waitUntil(() => input.hasFocus()),false,,,
+bbc/simorgh,9175c8cda8c3e4a8a12ca4fdd7109384,Cypress,275,cy.wait,cy.wait(requestAlias),unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(requestAlias),false,,,
+uber/baseweb,041408cb3ba74424609ed0c4d0220e74,Playwright,69,page.waitForEvent,page.waitForEvent('filechooser'),event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForEvent('filechooser'),false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,66,cy.wait,cy.wait(SECOND * 10),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 10),false,,,
+ionic-team/ionic-framework,3ab05081d67c4d684e496e86419aa01f,Playwright,30,expect(itemEl).toHaveScreenshot,expect(itemEl).toHaveScreenshot(screenshot(`label-fixed`)),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(itemEl).toHaveScreenshot(screenshot(`label-fixed`)),false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,102,cy.wait,cy.wait(SECOND * 0.5),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 0.5),false,,,
+openobserve/openobserve,af73d43f9f55ea8bc6b9e74e0b82bde9,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,47,cy.wait,cy.wait(SECOND * 3),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 3),false,,,
+bbc/simorgh,0e0364e5f0a61cf7c1b5f99168e0bc0f,Cypress,117,cy.wait,cy.wait(5000),fixed_delay,time,helper,True,literal_ms,wait_api,literal_ms,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(5000),false,,,
+getpaseo/paseo,4beb4d4b40c8266d960b0cb8e7c83971,Playwright,179,"expect(page.getByTestId(""host-page-label-input"")).toBeVisible","expect(page.getByTestId(""host-page-label-input"")).toBeVisible()",assertion_retry_wait,assertion,helper,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(page.getByTestId(""host-page-label-input"")).toBeVisible()",false,,,
+cloudtogo/pageplug,b804821728ca9e4f4bbff048e5034169,Cypress,233,cy.wait,cy.wait(2000),fixed_delay,time,hook,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(2000),false,,,
+cloudtogo/pageplug,c36fff51a6c9650cf5d8f12fd8d296db,Cypress,94,cy.wait,"cy.wait(""@getConsolidatedData"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getConsolidatedData"")",false,,,
+cloudtogo/pageplug,6f63c3631af280b827ec9ece13c0f7a4,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+cloudtogo/pageplug,c1b0616388a3e81721270b4bbfacf3a3,Cypress,94,cy.wait,"cy.wait(""@getConsolidatedData"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getConsolidatedData"")",false,,,
+appsmithorg/appsmith,0fd95775c360d7761191bcb7ebbcd6fe,Cypress,19,"cy.wait(500)
+        .get(formWidgetsPage.treeSelectInput)
+        .last()
+        .click({ force: true })
+        .wait","cy.wait(500)
+        .get(formWidgetsPage.treeSelectInput)
+        .last()
+        .click({ force: true })
+        .wait(500)",fixed_delay,time,test_body,True,literal_ms,wait_api,literal_ms,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(500)
+        .get(formWidgetsPage.treeSelectInput)
+        .last()
+        .click({ force: true })
+        .wait(500)",false,,,
+appsmithorg/appsmith,22cadba10917ab8d7005202bd7c7d2d8,Cypress,133,cy.wait,cy.wait(2000),fixed_delay,time,hook,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(2000),false,,,
+BuilderIO/builder,82828bb94c7d043aa3cf8199e66479f6,Playwright,58,cy.wait,"cy.wait([getProductReq, getProductReq])",unresolved_custom_wait,,test_body,False,,wait_api,array_expression,False,False,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait([getProductReq, getProductReq])",false,,,
+cloudtogo/pageplug,cb95da12fc3c9eb6d29f228dcc53d26c,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+super-productivity/super-productivity,55839c34a7f5ce211db920be6e75d747,Playwright,106,expect(tasks).toHaveCount,"expect(tasks).toHaveCount(2, { timeout: 10000 })",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(tasks).toHaveCount(2, { timeout: 10000 })",false,,,
+mattermost/mattermost,24ffff8fea6f9f376a271ba41507e066,Cypress,110,"cy.uiGetPostTextBox().clear().type(`${MESSAGES.TINY}-recent ${customEmojiWithColons.slice(0, -1)}`).wait","cy.uiGetPostTextBox().clear().type(`${MESSAGES.TINY}-recent ${customEmojiWithColons.slice(0, -1)}`).wait(TIMEOUTS.TWO_SEC)",fixed_delay,time,test_body,True,constant_or_expression,wait_api,timeout_constant,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.uiGetPostTextBox().clear().type(`${MESSAGES.TINY}-recent ${customEmojiWithColons.slice(0, -1)}`).wait(TIMEOUTS.TWO_SEC)",false,,,
+live-codes/livecodes,78a0b10d76b2da7bee75a3bf0cedbc10,Playwright,4,page.waitForSelector,"page.waitForSelector('iframe[name=""app""]')",element_state_wait,element,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForSelector('iframe[name=""app""]')",false,,,
+linode/manager,55f8cd0d438109ec355bb2383d48a998,Cypress,131,cy.wait,cy.wait(['@getPlacementGroups']),network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(['@getPlacementGroups']),false,,,
+openobserve/openobserve,fda8e4d0e9383acbacfdc3ed19c4db48,Playwright,99,page.waitForFunction,"page.waitForFunction(
+    () => {
+      const dialog = document.querySelector('[data-test=""dialog-box""]');
+      if (!dialog) return false;
+
+      // Find the confirm button with data-test attribute inside dialog
+      const button = dialog.querySelector('[data-test=""confirm-button""]');
+      if (!button) return false;
+
+      // Check if button is stable (has computed style and is not ani...",predicate_or_custom_condition,predicate,hook,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(
+    () => {
+      const dialog = document.querySelector('[data-test=""dialog-box""]');
+      if (!dialog) return false;
+
+      // Find the confirm button with data-test attribute inside dialog
+      const button = dialog.querySelector('[data-test=""confirm-button""]');
+      if (!button) return false;
+
+      // Check if button is stable (has computed style and is not ani...",false,,,
+openobserve/openobserve,32d77745bf95e35c9bc2ba469eb96d6d,Playwright,54,"page
+    .waitForFunction","page
+    .waitForFunction(
+      () => document.querySelectorAll('[role=""option""]').length > 0,
+      { timeout: isVariable ? 8000 : 10000, polling: 100 }
+    )",predicate_or_custom_condition,predicate,helper,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForFunction(
+      () => document.querySelectorAll('[role=""option""]').length > 0,
+      { timeout: isVariable ? 8000 : 10000, polling: 100 }
+    )",false,,,
+sanity-io/sanity,dad9190d719c8fafea3dbd1e13a054db,Playwright,157,page.waitForTimeout,page.waitForTimeout(retryDelay),fixed_delay,time,helper,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(retryDelay),false,,,
+openobserve/openobserve,1cea5371fee9f6cb584e2a7926605235,Playwright,41,page.waitForLoadState,page.waitForLoadState('domcontentloaded'),navigation_or_load_wait,navigation,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForLoadState('domcontentloaded'),false,,,
+super-productivity/super-productivity,0cd2467510c903847c4c22a5fc41b13b,Playwright,614,client.page.waitForTimeout,client.page.waitForTimeout(UI_SETTLE_STANDARD),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,client.page.waitForTimeout(UI_SETTLE_STANDARD),false,,,
+deltachat/deltachat-desktop,5a080936be9000592253c7486b6a32f0,Playwright,329,page.waitForSelector,page.waitForSelector('button.styles_module_account'),element_state_wait,element,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForSelector('button.styles_module_account'),false,,,
+super-productivity/super-productivity,90b139d73d401ae8f8c76103280338e4,Playwright,235,page.waitForTimeout,page.waitForTimeout(isFull ? 250 : 150),fixed_delay,time,test_body,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(isFull ? 250 : 150),false,,,
+silevis/reactgrid,cf6e464278781d5c04f343472f5fca23,Cypress,17,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+tinacms/tinacms,a99adb739f3b96efee2b0fc9e0516fa5,Playwright,32,"editModeBtn
+      .waitFor","editModeBtn
+      .waitFor({ state: 'visible', timeout: 5000 })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"editModeBtn
+      .waitFor({ state: 'visible', timeout: 5000 })",false,,,
+payloadcms/payload,1a0e3afcd71c76340ffee82c406ee818,Playwright,23,"expect(async () => {
+      await expect(
+        page.locator('.autosave:has-text(""Last saved less than a minute ago"")'),
+      ).toBeVisible()
+    }).toPass","expect(async () => {
+      await expect(
+        page.locator('.autosave:has-text(""Last saved less than a minute ago"")'),
+      ).toBeVisible()
+    }).toPass({
+      timeout: POLL_TOPASS_TIMEOUT,
+    })",assertion_retry_wait,assertion,helper,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+      await expect(
+        page.locator('.autosave:has-text(""Last saved less than a minute ago"")'),
+      ).toBeVisible()
+    }).toPass({
+      timeout: POLL_TOPASS_TIMEOUT,
+    })",false,,,
+immich-app/immich,d6479ac5e665187c360229ef7ed36e5a,Playwright,56,page.waitForEvent,page.waitForEvent('download'),event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForEvent('download'),false,,,
+KittyCAD/modeling-app,7d8eee345504941110d49065f909292e,Playwright,903,expect(folderToDelete).not.toBeVisible,expect(folderToDelete).not.toBeVisible(),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(folderToDelete).not.toBeVisible(),false,,,
+plasmicapp/plasmic,403eee04ec5892e1cb1e370e200349bb,Playwright,163,"loadingMask
+      .waitFor","loadingMask
+      .waitFor({ state: ""hidden"", timeout: 5000 })",element_state_wait,element,test_body,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"loadingMask
+      .waitFor({ state: ""hidden"", timeout: 5000 })",false,,,
+silevis/reactgrid,b06c6e1a46857803dd149bba8a3744f3,Cypress,177,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+microsoft/fluentui,5bca2e2e6a8ad7b232abaaa0f2214860,Playwright,200,expect(element).toHaveJSProperty,"expect(element).toHaveJSProperty('size', size)",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(element).toHaveJSProperty('size', size)",false,,,
+cloudtogo/pageplug,ba3f8f09de4c868435a35a431c65473c,Cypress,1063,cy.get(`${selector}:first-of-type`).first().click({ force: true }).wait,cy.get(`${selector}:first-of-type`).first().click({ force: true }).wait(500),fixed_delay,time,helper,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.get(`${selector}:first-of-type`).first().click({ force: true }).wait(500),false,,,
+linode/manager,9f661d296f5c477921decc9d4f613dcf,Cypress,558,cy.wait,"cy.wait(['@getConfigs', '@getDisks', '@getLinode', '@getVolumes'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@getConfigs', '@getDisks', '@getLinode', '@getVolumes'])",false,,,
+MyCryptoHQ/MyCrypto,401df23203d72266a4ff78f50a4e913a,TestCafe,71,sent.wait,sent.wait(),fixed_delay,time,helper,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,sent.wait(),false,,,
+seek-oss/playroom,8809b412c98ba944f9e794b624ba1590,Cypress,341,cy.wait,cy.wait(CYPRESS_DEFAULT_WAIT_TIME),fixed_delay,time,helper,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(CYPRESS_DEFAULT_WAIT_TIME),false,,,
+openobserve/openobserve,7d5cf546a047de7e5cc99166fede0ff9,Playwright,126,page.waitForResponse,"page.waitForResponse(
+    async (response) => {
+      const url = response.url();
+      const method = response.request().method();
+
+      // Check if this is a DELETE request to dashboards endpoint
+      const isDeleteEndpoint = method === 'DELETE' &&
+                                /\/api\/.*\/dashboards\/\d+/.test(url);
+
+      if (isDeleteEndpoint) {
+        testLogger.debug(`Delete A...",network_wait,network,helper,False,,wait_api,,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+    async (response) => {
+      const url = response.url();
+      const method = response.request().method();
+
+      // Check if this is a DELETE request to dashboards endpoint
+      const isDeleteEndpoint = method === 'DELETE' &&
+                                /\/api\/.*\/dashboards\/\d+/.test(url);
+
+      if (isDeleteEndpoint) {
+        testLogger.debug(`Delete A...",false,,,
+uber/baseweb,639f1f99e652c89848fa19153ca530ab,Playwright,126,page.waitForSelector,page.waitForSelector(selectors.twelveHourCreatable),element_state_wait,element,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForSelector(selectors.twelveHourCreatable),false,,,
+openobserve/openobserve,d7ad7229f0a49c905b78caabf50ce247,Playwright,52,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 10000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 10000 })",false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,92,cy.wait,cy.wait(SECOND * 3),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 3),false,,,
+opencollective/opencollective-frontend,fd365975c41eae76057f7fe4ab78ea85,Cypress,112,cy.wait,cy.wait(options.wait ?? 1000),fixed_delay,time,helper,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(options.wait ?? 1000),false,,,
+ohcnetwork/care_fe,86466b9aa7c9b7a68ea4a02e20929d10,Playwright,168,"expect(async () => {
+      await page.getByRole(""textbox"", { name: /search/i }).clear();
+      await page.getByRole(""textbox"", { name: /search/i }).fill(title);
+      await expect(page.getByRole(""t","expect(async () => {
+      await page.getByRole(""textbox"", { name: /search/i }).clear();
+      await page.getByRole(""textbox"", { name: /search/i }).fill(title);
+      await expect(page.getByRole(""table"").getByText(title)).toBeVisible();
+    }).toPass({ intervals: [2_000, 3_000, 5_000], timeout: 30_000 })",assertion_retry_wait,assertion,test_body,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+      await page.getByRole(""textbox"", { name: /search/i }).clear();
+      await page.getByRole(""textbox"", { name: /search/i }).fill(title);
+      await expect(page.getByRole(""table"").getByText(title)).toBeVisible();
+    }).toPass({ intervals: [2_000, 3_000, 5_000], timeout: 30_000 })",false,,,
+super-productivity/super-productivity,ef6d515a7316149bc8e619ec0bd0ef1f,Playwright,128,"page
+    .waitForEvent","page
+    .waitForEvent('download', { timeout: 90000 })",event_wait,event,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForEvent('download', { timeout: 90000 })",false,,,
+mattermost/mattermost,d58939e147c83768b4d36432ac2d7509,Cypress,75,cy.uiGetSearchBox().clear().type('in:town-square').wait,cy.uiGetSearchBox().clear().type('in:town-square').wait(TIMEOUTS.HALF_SEC),fixed_delay,time,test_body,True,constant_or_expression,wait_api,constant_or_expression,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.uiGetSearchBox().clear().type('in:town-square').wait(TIMEOUTS.HALF_SEC),false,,,
+FuelLabs/fuels-wallet,fd65aea179c8cc3c0f259d66c6f3f906,Playwright,363,context.waitForEvent,"context.waitForEvent('page', {
+          predicate: (page) => page.url().includes(extensionId),
+          timeout: 10_000,
+        })",event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"context.waitForEvent('page', {
+          predicate: (page) => page.url().includes(extensionId),
+          timeout: 10_000,
+        })",false,,,
+openreplay/openreplay,13a6b4928fc8fa7d71a68af0c9d6a556,Cypress,40,cy.wait,cy.wait(SECOND * 15),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(SECOND * 15),false,,,
+super-productivity/super-productivity,04cbc855396ac9761b1db165ad5322b2,Playwright,128,"page
+    .waitForEvent","page
+    .waitForEvent('download', { timeout: 90000 })",event_wait,event,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForEvent('download', { timeout: 90000 })",false,,,
+linode/manager,e7c29108b5748c41cc5be225dcef3d3e,Cypress,228,cy.wait,"cy.wait(['@getFeatureFlags', '@getSettings', '@getRegions'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@getFeatureFlags', '@getSettings', '@getRegions'])",false,,,
+BuilderIO/builder,072cd6da3dcf289c308687af51e8922e,Playwright,24,cy.wait,"cy.wait([getProductReq, getProductReq])",unresolved_custom_wait,,test_body,False,,wait_api,array_expression,False,False,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait([getProductReq, getProductReq])",false,,,
+hello-pangea/dnd,db11c1666112137cfb8cf163423d56de,Cypress,27,cy.wait,cy.wait(timings.outOfTheWay * 1000),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(timings.outOfTheWay * 1000),false,,,
+SonicJs-Org/sonicjs,ad10011e090b9c647b997bec74e8f12b,Playwright,372,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 15000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 15000 })",false,,,
+payloadcms/payload,1f4a9d06831f653cc16a211254808d09,Playwright,148,expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",assertion_retry_wait,assertion,hook,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",false,,,
+openobserve/openobserve,87bad68078dee88920f884d957c23484,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+openobserve/openobserve,5299681aa51b97be2b04b4c2e3d9f791,Playwright,21,page.waitForResponse,"page.waitForResponse(
+        (response) =>
+          /\/api\/.*\/dashboards/.test(response.url()) &&
+          response.status() === 200,
+        { timeout: 30000 }
+      )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+        (response) =>
+          /\/api\/.*\/dashboards/.test(response.url()) &&
+          response.status() === 200,
+        { timeout: 30000 }
+      )",false,,,
+BuilderIO/builder,6f4c099b5164259d101a9161d12f6755,Playwright,96,page.waitForEvent,"page.waitForEvent('console', msg =>
+      msg.text().includes(HELLO_CUSTOM_COMPONENT_LOADED_MESSAGE)
+    )",event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForEvent('console', msg =>
+      msg.text().includes(HELLO_CUSTOM_COMPONENT_LOADED_MESSAGE)
+    )",false,,,
+openobserve/openobserve,3e11e7b9c945d049aa585e67f63222cd,Playwright,21,page.waitForResponse,"page.waitForResponse(
+        (response) =>
+          /\/api\/.*\/dashboards/.test(response.url()) &&
+          response.status() === 200,
+        { timeout: 30000 }
+      )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+        (response) =>
+          /\/api\/.*\/dashboards/.test(response.url()) &&
+          response.status() === 200,
+        { timeout: 30000 }
+      )",false,,,
+mattermost/mattermost,b7987c6b5054d51e29a61bbf4c905205,Cypress,187,cy.waitUntil,"cy.waitUntil(checkFn, options)",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(checkFn, options)",false,,,
+super-productivity/super-productivity,6084230521a6bae72b5271be7a1a1383,Playwright,337,"page
+    .waitForFunction","page
+    .waitForFunction(
+      (name) => {
+        const cards = Array.from(document.querySelectorAll('plugin-management mat-card'));
+        const targetCard = cards.find((card) => {
+          const title = card.querySelector('mat-card-title')?.textContent || '';
+          return title.includes(name);
+        });
+        return !!targetCard;
+      },
+      pluginName,
+      { timeout: timeout /...",predicate_or_custom_condition,predicate,helper,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForFunction(
+      (name) => {
+        const cards = Array.from(document.querySelectorAll('plugin-management mat-card'));
+        const targetCard = cards.find((card) => {
+          const title = card.querySelector('mat-card-title')?.textContent || '';
+          return title.includes(name);
+        });
+        return !!targetCard;
+      },
+      pluginName,
+      { timeout: timeout /...",false,,,
+cloudtogo/pageplug,c52d469eb6f173f7108ba7ee0e6d0954,Cypress,222,cy.waitUntil,"cy.waitUntil(
+          () =>
+            cy
+              .xpath(""//div[contains(@class, ' t--widget-textwidget')][2]"", {
+                timeout: 50000,
+              })
+              .eq(0)
+              .contains(""CreditLimit:"", { timeout: 30000 })
+              .should(""exist""),
+          {
+            errorMsg: ""Execute call did not complete evn after 10 secs"",
+            timeout...",predicate_or_custom_condition,predicate,test_body,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(
+          () =>
+            cy
+              .xpath(""//div[contains(@class, ' t--widget-textwidget')][2]"", {
+                timeout: 50000,
+              })
+              .eq(0)
+              .contains(""CreditLimit:"", { timeout: 30000 })
+              .should(""exist""),
+          {
+            errorMsg: ""Execute call did not complete evn after 10 secs"",
+            timeout...",false,,,
+openobserve/openobserve,19f1ca398fcb14e18a6b38c38907a3a9,Playwright,52,setupPage.waitForLoadState,setupPage.waitForLoadState('networkidle'),navigation_or_load_wait,navigation,hook,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,setupPage.waitForLoadState('networkidle'),false,,,
+UI5/webcomponents,4c6fc3000c760e2c95491dda19832b00,Cypress,25,"cy.get(""@menu"")
+		.shadow()
+		.find(""[ui5-responsive-popover]"")
+		.should","cy.get(""@menu"")
+		.shadow()
+		.find(""[ui5-responsive-popover]"")
+		.should($rp => {
+			expect($rp.is("":popover-open"")).to.be.true;
+			expect($rp.width()).to.not.equal(0);
+			expect($rp.height()).to.not.equal(0);
+		})",assertion_retry_wait,assertion,helper,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(""@menu"")
+		.shadow()
+		.find(""[ui5-responsive-popover]"")
+		.should($rp => {
+			expect($rp.is("":popover-open"")).to.be.true;
+			expect($rp.width()).to.not.equal(0);
+			expect($rp.height()).to.not.equal(0);
+		})",false,,,
+opencollective/opencollective-frontend,2df5ea05a182be962d40cf819b91066a,Cypress,112,cy.wait,cy.wait(options.wait ?? 1000),fixed_delay,time,helper,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(options.wait ?? 1000),false,,,
+openobserve/openobserve,967762d536b07b189872e1456795de0d,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+openobserve/openobserve,fe7310d2473624740d30e87225bd92a2,Playwright,547,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 10000 })",navigation_or_load_wait,navigation,test_body,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 10000 })",false,,,
+UI5/webcomponents,cfb79cb9a0c9c562a6cb08bf82da5133,Cypress,217,"cy.get(""[ui5-expandable-text]"")
+				.shadow()
+				.find(""[ui5-text]"")
+				.should","cy.get(""[ui5-expandable-text]"")
+				.shadow()
+				.find(""[ui5-text]"")
+				.should(""have.attr"", ""empty-indicator-mode"", ""Off"")",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(""[ui5-expandable-text]"")
+				.shadow()
+				.find(""[ui5-text]"")
+				.should(""have.attr"", ""empty-indicator-mode"", ""Off"")",false,,,
+cloudtogo/pageplug,4443f6a36503078935067a77d72a90cf,Cypress,975,cy.wait,cy.wait(2000),fixed_delay,time,hook,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(2000),false,,,
+openobserve/openobserve,63c2705bb9ae695ae9182a25f68396ef,Playwright,10,page.waitForURL,"page.waitForURL(/\/web\/dashboards.*/, { timeout: 30000 })",navigation_or_load_wait,navigation,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForURL(/\/web\/dashboards.*/, { timeout: 30000 })",false,,,
+openobserve/openobserve,f0329a988abb1ee374e21e6e5f044a8f,Playwright,240,page.locator(getVariableSelector(varA)).waitFor,"page.locator(getVariableSelector(varA)).waitFor({ state: ""visible"", timeout: 10000 })",element_state_wait,element,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.locator(getVariableSelector(varA)).waitFor({ state: ""visible"", timeout: 10000 })",false,,,
+linode/manager,f137ed697e2ada8c270724ec9256f6ff,Cypress,807,"cy.get('[data-qa-graph-column-title=""Avg""]')
+              .should('be.visible')
+              .should","cy.get('[data-qa-graph-column-title=""Avg""]')
+              .should('be.visible')
+              .should('have.text', `${expectedWidgetValues.average}`)",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get('[data-qa-graph-column-title=""Avg""]')
+              .should('be.visible')
+              .should('have.text', `${expectedWidgetValues.average}`)",false,,,
+cloudtogo/pageplug,674b495a934cac7c69ebdf96230ece53,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+mattermost/mattermost,485b96d0d603d6b97384ae1266b94103,Cypress,16,"cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait","cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait(TIMEOUTS.HALF_SEC)",unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait(TIMEOUTS.HALF_SEC)",false,,,
+cloudtogo/pageplug,ecb332d43999608a9cb3cd1f1a0a6884,Cypress,947,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+tinacms/tinacms,76ee44e17a95c0c060ea137dba9149a0,Playwright,66,"page
+    .waitForURL","page
+    .waitForURL((url) => url.toString() !== urlBeforeSave, { timeout: 3000 })",navigation_or_load_wait,navigation,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForURL((url) => url.toString() !== urlBeforeSave, { timeout: 3000 })",false,,,
+SonicJs-Org/sonicjs,147ee2e99315e65f002c52e8b3855163,Playwright,372,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 15000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 15000 })",false,,,
+mattermost-community/focalboard,ee9fc7e8c9328c1ba8baf72fcabd418a,Cypress,84,"cy.get('.CardDetail .EditableArea.title').
+            click().
+            should('have.focus').
+            wait","cy.get('.CardDetail .EditableArea.title').
+            click().
+            should('have.focus').
+            wait(1000)",unresolved_custom_wait,,test_body,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get('.CardDetail .EditableArea.title').
+            click().
+            should('have.focus').
+            wait(1000)",false,,,
+midas-research/audino,daa97d017913aa38d835ac4b0635ed61,Cypress,118,cy.get('.cvat-projects-project-item-card').should,"cy.get('.cvat-projects-project-item-card').should('have.css', 'opacity', '0.5')",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get('.cvat-projects-project-item-card').should('have.css', 'opacity', '0.5')",false,,,
+MyCryptoHQ/MyCrypto,ed64aa2de23eeffde66029e1614bdd51,TestCafe,70,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+appsmithorg/appsmith,0c21ccffafb3a7e866347388a49bcb4c,Cypress,215,cy.location().should,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",false,,,
+opensearch-project/OpenSearch-Dashboards,510d7f1bbfb9832b293cbded3d968cfc,Cypress,372,"cy.getElementByTestId(editorType)
+    .find('.monaco-editor')
+    .should('be.visible')
+    .should('have.class', 'vs')
+    .wait","cy.getElementByTestId(editorType)
+    .find('.monaco-editor')
+    .should('be.visible')
+    .should('have.class', 'vs')
+    .wait(1000)",fixed_delay,time,helper,True,literal_ms,wait_api,literal_ms,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.getElementByTestId(editorType)
+    .find('.monaco-editor')
+    .should('be.visible')
+    .should('have.class', 'vs')
+    .wait(1000)",false,,,
+mattermost/mattermost,f31e2675584a60fe4633b0258eb0ac0c,Cypress,174,cy.wait,cy.wait(TIMEOUTS.HALF_SEC),fixed_delay,time,test_body,True,constant_or_expression,wait_api,constant_or_expression,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(TIMEOUTS.HALF_SEC),false,,,
+linode/manager,fd1d7ac531f2ce6ac62e34b80beb203e,Cypress,680,cy.wait,cy.wait(`@getAlerts-${label}`),network_wait,network,test_body,False,alias_expression,wait_api,network_alias_expression,False,True,False,False,ast_template_literal_head,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(`@getAlerts-${label}`),false,,,
+cloudtogo/pageplug,75c007bfb6972a0d3a767b98e7037bb9,Cypress,924,cy.get(welcomePage.email).should,"cy.get(welcomePage.email).should(""be.visible"")",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(welcomePage.email).should(""be.visible"")",false,,,
+MyCryptoHQ/MyCrypto,68c17c15d8abe6511b94bfcdd85403d2,TestCafe,21,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+redpanda-data/console,a743ccc79e5200583c3e50181b1ebcae,Playwright,1181,page.waitForURL,"page.waitForURL(
+          `**/security/acls/${encodeURIComponent(principal)}/details?host=${encodeURIComponent(firstHost)}`
+        )",navigation_or_load_wait,navigation,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForURL(
+          `**/security/acls/${encodeURIComponent(principal)}/details?host=${encodeURIComponent(firstHost)}`
+        )",false,,,
+cloudtogo/pageplug,86000fb71be6762cc3d24ed00d6059a7,Cypress,1072,cy.wait,cy.wait(1000),fixed_delay,time,helper,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(1000),false,,,
+SonicJs-Org/sonicjs,e345aed179b9a102526b5d0cb25a37f3,Playwright,392,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 15000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 15000 })",false,,,
+cloudtogo/pageplug,a360406284f12e147a4d032e1a960754,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+midas-research/audino,3880a2be2479eb77c473249542957bd1,Cypress,61,cy.wait,cy.wait('@createTaskRequest'),network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait('@createTaskRequest'),false,,,
+bbc/simorgh,a670aa36984194f2b78596a76aea5c06,Cypress,275,cy.wait,cy.wait(requestAlias),unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(requestAlias),false,,,
+uber/react-view,f9e6058cf6dc5666df3ebe516fa91cd2,Playwright,13,page.waitForSelector,"page.waitForSelector(""[data-storyloaded]"")",element_state_wait,element,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForSelector(""[data-storyloaded]"")",false,,,
+cloudtogo/pageplug,bb9f4f106bedaad37e5ac70479e87a51,Cypress,94,cy.wait,"cy.wait(""@getConsolidatedData"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getConsolidatedData"")",false,,,
+super-productivity/super-productivity,6a2d406141b2c783cb4ad103e3795541,Playwright,997,page.waitForTimeout,page.waitForTimeout(UI_SETTLE_STANDARD),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(UI_SETTLE_STANDARD),false,,,
+silevis/reactgrid,d2b6bafc22d1d2963190eff3d56a3ae1,Cypress,189,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+linode/manager,2243ae14b8553aacc5b34fbcf2757348,Cypress,149,cy.wait,"cy.wait(['@getProfile', '@getLinode'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@getProfile', '@getLinode'])",false,,,
+ValueCell-ai/ClawX,4df86414b799806a8e85cdba0f55f432,Playwright,71,app.waitForEvent,"app.waitForEvent('window', { timeout: 2_000 })",event_wait,event,helper,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"app.waitForEvent('window', { timeout: 2_000 })",false,,,
+appsmithorg/appsmith,9f922acb7e45bde7b92659b4bd7dd35b,Cypress,1099,cy.wait,cy.wait(1000),fixed_delay,time,helper,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(1000),false,,,
+jetkvm/kvm,61bf4116c2a922627696e3affc12f72a,Playwright,433,page.waitForTimeout,page.waitForTimeout(ANIMATION_DELAY),fixed_delay,time,helper,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(ANIMATION_DELAY),false,,,
+microsoft/fluentui,c6e33e668ccd36d253123cd1ba663bf5,Cypress,339,"cy.get(popoverTriggerSelector)
+        .click()
+        .get('iframe')
+        .focus()
+        .wait","cy.get(popoverTriggerSelector)
+        .click()
+        .get('iframe')
+        .focus()
+        .wait(2000)",fixed_delay,time,test_body,True,literal_ms,wait_api,literal_ms,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(popoverTriggerSelector)
+        .click()
+        .get('iframe')
+        .focus()
+        .wait(2000)",false,,,
+openobserve/openobserve,9d40ed23535be15aa1aac7729d8379cb,Playwright,51,page.waitForTimeout,page.waitForTimeout(isVariable ? 1500 : 500),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(isVariable ? 1500 : 500),false,,,
+midas-research/audino,632f54904024fa22b8a2314229b604f0,Cypress,13,cy.url().should,"cy.url().should('include', '/auth/login')",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.url().should('include', '/auth/login')",false,,,
+mattermost/mattermost,8468cae15f696b2abe6b8ffec5090206,Cypress,16,"cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait","cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait(TIMEOUTS.HALF_SEC)",unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait(TIMEOUTS.HALF_SEC)",false,,,
+appsmithorg/appsmith,4fd5551201a304f0ba0c8005fda315dd,Cypress,569,cy.waitUntil,cy.waitUntil(() => input.hasFocus()),predicate_or_custom_condition,predicate,helper,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.waitUntil(() => input.hasFocus()),false,,,
+appsmithorg/appsmith,e97ea796478ac3cad402ec5d85d37328,Cypress,977,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+linode/manager,ac2cf40bada6cecc969da39559cce876,Cypress,328,cy.wait,"cy.wait([
+        '@getRegions',
+        '@getAccount',
+        '@getCluster',
+        '@getNodePools',
+        '@getTieredVersions',
+      ])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait([
+        '@getRegions',
+        '@getAccount',
+        '@getCluster',
+        '@getNodePools',
+        '@getTieredVersions',
+      ])",false,,,
+documenso/documenso,fef5535698a45a117743f0fd8714b1e7,Playwright,507,expect(page.getByText('You have successfully removed this user').first()).toBeVisible,expect(page.getByText('You have successfully removed this user').first()).toBeVisible(),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(page.getByText('You have successfully removed this user').first()).toBeVisible(),false,,,
+uber/baseweb,e4638d27c3f01c8e72be13d4eeec56d6,Playwright,58,page.waitForSelector,page.waitForSelector('[data-storyloaded]'),element_state_wait,element,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForSelector('[data-storyloaded]'),false,,,
+payloadcms/payload,52d748aeae1963d995f6df954ba41355,Playwright,148,expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",assertion_retry_wait,assertion,hook,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",false,,,
+openobserve/openobserve,1d81b7b1646b1ec4c0d7a488ffca0ee6,Playwright,140,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 15000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 15000 })",false,,,
+mattermost/mattermost,af358aafee4e1389420247f0ed0665c0,Cypress,16,"cy.uiGetSearchBox().
+        clear().
+        wait","cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC)",unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC)",false,,,
+Monogatari/Monogatari,ebd4551222663d31700dfae8cb4fd22d,Cypress,44,cy.wait,cy.wait (150),fixed_delay,time,helper,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait (150),false,,,
+BuilderIO/builder,7bc931b964f213fa3c15a76b40b4ca54,Playwright,75,page.waitForEvent,"page.waitForEvent('console', msg => {
+      consoleMessages.push(msg.text());
+      return msg.text().includes(LAST_COMPONENT_REGISTERED_MESSAGE);
+    })",event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForEvent('console', msg => {
+      consoleMessages.push(msg.text());
+      return msg.text().includes(LAST_COMPONENT_REGISTERED_MESSAGE);
+    })",false,,,
+mattermost/mattermost,578bd1b388bcc49d6ebfec2f6798bc9e,Cypress,253,cy.get('#selectItems input').typeWithForce(participants[0].username).wait,cy.get('#selectItems input').typeWithForce(participants[0].username).wait(TIMEOUTS.HALF_SEC),fixed_delay,time,test_body,True,constant_or_expression,wait_api,timeout_constant,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.get('#selectItems input').typeWithForce(participants[0].username).wait(TIMEOUTS.HALF_SEC),false,,,
+super-productivity/super-productivity,d7bbc25fcec4aca5f897eb6c8e527c23,Playwright,997,page.waitForTimeout,page.waitForTimeout(UI_SETTLE_STANDARD),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(UI_SETTLE_STANDARD),false,,,
+otterscan/otterscan,7d2bee191e859dc51aedf3c8ecc1cf17,Cypress,111,tx.wait,tx.wait(),unresolved_custom_wait,,hook,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,tx.wait(),false,,,
+hello-pangea/dnd,4b339b7d861b92c9fbcfa92014ee07a3,Cypress,32,"cy.get('@item')
+        .trigger('keydown', { keyCode: keyCodes.arrowDown, force: true })
+        // finishing before the movement time is fine - but this looks nice
+        // waiting longer than ","cy.get('@item')
+        .trigger('keydown', { keyCode: keyCodes.arrowDown, force: true })
+        // finishing before the movement time is fine - but this looks nice
+        // waiting longer than we should (timings.outOfTheWay * 1000) as electron is being strange
+        .wait(timings.outOfTheWay * 1000 * 3)",fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get('@item')
+        .trigger('keydown', { keyCode: keyCodes.arrowDown, force: true })
+        // finishing before the movement time is fine - but this looks nice
+        // waiting longer than we should (timings.outOfTheWay * 1000) as electron is being strange
+        .wait(timings.outOfTheWay * 1000 * 3)",false,,,
+JetBrains/kotlin-web-site,241ff2cfd0bd092f65402145ac334f52,Playwright,207,expect(link).not.toBeVisible,expect(link).not.toBeVisible(),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(link).not.toBeVisible(),false,,,
+appsmithorg/appsmith,608397818348561cd335c5010f40f672,Cypress,96,cy.wait,"cy.wait(""@getConsolidatedData"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getConsolidatedData"")",false,,,
+cloudtogo/pageplug,c1b3127f6a13d4142958cf9bc22d7684,Cypress,1757,cy.waitUntil,"cy.waitUntil(() => this.IsContainerReady(containerName), {
+        interval: 5000,
+        timeout: 60000,
+      })",predicate_or_custom_condition,predicate,hook,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(() => this.IsContainerReady(containerName), {
+        interval: 5000,
+        timeout: 60000,
+      })",false,,,
+appsmithorg/appsmith,369812b4c3b83a19f26695c2897df15d,Cypress,966,cy.get(welcomePage.continueButton).should,"cy.get(welcomePage.continueButton).should(""not.be.disabled"")",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(welcomePage.continueButton).should(""not.be.disabled"")",false,,,
+mattermost/mattermost,32e0b8a7c6e98288e525a9babad88cd1,Cypress,185,"cy.findByRole('combobox', {name: 'Search for people'}).
+            should('have.focused').
+            typeWithForce(guestUser.username).
+            wait","cy.findByRole('combobox', {name: 'Search for people'}).
+            should('have.focused').
+            typeWithForce(guestUser.username).
+            wait(TIMEOUTS.ONE_SEC)",unresolved_custom_wait,,test_body,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.findByRole('combobox', {name: 'Search for people'}).
+            should('have.focused').
+            typeWithForce(guestUser.username).
+            wait(TIMEOUTS.ONE_SEC)",false,,,
+otterscan/otterscan,79285a642194d0d5ed4d9e676594afc3,Cypress,52,tx.wait,tx.wait(),unresolved_custom_wait,,helper,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,tx.wait(),false,,,
+appsmithorg/appsmith,550ff79d94318a30808c894c5698e49c,Cypress,63,"cy.wrap($containerEl)
+          .find(publishLocators.textWidget)
+          .eq(1)
+          .should","cy.wrap($containerEl)
+          .find(publishLocators.textWidget)
+          .eq(1)
+          .should(""have.text"", simpleListData1[index].id)",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wrap($containerEl)
+          .find(publishLocators.textWidget)
+          .eq(1)
+          .should(""have.text"", simpleListData1[index].id)",false,,,
+databuddy-analytics/Databuddy,5eadfef374230fd0fe2fe53b2de0fd4b,Playwright,30,page.waitForFunction,"page.waitForFunction(
+		() => typeof window.__SDK__ !== ""undefined"",
+		null,
+		{
+			timeout: 5000,
+		}
+	)",predicate_or_custom_condition,predicate,hook,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(
+		() => typeof window.__SDK__ !== ""undefined"",
+		null,
+		{
+			timeout: 5000,
+		}
+	)",false,,,
+cloudtogo/pageplug,2d42cd6fe3b58bdfd864045c8115ccb4,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+otterscan/otterscan,7cba735aa252d694d7064112885d8b99,Cypress,52,tx.wait,tx.wait(),unresolved_custom_wait,,hook,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,tx.wait(),false,,,
+pretzelai/pretzelai,3964b1af48bc6cff4812e34f67515c69,Playwright,557,page.locator('text=1/21').waitFor,page.locator('text=1/21').waitFor(),element_state_wait,element,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.locator('text=1/21').waitFor(),false,,,
+openobserve/openobserve,c73e3df273f2ac1ec120d86d874ea718,Playwright,69,page.waitForResponse,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",false,,,
+cloudtogo/pageplug,b848c1b76cff72bf0ef8e54a0945304d,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+super-productivity/super-productivity,90b139d73d401ae8f8c76103280338e4,Playwright,901,page.waitForTimeout,page.waitForTimeout(fadeMs + 600),fixed_delay,time,helper,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(fadeMs + 600),false,,,
+mattermost/mattermost,5fbd20c96235ca537901c30b3875bc0c,Cypress,194,cy.get('input').should('be.visible').type('Channel').wait,cy.get('input').should('be.visible').type('Channel').wait(TIMEOUTS.HALF_SEC),fixed_delay,time,test_body,True,constant_or_expression,wait_api,constant_or_expression,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.get('input').should('be.visible').type('Channel').wait(TIMEOUTS.HALF_SEC),false,,,
+super-productivity/super-productivity,b5244aa15b9b1643128f26c998a60823,Playwright,128,"page
+    .waitForEvent","page
+    .waitForEvent('download', { timeout: 90000 })",event_wait,event,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForEvent('download', { timeout: 90000 })",false,,,
+cloudtogo/pageplug,db9aa6475c266795e7230a8a9868b849,Cypress,936,cy.get(welcomePage.continueButton).should,"cy.get(welcomePage.continueButton).should(""not.be.disabled"")",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(welcomePage.continueButton).should(""not.be.disabled"")",false,,,
+appsmithorg/appsmith,c8dac5c81e3e07344b15f68b8c666ba5,Cypress,79,cy.wait,"cy.wait(""@getWorkspace"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getWorkspace"")",false,,,
+linode/manager,55aaf097b35756f20ead37b3bca02a3e,Cypress,359,cy.wait,"cy.wait(['@getDatabase', '@getDatabaseTypes'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@getDatabase', '@getDatabaseTypes'])",false,,,
+element-hq/element-web,e6310dae81cab096832c61e4412e849f,Playwright,92,page.waitForResponse,"page.waitForResponse((resp) => resp.url().includes(""/sync"") && resp.status() === 401)",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse((resp) => resp.url().includes(""/sync"") && resp.status() === 401)",false,,,
+surveyjs/survey-library,b3d4fa04951164ab14c39873570b11e0,Playwright,150,page.waitForFunction,"page.waitForFunction(() => (window as any).__surveyStylesLoaded === true, { timeout: 5000 })",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(() => (window as any).__surveyStylesLoaded === true, { timeout: 5000 })",false,,,
+payloadcms/payload,8d46ed7be029cbd6c694f740e87b083f,Playwright,1272,"expect(async () => {
+        await expect(page.locator('.export-preview')).toBeVisible()
+      }).toPass","expect(async () => {
+        await expect(page.locator('.export-preview')).toBeVisible()
+      }).toPass()",assertion_retry_wait,assertion,test_body,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+        await expect(page.locator('.export-preview')).toBeVisible()
+      }).toPass()",false,,,
+UI5/webcomponents-react,cefadb3092bcae87c1d83487aa8976de,Cypress,148,cy.get('@endContent').should,"cy.get('@endContent').should(($el) => {
+      expect($el[0].getBoundingClientRect().top).to.approximately(525.5, 1);
+    })",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get('@endContent').should(($el) => {
+      expect($el[0].getBoundingClientRect().top).to.approximately(525.5, 1);
+    })",false,,,
+JetBrains/kotlin-web-site,78a1fe4e8356271a189f9413416e731b,Playwright,379,expect(element).toBeVisible,expect(element).toBeVisible(),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(element).toBeVisible(),false,,,
+super-productivity/super-productivity,d7bbc25fcec4aca5f897eb6c8e527c23,Playwright,1038,page.waitForTimeout,page.waitForTimeout(UI_SETTLE_EXTENDED),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(UI_SETTLE_EXTENDED),false,,,
+linode/manager,0de80e38289d90e987418b5be841f4a2,Cypress,190,cy.wait,cy.wait(Array(6).fill('@getMetrics')),network_wait,network,hook,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_fill_alias,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(Array(6).fill('@getMetrics')),false,,,
+mattermost/mattermost,f5a7f864e32fff1ded2691ccf8171aed,Cypress,79,cy.waitUntil,"cy.waitUntil(() => {
+        return cy.uiGetPostTextBox().then((el) => {
+            return el[0].textContent === '';
+        });
+    })",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(() => {
+        return cy.uiGetPostTextBox().then((el) => {
+            return el[0].textContent === '';
+        });
+    })",false,,,
+dyrector-io/dyrectorio,b6dcab57c964ecab229fc84737d17bb4,Playwright,135,expect(newSecretValueInput).toBeDisabled,expect(newSecretValueInput).toBeDisabled(),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(newSecretValueInput).toBeDisabled(),false,,,
+linode/manager,69916c98f7b5733223ebcba1e3b74e82,Cypress,155,cy.wait,"cy.wait([
+      '@getLinode',
+      '@getFeatureFlags',
+      '@getNotifications',
+      '@getMaintenances',
+      '@getProfile',
+    ])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait([
+      '@getLinode',
+      '@getFeatureFlags',
+      '@getNotifications',
+      '@getMaintenances',
+      '@getProfile',
+    ])",false,,,
+openobserve/openobserve,3b832718135d9ab2ea7181caac1e2c8b,Playwright,23,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 10000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 10000 })",false,,,
+appsmithorg/appsmith,03074e1df8b39bc89dbaf720df5a57c9,Cypress,977,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+ontola/atomic-server,e0e44a3133273556f7b525860d67e8e1,Playwright,202,page.waitForTimeout,page.waitForTimeout(REBUILD_INDEX_TIME),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(REBUILD_INDEX_TIME),false,,,
+cloudtogo/pageplug,75eb7473f86495882c8a634a54eadc1a,Cypress,214,cy.wait,cy.wait(2000),fixed_delay,time,hook,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(2000),false,,,
+linode/manager,5106c7f1354de354ab217c63dd2227c9,Cypress,68,cy.wait,"cy.wait(['@getAccountSettings', '@getUserPreferences'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@getAccountSettings', '@getUserPreferences'])",false,,,
+cloudtogo/pageplug,2df5f8aa722202815832d4ffe3b44c97,Cypress,1757,cy.waitUntil,"cy.waitUntil(() => this.IsContainerReady(containerName), {
+        interval: 5000,
+        timeout: 60000,
+      })",predicate_or_custom_condition,predicate,hook,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(() => this.IsContainerReady(containerName), {
+        interval: 5000,
+        timeout: 60000,
+      })",false,,,
+super-productivity/super-productivity,2bc584493108c3efc189e50445c259a5,Playwright,614,client.page.waitForTimeout,client.page.waitForTimeout(UI_SETTLE_STANDARD),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,client.page.waitForTimeout(UI_SETTLE_STANDARD),false,,,
+cloudtogo/pageplug,a51db16fa3a41aa23c38664e7295bfba,Cypress,66,cy.waitUntil,"cy.waitUntil(
+            () =>
+              cy
+                .get(
+                  '.tbody .td[data-rowindex=""' +
+                    1 +
+                    '""][data-colindex=""' +
+                    0 +
+                    '""]',
+                  {
+                    timeout: 40000,
+                  },
+                )
+                .eq(0)
+                .should(""be.vis...",predicate_or_custom_condition,predicate,test_body,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(
+            () =>
+              cy
+                .get(
+                  '.tbody .td[data-rowindex=""' +
+                    1 +
+                    '""][data-colindex=""' +
+                    0 +
+                    '""]',
+                  {
+                    timeout: 40000,
+                  },
+                )
+                .eq(0)
+                .should(""be.vis...",false,,,
+pinterest/gestalt,1c13d01be73957a5773b5e1fa3c80643,Playwright,13,"page
+    .waitForFunction","page
+    .waitForFunction(
+      ({
+        selector,
+        args: {
+          targetItems,
+          targetItemsLT,
+          targetItemsLTE,
+          targetItemsGT,
+          targetItemsGTE,
+          scrollHeight,
+        },
+      }) => {
+        const items = Array.from(document.querySelectorAll(selector));
+        const loadedItems = items.filter((item) => item.style.visibilit...",predicate_or_custom_condition,predicate,helper,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForFunction(
+      ({
+        selector,
+        args: {
+          targetItems,
+          targetItemsLT,
+          targetItemsLTE,
+          targetItemsGT,
+          targetItemsGTE,
+          scrollHeight,
+        },
+      }) => {
+        const items = Array.from(document.querySelectorAll(selector));
+        const loadedItems = items.filter((item) => item.style.visibilit...",false,,,
+hello-pangea/dnd,4b339b7d861b92c9fbcfa92014ee07a3,Cypress,46,cy.wait,cy.wait(timings.outOfTheWay * 1000),fixed_delay,time,test_body,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_binary_numeric_expression,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(timings.outOfTheWay * 1000),false,,,
+cloudtogo/pageplug,21f31b7b30dd96ac03141ca6772a72b6,Cypress,927,cy.get(welcomePage.continueButton).should,"cy.get(welcomePage.continueButton).should(""be.disabled"")",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(welcomePage.continueButton).should(""be.disabled"")",false,,,
+payloadcms/payload,77b7641c1a88557faf7313a87cad04cf,Playwright,1435,"expect(async () => {
+        await expect(listItem).toHaveText('00:00')
+      }).toPass","expect(async () => {
+        await expect(listItem).toHaveText('00:00')
+      }).toPass({
+        timeout: POLL_TOPASS_TIMEOUT,
+      })",assertion_retry_wait,assertion,test_body,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+        await expect(listItem).toHaveText('00:00')
+      }).toPass({
+        timeout: POLL_TOPASS_TIMEOUT,
+      })",false,,,
+cloudtogo/pageplug,f16a1041ec5b8a3f0b11e59c86f4b440,Cypress,947,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+BuilderIO/builder,8436149e6aad9a8d1792e3f98eb5c729,Playwright,96,cy.wait,cy.wait(customerSignMeIn),unresolved_custom_wait,,test_body,False,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(customerSignMeIn),false,,,
+brocoders/extensive-react-boilerplate,998a79f1a4f6a9bc7df914e6576077b2,Playwright,6,page.waitForResponse,"page.waitForResponse(
+    (response) =>
+      response.url().endsWith(""auth/email/login"") && response.status() === 200
+  )",network_wait,network,hook,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+    (response) =>
+      response.url().endsWith(""auth/email/login"") && response.status() === 200
+  )",false,,,
+openobserve/openobserve,1521a0f3618ac92479f49f66813f7df6,Playwright,69,page.waitForResponse,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",network_wait,network,hook,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",false,,,
+linode/manager,c1ade3504e5853c40c433d658e0bc719,Cypress,223,cy.wait,"cy.wait(['@getFeatureFlags', '@getAccount', '@getProfile'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@getFeatureFlags', '@getAccount', '@getProfile'])",false,,,
+openobserve/openobserve,bd590455a5df3a4cb6a03001df10820a,Playwright,51,page.waitForTimeout,page.waitForTimeout(isVariable ? 1500 : 500),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(isVariable ? 1500 : 500),false,,,
+cypress-io/cypress-realworld-app,20e07e7f584debfdebb4f24f5d12aa0c,Cypress,298,cy.wait,cy.wait(`@${feed.routeAlias}`),network_wait,network,test_body,False,alias_expression,wait_api,network_alias_expression,False,True,False,False,ast_template_literal_head,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(`@${feed.routeAlias}`),false,,,
+silevis/reactgrid,fe9a57a6027d3f3ed8f20573f1d4fb17,Cypress,148,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+payloadcms/payload,6f8d0781fd82c6211b5e0347c38eb20e,Playwright,1408,"expect(async () => {
+        await page.reload()
+
+        const exportFilename = page.locator('.file-details__main-detail')
+        await expect(exportFilename).toBeVisible()
+        await expect(expo","expect(async () => {
+        await page.reload()
+
+        const exportFilename = page.locator('.file-details__main-detail')
+        await expect(exportFilename).toBeVisible()
+        await expect(exportFilename).toContainText('.csv')
+      }).toPass({ timeout: POLL_TOPASS_TIMEOUT })",assertion_retry_wait,assertion,test_body,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+        await page.reload()
+
+        const exportFilename = page.locator('.file-details__main-detail')
+        await expect(exportFilename).toBeVisible()
+        await expect(exportFilename).toContainText('.csv')
+      }).toPass({ timeout: POLL_TOPASS_TIMEOUT })",false,,,
+appsmithorg/appsmith,d285da095b12528a591a10cd5b10fdfa,Cypress,215,cy.location().should,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",false,,,
+pinterest/gestalt,e514c001b3344674bb4cdb49edcc19a3,Playwright,13,"page
+    .waitForFunction","page
+    .waitForFunction(
+      ({
+        selector,
+        args: {
+          targetItems,
+          targetItemsLT,
+          targetItemsLTE,
+          targetItemsGT,
+          targetItemsGTE,
+          scrollHeight,
+        },
+      }) => {
+        const items = Array.from(document.querySelectorAll(selector));
+        const loadedItems = items.filter((item) => item.style.visibilit...",predicate_or_custom_condition,predicate,helper,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForFunction(
+      ({
+        selector,
+        args: {
+          targetItems,
+          targetItemsLT,
+          targetItemsLTE,
+          targetItemsGT,
+          targetItemsGTE,
+          scrollHeight,
+        },
+      }) => {
+        const items = Array.from(document.querySelectorAll(selector));
+        const loadedItems = items.filter((item) => item.style.visibilit...",false,,,
+JetBrains/kotlin-web-site,e4f638a4bc3fe63371b5eb0ae68a819a,Playwright,44,context.waitForEvent,context.waitForEvent('page'),event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,context.waitForEvent('page'),false,,,
+mattermost/mattermost,6703ac08beae192f0862f58f11e62f51,Cypress,98,cy.wait,cy.wait(TIMEOUTS.ONE_SEC),fixed_delay,time,hook,True,constant_or_expression,wait_api,constant_or_expression,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(TIMEOUTS.ONE_SEC),false,,,
+openobserve/openobserve,72ec150d9b7fdb5e29165115f0bef2a5,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+super-productivity/super-productivity,773bc7631c6b5e446fc3195a147e97cd,Playwright,985,page.waitForTimeout,page.waitForTimeout(UI_SETTLE_EXTENDED),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(UI_SETTLE_EXTENDED),false,,,
+openobserve/openobserve,0d081435a10e57df36c651473c6f23d8,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+openobserve/openobserve,e5f46c5299797e9b963682db5c69e0e6,Playwright,15,page.waitForResponse,"page.waitForResponse(
+      (response) =>
+        response.url().includes(""/auth/login"") && response.status() === 200
+    )",network_wait,network,hook,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+      (response) =>
+        response.url().includes(""/auth/login"") && response.status() === 200
+    )",false,,,
+openobserve/openobserve,2ddf5eb06b59f745a6e50d02aa2a3c08,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+surveyjs/survey-library,bc9b2afd7990db19710c3bec8382bdfb,Playwright,150,page.waitForFunction,"page.waitForFunction(() => (window as any).__surveyStylesLoaded === true, { timeout: 5000 })",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(() => (window as any).__surveyStylesLoaded === true, { timeout: 5000 })",false,,,
+openobserve/openobserve,9d40ed23535be15aa1aac7729d8379cb,Playwright,54,"page
+    .waitForFunction","page
+    .waitForFunction(
+      () => document.querySelectorAll('[role=""option""]').length > 0,
+      { timeout: isVariable ? 8000 : 10000, polling: 100 }
+    )",predicate_or_custom_condition,predicate,helper,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForFunction(
+      () => document.querySelectorAll('[role=""option""]').length > 0,
+      { timeout: isVariable ? 8000 : 10000, polling: 100 }
+    )",false,,,
+super-productivity/super-productivity,6fe8a6f194ef7c5df20050b9282d0f49,Playwright,123,page.waitForSelector,"page.waitForSelector('plugin-management', {
+      state: 'attached',
+      timeout: 10000,
+    })",element_state_wait,element,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForSelector('plugin-management', {
+      state: 'attached',
+      timeout: 10000,
+    })",false,,,
+mattermost/mattermost,ff5116506d0995a6f2c459203d52e1e0,Cypress,563,cy.findAllByTestId('emoji_picker_preview').eq(0).should,cy.findAllByTestId('emoji_picker_preview').eq(0).should('exist'),assertion_retry_wait,assertion,helper,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.findAllByTestId('emoji_picker_preview').eq(0).should('exist'),false,,,
+activist-org/activist,6a0c7bf60626d7f575461e9205330f7b,Playwright,697,"firstOptionRow
+        .waitFor","firstOptionRow
+        .waitFor({ state: ""visible"", timeout: 15000 })",element_state_wait,element,test_body,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"firstOptionRow
+        .waitFor({ state: ""visible"", timeout: 15000 })",false,,,
+cloudtogo/pageplug,5f35e4fb30bd69e462a16334147bd893,Cypress,222,cy.location().should,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      expect(loc.href).to.eq(loc.origin + ""/applications"");
+    })",false,,,
+live-codes/livecodes,2f35a2e7765ef9389fb2c43812a151fa,Playwright,16,page.waitForSelector,"page.waitForSelector('iframe[name=""app""]')",element_state_wait,element,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForSelector('iframe[name=""app""]')",false,,,
+mattermost/mattermost,d9d549296bfebf7383099dab1978534d,Cypress,45,cy.wait,cy.wait(TIMEOUTS.ONE_SEC),fixed_delay,time,helper,True,constant_or_expression,wait_api,timeout_constant,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(TIMEOUTS.ONE_SEC),false,,,
+cloudtogo/pageplug,6d23b0cf6082052f5ff6db0ee5c96213,Cypress,76,cy.wait,"cy.wait(""@getWorkspace"")",network_wait,network,hook,False,alias_literal,wait_api,network_alias,False,True,False,False,ast_string_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@getWorkspace"")",false,,,
+xyflow/xyflow,c81a8007ff8ce08a8ca070898415f96d,Cypress,11,"elementToDrag
+        .trigger('mousedown', { view: window, force: true })
+        .trigger('mousemove', nextX, nextY, { force: true })
+        .wait","elementToDrag
+        .trigger('mousedown', { view: window, force: true })
+        .trigger('mousemove', nextX, nextY, { force: true })
+        .wait(50)",fixed_delay,time,helper,True,literal_ms,wait_api,literal_ms,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"elementToDrag
+        .trigger('mousedown', { view: window, force: true })
+        .trigger('mousemove', nextX, nextY, { force: true })
+        .wait(50)",false,,,
+activist-org/activist,6a0c7bf60626d7f575461e9205330f7b,Playwright,728,page.waitForResponse,"page.waitForResponse(isPostCreateEventResponse, {
+        timeout: 30000,
+      })",network_wait,network,test_body,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(isPostCreateEventResponse, {
+        timeout: 30000,
+      })",false,,,
+microsoft/fast,e2d83fecae483f954f4673c725f931c5,Playwright,51,page.waitForFunction,"page.waitForFunction(
+            () => (window as any).hydrationCompleted === true,
+        )",predicate_or_custom_condition,predicate,test_body,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(
+            () => (window as any).hydrationCompleted === true,
+        )",false,,,
+Stirling-Tools/Stirling-PDF,f7d66d61dd8f5b5cb744555ab94cbe79,Playwright,131,"context
+        .waitForEvent","context
+        .waitForEvent(""page"", { timeout: 10000 })",event_wait,event,test_body,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"context
+        .waitForEvent(""page"", { timeout: 10000 })",false,,,
+activist-org/activist,dc5ff149e9c9e804fd1e270c2bf492b5,Playwright,10,expect(organizationsHomePage.heading).toHaveText,"expect(organizationsHomePage.heading).toHaveText(
+    getEnglishText(""i18n.pages.organizations.index.header_title"")
+  )",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(organizationsHomePage.heading).toHaveText(
+    getEnglishText(""i18n.pages.organizations.index.header_title"")
+  )",false,,,
+BuilderIO/builder,a2fcb86c382897a5cda431ee2923f8ab,Playwright,68,cy.wait,cy.wait(customerChangeMyPasswordRequest),unresolved_custom_wait,,test_body,False,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(customerChangeMyPasswordRequest),false,,,
+tinacms/tinacms,a99adb739f3b96efee2b0fc9e0516fa5,Playwright,20,"errorClose
+      .first()
+      .waitFor","errorClose
+      .first()
+      .waitFor({ state: 'hidden', timeout: 1000 })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"errorClose
+      .first()
+      .waitFor({ state: 'hidden', timeout: 1000 })",false,,,
+openobserve/openobserve,3f95d2cb4001a10c48ef10218f52b45a,Playwright,69,page.waitForResponse,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+      (response) => {
+        const url = response.url();
+        return (
+          ( /\/api\/.*\/dashboards/.test(url) ||
+            /\/api\/.*\/folders/.test(url) ) &&
+          response.status() === 200
+        );
+      },
+      { timeout: 20000 }
+    )",false,,,
+super-productivity/super-productivity,6fe8a6f194ef7c5df20050b9282d0f49,Playwright,337,"page
+    .waitForFunction","page
+    .waitForFunction(
+      (name) => {
+        const cards = Array.from(document.querySelectorAll('plugin-management mat-card'));
+        const targetCard = cards.find((card) => {
+          const title = card.querySelector('mat-card-title')?.textContent || '';
+          return title.includes(name);
+        });
+        return !!targetCard;
+      },
+      pluginName,
+      { timeout: timeout /...",predicate_or_custom_condition,predicate,helper,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForFunction(
+      (name) => {
+        const cards = Array.from(document.querySelectorAll('plugin-management mat-card'));
+        const targetCard = cards.find((card) => {
+          const title = card.querySelector('mat-card-title')?.textContent || '';
+          return title.includes(name);
+        });
+        return !!targetCard;
+      },
+      pluginName,
+      { timeout: timeout /...",false,,,
+payloadcms/payload,04f9f3da0d3cc53663caa794717c8111,Playwright,148,expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",assertion_retry_wait,assertion,hook,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",false,,,
+silevis/reactgrid,9f01286c73f8908c5f333af31923b59b,Cypress,26,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+jhipster/jhipster-sample-app,4ec556588cc60718b083153337b7cd15,Cypress,135,cy.wait,cy.wait('@entitiesRequest'),network_wait,network,test_body,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait('@entitiesRequest'),false,,,
+openobserve/openobserve,1817d91ddc5ba37391727a8a7d75361e,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+appsmithorg/appsmith,3521ed056a9f944d865e18e30d1e46c3,Cypress,224,cy.wait,cy.wait(2000),fixed_delay,time,hook,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(2000),false,,,
+appsmithorg/appsmith,99713cf27c8645471d2917cce14d239f,Cypress,986,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+usablica/intro.js,3b15cba0fe845736196bad47c70d7ffd,Cypress,102,cy.wait,cy.wait(500),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_numeric_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(500),false,,,
+super-productivity/super-productivity,773bc7631c6b5e446fc3195a147e97cd,Playwright,997,page.waitForTimeout,page.waitForTimeout(UI_SETTLE_STANDARD),fixed_delay,time,helper,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(UI_SETTLE_STANDARD),false,,,
+BuilderIO/builder,15fda3365e904f6bcb7ee8edd0bd1730,Playwright,36,page.waitForEvent,"page.waitForEvent(
+    'console',
+    msg => msg.text().includes(GEN2_SDK_LOADED_MSG) || msg.text().includes(GEN1_SDK_LOADED_MSG)
+  )",event_wait,event,helper,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForEvent(
+    'console',
+    msg => msg.text().includes(GEN2_SDK_LOADED_MSG) || msg.text().includes(GEN1_SDK_LOADED_MSG)
+  )",false,,,
+super-productivity/super-productivity,89509a9ea2745e06bdafcb7c1cdc0b1e,Playwright,163,page.waitForLoadState,page.waitForLoadState('networkidle'),navigation_or_load_wait,navigation,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForLoadState('networkidle'),false,,,
+openobserve/openobserve,2234f8a8e72ac78a03d1d3c8017f2ab5,Playwright,221,cleanupPage.waitForLoadState,cleanupPage.waitForLoadState('networkidle'),navigation_or_load_wait,navigation,hook,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cleanupPage.waitForLoadState('networkidle'),false,,,
+payloadcms/payload,945b625f28fd0f2c4095bfb952bba115,Playwright,148,expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",assertion_retry_wait,assertion,hook,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",false,,,
+midas-research/audino,c676406abba321670aa575106e8e5878,Cypress,88,cy.get('.cvat-brush-tools-toolbox').should('exist').and,cy.get('.cvat-brush-tools-toolbox').should('exist').and('be.visible'),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.get('.cvat-brush-tools-toolbox').should('exist').and('be.visible'),false,,,
+openobserve/openobserve,27de257448691ee5f764c61572d7114c,Playwright,223,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 10000 })",navigation_or_load_wait,navigation,test_body,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 10000 })",false,,,
+bbc/simorgh,5935994f5b83ab9211a28d951d9683f0,Cypress,275,cy.wait,cy.wait(requestAlias),unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(requestAlias),false,,,
+openobserve/openobserve,c73e3df273f2ac1ec120d86d874ea718,Playwright,21,page.waitForResponse,"page.waitForResponse(
+        (response) =>
+          /\/api\/.*\/dashboards/.test(response.url()) &&
+          response.status() === 200,
+        { timeout: 30000 }
+      )",network_wait,network,helper,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+        (response) =>
+          /\/api\/.*\/dashboards/.test(response.url()) &&
+          response.status() === 200,
+        { timeout: 30000 }
+      )",false,,,
+uber/baseweb,41695c94c746d0972b24ce84566bfb5f,Playwright,61,page.waitForSelector,page.waitForSelector(selectors.input),element_state_wait,element,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForSelector(selectors.input),false,,,
+payloadcms/payload,f45b0a15e415462bba33bb578ed45c9e,Playwright,617,"expect(() =>
+      expect(frame.locator(renderedPageTitleLocator)).toHaveText(`For Testing: ${newTitleValue}`),
+    ).toPass","expect(() =>
+      expect(frame.locator(renderedPageTitleLocator)).toHaveText(`For Testing: ${newTitleValue}`),
+    ).toPass({
+      timeout: POLL_TOPASS_TIMEOUT,
+    })",assertion_retry_wait,assertion,test_body,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() =>
+      expect(frame.locator(renderedPageTitleLocator)).toHaveText(`For Testing: ${newTitleValue}`),
+    ).toPass({
+      timeout: POLL_TOPASS_TIMEOUT,
+    })",false,,,
+BuilderIO/builder,8427eae245b130f64b01ce3e3706188e,Playwright,46,cy.wait,cy.wait(customerUpdateMeRequest),unresolved_custom_wait,,test_body,False,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(customerUpdateMeRequest),false,,,
+mattermost/mattermost,2266cf97d814a865308d19ee6a51b14b,Cypress,55,cy.uiGetPostTextBox().type(firstMessage).type('{enter}').wait,cy.uiGetPostTextBox().type(firstMessage).type('{enter}').wait(TIMEOUTS.HALF_SEC),fixed_delay,time,hook,True,constant_or_expression,wait_api,timeout_constant,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.uiGetPostTextBox().type(firstMessage).type('{enter}').wait(TIMEOUTS.HALF_SEC),false,,,
+mattermost/mattermost,e17fb939330989bda6507c3ca648a7d8,Cypress,41,cy.wait,cy.wait(TIMEOUTS.ONE_SEC),fixed_delay,time,hook,True,constant_or_expression,wait_api,constant_or_expression,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(TIMEOUTS.ONE_SEC),false,,,
+deltachat/deltachat-desktop,0e5167d28457548f0567f98441cc0e74,Playwright,473,expect(page.getByRole('dialog')).toBeVisible,expect(page.getByRole('dialog')).toBeVisible(),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(page.getByRole('dialog')).toBeVisible(),false,,,
+linode/manager,42847ddfe93e4f66785432523e03f993,Cypress,416,cy.wait,cy.wait(Array(4).fill('@getMetrics')),network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_fill_alias,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(Array(4).fill('@getMetrics')),false,,,
+dyrector-io/dyrectorio,17b98bf9add16b68aba5ac48ff86fe95,Playwright,358,page.waitForSelector,"page.waitForSelector('h2:text-is(""Image config"")')",element_state_wait,element,test_body,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForSelector('h2:text-is(""Image config"")')",false,,,
+super-productivity/super-productivity,90b139d73d401ae8f8c76103280338e4,Playwright,355,page.waitForTimeout,page.waitForTimeout(isFull ? 2740 : isShorts ? 1940 : 2240),fixed_delay,time,test_body,True,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,page.waitForTimeout(isFull ? 2740 : isShorts ? 1940 : 2240),false,,,
+linode/manager,793e62b1c50a7294a603aa45fcf14925,Cypress,133,cy.wait,"cy.wait(['@deleteKey', '@getKeys'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@deleteKey', '@getKeys'])",false,,,
+openobserve/openobserve,32d77745bf95e35c9bc2ba469eb96d6d,Playwright,174,option.waitFor,"option.waitFor({ state: ""visible"", timeout: 3000 })",element_state_wait,element,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"option.waitFor({ state: ""visible"", timeout: 3000 })",false,,,
+otterscan/otterscan,7d2bee191e859dc51aedf3c8ecc1cf17,Cypress,92,tx.wait,tx.wait(),unresolved_custom_wait,,hook,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,tx.wait(),false,,,
+payloadcms/payload,95874e9d26cef99e40e5cbed79a73ee2,Playwright,148,expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",assertion_retry_wait,assertion,hook,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(() => expect(page.locator('.template-default')).toBeVisible()).toPass({
+    timeout: POLL_TOPASS_TIMEOUT,
+  })",false,,,
+openobserve/openobserve,417bbacacaf93ed989fcf72b4a2a139f,Playwright,32,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 10000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 10000 })",false,,,
+mattermost/mattermost,688bad1579672b94a3d143f9b6451bc8,Cypress,65,cy.get('#postListContent').should,cy.get('#postListContent').should('be.visible'),assertion_retry_wait,assertion,helper,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.get('#postListContent').should('be.visible'),false,,,
+cloudtogo/pageplug,2adb72a0d6896ffeb5574f081ba4f381,Cypress,947,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+midas-research/audino,aa0376cc73f10724171cb39f6a9ebecc,Cypress,755,"cy.get('.cvat-attribute-mutable-checkbox')
+                .find('[type=""checkbox""]')
+                .should","cy.get('.cvat-attribute-mutable-checkbox')
+                .find('[type=""checkbox""]')
+                .should('be.checked')",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get('.cvat-attribute-mutable-checkbox')
+                .find('[type=""checkbox""]')
+                .should('be.checked')",false,,,
+apitable/apitable,ddbd7f7cba4f01a18ee8d95076bb7ab2,Cypress,101,cy.waitUntil,"cy.waitUntil(() => {
+    return cy.get('@consoleLog', {
+      timeout: 200000,
+    }).should('be.calledWithMatch', /resourceRevisions/);
+  }, {
+    timeout: 200000,
+  })",predicate_or_custom_condition,predicate,helper,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.waitUntil(() => {
+    return cy.get('@consoleLog', {
+      timeout: 200000,
+    }).should('be.calledWithMatch', /resourceRevisions/);
+  }, {
+    timeout: 200000,
+  })",false,,,
+microsoft/fluentui,b15c6360f68ab7e1e854270bb4915a73,Cypress,20,cy.get('#drawer-footer').should,cy.get('#drawer-footer').should('exist'),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.get('#drawer-footer').should('exist'),false,,,
+MyCryptoHQ/MyCrypto,d11cc10325b964af9df14301f6b4ed8d,TestCafe,70,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+mattermost/mattermost,1fdd4780e31e0c3a05d91326716562ad,Cypress,16,"cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait","cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait(TIMEOUTS.HALF_SEC)",unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait(TIMEOUTS.HALF_SEC)",false,,,
+JetBrains/kotlin-web-site,de5616e396fba9dab280128ce3bb73b0,Playwright,23,context.waitForEvent,context.waitForEvent('page'),event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,context.waitForEvent('page'),false,,,
+mattermost/mattermost,4cbdf72c7db85e6d9a0b4a1a4914fca9,Cypress,16,"cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait","cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait(TIMEOUTS.HALF_SEC)",unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.uiGetSearchBox().
+        clear().
+        wait(TIMEOUTS.HALF_SEC).
+        type(query).
+        wait(TIMEOUTS.HALF_SEC)",false,,,
+appsmithorg/appsmith,63dfe64e664ce17ca7df733fb761305e,Cypress,954,cy.get(welcomePage.email).should,"cy.get(welcomePage.email).should(""be.visible"")",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(welcomePage.email).should(""be.visible"")",false,,,
+openobserve/openobserve,740fcf491737c3a9343c9bf907a2bffa,Playwright,178,"page.getByText(""Dashboard deleted successfully"").waitFor","page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",element_state_wait,element,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.getByText(""Dashboard deleted successfully"").waitFor({
+    state: 'visible',
+    timeout: 10000
+  })",false,,,
+cloudtogo/pageplug,7aff4fa687f6f3ddc316c54e77e66bbf,Cypress,1132,cy.wait,cy.wait(timeout),fixed_delay,time,hook,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(timeout),false,,,
+super-productivity/super-productivity,7a17ddbf9ab4982436b7109288b21fd1,Playwright,128,"page
+    .waitForEvent","page
+    .waitForEvent('download', { timeout: 90000 })",event_wait,event,helper,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+    .waitForEvent('download', { timeout: 90000 })",false,,,
+BuilderIO/builder,2bd994d45785a209390a923af164e2e3,Playwright,125,cy.wait,cy.wait(getOrdersRequest),unresolved_custom_wait,,test_body,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(getOrdersRequest),false,,,
+linode/manager,b7ce4c693be97f4f1cfb7675cc0d7e8b,Cypress,475,cy.wait,"cy.wait(['@getInvoices', '@getPayments', '@getPaymentMethods'])",network_wait,network,test_body,False,alias_array,wait_api,network_alias_array,False,True,False,False,ast_array_literal,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(['@getInvoices', '@getPayments', '@getPaymentMethods'])",false,,,
+cloudtogo/pageplug,da095c03aee1eb89748b255eb4f990d6,Cypress,947,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+lunasec-io/lunasec,dc9437c5aa0b2fa54c4ed6b368855712,Cypress,148,cy.wait,cy.wait(process.env.CI ? 10000 : 1000),unresolved_custom_wait,,test_body,False,constant_or_expression,wait_api,expression,False,False,False,False,ast_expression_unresolved,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(process.env.CI ? 10000 : 1000),false,,,
+payloadcms/payload,d5522f320981d9f5da3f6d7b98df954e,Playwright,1635,"expect(async () => {
+        await expect(page.locator('.import-preview__import-count')).toBeVisible()
+      }).toPass","expect(async () => {
+        await expect(page.locator('.import-preview__import-count')).toBeVisible()
+      }).toPass({ timeout: POLL_TOPASS_TIMEOUT })",assertion_retry_wait,assertion,test_body,False,,assertion,,False,False,True,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+        await expect(page.locator('.import-preview__import-count')).toBeVisible()
+      }).toPass({ timeout: POLL_TOPASS_TIMEOUT })",false,,,
+appsmithorg/appsmith,2895b7a6c07cc48c175b3612609172e2,Cypress,986,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+MyCryptoHQ/MyCrypto,c892b03d1d6299ec5ad7c41a0c00444a,TestCafe,55,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+appsmithorg/appsmith,740b260616274f6e3b278315e2ab5653,Cypress,215,cy.location().should,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",assertion_retry_wait,assertion,hook,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_callback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.location().should((loc) => {
+      if (redirectUrl) {
+        expect(loc.href).to.eq(loc.origin + redirectUrl);
+      } else {
+        expect(loc.href).to.eq(loc.origin + ""/applications"");
+      }
+    })",false,,,
+tldraw/tldraw,95e1d0d9685e84b532272428a2d138c9,Playwright,301,"expect(async () => {
+		await sidebar.expectToContainText(originalName)
+		await sidebar.expectNotToContainText(newName)
+	}).toPass","expect(async () => {
+		await sidebar.expectToContainText(originalName)
+		await sidebar.expectNotToContainText(newName)
+	}).toPass()",predicate_or_custom_condition,predicate,test_body,False,,predicate,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"expect(async () => {
+		await sidebar.expectToContainText(originalName)
+		await sidebar.expectNotToContainText(newName)
+	}).toPass()",false,,,
+UI5/webcomponents,609f66970a85cfb007cdceb0addeb12c,Cypress,236,"cy.get(""@valueHelpTrigger"")
+			.should","cy.get(""@valueHelpTrigger"")
+			.should(""have.been.calledTwice"")",assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.get(""@valueHelpTrigger"")
+			.should(""have.been.calledTwice"")",false,,,
+elizaOS/eliza,92ef12ed4848e5de598424bd7a954cb4,Playwright,112,page.waitForResponse,"page.waitForResponse(
+      (response) =>
+        response.url().includes(""/api/v1/dashboard"") &&
+        response.status() === 200,
+    )",network_wait,network,test_body,False,alias_expression,wait_api,network,False,True,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForResponse(
+      (response) =>
+        response.url().includes(""/api/v1/dashboard"") &&
+        response.status() === 200,
+    )",false,,,
+live-codes/livecodes,823bfa9de80903f93a155a4f0bf47a0f,Playwright,6,app.waitForLoadState,app.waitForLoadState(),navigation_or_load_wait,navigation,helper,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,app.waitForLoadState(),false,,,
+cloudtogo/pageplug,f283a43501f3336c2cf868d76829e3ff,Cypress,804,cy.wrap($element).wait,cy.wrap($element).wait(waitTimeInterval),fixed_delay,time,hook,True,constant_or_expression,wait_api,time_expression,False,False,False,False,ast_symbol_name_heuristic,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wrap($element).wait(waitTimeInterval),false,,,
+silevis/reactgrid,912842104b812c85ad4822e321bf60f2,Cypress,166,utils.wait,utils.wait(),unresolved_custom_wait,,test_body,False,,wait_api,none,False,False,False,False,ast_call,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,utils.wait(),false,,,
+cloudtogo/pageplug,05ec173a00c562a03ca709dd1269871b,Cypress,947,cy.wait,"cy.wait(""@createSuperUser"")",network_wait,network,hook,False,alias_literal,wait_api,alias_literal,False,True,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.wait(""@createSuperUser"")",false,,,
+SonicJs-Org/sonicjs,4cbe7288f7aec5a569f5e5a46a0bfa0d,Playwright,377,page.waitForLoadState,"page.waitForLoadState('networkidle', { timeout: 15000 })",navigation_or_load_wait,navigation,hook,False,,wait_api,condition,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForLoadState('networkidle', { timeout: 15000 })",false,,,
+microsoft/fast,bb68a6e0d4cc1e713f9918507e25c1f8,Playwright,5,page.waitForFunction,"page.waitForFunction(
+            () => (window as any).hydrationCompleted === true,
+        )",predicate_or_custom_condition,predicate,hook,False,,predicate,predicate,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page.waitForFunction(
+            () => (window as any).hydrationCompleted === true,
+        )",false,,,
+MyCryptoHQ/MyCrypto,ed64aa2de23eeffde66029e1614bdd51,TestCafe,57,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+MyCryptoHQ/MyCrypto,d11cc10325b964af9df14301f6b4ed8d,TestCafe,57,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+super-productivity/super-productivity,6302fb36a455bdf140962675c6404417,Playwright,295,"page
+        .locator('focus-mode-main')
+        .first()
+        .waitFor","page
+        .locator('focus-mode-main')
+        .first()
+        .waitFor({ state: 'visible', timeout: 8_000 })",element_state_wait,element,test_body,False,,wait_api,,True,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"page
+        .locator('focus-mode-main')
+        .first()
+        .waitFor({ state: 'visible', timeout: 8_000 })",false,,,
+MyCryptoHQ/MyCrypto,6d6a6ff7a69ac784107a987049e98a37,TestCafe,22,t.wait,t.wait(FIXTURES_CONST.TIMEOUT),fixed_delay,time,test_body,True,literal_ms,wait_api,fixed_ms,False,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,t.wait(FIXTURES_CONST.TIMEOUT),false,,,
+quoroom-ai/room,c39f1367273f4af4af357b90f1842fd0,Playwright,325,expect(page.getByText('Compatibility Check (required)')).toBeVisible,expect(page.getByText('Compatibility Check (required)')).toBeVisible({ timeout: 5000 }),assertion_retry_wait,assertion,test_body,False,,assertion,assertion_retry,False,False,True,False,ast_assertion_matcher,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,expect(page.getByText('Compatibility Check (required)')).toBeVisible({ timeout: 5000 }),false,,,
+JetBrains/kotlin-web-site,ad8b375176066f0719ed6c69d355b734,Playwright,54,context.waitForEvent,context.waitForEvent('page'),event_wait,event,test_body,False,,wait_api,event,True,False,False,False,ast_wait_api,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,context.waitForEvent('page'),false,,,
+bbc/simorgh,9a92b9369ba4990fadc54e4ff8eacd67,Cypress,275,cy.wait,cy.wait(requestAlias),unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,cy.wait(requestAlias),false,,,
+mattermost/mattermost,e5c260c3d1e4e317a5e932eee2072b3b,Cypress,101,"cy.findByRole('combobox', {name: 'Search for people'}).
+        typeWithForce(username).
+        wait","cy.findByRole('combobox', {name: 'Search for people'}).
+        typeWithForce(username).
+        wait(TIMEOUTS.ONE_SEC)",unresolved_custom_wait,,helper,False,,wait_api,,False,False,False,False,regex_fallback,correct,n/a,correct,n/a,correct,n/a,Sync pattern/target/argument kind match evidence.,"cy.findByRole('combobox', {name: 'Search for people'}).
+        typeWithForce(username).
+        wait(TIMEOUTS.ONE_SEC)",false,,,

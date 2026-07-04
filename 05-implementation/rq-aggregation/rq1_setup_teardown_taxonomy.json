@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "description": "RQ1 setup/teardown semantic layer codebook (Milestone 2). Inventory remains rq1_environment_control_*.",
+  "phase": [
+    "setup",
+    "teardown",
+    "setup_and_teardown",
+    "unclear"
+  ],
+  "scope": [
+    "global_or_project",
+    "suite_or_fixture",
+    "per_test_hook",
+    "helper_or_framework_extension",
+    "inline_test_body",
+    "unclear"
+  ],
+  "primary_intent": [
+    "navigation_bootstrap",
+    "auth_session_state",
+    "browser_context_or_client_state",
+    "test_data_or_backend_state",
+    "network_mock_or_spy",
+    "server_or_external_environment",
+    "time_device_permission_emulation",
+    "cleanup_restore_state",
+    "generic_setup_teardown_utility",
+    "unclear"
+  ],
+  "primary_intent_evidence_basis": [
+    "ast_framework_api_category",
+    "ast_cypress_command_role",
+    "ast_cypress_task_handler",
+    "ast_callee_name_heuristic",
+    "ast_literal_argument_context",
+    "ast_request_target_domain",
+    "heuristic_cypress_command_role",
+    "input_source_class",
+    "resolved_helper_child_intents",
+    "lexical_framework_api_category",
+    "inventory_category:feature_type",
+    "inventory_category:source_kind",
+    "inventory_category:lexical_fallback",
+    "lexical_navigation_call",
+    "lexical_static_file_load",
+    "lexical_wait_sleep",
+    "lexical_network_mock",
+    "lexical_backend_data_setup",
+    "lexical_auth_session",
+    "lexical_inline_data_setup",
+    "lexical_server_environment",
+    "lexical_time_device_permission",
+    "lexical_cleanup",
+    "lexical_cookie_storage",
+    "lexical_generic_helper_name",
+    "unresolved"
+  ],
+  "confidence": [
+    "high",
+    "medium",
+    "low"
+  ],
+  "review_reason": [
+    "generic_helper_name",
+    "helper_body_unavailable",
+    "mixed_intents",
+    "weak_lexical_signal",
+    "framework_mapping_unclear",
+    "conflicting_evidence",
+    "low_confidence",
+    "partial_coverage_m3",
+    "not_applicable"
+  ],
+  "uncertain_reason": [
+    "helper_body_unavailable",
+    "generic_helper_name",
+    "mixed_intents",
+    "missing_framework_mapping",
+    "weak_lexical_signal",
+    "conflicting_evidence",
+    "not_enough_context",
+    "review_snippet_truncated",
+    "true_semantic_ambiguity"
+  ],
+  "inventory_category_to_primary_intent_hint": {
+    "network_mock": "network_mock_or_spy",
+    "browser_context_control": "browser_context_or_client_state",
+    "time_control": "time_device_permission_emulation",
+    "framework_fixture": "test_data_or_backend_state",
+    "auth_session_setup": "auth_session_state",
+    "api_seed_setup": "test_data_or_backend_state",
+    "database_seed_setup": "test_data_or_backend_state",
+    "browser_context_setup": "browser_context_or_client_state",
+    "teardown_cleanup": "cleanup_restore_state",
+    "hook_setup": "generic_setup_teardown_utility",
+    "helper_setup": "generic_setup_teardown_utility",
+    "unknown_setup": "unclear"
+  },
+  "partial_coverage_note": "Milestone 3 AST enrichment (statement_phase_hint_ast, helper_body_phase_hint_ast on wrappers, navigation_bootstrap_candidate_ast, framework_api_category, hook_owner_kind=test|fixture|global|unknown) is applied when Phase 2B/2C outputs are re-extracted at schema v39+. Resolved helper wrappers are wrapper_only rows excluded from paper_facing_unit_count. External/static file load sites may be eligible setup units when they are not direct fixture-only loads or UI text-entry consumers; direct cy.fixture/fixture_file_input rows remain RQ2 input provenance unless tied to a structured state-changing setup action. Navigation bootstrap uses static line order and blocks on any prior setup-phase unit (conservative). Residual limits: unresolved helper expansion bodies, global support hook walks without full import/astCtx."
+}

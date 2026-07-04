@@ -1,0 +1,2 @@
+{"repo_full_name":"gridstack/gridstack.js","repo_cache_key":"gridstack__gridstack.js","app_start_command":"python -m http.server 8080 --bind 127.0.0.1","base_url":"http://localhost:8080","app_start_command_correction":"manual_triage_static_python_server"}
+{"repo_full_name":"openplayerjs/openplayerjs","repo_cache_key":"openplayerjs__openplayerjs","app_start_command":"python -m http.server 4173 --bind 127.0.0.1","base_url":"http://localhost:4173","app_start_command_correction":"manual_triage_static_python_server"}

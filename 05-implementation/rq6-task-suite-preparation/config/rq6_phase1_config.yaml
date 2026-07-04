@@ -1,0 +1,43 @@
+# RQ6 Phase 1 local-runnable panel defaults.
+# Scripts expose these values as CLI arguments; this file is the human-readable
+# protocol snapshot for reproducibility.
+
+target_final_repos: 20
+target_tests_per_repo: 3
+reserve_repos: 10
+
+execution_pilot:
+  playwright_repos: 10
+  cypress_repos: 10
+  max_tests_per_repo: 8
+  stable_runs: 3
+
+frameworks:
+  include:
+    - playwright
+    - cypress
+
+timeouts:
+  install_sec: 600
+  app_boot_sec: 120
+  test_run_sec: 180
+  stable_runs: 3
+
+paths:
+  repo_cache: "<repo-cache>"
+  phase1_inventory: "github_pilot_corpus/ui_file_inventory_final/all_ui_test_files.jsonl"
+  phase2_run_dir: "github_pilot_corpus/phase2c_full"
+  out_dir: "rq6_outputs/phase1_local_runnable_panel"
+  pilot_out_dir: "rq6_outputs/phase1_execution_pilot"
+
+selection:
+  min_phase2_tests_per_repo: 5
+  min_candidate_tests_per_repo: 3
+  exclude_dynamic_parameterized: true
+  require_assertion: true
+  require_expanded_ui_action: true
+
+provenance:
+  require_source_provenance_field: true
+  hash_source_tree_for_execution: true
+  final_panel_should_prefer: "git_commit_verified"
